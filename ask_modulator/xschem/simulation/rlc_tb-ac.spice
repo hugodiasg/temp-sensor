@@ -1,0 +1,25 @@
+** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/rlc_tb-ac.sch
+**.subckt rlc_tb-ac
+L0 a GND 5.097n m=1
+Vdd a GND DC 0 AC 1
+XR0 GND a GND sky130_fd_pr__res_high_po_5p73 L=0.5 mult=1 m=1
+XC0 a GND sky130_fd_pr__cap_mim_m3_1 W=19.75 L=19.75 MF=1 m=1
+**** begin user architecture code
+
+.lib /home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt
+
+
+
+.ac dec 1Meg 1G 5G
+.control
+destroy all
+run
+plot a/(-i(vdd))
+plot imag(a/(-i(vdd)))
+plot real(a/(-i(vdd)))
+.endc
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

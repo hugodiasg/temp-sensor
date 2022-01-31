@@ -1,0 +1,11 @@
+** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator.sch
+.subckt ask-modulator gnd in out vd
+*.PININFO gnd:B in:I out:O vd:B
+XM2 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5 L=1 W=21 nf=5 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+L0 vd out 5.097n m=1
+XC0 vd out sky130_fd_pr__cap_mim_m3_1 W=19.75 L=19.75 MF=1 m=1
+XR0 out vd gnd sky130_fd_pr__res_high_po_5p73 L=0.5 mult=1 m=1
+.ends
+.end

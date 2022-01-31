@@ -1,0 +1,41 @@
+** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator_tb-ac.sch
+**.subckt ask-modulator_tb-ac
+Vdd vd GND DC 0 AC 3.3
+Vin in GND DC 1.8 AC 0
+x1 vd out in GND ask-modulator
+**** begin user architecture code
+
+
+.ac lin 1MEG 1G 5G
+.control
+destroy all
+run
+let phase = ph(out)*180/3.14159265358979323846
+plot db(abs(out/vd))
+plot phase
+.endc
+
+
+.lib /home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  ask-modulator.sym # of pins=4
+** sym_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator.sym
+** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator.sch
+.subckt ask-modulator  vdd out in gnd
+*.iopin gnd
+*.iopin vdd
+*.ipin in
+*.opin out
+L0 vdd out 5.105n m=1
+XC0 vdd out sky130_fd_pr__cap_mim_m3_1 W=20.141 L=20.141 MF=1 m=1
+XM2 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5 L=1 W=21 nf=5 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XR0 out vdd gnd sky130_fd_pr__res_high_po_5p73 L=1 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end
