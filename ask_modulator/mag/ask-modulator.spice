@@ -1,0 +1,28 @@
+* NGSPICE file created from ask-modulator.ext - technology: sky130A
+
+.subckt sky130_fd_pr__res_high_po_5p73_2BGFUD a_n573_50# w_n739_n648# a_n573_n482#
+X0 a_n573_n482# a_n573_50# w_n739_n648# sky130_fd_pr__res_high_po_5p73 l=500000u
+.ends
+
+.subckt p1 p2 l0
+.ends
+
+.subckt sky130_fd_pr__nfet_g5v0d10v5_JF8TZN a_29_n523# a_n129_n523# a_129_n435# w_n357_n693#
++ a_n29_n435# a_n187_n435#
+X0 a_129_n435# a_29_n523# a_n29_n435# w_n357_n693# sky130_fd_pr__nfet_g5v0d10v5 ad=1.2615e+12p pd=9.28e+06u as=1.2615e+12p ps=9.28e+06u w=4.35e+06u l=500000u
+X1 a_n29_n435# a_n129_n523# a_n187_n435# w_n357_n693# sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=1.2615e+12p ps=9.28e+06u w=4.35e+06u l=500000u
+.ends
+
+.subckt sky130_fd_pr__cap_mim_m3_2_5KDT2C m4_n2801_n2550# c2_n2701_n2450#
+X0 c2_n2701_n2450# m4_n2801_n2550# sky130_fd_pr__cap_mim_m3_2 l=2.45e+07u w=2.45e+07u
+.ends
+
+.subckt ask-modulator gnd in out vd
+XXR1 vd gnd out sky130_fd_pr__res_high_po_5p73_2BGFUD
+XXM2 in in gnd gnd out gnd sky130_fd_pr__nfet_g5v0d10v5_JF8TZN
+XXC1 out vd sky130_fd_pr__cap_mim_m3_2_5KDT2C
+XXC2 out vd sky130_fd_pr__cap_mim_m3_2_5KDT2C
+XXC3 out vd sky130_fd_pr__cap_mim_m3_2_5KDT2C
+XL0 vd out l0
+.ends
+

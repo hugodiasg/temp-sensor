@@ -1,0 +1,4 @@
+Equate pins:  cell /home/hugodg/projects_sky130/temp_sensor/ask_modulator/mag/ask-modulator.spice and/or /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/simulation/ask-modulator.spice has no elements.
+Cells have no pins;  pin matching not needed.
+Device classes /home/hugodg/projects_sky130/temp_sensor/ask_modulator/mag/ask-modulator.spice and /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/simulation/ask-modulator.spice are equivalent.
+Verify:  cell /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/simulation/ask-modulator.spice has no elements and/or nodes.  Not checked.

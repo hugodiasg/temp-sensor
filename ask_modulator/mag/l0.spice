@@ -1,0 +1,5 @@
+* NGSPICE file created from l0.ext - technology: sky130A
+
+.subckt l0 p1 p2
+.ends
+

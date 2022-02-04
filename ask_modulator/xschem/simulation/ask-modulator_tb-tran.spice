@@ -1,11 +1,11 @@
 ** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator_tb-tran.sch
 **.subckt ask-modulator_tb-tran
 Vdd vd GND 3.3
-Vin in GND PULSE(0V 1.8V 0.5ns 0.1ns 0.1ns 6ns 12ns)
+Vin in GND PULSE(0V 1.8V 0.5ns 0.1ns 0.1ns 10ns 20ns)
 x1 vd out in GND ask-modulator
 **** begin user architecture code
 
-.tran 0.01n 8n
+.tran 1n 100n
 .control
 destroy all
 run
@@ -17,6 +17,8 @@ plot z_out
 plot id
 plot in
 plot out
+let S=abs(id*(vd-out))+abs(id*out)
+plot s
 .endc
 
 
@@ -33,12 +35,35 @@ plot out
 *.ipin in
 *.opin out
 *.iopin vd
-XM2 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5 L=1 W=21 nf=5 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM2 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=8.7 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
-L0 vd out 5.097n m=1
-XC0 vd out sky130_fd_pr__cap_mim_m3_1 W=19.75 L=19.75 MF=1 m=1
-XR0 out vd gnd sky130_fd_pr__res_high_po_5p73 L=0.5 mult=1 m=1
+**** begin user architecture code
+
+
+
+**** end user architecture code
+xl0 vd out l0
+XC1 vd out sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
+XC2 vd out sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
+XC3 vd out sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
+XR1 out vd gnd sky130_fd_pr__res_high_po_5p73 L=0.5 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym # of
+*+ pins=2
+** sym_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym
+** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sch
+.subckt l0  p1 p2
+*.iopin p2
+*.iopin p1
+L0 p1 net3 1.006n m=1
+R net3 p2 5.426 m=1
+Cs1 p1 net1 10.86f m=1
+Cs2 p2 net2 11.96f m=1
+Rs1 net1 GND 114.5 m=1
+Rs2 net2 GND -66.9 m=1
 .ends
 
 .GLOBAL GND

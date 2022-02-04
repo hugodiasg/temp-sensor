@@ -1,18 +1,24 @@
 ** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator_tb-ac.sch
 **.subckt ask-modulator_tb-ac
-Vdd vd GND DC 0 AC 3.3
-Vin in GND DC 1.8 AC 0
+Vdd vd GND DC 3.3 AC 0
+Vin in GND DC 1.8 AC 1
 x1 vd out in GND ask-modulator
 **** begin user architecture code
 
 
-.ac lin 1MEG 1G 5G
+.ac lin 1MEG 2G 3G
 .control
 destroy all
 run
+let id =-i(vdd)
 let phase = ph(out)*180/3.14159265358979323846
-plot db(abs(out/vd))
+plot db(abs(out/in))
 plot phase
+let z_rlc= (in-out)/id
+let z_nmos=in/id
+let z_out=z_rlc*z_nmos/(z_rlc+z_nmos)
+plot imag(z_out)
+plot z_out
 .endc
 
 
@@ -24,17 +30,40 @@ plot phase
 * expanding   symbol:  ask-modulator.sym # of pins=4
 ** sym_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator.sym
 ** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator.sch
-.subckt ask-modulator  vdd out in gnd
+.subckt ask-modulator  vd out in gnd
 *.iopin gnd
-*.iopin vdd
 *.ipin in
 *.opin out
-L0 vdd out 5.105n m=1
-XC0 vdd out sky130_fd_pr__cap_mim_m3_1 W=20.141 L=20.141 MF=1 m=1
-XM2 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5 L=1 W=21 nf=5 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+*.iopin vd
+XM2 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=8.7 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
-XR0 out vdd gnd sky130_fd_pr__res_high_po_5p73 L=1 mult=1 m=1
+**** begin user architecture code
+
+
+
+**** end user architecture code
+xl0 vd out l0
+XC1 vd out sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
+XC2 vd out sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
+XC3 vd out sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
+XR1 out vd gnd sky130_fd_pr__res_high_po_5p73 L=0.5 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym # of
+*+ pins=2
+** sym_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym
+** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sch
+.subckt l0  p1 p2
+*.iopin p2
+*.iopin p1
+L0 p1 net3 1.006n m=1
+R net3 p2 5.426 m=1
+Cs1 p1 net1 10.86f m=1
+Cs2 p2 net2 11.96f m=1
+Rs1 net1 GND 114.5 m=1
+Rs2 net2 GND -66.9 m=1
 .ends
 
 .GLOBAL GND

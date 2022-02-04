@@ -1,12 +1,18 @@
-SQ NAME=l0:LEN=139:W=5:S=3:N=8.5:METAL=MET4:EXIT=MET4:XORG=0:YORG=0
+SQ NAME=l0:LEN=81:W=5:S=3:N=4.25:METAL=MET5:EXIT=MET5:XORG=0:YORG=0
 pi l0 2.5
 save l0
 cifsave l0 l0.cif 1 100 poly
 mv l0.cif ~/projects_sky130/temp_sensor/ask_modulator/mag/
 cd ~/projects_sky130/temp_sensor/ask_modulator/mag/
 
-Pi Model at f=2.5 GHz:  Q = 2.789 , 2.78 , 2.822 
-L = 5.097 nH R = 28.01 
-Cs1 = 16.63 fF Rs1 = 54.53 
-Cs2 = 19.83 fF Rs2 = -17.88      Est. Resonance = 17.35 GHz
+Pi Model at f=2.5 GHz:  Q = 2.904 , 2.904 , 2.909 
+L = 1.006 nH R = 5.426 
+Cs1 = 10.86 fF Rs1 = 114.5 
+Cs2 = 11.96 fF Rs2 = -66.9      Est. Resonance = 51.94 GHz
+ASITIC>  pi l0 2.45
+
+Pi Model at f=2.45 GHz:  Q = 2.848 , 2.848 , 2.853 
+L = 1.006 nH R = 5.421 
+Cs1 = 10.87 fF Rs1 = 118.1 
+Cs2 = 11.95 fF Rs2 = -69.89      Est. Resonance = 52.22 GHz
 
