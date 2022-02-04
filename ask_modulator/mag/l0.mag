@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643980174
+timestamp 1643995138
 << metal4 >>
 rect 12800 -2000 14800 9800
 << metal5 >>
@@ -24,4 +24,6 @@ flabel metal5 746 21555 756 21585 0 FreeSans 1600 0 0 0 p1
 port 0 nsew
 flabel metal4 13753 -1378 13753 -1378 0 FreeSans 1600 0 0 0 p2
 port 1 nsew
+<< properties >>
+string device l0
 << end >>

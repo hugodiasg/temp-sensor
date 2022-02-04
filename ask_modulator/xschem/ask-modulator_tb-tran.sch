@@ -15,12 +15,12 @@ lab=vd}
 N 160 -160 160 -140 {
 lab=vd}
 C {devices/vsource.sym} 155 -240 2 0 {name=Vdd value=3.3}
-C {devices/vsource.sym} -60 -140 2 0 {name=Vin value="PULSE(0V	1.8V	0.5ns	0.1ns	0.1ns	10ns	20ns)"}
+C {devices/vsource.sym} -60 -140 2 0 {name=Vin value="PULSE(0V	1.8V	0.5ns	0.1ns	0.1ns	20ns	40ns)"}
 C {devices/gnd.sym} 160 -30 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=out}
 C {devices/lab_pin.sym} 155 -190 2 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/gnd.sym} -60 -170 2 0 {name=l5 lab=GND}
-C {devices/code_shown.sym} 410 -410 0 0 {name=Simulation only_toplevel=false value=".tran 1n 100n
+C {devices/code_shown.sym} 410 -410 0 0 {name=Simulation only_toplevel=false value=".tran 0.5n 40n
 .control
 destroy all
 run

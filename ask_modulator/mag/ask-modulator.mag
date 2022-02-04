@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1643981889
+timestamp 1643995581
 << metal1 >>
 rect -9000 14200 -3600 14400
 rect -9000 13200 -8800 14200
@@ -81,29 +81,29 @@ rect -200 13200 0 14200
 rect 1600 13200 1800 14200
 rect -200 13000 1800 13200
 use l0  l0_0
-timestamp 1643980174
-transform 1 0 2177 0 1 10805
+timestamp 1643995138
+transform 1 0 2300 0 1 10800
 box 0 -2000 22600 22600
-use sky130_fd_pr__cap_mim_m3_2_5KDT2C  XC1
+use sky130_fd_pr__res_high_po_5p73_2BGFUD  XR1
 timestamp 1643981260
-transform 0 1 -3249 -1 0 31023
+transform 0 1 -3352 -1 0 13739
+box -739 -648 739 648
+use sky130_fd_pr__nfet_g5v0d10v5_JF8TZN  XM2
+timestamp 1643981260
+transform 1 0 -3443 0 1 11493
+box -357 -693 357 693
+use sky130_fd_pr__cap_mim_m3_2_5KDT2C  XC3
+timestamp 1643981260
+transform 0 1 -3249 -1 0 18223
 box -2801 -2551 2823 2551
 use sky130_fd_pr__cap_mim_m3_2_5KDT2C  XC2
 timestamp 1643981260
 transform 0 1 -3249 -1 0 24623
 box -2801 -2551 2823 2551
-use sky130_fd_pr__cap_mim_m3_2_5KDT2C  XC3
+use sky130_fd_pr__cap_mim_m3_2_5KDT2C  XC1
 timestamp 1643981260
-transform 0 1 -3249 -1 0 18223
+transform 0 1 -3249 -1 0 31023
 box -2801 -2551 2823 2551
-use sky130_fd_pr__nfet_g5v0d10v5_JF8TZN  XM2
-timestamp 1643981260
-transform 1 0 -3443 0 1 11493
-box -357 -693 357 693
-use sky130_fd_pr__res_high_po_5p73_2BGFUD  XR1
-timestamp 1643981260
-transform 0 1 -3352 -1 0 13739
-box -739 -648 739 648
 << labels >>
 flabel metal1 -2960 6700 -2760 6900 0 FreeSans 128 0 0 0 gnd
 port 0 nsew
@@ -115,4 +115,5 @@ flabel metal1 -1660 6700 -1460 6900 0 FreeSans 128 0 0 0 vd
 port 3 nsew
 << properties >>
 string l0_0 l0_0
+string l0 device
 << end >>

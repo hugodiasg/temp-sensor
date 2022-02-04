@@ -64,7 +64,35 @@ model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/iopin.sym} 360 -262.5 3 0 {name=p2 lab=vd}
-C {devices/code_shown.sym} 730 -425 0 0 {name=Extraction only_toplevel=false value=""}
+C {devices/code_shown.sym} 740 -115 0 0 {name=Extraction only_toplevel=false value="*X0 vd.t2 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+*X1 gnd in.t0 out gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.856e+07u as=1.2615e+12p ps=9.28e+06u w=0u l=0u
+*X2 out in.t1 gnd gnd sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=0u l=0u
+*X3 vd.t0 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+*X4 vd.t1 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+R0 vd vd.n2 2.382
+R1 vd.n2 vd.n1 0.07
+R2 vd.n1 vd.n0 0.065
+R3 vd.n0 vd 0.031
+R4 vd.n1 vd.t1 0.014
+R5 vd.n0 vd.t0 0.014
+R6 vd.n2 vd.t2 0.013
+R7 in.n0 in.t1 236.307
+R8 in.n0 in.t0 236.307
+R9 in in.n0 1.834
+C0 out vd 1.77fF
+C1 in out 0.77fF
+C2 in.t1 gnd 0.28fF
+C3 in.t0 gnd 0.28fF
+C4 in.n0 gnd 2.40fF $ **FLOATING
+C5 vd.t0 gnd 12.71fF
+C6 vd.n0 gnd 5.39fF $ **FLOATING
+C7 vd.t1 gnd 12.72fF
+C8 vd.n1 gnd 6.55fF $ **FLOATING
+C9 vd.t2 gnd 12.66fF
+C10 vd.n2 gnd 13.12fF $ **FLOATING
+C11 in gnd 6.97fF
+C12 out gnd 308.19fF
+C13 vd gnd 139.61fF"}
 C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym} 500 -205 1 0 {name=xl0}
 C {sky130_fd_pr/cap_mim_m3_2.sym} 100 -190 0 0 {name=C1 model=cap_mim_m3_2 W=24.5 L=24.5 MF=1 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_2.sym} 230 -190 0 0 {name=C2 model=cap_mim_m3_2 W=24.5 L=24.5 MF=1 spiceprefix=X}
