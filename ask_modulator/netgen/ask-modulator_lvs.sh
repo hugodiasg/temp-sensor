@@ -1,1 +1,1 @@
-netgen lvs /home/hugodg/projects_sky130/temp_sensor/ask_modulator/mag/ask-modulator.spice /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/simulation/ask-modulator.spice
+netgen -batch lvs "/home/hugodg/projects_sky130/temp_sensor/ask_modulator/mag/ask-modulator.spice ask-modulator" "/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/simulation/ask-modulator.spice ask-modulator" -blackbox

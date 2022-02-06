@@ -7,14 +7,10 @@ E {}
 T {3.83pF
 3 x sq -> 25.108um} -520 -540 0 0 0.4 0.4 {}
 T {42.974ohms
-W/L =5.75/0.50} 350 -550 0 0 0.4 0.4 {}
+W/L =5.75/0.50} 192.5 -360 0 0 0.4 0.4 {}
 N 200 -592.5 200 -572.5 {
 lab=a}
 N 200 -490 200 -470 {
-lab=GND}
-N -280 -490 -150 -490 {
-lab=GND}
-N -150 -490 -20 -490 {
 lab=GND}
 N 122.5 -490 200 -490 {
 lab=GND}
@@ -27,14 +23,6 @@ lab=a}
 N -20 -572.5 122.5 -572.5 {
 lab=a}
 N -20 -572.5 -20 -550 {
-lab=a}
-N -150 -572.5 -20 -572.5 {
-lab=a}
-N -150 -572.5 -150 -550 {
-lab=a}
-N -280 -572.5 -150 -572.5 {
-lab=a}
-N -280 -572.5 -280 -550 {
 lab=a}
 C {devices/lab_pin.sym} 200 -592.5 0 0 {name=l1 sig_type=std_logic lab=a}
 C {devices/gnd.sym} 200 -470 0 0 {name=l3 lab=GND}
@@ -51,13 +39,11 @@ plot imag(a/(-i(vdd)))
 plot real(a/(-i(vdd)))
 .endc"}
 C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym} 120 -535 1 0 {name=xl0}
-C {sky130_fd_pr/cap_mim_m3_2.sym} -280 -520 0 0 {name=C1 model=cap_mim_m3_2 W=24.5 L=24.5 MF=1 spiceprefix=X}
 C {devices/gnd.sym} 180 -520 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/cap_mim_m3_2.sym} -150 -520 0 0 {name=C2 model=cap_mim_m3_2 W=24.5 L=24.5 MF=1 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_2.sym} -20 -520 0 0 {name=C3 model=cap_mim_m3_2 W=24.5 L=24.5 MF=1 spiceprefix=X}
-C {sky130_fd_pr/res_high_po_5p73.sym} 200 -520 0 0 {name=R1
+C {sky130_fd_pr/cap_mim_m3_2.sym} -20 -520 0 0 {name=C0 model=cap_mim_m3_2 W=24 L=24 MF=3 spiceprefix=X}
+C {sky130_fd_pr/res_high_po_5p73.sym} 200 -520 0 0 {name=R0
 W=5.73
-L=0.5
+L=0.56
 model=res_high_po_5p73
 spiceprefix=X
-mult=1}
+mult=4}

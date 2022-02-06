@@ -2,10 +2,8 @@
 **.subckt rlc_tb-ac
 Vdd a GND DC 0 AC 1
 xl0 a GND l0
-XC1 a GND sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
-XC2 a GND sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
-XC3 a GND sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
-XR1 GND a GND sky130_fd_pr__res_high_po_5p73 L=0.5 mult=1 m=1
+XC0 a GND sky130_fd_pr__cap_mim_m3_2 W=24 L=24 MF=3 m=3
+XR0 GND a GND sky130_fd_pr__res_high_po_5p73 L=0.56 mult=4 m=4
 **** begin user architecture code
 
 .lib /home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt
@@ -32,11 +30,11 @@ plot real(a/(-i(vdd)))
 *.iopin p2
 *.iopin p1
 L0 p1 net3 1.006n m=1
-R net3 p2 5.426 m=1
 Cs1 p1 net1 10.86f m=1
 Cs2 p2 net2 11.96f m=1
 Rs1 net1 GND 114.5 m=1
 Rs2 net2 GND -66.9 m=1
+R1 p2 net3 5.426 m=1
 .ends
 
 .GLOBAL GND

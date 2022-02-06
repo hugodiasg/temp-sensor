@@ -1,11 +1,14 @@
 ** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator_tb-tran.sch
 **.subckt ask-modulator_tb-tran
 Vdd vd GND 3.3
-Vin in GND PULSE(0V 1.8V 0.5ns 0.1ns 0.1ns 20ns 40ns)
+Vin in GND PULSE(0V 1.8V 0.5ns 0.1ns 0.1ns 100ns 200ns)
 x1 vd out in GND ask-modulator
 **** begin user architecture code
 
-.tran 0.5n 40n
+
+*.tran 0.3n 110n
+*.tran 0.5n 200n
+.tran 1n 1000n
 .control
 destroy all
 run
@@ -35,48 +38,50 @@ plot s
 *.ipin in
 *.opin out
 *.iopin vd
-XM2 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=8.7 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM2 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=8.7 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
+XC0 vd out sky130_fd_pr__cap_mim_m3_2 W=24 L=24 MF=3 m=3
+XR0 out vd gnd sky130_fd_pr__res_high_po_5p73 L=0.56 mult=4 m=4
+x1 vd out l0
 **** begin user architecture code
 
-*X0 vd.t2 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-*X1 gnd in.t0 out gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.856e+07u as=1.2615e+12p
-*+ ps=9.28e+06u w=0u l=0u
-*X2 out in.t1 gnd gnd sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=0u l=0u
-*X3 vd.t0 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-*X4 vd.t1 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-R0 vd vd.n2 2.382
-R1 vd.n2 vd.n1 0.07
-R2 vd.n1 vd.n0 0.065
-R3 vd.n0 vd 0.031
-R4 vd.n1 vd.t1 0.014
-R5 vd.n0 vd.t0 0.014
-R6 vd.n2 vd.t2 0.013
-R7 in.n0 in.t1 236.307
-R8 in.n0 in.t0 236.307
-R9 in in.n0 1.834
-C0 out vd 1.77fF
-C1 in out 0.77fF
-C2 in.t1 gnd 0.28fF
-C3 in.t0 gnd 0.28fF
-C4 in.n0 gnd 2.40fF $ **FLOATING
-C5 vd.t0 gnd 12.71fF
-C6 vd.n0 gnd 5.39fF $ **FLOATING
-C7 vd.t1 gnd 12.72fF
-C8 vd.n1 gnd 6.55fF $ **FLOATING
-C9 vd.t2 gnd 12.66fF
-C10 vd.n2 gnd 13.12fF $ **FLOATING
-C11 in gnd 6.97fF
-C12 out gnd 308.19fF
-C13 vd gnd 139.61fF
+*X0 out.t4 out.t5 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+*X1 out in.t0 gnd gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p
+*+ ps=1.798e+07u w=0u l=0u
+*X2 out.t0 out.t1 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+*X3 out.t2 out.t3 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+R0 out.n2 out 3.44
+R1 out.n3 out 2.874
+R2 out out.n2 1.395
+R3 out.n0 out.t5 0.485
+R4 out.n1 out.n0 0.484
+R5 out.n3 out.t0 0.146
+R6 out.n2 out.n1 0.122
+R7 out.t2 out.t4 0.064
+R8 out.t0 out.t2 0.064
+R9 out out.n3 0.042
+R10 out.n0 out.t3 0.023
+R11 out.n1 out.t1 0.001
+R12 in in.t0 446.69
+C0 in gnd 0.98fF
+C1 out in 0.05fF
+C2 out gnd 3.40fF
+C3 out.t3 0 8.30fF
+C4 out.t5 0 11.92fF
+C5 out.n0 0 4.15fF $ **FLOATING
+C6 out.t1 0 5.68fF
+C7 out.n1 0 6.72fF $ **FLOATING
+C8 out.n2 0 20.76fF $ **FLOATING
+C9 out.t4 0 18.71fF
+C10 out.t2 0 18.76fF
+C11 out.t0 0 19.44fF
+C12 out.n3 0 15.11fF $ **FLOATING
+C13 out 0 314.11fF
+C14 gnd 0 12.33fF
+C15 in 0 1.73fF
 
 **** end user architecture code
-xl0 vd out l0
-XC1 vd out sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
-XC2 vd out sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
-XC3 vd out sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=1 m=1
-XR1 out vd gnd sky130_fd_pr__res_high_po_5p73 L=0.5 mult=1 m=1
 .ends
 
 
@@ -88,11 +93,11 @@ XR1 out vd gnd sky130_fd_pr__res_high_po_5p73 L=0.5 mult=1 m=1
 *.iopin p2
 *.iopin p1
 L0 p1 net3 1.006n m=1
-R net3 p2 5.426 m=1
 Cs1 p1 net1 10.86f m=1
 Cs2 p2 net2 11.96f m=1
 Rs1 net1 GND 114.5 m=1
 Rs2 net2 GND -66.9 m=1
+R1 p2 net3 5.426 m=1
 .ends
 
 .GLOBAL GND
