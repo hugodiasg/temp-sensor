@@ -55,9 +55,9 @@ C {devices/iopin.sym} 360 -262.5 3 0 {name=p2 lab=vd}
 C {sky130_fd_pr/cap_mim_m3_2.sym} 360 -190 0 0 {name=C0 model=cap_mim_m3_2 W=23 L=23 MF=3 spiceprefix=X}
 C {devices/lab_pin.sym} 560 -190 0 0 {name=l1 sig_type=std_logic lab=gnd}
 C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym} 500 -205 1 0 {name=x1}
-C {devices/code_shown.sym} 967.5 -87.5 0 0 {name=RC-Ext only_toplevel=false value="*X0 out in.t0 gnd gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=0u l=0u
+C {devices/code_shown.sym} 967.5 -87.5 0 0 {name=RC-Ext only_toplevel=false value="R0 gnd gnd sky130_fd_pr__res_generic_l1 w=-1.0046e+13u l=2.76e+07u
+*X0 out in.t0 gnd gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=0u l=0u
 *X1 out.t4 out.t5 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-R0 gnd gnd sky130_fd_pr__res_generic_l1 w=-1.40235e+12u l=2.35e+07u
 *X2 out.t0 out.t1 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
 *X3 out.t2 out.t3 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
 R1 out.n2 out 3.403
@@ -74,19 +74,19 @@ R11 out.n0 out.t3 0.023
 R12 out.n1 out.t1 0.002
 R13 in in.t0 446.69
 C0 in out 0.05fF
-C1 li_17191_n190# gnd 1.60fF $ **FLOATING
+C1 li_17160_180# gnd 2.12fF $ **FLOATING
 C2 in.t0 gnd 0.40fF
 C3 out.t3 gnd 7.61fF
 C4 out.t5 gnd 10.97fF
 C5 out.n0 gnd 3.85fF $ **FLOATING
-C6 out.t1 gnd 5.33fF
+C6 out.t1 gnd 5.32fF
 C7 out.n1 gnd 6.22fF $ **FLOATING
 C8 out.n2 gnd 20.09fF $ **FLOATING
 C9 out.t4 gnd 16.65fF
 C10 out.t2 gnd 16.70fF
-C11 out.t0 gnd 17.48fF
+C11 out.t0 gnd 17.47fF
 C12 out.n3 gnd 14.27fF $ **FLOATING
-C13 out gnd 304.73fF
+C13 out gnd 304.72fF
 C14 in gnd 5.02fF"
 }
 C {sky130_fd_pr/res_high_po_5p73.sym} 580 -190 0 0 {name=R1

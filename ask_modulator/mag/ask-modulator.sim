@@ -7,7 +7,8 @@ x out out l=4600 w=4600 x=14101 y=9831 sky130_fd_pr__cap_mim_m3_2
 x out out l=4600 w=4600 x=14101 y=14731 sky130_fd_pr__cap_mim_m3_2
 x out out l=4600 w=4600 x=14101 y=19630 sky130_fd_pr__cap_mim_m3_2
 r gnd gnd 0.000000
-R li_17191_n190# 92
+C li_17160_180# GND 2.12
+R li_17160_180# 95
 C out GND 212.22
 R out 4286
 = out sky130_fd_pr__cap_mim_m3_2_QKF9RA_0/m4_n2479_n7300#
@@ -26,7 +27,7 @@ R out 4286
 C in GND 2.71
 R in 1027
 = in XM2/a_n50_n958#
-R gnd 114780
+R gnd 106870
 = gnd l0_0/VSUBS
 = gnd sky130_fd_pr__cap_mim_m3_2_QKF9RA_0/VSUBS
 = gnd XR0/w_n2133_n654#
