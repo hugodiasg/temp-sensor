@@ -34,15 +34,15 @@ Circuit 1: sky130_fd_pr__cap_mim_m3_2      |Circuit 2: sky130_fd_pr__cap_mim_m3_
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__cap_mim_m3_2 and sky130_fd_pr__cap_mim_m3_2 are equivalent.
-Flattening unmatched subcell sky130_fd_pr__res_high_po_5p73_CAGT5B in circuit ask-modulator (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__res_high_po_5p73_K9JT5B in circuit ask-modulator (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_g5v0d10v5_FLFTBY in circuit ask-modulator (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_2_U2MGMH in circuit ask-modulator (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_2_QKF9RA in circuit ask-modulator (0)(1 instance)
 
-Class ask-modulator (0):  Merged 5 parallel devices.
+Class ask-modulator (0):  Merged 4 parallel devices.
 Subcircuit summary:
 Circuit 1: ask-modulator                   |Circuit 2: ask-modulator                   
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__res_high_po_5p73 (4->1)      |sky130_fd_pr__res_high_po_5p73 (4->1)      
+sky130_fd_pr__res_high_po_5p73 (3->1)      |sky130_fd_pr__res_high_po_5p73 (2->1)      
 sky130_fd_pr__nfet_g5v0d10v5 (1)           |sky130_fd_pr__nfet_g5v0d10v5 (1)           
 sky130_fd_pr__cap_mim_m3_2 (3->1)          |sky130_fd_pr__cap_mim_m3_2 (3->1)          
 Number of devices: 3                       |Number of devices: 3                       
@@ -52,7 +52,10 @@ Circuits match uniquely.
 Property errors were found.
 Netlists match uniquely.
 There were property errors.
-sky130_fd_pr__cap_mim_m3_2_U2MGMH_0/sky130_fd_pr__cap_mim_m3_2:0 vs. sky130_fd_pr__cap_mim_m3_2:C0:
+sky130_fd_pr__cap_mim_m3_2_QKF9RA_0/sky130_fd_pr__cap_mim_m3_2:0 vs. sky130_fd_pr__cap_mim_m3_2:C0:
+ w circuit1: 23   circuit2: 22.8   (delta=0.873%, cutoff=0%)
+ l circuit1: 23   circuit2: 22.8   (delta=0.873%, cutoff=0%)
+sky130_fd_pr__cap_mim_m3_2_QKF9RA_0/sky130_fd_pr__cap_mim_m3_2:0 vs. sky130_fd_pr__cap_mim_m3_2:C0:
 Property MF in circuit2 has no matching property in circuit1
 sky130_fd_pr__nfet_g5v0d10v5_FLFTBY:XM2/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M2:
  ps circuit1: "17.98"   (unresolved expression)  (property type mismatch)
@@ -73,16 +76,18 @@ sky130_fd_pr__nfet_g5v0d10v5_FLFTBY:XM2/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky13
 Property nrd in circuit2 has no matching property in circuit1
 sky130_fd_pr__nfet_g5v0d10v5_FLFTBY:XM2/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M2:
 Property nf in circuit2 has no matching property in circuit1
-sky130_fd_pr__res_high_po_5p73_CAGT5B:XR0/sky130_fd_pr__res_high_po_5p73:0 vs. sky130_fd_pr__res_high_po_5p73:R0:
+sky130_fd_pr__res_high_po_5p73_K9JT5B:XR0/sky130_fd_pr__res_high_po_5p73:0 vs. sky130_fd_pr__res_high_po_5p73:R1:
+ M circuit1: 3   circuit2: 2   (delta=1, cutoff=0)
+sky130_fd_pr__res_high_po_5p73_K9JT5B:XR0/sky130_fd_pr__res_high_po_5p73:0 vs. sky130_fd_pr__res_high_po_5p73:R1:
 Property mult in circuit2 has no matching property in circuit1
 
 Subcircuit pins:
 Circuit 1: ask-modulator                   |Circuit 2: ask-modulator                   
 -------------------------------------------|-------------------------------------------
 in                                         |in                                         
-vd                                         |vd                                         
 out                                        |out                                        
 gnd                                        |gnd                                        
+vd                                         |vd                                         
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes ask-modulator and ask-modulator are equivalent.

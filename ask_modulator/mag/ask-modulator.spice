@@ -1,29 +1,23 @@
 * NGSPICE file created from ask-modulator.ext - technology: sky130A
 
-.subckt sky130_fd_pr__res_high_po_5p73_CAGT5B a_n2664_n488# a_124_56# a_n1270_n488#
-+ a_1518_n488# a_n2664_56# a_1518_56# a_124_n488# a_n1270_56# w_n2830_n654#
-X0 a_n1270_n488# a_n1270_56# w_n2830_n654# sky130_fd_pr__res_high_po_5p73 l=560000u
-X1 a_1518_n488# a_1518_56# w_n2830_n654# sky130_fd_pr__res_high_po_5p73 l=560000u
-X2 a_124_n488# a_124_56# w_n2830_n654# sky130_fd_pr__res_high_po_5p73 l=560000u
-X3 a_n2664_n488# a_n2664_56# w_n2830_n654# sky130_fd_pr__res_high_po_5p73 l=560000u
-C0 a_124_n488# a_1518_n488# 0.19fF
-C1 a_n2664_n488# a_n1270_n488# 0.19fF
-C2 a_124_56# a_1518_56# 0.19fF
-C3 a_124_n488# a_124_56# 0.72fF
-C4 a_n1270_n488# a_n1270_56# 0.72fF
-C5 a_n2664_n488# a_n2664_56# 0.72fF
-C6 a_n2664_56# a_n1270_56# 0.19fF
-C7 a_n1270_56# a_124_56# 0.19fF
-C8 a_1518_n488# a_1518_56# 0.72fF
-C9 a_124_n488# a_n1270_n488# 0.19fF
-C10 a_1518_n488# w_n2830_n654# 2.00fF
-C11 a_1518_56# w_n2830_n654# 2.00fF
-C12 a_124_n488# w_n2830_n654# 1.58fF
-C13 a_124_56# w_n2830_n654# 1.58fF
-C14 a_n1270_n488# w_n2830_n654# 1.58fF
-C15 a_n1270_56# w_n2830_n654# 1.58fF
-C16 a_n2664_n488# w_n2830_n654# 1.81fF
-C17 a_n2664_56# w_n2830_n654# 1.81fF
+.subckt sky130_fd_pr__res_high_po_5p73_K9JT5B a_n1967_56# w_n2133_n654# a_n573_56#
++ a_821_56# a_n1967_n488# a_821_n488# a_n573_n488#
+X0 a_821_n488# a_821_56# w_n2133_n654# sky130_fd_pr__res_high_po_5p73 l=560000u
+X1 a_n1967_n488# a_n1967_56# w_n2133_n654# sky130_fd_pr__res_high_po_5p73 l=560000u
+X2 a_n573_n488# a_n573_56# w_n2133_n654# sky130_fd_pr__res_high_po_5p73 l=560000u
+C0 a_n573_n488# a_821_n488# 0.19fF
+C1 a_n573_56# a_n573_n488# 0.72fF
+C2 a_n1967_56# a_n1967_n488# 0.72fF
+C3 a_821_56# a_821_n488# 0.72fF
+C4 a_n1967_56# a_n573_56# 0.19fF
+C5 a_n573_56# a_821_56# 0.19fF
+C6 a_n573_n488# a_n1967_n488# 0.19fF
+C7 a_821_n488# w_n2133_n654# 2.00fF
+C8 a_821_56# w_n2133_n654# 2.00fF
+C9 a_n573_n488# w_n2133_n654# 1.58fF
+C10 a_n573_56# w_n2133_n654# 1.58fF
+C11 a_n1967_n488# w_n2133_n654# 1.81fF
+C12 a_n1967_56# w_n2133_n654# 1.81fF
 .ends
 
 .subckt sky130_fd_pr__nfet_g5v0d10v5_FLFTBY a_n108_n870# a_n50_n958# w_n278_n1128#
@@ -35,51 +29,51 @@ C2 a_n108_n870# w_n278_n1128# 0.85fF
 C3 a_n50_n958# w_n278_n1128# 0.52fF
 .ends
 
-.subckt sky130_fd_pr__cap_mim_m3_2_U2MGMH m4_n2579_n7600# c2_n2479_n7500# VSUBS
-X0 c2_n2479_n7500# m4_n2579_n7600# sky130_fd_pr__cap_mim_m3_2 l=2.4e+07u w=2.4e+07u
-X1 c2_n2479_n7500# m4_n2579_n7600# sky130_fd_pr__cap_mim_m3_2 l=2.4e+07u w=2.4e+07u
-X2 c2_n2479_n7500# m4_n2579_n7600# sky130_fd_pr__cap_mim_m3_2 l=2.4e+07u w=2.4e+07u
-C0 c2_n2479_n7500# m4_n2579_n7600# 126.82fF
-C1 c2_n2479_n7500# VSUBS 0.26fF
-C2 m4_n2579_n7600# VSUBS 29.98fF
+.subckt sky130_fd_pr__cap_mim_m3_2_QKF9RA c2_n2379_n7200# m4_n2479_n7300# VSUBS
+X0 c2_n2379_n7200# m4_n2479_n7300# sky130_fd_pr__cap_mim_m3_2 l=2.3e+07u w=2.3e+07u
+X1 c2_n2379_n7200# m4_n2479_n7300# sky130_fd_pr__cap_mim_m3_2 l=2.3e+07u w=2.3e+07u
+X2 c2_n2379_n7200# m4_n2479_n7300# sky130_fd_pr__cap_mim_m3_2 l=2.3e+07u w=2.3e+07u
+C0 m4_n2479_n7300# c2_n2379_n7200# 106.47fF
+C1 c2_n2379_n7200# VSUBS 0.26fF
+C2 m4_n2479_n7300# VSUBS 28.22fF
 .ends
 
 .subckt ask-modulator in out gnd
-XXR0 out out out out out out out out gnd sky130_fd_pr__res_high_po_5p73_CAGT5B
+XXR0 out gnd out out out out out sky130_fd_pr__res_high_po_5p73_K9JT5B
 XXM2 gnd in gnd out sky130_fd_pr__nfet_g5v0d10v5_FLFTBY
-Xsky130_fd_pr__cap_mim_m3_2_U2MGMH_0 out out gnd sky130_fd_pr__cap_mim_m3_2_U2MGMH
-X0 out.t4 out.t5 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X1 out in.t0 gnd gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=0u l=0u
+Xsky130_fd_pr__cap_mim_m3_2_QKF9RA_0 out out gnd sky130_fd_pr__cap_mim_m3_2_QKF9RA
+X0 out in.t0 gnd gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=0u l=0u
+X1 out.t4 out.t5 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+R0 gnd gnd sky130_fd_pr__res_generic_l1 w=-1.40235e+12u l=2.35e+07u
 X2 out.t0 out.t1 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
 X3 out.t2 out.t3 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-R0 out.n2 out 3.44
-R1 out.n3 out 2.874
-R2 out out.n2 1.395
-R3 out.n0 out.t5 0.485
-R4 out.n1 out.n0 0.484
-R5 out.n3 out.t0 0.146
-R6 out.n2 out.n1 0.122
-R7 out.t2 out.t4 0.064
-R8 out.t0 out.t2 0.064
-R9 out out.n3 0.042
-R10 out.n0 out.t3 0.023
-R11 out.n1 out.t1 0.001
-R12 in in.t0 446.69
-C0 in gnd 0.98fF
-C1 out in 0.05fF
-C2 out gnd 3.40fF
-C3 out.t3 0 8.30fF
-C4 out.t5 0 11.92fF
-C5 out.n0 0 4.15fF $ **FLOATING
-C6 out.t1 0 5.68fF
-C7 out.n1 0 6.72fF $ **FLOATING
-C8 out.n2 0 20.76fF $ **FLOATING
-C9 out.t4 0 18.71fF
-C10 out.t2 0 18.76fF
-C11 out.t0 0 19.44fF
-C12 out.n3 0 15.11fF $ **FLOATING
-C13 out 0 314.11fF
-C14 gnd 0 12.33fF
-C15 in 0 1.73fF
+R1 out.n2 out 3.403
+R2 out.n3 out 2.851
+R3 out out.n2 1.395
+R4 out.n0 out.t5 0.467
+R5 out.n1 out.n0 0.465
+R6 out.n3 out.t0 0.161
+R7 out.n2 out.n1 0.144
+R8 out.t2 out.t4 0.066
+R9 out.t0 out.t2 0.066
+R10 out out.n3 0.042
+R11 out.n0 out.t3 0.023
+R12 out.n1 out.t1 0.002
+R13 in in.t0 446.69
+C0 in out 0.05fF
+C1 li_17191_n190# gnd 1.60fF $ **FLOATING
+C2 in.t0 gnd 0.40fF
+C3 out.t3 gnd 7.61fF
+C4 out.t5 gnd 10.97fF
+C5 out.n0 gnd 3.85fF $ **FLOATING
+C6 out.t1 gnd 5.33fF
+C7 out.n1 gnd 6.22fF $ **FLOATING
+C8 out.n2 gnd 20.09fF $ **FLOATING
+C9 out.t4 gnd 16.65fF
+C10 out.t2 gnd 16.70fF
+C11 out.t0 gnd 17.48fF
+C12 out.n3 gnd 14.27fF $ **FLOATING
+C13 out gnd 304.73fF
+C14 in gnd 5.02fF
 .ends
 

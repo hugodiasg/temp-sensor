@@ -2,21 +2,25 @@
 **.subckt rlc_tb-ac
 Vdd a GND DC 0 AC 1
 xl0 a GND l0
-XC0 a GND sky130_fd_pr__cap_mim_m3_2 W=24 L=24 MF=3 m=3
-XR0 GND a GND sky130_fd_pr__res_high_po_5p73 L=0.56 mult=4 m=4
+XC0 a GND sky130_fd_pr__cap_mim_m3_2 W=23 L=23 MF=3 m=3
+XR0 GND a GND sky130_fd_pr__res_high_po_5p73 L=0.56 mult=3 m=3
 **** begin user architecture code
 
 .lib /home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt
 
 
 
-.ac lin 1Meg 2G 3G
+.ac lin 1Meg 2.4G 3G
 .control
 destroy all
 run
-plot a/(-i(vdd))
-plot imag(a/(-i(vdd)))
-plot real(a/(-i(vdd)))
+let r=a/real(-i(vdd))
+let x=imag(a/(-i(vdd)))
+let z=a/(-i(vdd))
+plot z
+plot x
+plot r
+
 .endc
 
 **** end user architecture code

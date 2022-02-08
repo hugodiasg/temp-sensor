@@ -20,20 +20,27 @@ C {devices/gnd.sym} 160 -30 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=out}
 C {devices/lab_pin.sym} 175 -190 2 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/gnd.sym} -180 -80 0 0 {name=l5 lab=GND}
-C {devices/code_shown.sym} 490 -430 0 0 {name=Simulation only_toplevel=false value="
+C {devices/code_shown.sym} 410 -560 0 0 {name=Simulation only_toplevel=false value="
 .ac lin 1MEG 2G 4G
 .control
 destroy all
 run
 let id =-i(vdd)
 let phase = ph(out)*180/3.14159265358979323846
-plot db(abs(out/in))
+let r_out= out/real(-i(vdd))
+plot vdb(out)
 plot phase
-let z_rlc= (in-out)/id
-let z_nmos=in/id
+*rlc
+let s_rlc=(out-vd)*conj(-i(vdd))
+let z_rlc=(out-vd)/id
+*nmos
+let s_nmos=out*conj(-i(vdd))
+let z_nmos=out/id
+*ask-modulator
+let s=s_nmos+s_rlc
 let z_out=z_rlc*z_nmos/(z_rlc+z_nmos)
-plot imag(z_out)
 plot z_out
+plot s
 .endc"}
 C {devices/code_shown.sym} 410 -70 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
 C {devices/gnd.sym} 175 -270 2 0 {name=l6 lab=GND}

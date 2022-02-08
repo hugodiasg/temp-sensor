@@ -30,20 +30,24 @@ C {devices/vsource.sym} 200 -622.5 2 0 {name=Vdd value="DC 0 AC 1"}
 C {devices/gnd.sym} 200 -652.5 2 0 {name=l4 lab=GND}
 C {devices/code_shown.sym} 440 -360 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
 C {devices/code_shown.sym} 430 -250 0 0 {name=Simulation only_toplevel=false value="
-.ac lin 1Meg 2G 3G
+.ac lin 1Meg 2.4G 3G
 .control
 destroy all
 run
-plot a/(-i(vdd))
-plot imag(a/(-i(vdd)))
-plot real(a/(-i(vdd)))
+let r=a/real(-i(vdd))
+let x=imag(a/(-i(vdd)))
+let z=a/(-i(vdd))
+plot z
+plot x
+plot r
+
 .endc"}
 C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym} 120 -535 1 0 {name=xl0}
 C {devices/gnd.sym} 180 -520 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/cap_mim_m3_2.sym} -20 -520 0 0 {name=C0 model=cap_mim_m3_2 W=24 L=24 MF=3 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} -20 -520 0 0 {name=C0 model=cap_mim_m3_2 W=23 L=23 MF=3 spiceprefix=X}
 C {sky130_fd_pr/res_high_po_5p73.sym} 200 -520 0 0 {name=R0
 W=5.73
 L=0.56
 model=res_high_po_5p73
 spiceprefix=X
-mult=4}
+mult=3}
