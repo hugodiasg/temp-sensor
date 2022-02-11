@@ -16,3 +16,11 @@ L = 1.006 nH R = 5.426
 Cs1 = 10.86 fF Rs1 = 114.5 
 Cs2 = 11.96 fF Rs2 = -66.9      Est. Resonance = 51.94 GHz
 
+Indutor sem R negativo 
+ SQ NAME=l0:LEN=150:W=6:S=3:N=1.75:METAL=MET5:EXIT=MET4:XORG=0:YORG=0
+Pi Model at f=2.5 GHz:  Q = 3.453 , 3.453 , 3.458 
+L = 1.077 nH R = 4.884 
+Cs1 = 10.78 fF Rs1 = 41.32 
+Cs2 = 10.54 fF Rs2 = 6.311      Est. Resonance = 47.12 GHz
+
+

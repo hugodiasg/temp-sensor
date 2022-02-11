@@ -28,10 +28,10 @@ plot id
 plot real(zout)
 .endc"}
 C {devices/code_shown.sym} 370 -180 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
-C {xschem_sky130/sky130_fd_pr/nfet_g5v0d10v5.sym} 160 -200 0 0 {name=M1
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 160 -200 0 0 {name=M1
 L=0.5
 W=8.7
-nf=2
+nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"

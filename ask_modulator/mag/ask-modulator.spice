@@ -1,31 +1,17 @@
 * NGSPICE file created from ask-modulator.ext - technology: sky130A
 
-.subckt sky130_fd_pr__res_high_po_5p73_K9JT5B a_n1967_56# w_n2133_n654# a_n573_56#
-+ a_821_56# a_n1967_n488# a_821_n488# a_n573_n488#
-X0 a_821_n488# a_821_56# w_n2133_n654# sky130_fd_pr__res_high_po_5p73 l=560000u
-X1 a_n1967_n488# a_n1967_56# w_n2133_n654# sky130_fd_pr__res_high_po_5p73 l=560000u
-X2 a_n573_n488# a_n573_56# w_n2133_n654# sky130_fd_pr__res_high_po_5p73 l=560000u
-C0 a_n1967_n488# a_n573_n488# 0.19fF
-C1 a_n573_56# a_n573_n488# 0.72fF
-C2 a_821_56# a_n573_56# 0.19fF
-C3 a_821_n488# a_n573_n488# 0.19fF
-C4 a_821_n488# a_821_56# 0.72fF
-C5 a_n1967_n488# a_n1967_56# 0.72fF
-C6 a_n573_56# a_n1967_56# 0.19fF
-C7 a_821_n488# w_n2133_n654# 2.00fF
-C8 a_821_56# w_n2133_n654# 2.00fF
-C9 a_n573_n488# w_n2133_n654# 1.58fF
-C10 a_n573_56# w_n2133_n654# 1.58fF
-C11 a_n1967_n488# w_n2133_n654# 1.81fF
-C12 a_n1967_56# w_n2133_n654# 1.81fF
+.subckt sky130_fd_pr__res_xhigh_po_0p35_NVRUDW w_n201_n1098# a_n35_500# a_n35_n932#
+X0 a_n35_n932# a_n35_500# w_n201_n1098# sky130_fd_pr__res_xhigh_po_0p35 l=5e+06u
+C0 a_n35_n932# w_n201_n1098# 1.08fF
+C1 a_n35_500# w_n201_n1098# 1.08fF
 .ends
 
-.subckt sky130_fd_pr__nfet_g5v0d10v5_FLFTBY a_n108_n870# a_n50_n958# w_n278_n1128#
+.subckt sky130_fd_pr__nfet_g5v0d10v5_ML7W5H a_n108_n870# a_n50_n958# w_n278_n1128#
 + a_50_n870#
 X0 a_50_n870# a_n50_n958# a_n108_n870# w_n278_n1128# sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=8.7e+06u l=500000u
-C0 a_50_n870# a_n108_n870# 0.55fF
-C1 a_50_n870# w_n278_n1128# 0.83fF
-C2 a_n108_n870# w_n278_n1128# 0.85fF
+C0 a_50_n870# a_n108_n870# 1.16fF
+C1 a_50_n870# w_n278_n1128# 0.87fF
+C2 a_n108_n870# w_n278_n1128# 0.87fF
 C3 a_n50_n958# w_n278_n1128# 0.52fF
 .ends
 
@@ -33,47 +19,25 @@ C3 a_n50_n958# w_n278_n1128# 0.52fF
 X0 c2_n2379_n7200# m4_n2479_n7300# sky130_fd_pr__cap_mim_m3_2 l=2.3e+07u w=2.3e+07u
 X1 c2_n2379_n7200# m4_n2479_n7300# sky130_fd_pr__cap_mim_m3_2 l=2.3e+07u w=2.3e+07u
 X2 c2_n2379_n7200# m4_n2479_n7300# sky130_fd_pr__cap_mim_m3_2 l=2.3e+07u w=2.3e+07u
-C0 c2_n2379_n7200# m4_n2479_n7300# 106.47fF
+C0 m4_n2479_n7300# c2_n2379_n7200# 106.47fF
 C1 c2_n2379_n7200# VSUBS 0.26fF
 C2 m4_n2479_n7300# VSUBS 28.22fF
 .ends
 
 .subckt ask-modulator in out gnd
-XXR0 out gnd out out out out out sky130_fd_pr__res_high_po_5p73_K9JT5B
-XXM2 gnd in gnd out sky130_fd_pr__nfet_g5v0d10v5_FLFTBY
-Xsky130_fd_pr__cap_mim_m3_2_QKF9RA_0 out out gnd sky130_fd_pr__cap_mim_m3_2_QKF9RA
-R0 gnd gnd sky130_fd_pr__res_generic_l1 w=-1.0046e+13u l=2.76e+07u
-X0 out in.t0 gnd gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=0u l=0u
-X1 out.t4 out.t5 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X2 out.t0 out.t1 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X3 out.t2 out.t3 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-R1 out.n2 out 3.403
-R2 out.n3 out 2.851
-R3 out out.n2 1.395
-R4 out.n0 out.t5 0.467
-R5 out.n1 out.n0 0.465
-R6 out.n3 out.t0 0.161
-R7 out.n2 out.n1 0.144
-R8 out.t2 out.t4 0.066
-R9 out.t0 out.t2 0.066
-R10 out out.n3 0.042
-R11 out.n0 out.t3 0.023
-R12 out.n1 out.t1 0.002
-R13 in in.t0 446.69
-C0 in out 0.05fF
-C1 li_17160_180# gnd 2.12fF $ **FLOATING
-C2 in.t0 gnd 0.40fF
-C3 out.t3 gnd 7.61fF
-C4 out.t5 gnd 10.97fF
-C5 out.n0 gnd 3.85fF $ **FLOATING
-C6 out.t1 gnd 5.32fF
-C7 out.n1 gnd 6.22fF $ **FLOATING
-C8 out.n2 gnd 20.09fF $ **FLOATING
-C9 out.t4 gnd 16.65fF
-C10 out.t2 gnd 16.70fF
-C11 out.t0 gnd 17.47fF
-C12 out.n3 gnd 14.27fF $ **FLOATING
-C13 out gnd 304.72fF
-C14 in gnd 5.02fF
+XXR1 gnd out out sky130_fd_pr__res_xhigh_po_0p35_NVRUDW
+XXM1 gnd in gnd out sky130_fd_pr__nfet_g5v0d10v5_ML7W5H
+XXC0 out out gnd sky130_fd_pr__cap_mim_m3_2_QKF9RA
+X0 out out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X1 out in.t0 gnd gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=0u l=0u
+X2 out out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X3 out out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+R0 gnd.n0 gnd 0.619
+R1 gnd gnd.n0 0.07
+R2 gnd.n0 gnd 0.062
+R3 in in.t0 446.385
+C0 out in 0.05fF
+C1 out gnd 323.51fF
+C2 in gnd 1.10fF
 .ends
 
