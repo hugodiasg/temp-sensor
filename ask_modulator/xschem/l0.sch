@@ -44,12 +44,12 @@ value=10.54f
 footprint=1206
 device="ceramic capacitor"}
 C {devices/res.sym} 0 107.5 0 0 {name=Rs1
-value= 41.32
+value= 41.95
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} 192.5 107.5 0 0 {name=Rs2
-value= 6.311
+value= 5.649
 footprint=1206
 device=resistor
 m=1}
@@ -57,7 +57,7 @@ C {devices/iopin.sym} 222.5 0 0 0 {name=p1 lab=p2}
 C {devices/iopin.sym} -20 0 2 0 {name=p2 lab=p1}
 C {devices/gnd.sym} 112.5 172.5 0 0 {name=l1 lab=GND}
 C {devices/res.sym} 137.5 0 1 0 {name=R1
-value=4.884
+value=4.88
 footprint=1206
 device=resistor
 m=1}

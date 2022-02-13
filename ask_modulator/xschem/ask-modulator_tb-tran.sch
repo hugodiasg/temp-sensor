@@ -22,7 +22,7 @@ C {devices/lab_pin.sym} 155 -190 2 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/gnd.sym} -60 -170 2 0 {name=l5 lab=GND}
 C {devices/code_shown.sym} 400 -635 0 0 {name=Simulation only_toplevel=false value="
 *.tran 0.2n 30n
-.tran 0.04n 100n
+.tran 0.01n 100n
 *.tran 0.3n 400n
 *.tran 0.05n 1.3n
 .control
@@ -31,7 +31,7 @@ run
 let id =-i(vdd)
 plot id
 plot in
-plot out
+plot out 3.2950864
 *rlc
 let s_rlc=(out-vd)*conj(-i(vdd))
 *nmos

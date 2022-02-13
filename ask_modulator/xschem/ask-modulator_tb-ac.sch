@@ -43,9 +43,11 @@ C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=ns_out1}
 C {devices/lab_pin.sym} 175 -190 2 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/gnd.sym} -180 -80 0 0 {name=l5 lab=GND}
 C {devices/code_shown.sym} 395 -795 0 0 {name=Simulation only_toplevel=false value="
+
 .ac lin 1MEG 2G 4G
 .control
 destroy all
+set units=degrees
 run
 let z0=50
 

@@ -5,9 +5,9 @@ V {}
 S {}
 E {}
 T {R = 207.675 ohms} 240 -590 0 0 0.4 0.4 {}
-T {C=1.075pF
-3 x C (//) = 3.225fF} -250 -550 0 0 0.4 0.4 {}
 T {L=1.077nH} 0 -610 0 0 0.4 0.4 {}
+T {C=1.103pF
+3 x C (//) = 3.309fF} -280 -550 0 0 0.4 0.4 {}
 N 200 -592.5 200 -572.5 {
 lab=a}
 N 200 -490 200 -470 {
@@ -44,7 +44,7 @@ plot r
 .endc"}
 C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym} 120 -535 1 0 {name=xl0}
 C {devices/gnd.sym} 180 -520 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/cap_mim_m3_2.sym} -20 -520 0 0 {name=C0 model=cap_mim_m3_2 W=23 L=23 MF=3 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} -20 -520 0 0 {name=C0 model=cap_mim_m3_2 W=23.3 L=23.3 MF=3 spiceprefix=X}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} 200 -520 0 0 {name=R1
 W=0.35
 L=5

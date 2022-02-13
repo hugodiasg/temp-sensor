@@ -1,16 +1,28 @@
 scale 1000 1 500000
-rnode "in.t0" 0 0 6218 -3232 0
-rnode "in" 0 0 6100 -4720 0
-resist "in" "in.t0" 446.385
-rnode "gnd" 0 0 6880 -4700 0
-rnode "gnd" 0 0 6880 -4700 0
-rnode "gnd.n0" 0 0 6970 -4520 0
-rnode "gnd" 0 -0 6880 -4700 0
-resist "gnd.n0" "gnd" 0.062
-resist "gnd" "gnd.n0" 0.07
-resist "gnd.n0" "gnd" 0.619429
-rnode "out" 0 162340 7340 -4700 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 3880 9550 3881 9551  "None" "out" 36480 0 "out" -13228 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 3880 4650 3881 4651  "None" "out" 36480 0 "out" -13228 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 3880 -250 3881 -249  "None" "out" 36480 0 "out" -13228 0
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 6168 -4102 6169 -4101  "gnd" "in.t0" 200 0 "gnd" 1740 0 "out" 1740 0
+rnode "in.t0" 0 457.168 9818 -3632 0
+rnode "in" 0 2572.83 6340 -5360 0
+resist "in" "in.t0" 448.61
+rnode "gnd" 0 0 6340 -6180 0
+rnode "out.t2" 0 14161.7 10010 12020 0
+rnode "out.t0" 0 14200.4 10010 7060 0
+rnode "out.t4" 0 14436.5 10010 2100 0
+rnode "out" 0 361.153 6340 -6880 0
+rnode "out.n0" 0 46741.8 12200 -1900 0
+rnode "out.t1" 0 6467.68 10010 7060 0
+rnode "out.t5" 0 9311.79 10010 2100 0
+rnode "out.n1" 0 3271.83 7560 7060 0
+rnode "out.t3" 0 60754.2 10010 12020 0
+rnode "out" 0 2052.96 6340 -3040 0
+resist "out.n1" "out.t1" 0.023
+resist "out.t4" "out.t0" 0.066
+resist "out.t0" "out.t2" 0.066
+resist "out.n0" "out.t4" 0.164
+resist "out.t3" "out.n1" 0.471
+resist "out.n1" "out.t5" 0.472
+resist "out" "out.t3" 3.322
+resist "out.t3" "out.n0" 5.23
+resist "out.n0" "out" 6.736
+device csubckt sky130_fd_pr__cap_mim_m3_2 7680 4730 7681 4731  "None" "out.t0" 36960 0 "out.t1" -13402 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 7680 9690 7681 9691  "None" "out.t2" 36960 0 "out.t3" -13402 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 7680 -230 7681 -229  "None" "out.t4" 36960 0 "out.t5" -13402 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 9768 -4502 9769 -4501  "gnd" "in.t0" 200 0 "gnd" 1740 0 "out" 1740 0

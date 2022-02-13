@@ -7,8 +7,8 @@ E {}
 T {1.023kohms
 W/L =5.75/0.50} 940 -240 0 0 0.4 0.4 {}
 T {L=1.077nH} 430 -290 0 0 0.4 0.4 {}
-T {C=1.075pF
-3 x C (//) = 3.225fF} 130 -220 0 0 0.4 0.4 {}
+T {C=1.103pF
+3 x C (//) = 3.309fF} 130 -220 0 0 0.4 0.4 {}
 T {R = 207.675 ohms} 620 -240 0 0 0.4 0.4 {}
 N 360 -130 402.5 -130 {
 lab=out}
@@ -40,21 +40,35 @@ C {devices/iopin.sym} 360 -40 1 0 {name=p1 lab=gnd}
 C {devices/ipin.sym} 300 -90 0 0 {name=p3 lab=in}
 C {devices/opin.sym} 400 -130 0 0 {name=p4 lab=out}
 C {devices/iopin.sym} 360 -262.5 3 0 {name=p2 lab=vd}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 360 -190 0 0 {name=C0 model=cap_mim_m3_2 W=23 L=23 MF=3 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 360 -190 0 0 {name=C0 model=cap_mim_m3_2 W=23.3 L=23.3 MF=3 spiceprefix=X}
 C {devices/lab_pin.sym} 560 -190 0 0 {name=l1 sig_type=std_logic lab=gnd}
 C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym} 500 -205 1 0 {name=x1}
-C {devices/code_shown.sym} 930 -120 0 0 {name=RC-Ext only_toplevel=false value="*X0 out out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-*X1 out in.t0 gnd gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=0u l=0u
-*X2 out out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-*X3 out out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-R0 gnd.n0 gnd 0.619
-R1 gnd gnd.n0 0.07
-R2 gnd.n0 gnd 0.062
-R3 in in.t0 446.385
+C {devices/code_shown.sym} 930 -120 0 0 {name=RC-Ext only_toplevel=false value="*X0 out in.t0 gnd gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=0u l=0u
+*X1 out.t4 out.t5 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+*X2 out.t0 out.t1 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+*X3 out.t2 out.t3 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+R0 out.n0 out 6.736
+R1 out.t3 out.n0 5.23
+R2 out out.t3 3.322
+R3 out.n1 out.t5 0.472
+R4 out.t3 out.n1 0.471
+R5 out.n0 out.t4 0.164
+R6 out.t0 out.t2 0.066
+R7 out.t4 out.t0 0.066
+R8 out.n1 out.t1 0.023
+R9 in in.t0 448.61
 C0 out in 0.05fF
-C1 out gnd 323.51fF
-C2 in gnd 1.10fF"
-}
+C1 in.t0 gnd 0.46fF
+C2 out.t2 gnd 14.16fF
+C3 out.t0 gnd 14.20fF
+C4 out.t4 gnd 14.44fF
+C5 out.n0 gnd 46.74fF $ **FLOATING
+C6 out.t1 gnd 6.47fF
+C7 out.t5 gnd 9.31fF
+C8 out.n1 gnd 3.27fF $ **FLOATING
+C9 out.t3 gnd 60.75fF
+C10 out gnd 173.01fF
+C11 in gnd 5.60fF"}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 340 -90 0 0 {name=M1
 L=0.5
 W=8.7

@@ -1,14 +1,14 @@
 magic
 tech sky130A
-magscale 1 2
-timestamp 1644598236
-use 1  1_0
-timestamp 1644598236
-transform 1 0 -116 0 1 -141
-box 0 0 16000 16800
-<< labels >>
-flabel space 5963 16400 5963 16400 0 FreeSans 1600 0 0 0 p2
-port 1 nsew
-flabel space 335 15618 335 15618 0 FreeSans 1600 0 0 0 p1
-port 0 nsew
+timestamp 1644768986
+<< metal4 >>
+rect -600 900 1500 1500
+<< metal5 >>
+rect 0 14400 15000 15000
+rect 0 13500 14100 14100
+rect 0 600 600 13500
+rect 13500 1500 14100 13500
+rect 900 900 14100 1500
+rect 14400 600 15000 14400
+rect 0 0 15000 600
 << end >>
