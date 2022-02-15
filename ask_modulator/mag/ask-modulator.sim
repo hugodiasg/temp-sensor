@@ -1,27 +1,28 @@
-| units: 500000 tech: sky130A format: MIT
-x XR1/a_n35_n500# out out gnd l=1000 w=0 x=9359 y=-2066 sky130_fd_pr__res_xhigh_po_0p35
+| units: 500000 tech: sky130B format: MIT
+x XR1/a_n36_n500# out out gnd l=1000 w=0 x=9359 y=-2066 sky130_fd_pr__res_xhigh_po_0p35
 x in gnd out gnd l=100 w=1740 x=9866 y=-4501 sky130_fd_pr__nfet_g5v0d10v5
+x out out l=4660 w=4660 x=12338 y=4731 sky130_fd_pr__cap_mim_m3_2
 x out out l=4660 w=4660 x=12338 y=-229 sky130_fd_pr__cap_mim_m3_2
 x out out l=4660 w=4660 x=12338 y=9690 sky130_fd_pr__cap_mim_m3_2
-x out out l=4660 w=4660 x=12338 y=4731 sky130_fd_pr__cap_mim_m3_2
-C out GND 171.76
+C out GND 164.09
 R out 4383
-= out sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/c2_n2409_n7290#
-= out XR1/a_n35_500#
+= out sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/c2_n2410_n7290#
+= out XR1/a_n36_500#
 = out l0_0/m5_0_0#
 = out vd
 = out l0_0/m4_n1200_1800#
 = out m4_16080_14660#
-= out sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#
-= out XR1/a_n35_n932#
+= out sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#
+= out XR1/a_n36_n932#
 = out XM1/a_50_n870#
 C in GND 3.03
 R in 1029
 = in XM1/a_n50_n958#
-R gnd 101425
+R gnd 102353
 = gnd sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/VSUBS
-= gnd XR1/w_n201_n1098#
+= gnd XR1/w_n202_n1098#
 = gnd XM1/a_n108_n870#
+= gnd VSUBS
 = gnd XM1/w_n278_n1128#
 = gnd l0_0/VSUBS
-R XR1/a_n35_n500# 28571
+R XR1/a_n36_n500# 28571

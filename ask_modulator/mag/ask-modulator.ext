@@ -1,63 +1,67 @@
-timestamp 1644769631
+timestamp 1644922882
 version 8.3
-tech sky130A
+tech sky130B
 style ngspice()
 scale 1000 1 500000
 resistclasses 4400000 2200000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
-use sky130_fd_pr__res_xhigh_po_0p35_NVRUDW XR1 0 1 9858 -1 0 -2099
-use sky130_fd_pr__nfet_g5v0d10v5_ML7W5H XM1 -1 0 9818 0 1 -3632
+use sky130_fd_pr__cap_mim_m3_2_EZRVX8 sky130_fd_pr__cap_mim_m3_2_EZRVX8_0 -1 0 9930 0 1 7060
 use l0 l0_0 1 0 14200 0 -1 17600
-use sky130_fd_pr__cap_mim_m3_2_EZRVX8 sky130_fd_pr__cap_mim_m3_2_EZRVX8_0 -1 0 9931 0 1 7060
+use sky130_fd_pr__res_xhigh_po_0p35_NVRUDW XR1 0 1 9858 -1 0 -2100
+use sky130_fd_pr__nfet_g5v0d10v5_ML7W5H XM1 -1 0 9818 0 1 -3632
 port "in" 1 6340 -5360 6540 -5160 m1
+port "gnd" 0 6340 -6180 6540 -5980 m1
 port "vd" 3 6340 -6880 6540 -6680 m1
 port "out" 2 6340 -3040 6540 -2840 m1
-port "gnd" 0 6340 -6180 6540 -5980 m1
-node "m4_16080_14660#" 0 1888.89 16080 14660 v4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1123200 4240 1227264 4432 0 0
+node "m4_16080_14660#" 0 1758.81 16080 14660 v4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1123200 4240 1227264 4432 0 0
 node "in" 3 2312.28 6340 -5360 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 807200 8720 0 0 0 0 0 0 0 0 0 0
-node "vd" 7 16682.2 6340 -6880 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2888800 24240 384000 2560 384000 2560 384000 2560 13380976 35040 0 0
-node "out" 2 21866.6 6340 -3040 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4358800 18200 384000 2560 384000 2560 20370400 52040 0 0 0 0
-substrate "gnd" 0 0 6340 -6180 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 93600 1336 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 104000 1440 2801728 21464 0 0 0 0 0 0 0 0 0 0
+node "gnd" 5 6212.08 6340 -6180 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2795200 21440 0 0 0 0 0 0 0 0 0 0
+node "vd" 7 15664.9 6340 -6880 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2888800 24240 384000 2560 384000 2560 384000 2560 13381000 35040 0 0
+node "out" 2 19754.9 6340 -3040 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4358800 18200 384000 2560 384000 2560 20370400 52040 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "out" "gnd" 1281.59
+cap "vd" "gnd" 423
 cap "in" "out" 45
+cap "XM1/a_n108_n870#" "XM1/w_n278_n1128#" 276.85
 cap "XM1/a_n108_n870#" "XM1/a_50_n870#" -187.5
-cap "XM1/w_n278_n1128#" "XM1/a_n108_n870#" 276.85
-cap "XM1/w_n278_n1128#" "XM1/a_50_n870#" 276.85
-cap "XM1/a_n50_n958#" "XM1/a_n108_n870#" 7.10526
-cap "XM1/a_n50_n958#" "XM1/a_50_n870#" 4.73684
-cap "XM1/w_n278_n1128#" "XM1/a_n50_n958#" 308.85
-cap "XR1/w_n201_n1098#" "XM1/a_n50_n958#" 21.5625
-cap "XR1/w_n201_n1098#" "XM1/a_50_n870#" 89.2118
-cap "XR1/a_n35_n932#" "XR1/w_n201_n1098#" 292.415
-cap "XR1/a_n35_n932#" "XR1/w_n201_n1098#" -155.086
-cap "XR1/w_n201_n1098#" "XR1/a_n35_500#" 450.948
-cap "XM1/a_50_n870#" "XR1/w_n201_n1098#" -3.87456
-cap "XR1/w_n201_n1098#" "XR1/a_n35_500#" 401.546
-cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" "out" 125.922
-cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/c2_n2409_n7290#" 8.8752
-cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" 332.624
-cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" 332.624
-cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" 332.624
-cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" "out" 308.865
-cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" "out" 332.624
-cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" 332.624
-cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" 308.865
-cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" 332.624
-cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" "out" 332.624
-cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" "out" 332.624
-cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" 120.271
-cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/c2_n2409_n7290#" "out" 126.3
-cap "l0_0/m4_n1200_1800#" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" 95.7143
-merge "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/c2_n2409_n7290#" "XR1/a_n35_500#" -14818.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1559250 -6908 0 0 0 0 -8271862 -56245 -849856 -5642 0 0
-merge "XR1/a_n35_500#" "l0_0/m5_0_0#"
+cap "XM1/a_n50_n958#" "XM1/w_n278_n1128#" 308.85
+cap "XM1/a_50_n870#" "XM1/a_n50_n958#" 4.73684
+cap "XM1/a_50_n870#" "XM1/w_n278_n1128#" 276.85
+cap "XM1/a_n108_n870#" "XM1/a_n50_n958#" 7.10526
+cap "XM1/a_n50_n958#" "XR1/w_n202_n1098#" 21.5625
+cap "XR1/w_n202_n1098#" "XM1/a_50_n870#" 89.2118
+cap "XR1/a_n36_n932#" "XR1/w_n202_n1098#" 291.595
+cap "XM1/a_50_n870#" "XR1/w_n202_n1098#" -3.87456
+cap "XR1/a_n36_500#" "XR1/w_n202_n1098#" 450.088
+cap "XR1/a_n36_n932#" "XR1/w_n202_n1098#" -154.226
+cap "XR1/w_n202_n1098#" "XR1/a_n36_500#" 402.366
+cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" 125.922
+cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/c2_n2410_n7290#" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" 8.8752
+cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" 332.624
+cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" 332.624
+cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" "out" 332.624
+cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" 308.865
+cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" 332.624
+cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" "out" 332.624
+cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" 308.865
+cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" "out" 332.624
+cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" 332.624
+cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" "out" 332.624
+cap "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" "out" 120.271
+cap "out" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/c2_n2410_n7290#" 126.3
+cap "l0_0/m4_n1200_1800#" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" 95.7143
+merge "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/VSUBS" "XR1/w_n202_n1098#" -635.922 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 39284 -7184 0 0 0 0 0 0 0 0 0 0
+merge "XR1/w_n202_n1098#" "XM1/a_n108_n870#"
+merge "XM1/a_n108_n870#" "gnd"
+merge "gnd" "XM1/w_n278_n1128#"
+merge "XM1/w_n278_n1128#" "l0_0/VSUBS"
+merge "l0_0/VSUBS" "VSUBS"
+merge "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/c2_n2410_n7290#" "XR1/a_n36_500#" -13889.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1559200 -6906 0 0 0 0 -8271862 -56245 -849856 -5642 0 0
+merge "XR1/a_n36_500#" "l0_0/m5_0_0#"
 merge "l0_0/m5_0_0#" "vd"
 merge "vd" "l0_0/m4_n1200_1800#"
 merge "l0_0/m4_n1200_1800#" "m4_16080_14660#"
-merge "m4_16080_14660#" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#"
-merge "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2509_n7390#" "XR1/a_n35_n932#"
-merge "XR1/a_n35_n932#" "XM1/a_50_n870#"
+merge "m4_16080_14660#" "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#"
+merge "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/m4_n2510_n7390#" "XR1/a_n36_n932#"
+merge "XR1/a_n36_n932#" "XM1/a_50_n870#"
 merge "XM1/a_50_n870#" "out"
 merge "XM1/a_n50_n958#" "in" -142.072 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3680 -264 0 0 0 0 0 0 0 0 0 0
-merge "sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/VSUBS" "XR1/w_n201_n1098#" -893.953 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 110653 -9024 0 0 0 0 0 0 0 0 0 0
-merge "XR1/w_n201_n1098#" "XM1/a_n108_n870#"
-merge "XM1/a_n108_n870#" "XM1/w_n278_n1128#"
-merge "XM1/w_n278_n1128#" "l0_0/VSUBS"
-merge "l0_0/VSUBS" "gnd"

@@ -1,6 +1,6 @@
 magic
-tech sky130A
-timestamp 1644852153
+tech sky130B
+timestamp 1644922882
 << metal1 >>
 rect 3170 -870 4680 -820
 rect 3170 -1050 3190 -870
@@ -79,20 +79,20 @@ rect 5900 -1040 5920 -860
 rect 6280 -1040 6300 -860
 rect 5900 -5580 6300 -1040
 rect 5900 -6190 7120 -5580
-use sky130_fd_pr__res_xhigh_po_0p35_NVRUDW  XR1
-timestamp 1644852153
-transform 0 1 4929 -1 0 -1050
-box -101 -549 100 549
 use sky130_fd_pr__nfet_g5v0d10v5_ML7W5H  XM1
-timestamp 1644852153
+timestamp 1644922882
 transform -1 0 4909 0 1 -1816
 box -139 -564 139 564
+use sky130_fd_pr__res_xhigh_po_0p35_NVRUDW  XR1
+timestamp 1644922882
+transform 0 1 4929 -1 0 -1050
+box -101 -549 100 549
 use l0  l0_0
 timestamp 1644768986
 transform 1 0 7100 0 -1 8800
 box -600 0 15000 15000
 use sky130_fd_pr__cap_mim_m3_2_EZRVX8  sky130_fd_pr__cap_mim_m3_2_EZRVX8_0
-timestamp 1644852153
+timestamp 1644922882
 transform -1 0 4965 0 1 3530
 box -1255 -3720 1265 3720
 << labels >>
