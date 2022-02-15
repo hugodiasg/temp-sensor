@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1644763100
+timestamp 1644948615
 << metal4 >>
 rect -2579 7559 2579 7600
 rect -2579 2641 2323 7559
@@ -64,8 +64,8 @@ rect 2281 -7559 2323 -2641
 rect 2559 -7559 2601 -2641
 rect 2281 -7650 2601 -7559
 << properties >>
-string gencell sky130_fd_pr__cap_mim_m3_2
 string FIXED_BBOX -2579 2600 2421 7600
-string parameters w 24 l 24 val 1.17k carea 2.00 cperi 0.19 nx 1 ny 3 dummy 0 square 0 lmin 2.00 wmin 2.00 lmax 30.0 wmax 30.0 dc 0 bconnect 1 tconnect 1 ccov 80
+string gencell sky130_fd_pr__cap_mim_m3_2
 string library sky130
+string parameters w 24 l 24 val 1.17k carea 2.00 cperi 0.19 nx 1 ny 3 dummy 0 square 0 lmin 2.00 wmin 2.00 lmax 30.0 wmax 30.0 dc 0 bconnect 1 tconnect 1 ccov 80
 << end >>

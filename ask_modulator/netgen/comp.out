@@ -10,6 +10,17 @@ Circuit 1: sky130_fd_pr__res_xhigh_po_0p35 |Circuit 2: sky130_fd_pr__res_xhigh_p
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__res_xhigh_po_0p35 and sky130_fd_pr__res_xhigh_po_0p35 are equivalent.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_2 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_2 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__cap_mim_m3_2      |Circuit 2: sky130_fd_pr__cap_mim_m3_2      
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__cap_mim_m3_2 and sky130_fd_pr__cap_mim_m3_2 are equivalent.
 Warning: Equate pins:  cell sky130_fd_pr__nfet_g5v0d10v5 is a placeholder, treated as a black box.
 Warning: Equate pins:  cell sky130_fd_pr__nfet_g5v0d10v5 is a placeholder, treated as a black box.
 
@@ -23,28 +34,17 @@ Circuit 1: sky130_fd_pr__nfet_g5v0d10v5    |Circuit 2: sky130_fd_pr__nfet_g5v0d1
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_g5v0d10v5 and sky130_fd_pr__nfet_g5v0d10v5 are equivalent.
-Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_2 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_2 is a placeholder, treated as a black box.
-
-Subcircuit pins:
-Circuit 1: sky130_fd_pr__cap_mim_m3_2      |Circuit 2: sky130_fd_pr__cap_mim_m3_2      
--------------------------------------------|-------------------------------------------
-1                                          |1                                          
-2                                          |2                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes sky130_fd_pr__cap_mim_m3_2 and sky130_fd_pr__cap_mim_m3_2 are equivalent.
-Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_NVRUDW in circuit ask-modulator (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__nfet_g5v0d10v5_ML7W5H in circuit ask-modulator (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_2_EB5J48 in circuit ask-modulator (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN in circuit ask-modulator (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_2_EZRVX8 in circuit ask-modulator (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_g5v0d10v5_PWYS4E in circuit ask-modulator (0)(1 instance)
 
 Class ask-modulator (0):  Merged 2 parallel devices.
 Subcircuit summary:
 Circuit 1: ask-modulator                   |Circuit 2: ask-modulator                   
 -------------------------------------------|-------------------------------------------
 sky130_fd_pr__res_xhigh_po_0p35 (1)        |sky130_fd_pr__res_xhigh_po_0p35 (1)        
-sky130_fd_pr__nfet_g5v0d10v5 (1)           |sky130_fd_pr__nfet_g5v0d10v5 (1)           
 sky130_fd_pr__cap_mim_m3_2 (3->1)          |sky130_fd_pr__cap_mim_m3_2 (3->1)          
+sky130_fd_pr__nfet_g5v0d10v5 (1)           |sky130_fd_pr__nfet_g5v0d10v5 (1)           
 Number of devices: 3                       |Number of devices: 3                       
 Number of nets: 4                          |Number of nets: 4                          
 ---------------------------------------------------------------------------------------
@@ -52,28 +52,31 @@ Circuits match uniquely.
 Property errors were found.
 Netlists match uniquely.
 There were property errors.
-sky130_fd_pr__cap_mim_m3_2_EB5J48_0/sky130_fd_pr__cap_mim_m3_2:0 vs. sky130_fd_pr__cap_mim_m3_2:C0:
-Property MF in circuit2 has no matching property in circuit1
-sky130_fd_pr__nfet_g5v0d10v5_ML7W5H:XM1/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
+sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
  ps circuit1: "17.98"   (unresolved expression)  (property type mismatch)
  as circuit1: "2.523"   (unresolved expression)  (property type mismatch)
  pd circuit1: "17.98"   (unresolved expression)  (property type mismatch)
  ad circuit1: "2.523"   (unresolved expression)  (property type mismatch)
-sky130_fd_pr__nfet_g5v0d10v5_ML7W5H:XM1/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
+sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
 Property mult in circuit2 has no matching property in circuit1
-sky130_fd_pr__nfet_g5v0d10v5_ML7W5H:XM1/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
+sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
 Property sd in circuit2 has no matching property in circuit1
-sky130_fd_pr__nfet_g5v0d10v5_ML7W5H:XM1/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
+sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
 Property sb in circuit2 has no matching property in circuit1
-sky130_fd_pr__nfet_g5v0d10v5_ML7W5H:XM1/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
+sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
 Property sa in circuit2 has no matching property in circuit1
-sky130_fd_pr__nfet_g5v0d10v5_ML7W5H:XM1/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
+sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
 Property nrs in circuit2 has no matching property in circuit1
-sky130_fd_pr__nfet_g5v0d10v5_ML7W5H:XM1/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
+sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
 Property nrd in circuit2 has no matching property in circuit1
-sky130_fd_pr__nfet_g5v0d10v5_ML7W5H:XM1/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
+sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/sky130_fd_pr__nfet_g5v0d10v5:0 vs. sky130_fd_pr__nfet_g5v0d10v5:M1:
 Property nf in circuit2 has no matching property in circuit1
-sky130_fd_pr__res_xhigh_po_0p35_NVRUDW:XR1/sky130_fd_pr__res_xhigh_po_0p35:0 vs. sky130_fd_pr__res_xhigh_po_0p35:R1:
+sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/sky130_fd_pr__cap_mim_m3_2:0 vs. sky130_fd_pr__cap_mim_m3_2:C0:
+ w circuit1: 23.3   circuit2: 24.6   (delta=5.43%, cutoff=0%)
+ l circuit1: 23.3   circuit2: 24.6   (delta=5.43%, cutoff=0%)
+sky130_fd_pr__cap_mim_m3_2_EZRVX8_0/sky130_fd_pr__cap_mim_m3_2:0 vs. sky130_fd_pr__cap_mim_m3_2:C0:
+Property MF in circuit2 has no matching property in circuit1
+sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/sky130_fd_pr__res_xhigh_po_0p35:0 vs. sky130_fd_pr__res_xhigh_po_0p35:R1:
 Property mult in circuit2 has no matching property in circuit1
 
 Subcircuit pins:

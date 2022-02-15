@@ -1,28 +1,17 @@
 scale 1000 1 500000
-rnode "in.t0" 0 457.168 9818 -3632 0
-rnode "in" 0 2572.83 6340 -5360 0
-resist "in" "in.t0" 448.61
+rnode "in.t0" 0 452.336 9796 -3646 0
+rnode "in" 0 2537.66 6340 -5360 0
+resist "in" "in.t0" 448.598
 rnode "gnd" 0 0 6340 -6180 0
-rnode "out.t0" 0 13529.3 10010 12020 0
-rnode "out.t4" 0 13566.3 10010 7060 0
-rnode "out.t2" 0 13791.9 10010 2100 0
-rnode "out" 0 345.026 6340 -6880 0
-rnode "out.n0" 0 44654.5 12200 -1900 0
-rnode "out.t5" 0 6178.86 10010 7060 0
-rnode "out.t3" 0 8895.86 10010 2100 0
-rnode "out.n1" 0 3125.72 7560 7059 0
-rnode "out.t1" 0 58041.3 10010 12020 0
-rnode "out" 0 1961.28 6340 -3040 0
-resist "out.n1" "out.t5" 0.023
-resist "out.t2" "out.t4" 0.066
-resist "out.t4" "out.t0" 0.066
-resist "out.n0" "out.t2" 0.164
-resist "out.t1" "out.n1" 0.471
-resist "out.n1" "out.t3" 0.472
-resist "out" "out.t1" 3.322
-resist "out.t1" "out.n0" 5.23
-resist "out.n0" "out" 6.736
-device csubckt sky130_fd_pr__cap_mim_m3_2 7680 9690 7681 9691  "None" "out.t0" 36960 0 "out.t1" -13402 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 7680 -230 7681 -229  "None" "out.t2" 36960 0 "out.t3" -13402 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 7680 4730 7681 4731  "None" "out.t4" 36960 0 "out.t5" -13402 0
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 9768 -4502 9769 -4501  "gnd" "in.t0" 200 0 "gnd" 1740 0 "out" 1740 0
+rnode "vd.t0" 0 30935.6 10058 11656 0
+rnode "vd.t1" 0 31020.1 10058 6696 0
+rnode "vd.t2" 0 173210 10058 1736 0
+rnode "vd" 0 3884.66 6340 -6880 0
+resist "vd.t2" "vd.t1" 0.066
+resist "vd.t1" "vd.t0" 0.066
+resist "vd" "vd.t2" 6.883
+rnode "out" 0 164010 6340 -3040 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 9746 -4516 9747 -4515  "gnd" "in.t0" 200 0 "gnd" 1740 0 "out" 1740 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 7728 -594 7729 -593  "None" "vd.t2" 36960 0 "out" -13402 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 7728 4366 7729 4367  "None" "vd.t1" 36960 0 "out" -13402 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 7728 9326 7729 9327  "None" "vd.t0" 36960 0 "out" -13402 0
