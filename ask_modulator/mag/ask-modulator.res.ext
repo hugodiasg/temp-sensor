@@ -3,15 +3,15 @@ rnode "in.t0" 0 452.336 9796 -3646 0
 rnode "in" 0 2537.66 6340 -5360 0
 resist "in" "in.t0" 448.598
 rnode "gnd" 0 0 6340 -6180 0
-rnode "vd.t0" 0 30935.6 10058 11656 0
-rnode "vd.t1" 0 31020.1 10058 6696 0
-rnode "vd.t2" 0 173210 10058 1736 0
-rnode "vd" 0 3884.66 6340 -6880 0
-resist "vd.t2" "vd.t1" 0.066
+rnode "vd.t2" 0 31074.5 10063 11661 0
+rnode "vd.t0" 0 31159 10063 6691 0
+rnode "vd.t1" 0 173382 10063 1721 0
+rnode "vd" 0 3864.7 6340 -6880 0
 resist "vd.t1" "vd.t0" 0.066
-resist "vd" "vd.t2" 6.883
-rnode "out" 0 164010 6340 -3040 0
-device msubckt sky130_fd_pr__nfet_g5v0d10v5 9746 -4516 9747 -4515  "gnd" "in.t0" 200 0 "gnd" 1740 0 "out" 1740 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 7728 -594 7729 -593  "None" "vd.t2" 36960 0 "out" -13402 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 7728 4366 7729 4367  "None" "vd.t1" 36960 0 "out" -13402 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 7728 9326 7729 9327  "None" "vd.t0" 36960 0 "out" -13402 0
+resist "vd.t0" "vd.t2" 0.066
+resist "vd" "vd.t1" 6.882
+rnode "out" 0 164500 6340 -3040 0
+device msubckt sky130_fd_pr__nfet_g5v0d10v5 9746 -4516 9747 -4515  "gnd" "in.t0" 200 0 "out" 1740 0 "gnd" 1740 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 7728 9326 7729 9327  "None" "vd.t2" 37040 0 "out" -13431 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 7728 -614 7729 -613  "None" "vd.t1" 37040 0 "out" -13431 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 7728 4356 7729 4357  "None" "vd.t0" 37040 0 "out" -13431 0

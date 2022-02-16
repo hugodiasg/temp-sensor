@@ -74,7 +74,9 @@ let z_out2=((1-s_in1)*(1+s_out2)+s_out1*s_in2)/StoZDelS
 *plot z_in1
 *plot z_out1
 *plot z_in2
-plot z_out2
+plot z_out2 xlimit 2.4G 2.5G
+plot ph(z_out2) xlimit 2.4G 2.5G
+plot z_out2 
 plot ph(z_out2)
 *plot smith z_out2
 
