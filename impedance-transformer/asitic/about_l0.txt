@@ -1,0 +1,29 @@
+ASITIC>  optsq
+
+Desired inductance and accuracy in percent (e.g. '2 5' for 2nH within 5%)? (nH) 0.6917 1
+
+Name? l1
+
+Length? 90   
+
+Min/Step/Max Spacing? 3 0.1 6
+
+Min/Step/Max Width? 4 0.1 10
+
+Metal layer? met5
+
+Exit metal layer? met4
+
+Frequency? (GHz) 2.45
+
+Simulation started at:  qui 17 fev 2022 13:56:23 -03
+
+Completed in 17107 iterations
+Simulation ended at:  qui 17 fev 2022 13:56:24 -03
+
+Pi Model at f=2.45 GHz:  Q = 3.678 , 3.678 , 3.684 
+L = 694.6 pH R = 2.899 
+Cs1 = 15.23 fF Rs1 = 88.99 
+Cs2 = 16.88 fF Rs2 = -52.45      Est. Resonance = 53.83 GHz
+Found:  n =3.5000, w =8.4000, s =3.0000
+L =0.6946, R_sh = 42.3328(s), 42.3406(d)  Q = 3.6782, 3.6784, 3.6836(d)

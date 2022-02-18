@@ -29,6 +29,10 @@ C {devices/code_shown.sym} 400 -635 0 0 {name=Simulation only_toplevel=false val
 .control
 destroy all
 run
+
+set color0=white
+set color1=black
+
 let t=100n
 let id =-i(vdd)
 plot id
@@ -42,6 +46,8 @@ let srms_rlc=vrms_rlc*irms
 let srms_nmos=vrms_nmos*irms
 let srms=srms_rlc+srms_nmos
 plot srms
+plot out 3.2950864 xlimit 50.5n 51n
+plot out 3.2950864 xlimit .5n 1n
 .endc"
 }
 C {devices/code_shown.sym} 410 -70 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}

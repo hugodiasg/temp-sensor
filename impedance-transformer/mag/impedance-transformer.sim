@@ -1,0 +1,47 @@
+| units: 500000 tech: sky130A format: MIT
+x out gnd l=5328 w=5328 x=-10899 y=-27049 sky130_fd_pr__cap_mim_m3_2
+x out gnd l=5328 w=5328 x=-10899 y=-21421 sky130_fd_pr__cap_mim_m3_2
+x out gnd l=5328 w=5328 x=-10899 y=-15794 sky130_fd_pr__cap_mim_m3_2
+x in gnd l=4300 w=4300 x=-24499 y=-1449 sky130_fd_pr__cap_mim_m3_2
+x in gnd l=4300 w=4300 x=-24499 y=3150 sky130_fd_pr__cap_mim_m3_2
+x in gnd l=4300 w=4300 x=-24499 y=-6049 sky130_fd_pr__cap_mim_m3_2
+x out gnd l=5328 w=5328 x=-4899 y=-27049 sky130_fd_pr__cap_mim_m3_2
+x out gnd l=5328 w=5328 x=-4899 y=-21421 sky130_fd_pr__cap_mim_m3_2
+x out gnd l=5328 w=5328 x=-4899 y=-15794 sky130_fd_pr__cap_mim_m3_2
+x in gnd l=4300 w=4300 x=-19499 y=-1449 sky130_fd_pr__cap_mim_m3_2
+x in gnd l=4300 w=4300 x=-19499 y=3150 sky130_fd_pr__cap_mim_m3_2
+x in gnd l=4300 w=4300 x=-19499 y=-6049 sky130_fd_pr__cap_mim_m3_2
+x out gnd l=5328 w=5328 x=1101 y=-27049 sky130_fd_pr__cap_mim_m3_2
+x out gnd l=5328 w=5328 x=1101 y=-21421 sky130_fd_pr__cap_mim_m3_2
+x out gnd l=5328 w=5328 x=1101 y=-15794 sky130_fd_pr__cap_mim_m3_2
+x in gnd l=4300 w=4300 x=-14499 y=-1449 sky130_fd_pr__cap_mim_m3_2
+x in gnd l=4300 w=4300 x=-14499 y=3150 sky130_fd_pr__cap_mim_m3_2
+x in gnd l=4300 w=4300 x=-14499 y=-6049 sky130_fd_pr__cap_mim_m3_2
+x out gnd l=5328 w=5328 x=7101 y=-27049 sky130_fd_pr__cap_mim_m3_2
+x out gnd l=5328 w=5328 x=7101 y=-21421 sky130_fd_pr__cap_mim_m3_2
+x out gnd l=5328 w=5328 x=7101 y=-15794 sky130_fd_pr__cap_mim_m3_2
+C in out 26.83
+C in GND 406.28
+= in sky130_fd_pr__cap_mim_m3_2_5MQ5FR_2/c2_n2229_n6750#
+= in sky130_fd_pr__cap_mim_m3_2_5MQ5FR_1/c2_n2229_n6750#
+= in sky130_fd_pr__cap_mim_m3_2_5MQ5FR_0/c2_n2229_n6750#
+C out GND 582.55
+= out sky130_fd_pr__cap_mim_m3_2_EJYTBJ_3/c2_n2743_n8292#
+= out sky130_fd_pr__cap_mim_m3_2_EJYTBJ_2/c2_n2743_n8292#
+= out sky130_fd_pr__cap_mim_m3_2_EJYTBJ_1/c2_n2743_n8292#
+= out sky130_fd_pr__cap_mim_m3_2_EJYTBJ_0/c2_n2743_n8292#
+R gnd 229
+= gnd sky130_fd_pr__cap_mim_m3_2_5MQ5FR_2/m4_n2329_n6850#
+= gnd sky130_fd_pr__cap_mim_m3_2_5MQ5FR_2/VSUBS
+= gnd sky130_fd_pr__cap_mim_m3_2_5MQ5FR_1/m4_n2329_n6850#
+= gnd sky130_fd_pr__cap_mim_m3_2_5MQ5FR_1/VSUBS
+= gnd sky130_fd_pr__cap_mim_m3_2_5MQ5FR_0/VSUBS
+= gnd sky130_fd_pr__cap_mim_m3_2_5MQ5FR_0/m4_n2329_n6850#
+= gnd sky130_fd_pr__cap_mim_m3_2_EJYTBJ_3/m4_n2843_n8392#
+= gnd sky130_fd_pr__cap_mim_m3_2_EJYTBJ_3/VSUBS
+= gnd sky130_fd_pr__cap_mim_m3_2_EJYTBJ_2/m4_n2843_n8392#
+= gnd sky130_fd_pr__cap_mim_m3_2_EJYTBJ_2/VSUBS
+= gnd sky130_fd_pr__cap_mim_m3_2_EJYTBJ_1/m4_n2843_n8392#
+= gnd sky130_fd_pr__cap_mim_m3_2_EJYTBJ_1/VSUBS
+= gnd sky130_fd_pr__cap_mim_m3_2_EJYTBJ_0/m4_n2843_n8392#
+= gnd sky130_fd_pr__cap_mim_m3_2_EJYTBJ_0/VSUBS

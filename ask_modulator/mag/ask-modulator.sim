@@ -5,25 +5,24 @@ x vd out l=4670 w=4670 x=12396 y=-613 sky130_fd_pr__cap_mim_m3_2
 x vd out l=4670 w=4670 x=12396 y=9326 sky130_fd_pr__cap_mim_m3_2
 x in out gnd gnd l=100 w=1740 x=9747 y=-4515 sky130_fd_pr__nfet_g5v0d10v5
 C out vd 116.79
-C out GND 47.71
-R out 4190
-= out l0_0/m4_n1200_1800#
-= out sky130_fd_pr__cap_mim_m3_2_9XH3MC_0/m4_n2514_n7405#
-= out sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/a_n35_n932#
-= out sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/a_n108_n870#
-C in GND 2.99
-R in 1029
-= in sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/a_n50_n958#
-C vd GND 122.69
-R vd 188
-= vd sky130_fd_pr__cap_mim_m3_2_9XH3MC_0/c2_n2414_n7305#
-= vd sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/a_n35_500#
-= vd l0_0/m5_0_0#
+C out gnd 2.52
+C gnd GND 5.73
 R gnd 102354
 = gnd sky130_fd_pr__cap_mim_m3_2_9XH3MC_0/VSUBS
 = gnd sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/w_n201_n1098#
-= gnd sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/a_50_n870#
-= gnd VSUBS
 = gnd sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/w_n278_n1128#
-= gnd l0_0/VSUBS
+= gnd VSUBS
+= gnd sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/a_50_n870#
+C out GND 44.65
+R out 4190
+= out sky130_fd_pr__cap_mim_m3_2_9XH3MC_0/m4_n2514_n7405#
+= out sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/a_n35_n932#
+= out sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/a_n108_n870#
+C in GND 2.66
+R in 1029
+= in sky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0/a_n50_n958#
 R sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/a_n35_n500# 28571
+C vd GND 123.45
+R vd 190
+= vd sky130_fd_pr__cap_mim_m3_2_9XH3MC_0/c2_n2414_n7305#
+= vd sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/a_n35_500#

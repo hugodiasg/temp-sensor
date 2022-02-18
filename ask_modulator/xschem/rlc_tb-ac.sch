@@ -34,17 +34,19 @@ C {devices/code_shown.sym} 430 -250 0 0 {name=Simulation only_toplevel=false val
 .control
 destroy all
 run
-let r=a/real(-i(vdd))
-let x=imag(a/(-i(vdd)))
 let z=a/(-i(vdd))
+
+set color0=white
+set color1=black
+
+plot ph(z)
 plot z
-plot x
-plot r
+
 
 .endc"}
 C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym} 120 -535 1 0 {name=xl0}
 C {devices/gnd.sym} 180 -520 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/cap_mim_m3_2.sym} -20 -520 0 0 {name=C0 model=cap_mim_m3_2 W=23.3 L=23.3 MF=3 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} -20 -520 0 0 {name=C0 model=cap_mim_m3_2 W=23.35 L=23.35 MF=3 spiceprefix=X}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} 200 -520 0 0 {name=R1
 W=0.35
 L=5

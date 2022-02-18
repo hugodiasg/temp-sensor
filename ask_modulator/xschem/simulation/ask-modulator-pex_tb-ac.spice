@@ -3,7 +3,7 @@
 **.subckt ask-modulator-pex_tb-ac
 Vdd vd GND DC 3.3 AC 0
 Vin net1 GND DC 1.8 AC 1
-Vin1 net2 GND DC 1.8 AC 1
+Vin1 net2 GND DC 0 AC 1
 R1 ns_in1 net1 50 m=1
 R3 ns_out1 GND 50 m=1
 R4 ns_out2 net2 50 m=1
@@ -19,6 +19,10 @@ x2 vd ns_out2 ns_in2 GND ask-modulator-pex
 destroy all
 set units=degrees
 run
+
+set color0=white
+set color1=black
+
 let z0=50
 
 * Find two S parameters from test circuit
@@ -137,7 +141,7 @@ L0 p1 net3 1.077n m=1
 Cs1 p1 net1 10.78f m=1
 Cs2 p2 net2 10.54f m=1
 Rs1 net1 GND 41.95 m=1
-Rs2 net2 GND 5.649 m=1
+Rs2 net2 GND 15.649 m=1
 R1 p2 net3 4.88 m=1
 .ends
 

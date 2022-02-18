@@ -1,0 +1,37 @@
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_2 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_2 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__cap_mim_m3_2      |Circuit 2: sky130_fd_pr__cap_mim_m3_2      
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__cap_mim_m3_2 and sky130_fd_pr__cap_mim_m3_2 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_2_EJYTBJ in circuit impedance-transformer (0)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_2_5MQ5FR in circuit impedance-transformer (0)(3 instances)
+
+Class impedance-transformer (0):  Merged 19 parallel devices.
+Subcircuit summary:
+Circuit 1: impedance-transformer           |Circuit 2: impedance-transformer           
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__cap_mim_m3_2 (21->2)         |sky130_fd_pr__cap_mim_m3_2 (21->2)         
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 3                          |Number of nets: 3                          
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Netlists match uniquely.
+Netlists match uniquely.
+Circuits match correctly.
+
+Subcircuit pins:
+Circuit 1: impedance-transformer           |Circuit 2: impedance-transformer           
+-------------------------------------------|-------------------------------------------
+gnd                                        |gnd                                        
+in                                         |in                                         
+out                                        |out                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes impedance-transformer and impedance-transformer are equivalent.
+Circuits match uniquely.

@@ -49,6 +49,10 @@ C {devices/code_shown.sym} 395 -795 0 0 {name=Simulation only_toplevel=false val
 destroy all
 set units=degrees
 run
+
+set color0=white
+set color1=black
+
 let z0=50
 
 * Find two S parameters from test circuit
@@ -82,11 +86,11 @@ plot ph(z_out2)
 
 .endc"
 }
-C {devices/code_shown.sym} 410 -70 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
+C {devices/code_shown.sym} 400 -20 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
 C {devices/gnd.sym} 175 -270 2 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 160 -140 2 0 {name=l7 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 5 -80 1 0 {name=l8 sig_type=std_logic lab=ns_in1}
-C {devices/vsource.sym} 500 200 3 1 {name=Vin1 value="DC 1.8 AC 1"}
+C {devices/vsource.sym} 500 200 3 1 {name=Vin1 value="DC 0 AC 1"}
 C {devices/gnd.sym} 150 250 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} 320 200 1 0 {name=l10 sig_type=std_logic lab=ns_out2}
 C {devices/gnd.sym} 560 200 0 1 {name=l11 lab=GND}

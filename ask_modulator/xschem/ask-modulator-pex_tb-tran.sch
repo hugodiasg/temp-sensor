@@ -14,7 +14,7 @@ N -782.5 287.5 -772.5 287.5 {
 lab=out}
 N -1092.5 287.5 -1077.5 287.5 {
 lab=in}
-C {devices/code_shown.sym} -650 -175 0 0 {name=Simulation only_toplevel=false value="
+C {devices/code_shown.sym} -630 -265 0 0 {name=Simulation only_toplevel=false value="
 
 *.tran 0.2n 30n
 .tran 0.005n 100n
@@ -24,6 +24,11 @@ C {devices/code_shown.sym} -650 -175 0 0 {name=Simulation only_toplevel=false va
 .control
 destroy all
 run
+
+set color0=white
+set color1=black
+
+
 let t=100n
 let id =-i(vdd)
 plot id
