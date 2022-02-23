@@ -4,12 +4,12 @@
 Vdd vd GND DC 3.3 AC 0
 Vin net1 GND DC 1.8 AC 1
 Vin1 net2 GND DC 0 AC 1
-R1 ns_in1 net1 50 m=1
-R3 ns_out1 GND 50 m=1
-R4 ns_out2 net2 50 m=1
-R5 ns_in2 GND 50 m=1
-x1 vd ns_out1 ns_in1 GND ask-modulator-pex
-x2 vd ns_out2 ns_in2 GND ask-modulator-pex
+R1 ns11 net1 50 m=1
+R3 ns12 GND 50 m=1
+R4 ns22 net2 50 m=1
+R5 ns21 GND 50 m=1
+x1 vd ns12 ns11 GND ask-modulator-pex
+x2 vd ns22 ns21 GND ask-modulator-pex
 **** begin user architecture code
 
 
@@ -26,34 +26,35 @@ set color1=black
 let z0=50
 
 * Find two S parameters from test circuit
-let s_in1 = v(ns_in1)
-let s_out1 = v(ns_out1)
-let s_in2 = v(ns_in2)
-let s_out2 = v(ns_out2)
+let s11 = v(ns11)
+let s12 = v(ns12)
+let s21 = v(ns21)
+let s22 = v(ns22)
 
 * Extract Y parameters
-*let StoYDelS = ((1+s_in1)*(1+s_out2)-s_out1*s_in2)*z0
-*let y_in1 = ((1+s_out2)*(1-s_in1)+s_out1*s_in2/StoYDelS
-*let y_out1=-2*s_out1/StoYDelS
-*let y_in2=-2*s_in2/StoYDelS
-*let y_out2 = ((1+s_in1)*(1-s_out2)+s_out1+s_in2)/StoYDelS
+*let StoYDelS = ((1+s11)*(1+s22)-s12*s21)*z0
+*let y11 = ((1+s22)*(1-s11)+s12*s21/StoYDelS
+*let y12=-2*s12/StoYDelS
+*let y21=-2*s21/StoYDelS
+*let y22 = ((1+s11)*(1-s22)+s12+s21)/StoYDelS
 
 * Extract Z parameters
-let StoZDelS = ((1-s_in1)*(1-s_out2)-s_out1*s_in2)/z0
-let z_in1 = ((1+s_in1)*(1-s_out2)+s_out1*s_in2)/StoZDelS
-let z_out1 = 2*s_out1/StoZDelS
-let z_in2 = 2*s_in2/StoZDelS
-let z_out2=((1-s_in1)*(1+s_out2)+s_out1*s_in2)/StoZDelS
+let StoZDelS = ((1-s11)*(1-s22)-s12*s21)/z0
+let z11 = ((1+s11)*(1-s22)+s12*s21)/StoZDelS
+let z12 = 2*s12/StoZDelS
+let z21 = 2*s21/StoZDelS
+let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
 
-*plot z_in1
-*plot z_out1
-*plot z_in2
-plot z_out2 xlimit 2.4G 2.5G
-plot ph(z_out2) xlimit 2.4G 2.5G
-plot z_out2
-plot ph(z_out2)
-*plot smith z_out2
-
+*plot z11
+*plot z12
+*plot z21
+plot z22 xlimit 2.4G 2.5G
+plot ph(z22) xlimit 2.4G 2.5G
+plot z22
+*plot smith z22
+let z_output= z22-(z12*z21/(z11+z0))
+plot mag(z_output)
+plot ph(z_output)
 .endc
 
 
@@ -107,22 +108,26 @@ Xsky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0 out in gnd gnd sky130_fd_pr__nfet_g5v0d10
 *X0 vd.t1 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
 *X1 vd.t2 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
 *X2 vd.t0 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+*R0 out vd sky130_fd_pr__res_generic_m4 w=6e+06u l=900000u
 *X3 gnd in.t0 out gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p
 *+ ps=1.798e+07u w=0u l=0u
-R0 vd vd.t1 6.882
-R1 vd.t0 vd.t2 0.066
-R2 vd.t1 vd.t0 0.066
-R3 in in.t0 448.598
-C0 in out 0.46fF
-C1 out vd 7.37fF
-C2 in.t0 gnd 0.45fF
-C3 vd.t2 gnd 31.07fF
-C4 vd.t0 gnd 31.16fF
-C5 vd.t1 gnd 173.38fF
-C6 out gnd 211.18fF
-C7 in gnd 5.53fF
-C8 vd gnd 126.55fF
+R1 vd vd.t1 2.666
+R2 vd.t0 vd.t2 0.066
+R3 vd.t1 vd.t0 0.066
+R4 in in.t0 448.598
+C0 out in 0.46fF
+C1 out vd 0.14fF
+C2 m4_11480_14620# gnd 0.11fF $ **FLOATING
+C3 in.t0 gnd 0.45fF
+C4 vd.t2 gnd 25.05fF
+C5 vd.t0 gnd 25.12fF
+C6 vd.t1 gnd 173.47fF
+C7 out gnd 200.74fF
+C8 in gnd 5.53fF
+C9 vd gnd 136.30fF
 *.ends
+
+
 
 
 

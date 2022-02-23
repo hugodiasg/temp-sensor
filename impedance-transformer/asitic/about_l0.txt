@@ -1,14 +1,14 @@
 ASITIC>  optsq
 
-Desired inductance and accuracy in percent (e.g. '2 5' for 2nH within 5%)? (nH) 0.6917 1
+Desired inductance and accuracy in percent (e.g. '2 5' for 2nH within 5%)? (nH) 0.5915 0.05
 
-Name? l1
+Name? l0
 
-Length? 90   
+Length? 200
 
-Min/Step/Max Spacing? 3 0.1 6
+Min/Step/Max Spacing? 2 0.05 20
 
-Min/Step/Max Width? 4 0.1 10
+Min/Step/Max Width? 2 0.02 20
 
 Metal layer? met5
 
@@ -16,14 +16,31 @@ Exit metal layer? met4
 
 Frequency? (GHz) 2.45
 
-Simulation started at:  qui 17 fev 2022 13:56:23 -03
+Simulation started at:  ter 22 fev 2022 19:17:04 -03
 
-Completed in 17107 iterations
-Simulation ended at:  qui 17 fev 2022 13:56:24 -03
+Completed in 538891 iterations
+Simulation ended at:  ter 22 fev 2022 19:17:19 -03
 
-Pi Model at f=2.45 GHz:  Q = 3.678 , 3.678 , 3.684 
-L = 694.6 pH R = 2.899 
-Cs1 = 15.23 fF Rs1 = 88.99 
-Cs2 = 16.88 fF Rs2 = -52.45      Est. Resonance = 53.83 GHz
-Found:  n =3.5000, w =8.4000, s =3.0000
-L =0.6946, R_sh = 42.3328(s), 42.3406(d)  Q = 3.6782, 3.6784, 3.6836(d)
+Pi Model at f=2.45 GHz:  Q = 3.102 , 3.102 , 3.105 
+L = 591.5 pH R = 2.929 
+Cs1 = 13.23 fF Rs1 = 51.58 
+Cs2 = 12.76 fF Rs2 = 7.433      Est. Resonance = 58.67 GHz
+Found:  n =1.0000, w =8.1000, s =2.0000
+L =0.5915, R_sh = 31.2266(s), 31.2281(d)  Q = 3.1016, 3.1020, 3.1050(d)
+
+
+===============================================================================================
+
+ASITIC>  pix l0 2.45
+
+Warning:  KCL violation at port 2 of segment 4 in device l0.
+Warning:  KCL violation at port 2 of segment 5 in device l0.
+maxL = 3061.22, maxT =  1.55, maxW =  1.55 (lambda = 61224.49, delta =  1.94)
+Performing Analysis at 2.45 GHz
+Generating capacitance matrix (20x20)...
+Generating inductance matrix (25x25).....
+Pi Model at f=2.45 GHz:  Q = 3.134 , 3.136 , 3.147 
+L = 601.1 pH R = 2.929 
+Cs1 = 47.96 fF Rs1 = 20.08 
+Cs2 = 46.2 fF Rs2 = 15.98      Est. Resonance = 30.12 GHz
+

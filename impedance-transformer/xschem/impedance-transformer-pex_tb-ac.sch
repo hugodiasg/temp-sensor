@@ -7,36 +7,36 @@ E {}
 N -425 -80 -395 -80 {
 lab=GND}
 N 310 -80 330 -80 {
-lab=ns_out1}
+lab=ns12}
 N -335 -80 -325 -80 {
 lab=#net1}
 N 530 200 560 200 {
 lab=GND}
 N 300 200 320 200 {
-lab=ns_out2}
+lab=ns22}
 N 460 200 470 200 {
 lab=#net2}
 N -325 -80 -315 -80 {
 lab=#net1}
 N 330 -80 330 -65 {
-lab=ns_out1}
+lab=ns12}
 N 320 200 340 200 {
-lab=ns_out2}
+lab=ns22}
 N 400 200 460 200 {
 lab=#net2}
 N -372.5 200 -372.5 230 {
 lab=GND}
 N -20 -80 10 -80 {
-lab=ns_in1}
+lab=ns11}
 N -155 -210 -155 -190 {
 lab=vd}
 N -372.5 200 -362.5 200 {
 lab=GND}
 N -67.5 200 -0 200 {
-lab=ns_in2}
+lab=ns21}
 C {devices/vsource.sym} -365 -80 1 0 {name=Vin value="DC 0 AC 1"}
 C {devices/gnd.sym} 160 -30 0 0 {name=l1 lab=GND}
-C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=ns_out1}
+C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=ns12}
 C {devices/gnd.sym} -425 -80 0 0 {name=l5 lab=GND}
 C {devices/code_shown.sym} 425 -825 0 0 {name=Simulation only_toplevel=false value="
 
@@ -50,39 +50,47 @@ set color0=white
 set color1=black
 
 let z0=50
+let zl=169
 
 * Find two S parameters from test circuit
-let s_in1 = v(ns_in1)
-let s_out1 = v(ns_out1)
-let s_in2 = v(ns_in2)
-let s_out2 = v(ns_out2)
+let s11 = v(ns11)
+let s12 = v(ns12)
+let s21 = v(ns21)
+let s22 = v(ns22)
 
 * Extract Y parameters
-*let StoYDelS = ((1+s_in1)*(1+s_out2)-s_out1*s_in2)*z0
-*let y_in1 = ((1+s_out2)*(1-s_in1)+s_out1*s_in2/StoYDelS
-*let y_out1=-2*s_out1/StoYDelS
-*let y_in2=-2*s_in2/StoYDelS
-*let y_out2 = ((1+s_in1)*(1-s_out2)+s_out1+s_in2)/StoYDelS
+*let StoYDelS = ((1+s11)*(1+s22)-s12*s21)*z0
+*let y11 = ((1+s22)*(1-s11)+s12*s21/StoYDelS
+*let y12=-2*s12/StoYDelS
+*let y21=-2*s21/StoYDelS
+*let y22 = ((1+s11)*(1-s22)+s12+s21)/StoYDelS
 
 * Extract Z parameters
-let StoZDelS = ((1-s_in1)*(1-s_out2)-s_out1*s_in2)/z0
-let z_in1 = ((1+s_in1)*(1-s_out2)+s_out1*s_in2)/StoZDelS
-let z_out1 = 2*s_out1/StoZDelS
-let z_in2 = 2*s_in2/StoZDelS
-let z_out2=((1-s_in1)*(1+s_out2)+s_out1*s_in2)/StoZDelS
+let StoZDelS = ((1-s11)*(1-s22)-s12*s21)/z0
+let z11 = ((1+s11)*(1-s22)+s12*s21)/StoZDelS
+let z12 = 2*s12/StoZDelS
+let z21 = 2*s21/StoZDelS
+let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
 
-*plot z_in1
-*plot ph(z_in1)
-plot z_out1
-plot ph(z_out1)
-plot z_out1 xlimit 2.4G 2.5G
+*plot z11
+*plot z12
+*plot z21
+plot z22 xlimit 2.4G 2.5G
+plot ph(z22) xlimit 2.4G 2.5G
+plot z22 
+*plot smith z22
+let z_output= z22-(z12*z21/(z11+zl))
+plot z_output
+plot ph(z_output)
+let z_in = z11-z12*z21/(z22+z0)
 .endc"
+
 }
-C {devices/code_shown.sym} 420 -30 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
-C {devices/lab_pin.sym} -5 -80 1 0 {name=l8 sig_type=std_logic lab=ns_in1}
+C {devices/code_shown.sym} 422.5 127.5 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
+C {devices/lab_pin.sym} -5 -80 1 0 {name=l8 sig_type=std_logic lab=ns11}
 C {devices/vsource.sym} 500 200 3 1 {name=Vin1 value="DC 0 AC 1"}
 C {devices/gnd.sym} 150 250 0 0 {name=l9 lab=GND}
-C {devices/lab_pin.sym} 320 200 1 0 {name=l10 sig_type=std_logic lab=ns_out2}
+C {devices/lab_pin.sym} 320 200 1 0 {name=l10 sig_type=std_logic lab=ns22}
 C {devices/gnd.sym} 560 200 0 1 {name=l11 lab=GND}
 C {devices/res.sym} 330 -35 0 0 {name=R3
 value=50
@@ -105,6 +113,6 @@ C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator-p
 C {devices/gnd.sym} -217.5 250 0 0 {name=l12 lab=GND}
 C {devices/lab_pin.sym} -217.5 140 2 0 {name=l17 sig_type=std_logic lab=vd}
 C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator-pex.sym} -217.5 200 0 0 {name=xask2}
-C {devices/lab_pin.sym} -22.5 200 1 0 {name=l13 sig_type=std_logic lab=ns_in2}
+C {devices/lab_pin.sym} -22.5 200 1 0 {name=l13 sig_type=std_logic lab=ns21}
 C {/home/hugodg/projects_sky130/temp_sensor/impedance-transformer/xschem/impedance-transformer-pex.sym} 160 -80 0 0 {name=xit1}
 C {/home/hugodg/projects_sky130/temp_sensor/impedance-transformer/xschem/impedance-transformer-pex.sym} 150 200 0 0 {name=xit2}

@@ -3,13 +3,13 @@
 **.subckt impedance-transformer-pex_tb-ac
 Vin net1 GND DC 0 AC 1
 Vin1 net2 GND DC 0 AC 1
-R3 ns_out1 GND 50 m=1
-R4 ns_out2 net2 50 m=1
+R3 ns12 GND 50 m=1
+R4 ns22 net2 50 m=1
 Vdd vd GND DC 3.3 AC 0
-xask1 vd ns_in1 net1 GND ask-modulator-pex
-xask2 vd ns_in2 GND GND ask-modulator-pex
-xit1 ns_in1 ns_out1 GND impedance-transformer-pex
-xit2 ns_in2 ns_out2 GND impedance-transformer-pex
+xask1 vd ns11 net1 GND ask-modulator-pex
+xask2 vd ns21 GND GND ask-modulator-pex
+xit1 ns11 ns12 GND impedance-transformer-pex
+xit2 ns21 ns22 GND impedance-transformer-pex
 **** begin user architecture code
 
 
@@ -24,32 +24,39 @@ set color0=white
 set color1=black
 
 let z0=50
+let zl=169
 
 * Find two S parameters from test circuit
-let s_in1 = v(ns_in1)
-let s_out1 = v(ns_out1)
-let s_in2 = v(ns_in2)
-let s_out2 = v(ns_out2)
+let s11 = v(ns11)
+let s12 = v(ns12)
+let s21 = v(ns21)
+let s22 = v(ns22)
 
 * Extract Y parameters
-*let StoYDelS = ((1+s_in1)*(1+s_out2)-s_out1*s_in2)*z0
-*let y_in1 = ((1+s_out2)*(1-s_in1)+s_out1*s_in2/StoYDelS
-*let y_out1=-2*s_out1/StoYDelS
-*let y_in2=-2*s_in2/StoYDelS
-*let y_out2 = ((1+s_in1)*(1-s_out2)+s_out1+s_in2)/StoYDelS
+*let StoYDelS = ((1+s11)*(1+s22)-s12*s21)*z0
+*let y11 = ((1+s22)*(1-s11)+s12*s21/StoYDelS
+*let y12=-2*s12/StoYDelS
+*let y21=-2*s21/StoYDelS
+*let y22 = ((1+s11)*(1-s22)+s12+s21)/StoYDelS
 
 * Extract Z parameters
-let StoZDelS = ((1-s_in1)*(1-s_out2)-s_out1*s_in2)/z0
-let z_in1 = ((1+s_in1)*(1-s_out2)+s_out1*s_in2)/StoZDelS
-let z_out1 = 2*s_out1/StoZDelS
-let z_in2 = 2*s_in2/StoZDelS
-let z_out2=((1-s_in1)*(1+s_out2)+s_out1*s_in2)/StoZDelS
+let StoZDelS = ((1-s11)*(1-s22)-s12*s21)/z0
+let z11 = ((1+s11)*(1-s22)+s12*s21)/StoZDelS
+let z12 = 2*s12/StoZDelS
+let z21 = 2*s21/StoZDelS
+let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
 
-*plot z_in1
-*plot ph(z_in1)
-plot z_out1
-plot ph(z_out1)
-plot z_out1 xlimit 2.4G 2.5G
+*plot z11
+*plot z12
+*plot z21
+plot z22 xlimit 2.4G 2.5G
+plot ph(z22) xlimit 2.4G 2.5G
+plot z22
+*plot smith z22
+let z_output= z22-(z12*z21/(z11+zl))
+plot z_output
+plot ph(z_output)
+let z_in = z11-z12*z21/(z22+z0)
 .endc
 
 
@@ -254,11 +261,11 @@ R1 p2 net3 4.88 m=1
 .subckt l1  p1 p2
 *.iopin p2
 *.iopin p1
-L0 p1 net3 694.6p m=1
-Cs1 p1 net1 15.23f m=1
-Cs2 p2 net2 16.88f m=1
-Rs1 net1 GND 88.99 m=1
-Rs2 net2 GND -52.45 m=1
+L0 p1 net3 689.7p m=1
+Cs1 p1 net1 36.39f m=1
+Cs2 p2 net2 34.8f m=1
+Rs1 net1 GND 18.89 m=1
+Rs2 net2 GND 386.8m m=1
 R1 p2 net3 2.899 m=1
 .ends
 

@@ -58,20 +58,24 @@ Xsky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0 out in gnd gnd sky130_fd_pr__nfet_g5v0d10
 *X0 vd.t1 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
 *X1 vd.t2 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
 *X2 vd.t0 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+*R0 out vd sky130_fd_pr__res_generic_m4 w=6e+06u l=900000u
 *X3 gnd in.t0 out gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=0u l=0u
-R0 vd vd.t1 6.882
-R1 vd.t0 vd.t2 0.066
-R2 vd.t1 vd.t0 0.066
-R3 in in.t0 448.598
-C0 in out 0.46fF
-C1 out vd 7.37fF
-C2 in.t0 gnd 0.45fF
-C3 vd.t2 gnd 31.07fF
-C4 vd.t0 gnd 31.16fF
-C5 vd.t1 gnd 173.38fF
-C6 out gnd 211.18fF
-C7 in gnd 5.53fF
-C8 vd gnd 126.55fF
+R1 vd vd.t1 2.666
+R2 vd.t0 vd.t2 0.066
+R3 vd.t1 vd.t0 0.066
+R4 in in.t0 448.598
+C0 out in 0.46fF
+C1 out vd 0.14fF
+C2 m4_11480_14620# gnd 0.11fF $ **FLOATING
+C3 in.t0 gnd 0.45fF
+C4 vd.t2 gnd 25.05fF
+C5 vd.t0 gnd 25.12fF
+C6 vd.t1 gnd 173.47fF
+C7 out gnd 200.74fF
+C8 in gnd 5.53fF
+C9 vd gnd 136.30fF
 *.ends
+
+
 
 "}
