@@ -28,19 +28,21 @@ N -372.5 200 -372.5 230 {
 lab=GND}
 N -20 -80 10 -80 {
 lab=ns11}
-N -155 -210 -155 -190 {
-lab=vd}
 N -372.5 200 -362.5 200 {
 lab=GND}
 N -67.5 200 -0 200 {
+lab=ns21}
+N -255 -80 -20 -80 {
+lab=ns11}
+N -302.5 200 -67.5 200 {
 lab=ns21}
 C {devices/vsource.sym} -365 -80 1 0 {name=Vin value="DC 0 AC 1"}
 C {devices/gnd.sym} 160 -30 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=ns12}
 C {devices/gnd.sym} -425 -80 0 0 {name=l5 lab=GND}
-C {devices/code_shown.sym} 425 -825 0 0 {name=Simulation only_toplevel=false value="
+C {devices/code_shown.sym} 415 -875 0 0 {name=Simulation only_toplevel=false value="
 
-.ac lin 1MEG 2G 4G
+.ac lin 1MEG 1.5G 4G
 .control
 destroy all
 set units=degrees
@@ -75,14 +77,18 @@ let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
 *plot z11
 *plot z12
 *plot z21
-plot z22 xlimit 2.4G 2.5G
-plot ph(z22) xlimit 2.4G 2.5G
-plot z22 
+*plot z22 xlimit 2.4G 2.5G
+*plot ph(z22) xlimit 2.4G 2.5G
+*plot z22 
 *plot smith z22
-let z_output= z22-(z12*z21/(z11+zl))
-plot z_output
+let z_in =z11-z12*z21/(z22+z0)
+plot ph(z_in)
+plot mag(z_in)
+let z_output=z22-(z12*z21/(z11+zl))
 plot ph(z_output)
-let z_in = z11-z12*z21/(z22+z0)
+plot mag(z_output)
+let gamma=(mag(z_output)-mag(z_in))/(mag(z_output)+mag(z_in))
+plot gamma*100
 .endc"
 
 }
@@ -104,15 +110,16 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/gnd.sym} -372.5 230 0 0 {name=l16 lab=GND}
-C {devices/vsource.sym} -155 -240 2 0 {name=Vdd value="DC 3.3 AC 0"}
-C {devices/gnd.sym} -170 -30 0 0 {name=l3 lab=GND}
-C {devices/lab_pin.sym} -155 -190 2 0 {name=l4 sig_type=std_logic lab=vd}
-C {devices/gnd.sym} -155 -270 2 0 {name=l6 lab=GND}
-C {devices/lab_pin.sym} -170 -140 2 0 {name=l7 sig_type=std_logic lab=vd}
-C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator-pex.sym} -170 -80 0 0 {name=xask1}
-C {devices/gnd.sym} -217.5 250 0 0 {name=l12 lab=GND}
-C {devices/lab_pin.sym} -217.5 140 2 0 {name=l17 sig_type=std_logic lab=vd}
-C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator-pex.sym} -217.5 200 0 0 {name=xask2}
 C {devices/lab_pin.sym} -22.5 200 1 0 {name=l13 sig_type=std_logic lab=ns21}
 C {/home/hugodg/projects_sky130/temp_sensor/impedance-transformer/xschem/impedance-transformer-pex.sym} 160 -80 0 0 {name=xit1}
 C {/home/hugodg/projects_sky130/temp_sensor/impedance-transformer/xschem/impedance-transformer-pex.sym} 150 200 0 0 {name=xit2}
+C {devices/res.sym} -285 -80 3 0 {name=R1
+value=172.7
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} -332.5 200 3 0 {name=R2
+value=172.7
+footprint=1206
+device=resistor
+m=1}

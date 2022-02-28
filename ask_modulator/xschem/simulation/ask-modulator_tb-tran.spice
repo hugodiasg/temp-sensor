@@ -22,7 +22,7 @@ let t=100n
 let id =-i(vdd)
 plot id
 plot in
-plot out 3.2950864
+plot out 3.29583
 *S
 let vrms_rlc=sqrt(integ((out-vd)^2)/t)
 let vrms_nmos=sqrt(integ(out^2)/t)
@@ -50,7 +50,7 @@ plot out 3.2950864 xlimit .5n 1n
 *.ipin in
 *.opin out
 *.iopin vd
-XC0 vd out sky130_fd_pr__cap_mim_m3_2 W=23.35 L=23.35 MF=3 m=3
+XC0 vd out sky130_fd_pr__cap_mim_m3_2 W=25 L=25 MF=3 m=3
 x1 vd out l0
 XM1 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=8.7 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
@@ -66,12 +66,12 @@ XR1 out vd gnd sky130_fd_pr__res_xhigh_po_0p35 L=5 mult=1 m=1
 .subckt l0  p1 p2
 *.iopin p2
 *.iopin p1
-L0 p1 net3 1.077n m=1
-Cs1 p1 net1 10.78f m=1
-Cs2 p2 net2 10.54f m=1
-Rs1 net1 GND 41.95 m=1
-Rs2 net2 GND 5.649 m=1
-R1 p2 net3 4.88 m=1
+L0 p1 net3 1.011n m=1
+Cs1 p1 net1 43.36f m=1
+Cs2 p2 net2 36.59f m=1
+Rs1 net1 GND 37.41 m=1
+Rs2 net2 GND 20.07 m=1
+R1 p2 net3 4.143 m=1
 .ends
 
 .GLOBAL GND

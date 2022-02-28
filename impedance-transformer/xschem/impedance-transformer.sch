@@ -24,8 +24,8 @@ lab=in}
 N 567.5 -237.5 597.5 -237.5 {
 lab=out}
 C {devices/iopin.sym} 467.5 -137.5 1 0 {name=p1 lab=gnd}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 360 -190 0 0 {name=C0 model=cap_mim_m3_2 W=24.468 L=24.468 MF=9 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 567.5 -190 0 1 {name=C1 model=cap_mim_m3_2 W=28.895 L=28.895 MF=12 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 360 -190 0 0 {name=C0 model=cap_mim_m3_2 W=24.43 L=24.43 MF=9 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 567.5 -190 0 1 {name=C1 model=cap_mim_m3_2 W=24.962 L=24.962 MF=16 spiceprefix=X}
 C {devices/iopin.sym} 332.5 -237.5 2 0 {name=p2 lab=in}
 C {devices/iopin.sym} 595 -237.5 2 1 {name=p3 lab=out}
 C {/home/hugodg/projects_sky130/temp_sensor/impedance-transformer/xschem/l1.sym} 460 -235 0 0 {name=x1}

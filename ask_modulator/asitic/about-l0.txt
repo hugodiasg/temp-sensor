@@ -1,4 +1,4 @@
-SQ NAME=l0:LEN=150:W=6:S=3:N=1.75:METAL=MET5:EXIT=MET4:XORG=0:YORG=0
+SQ NAME=l0:LEN=150:W=6:S=3:N=1.75:METAL=MET5:EXIT=MET4:XORG=200:YORG=200
 pi l0 2.5
 save l0
 cifsave l0 l0.cif 1 100 poly
@@ -11,4 +11,18 @@ Pi Model at f=2.45 GHz:  Q = 3.386 , 3.387 , 3.392
 L = 1.077 nH R = 4.88 
 Cs1 = 10.78 fF Rs1 = 41.95 
 Cs2 = 10.54 fF Rs2 = 5.649      Est. Resonance = 47.13 GHz
+
+=================================================================================================
+
+
+ASITIC>  pix l0 2.45
+
+maxL = 3061.22, maxT =  1.55, maxW =  1.55 (lambda = 61224.49, delta =  1.94)
+Performing Analysis at 2.45 GHz
+Generating capacitance matrix (24x24)...
+Generating inductance matrix (32x32).....
+Pi Model at f=2.45 GHz:  Q = 3.373 , 3.376 , 3.396 
+L = 1.081 nH R = 4.869 
+Cs1 = 43.75 fF Rs1 = 23.73 
+Cs2 = 41.19 fF Rs2 = 21.97      Est. Resonance = 23.4 GHz
 
