@@ -48,7 +48,7 @@ Area | 0.022mm²
 
 #### 3.2 Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/156934755-764318fa-b4dc-4e42-bd07-ffd3cfafaea2.png)
+![image](https://user-images.githubusercontent.com/80465879/156936953-32667419-e65a-44e5-a9e3-9a2000ced55e.png)
 
 #### 3.3 Layout:
 
