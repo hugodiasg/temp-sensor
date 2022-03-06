@@ -46,7 +46,7 @@ plot mag(z)
 .endc"}
 C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym} 120 -535 1 0 {name=xl0}
 C {devices/gnd.sym} 180 -520 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/cap_mim_m3_2.sym} -20 -520 0 0 {name=C0 model=cap_mim_m3_2 W=23.35 L=23.35 MF=3 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} -20 -520 0 0 {name=C0 model=cap_mim_m3_2 W=24.5 L=24.5 MF=3 spiceprefix=X}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} 200 -520 0 0 {name=R1
 W=0.35
 L=5

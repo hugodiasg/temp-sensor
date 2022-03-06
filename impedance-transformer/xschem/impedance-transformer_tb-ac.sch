@@ -18,27 +18,39 @@ N 320 200 340 200 {
 lab=ns22}
 N 400 200 460 200 {
 lab=#net1}
-N -27.5 200 -0 200 {
-lab=ns21}
-N -17.5 -80 10 -80 {
-lab=ns11}
-N -535 -80 -505 -80 {
-lab=#net2}
-N -150 -80 -17.5 -80 {
-lab=ns11}
-N -177.5 200 -27.5 200 {
-lab=ns21}
-N -445 -80 -150 -80 {
-lab=ns11}
-N -412.5 200 -177.5 200 {
-lab=ns21}
-N -625 -80 -595 -80 {
+N -545 -80 -515 -80 {
 lab=GND}
+N -395 -80 -385 -80 {
+lab=#net2}
+N -385 -80 -375 -80 {
+lab=#net2}
+N -20 -80 10 -80 {
+lab=ns11}
+N -67.5 200 0 200 {
+lab=ns21}
+N -80 -80 -20 -80 {
+lab=ns11}
+N -335 -325 -305 -325 {
+lab=GND}
+N -245 -325 -235 -325 {
+lab=vd}
+N -235 -325 -225 -325 {
+lab=vd}
+N -550 200 -550 232.5 {
+lab=GND}
+N -550 200 -542.5 200 {
+lab=GND}
+N -422.5 200 -362.5 200 {
+lab=#net3}
+N -482.5 200 -422.5 200 {
+lab=#net3}
+N -455 -80 -395 -80 {
+lab=#net2}
 C {devices/gnd.sym} 160 -30 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=ns12}
 C {devices/code_shown.sym} 402.5 -1025 0 0 {name=Simulation only_toplevel=false value="
 
-.ac lin 1MEG 1.5G 4G
+.ac lin 1MEG 2G 3G
 .control
 destroy all
 set units=degrees
@@ -48,7 +60,7 @@ set color0=white
 set color1=black
 
 let z0=50
-let zl=169
+let zl=191.7
 
 * Find two S parameters from test circuit
 let s11 = v(ns11)
@@ -77,19 +89,16 @@ let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
 *plot ph(z22) xlimit 2.4G 2.5G
 *plot z22 
 *plot smith z22
-let z_in =z11-z12*z21/(z22+z0)
-plot ph(z_in)
-plot mag(z_in)
-let z_output=z22-(z12*z21/(z11+zl))
-plot ph(z_output)
-plot mag(z_output)
+let z_in =z11-z12*z21/(z22+zl)
+let z_output=z22-(z12*z21/(z11+z0))
+plot ph(z_in) ph(z_output) 
+plot mag(z_in) mag(z_output)
 let gamma=(mag(z_output)-mag(z_in))/(mag(z_output)+mag(z_in))
-plot gamma*100
+plot gamma
 .endc"
 
 }
 C {devices/code_shown.sym} 420 -30 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
-C {devices/lab_pin.sym} -17.5 -80 1 0 {name=l8 sig_type=std_logic lab=ns11}
 C {devices/vsource.sym} 500 200 3 1 {name=Vin1 value="DC 0 AC 1"}
 C {devices/gnd.sym} 150 250 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} 320 200 1 0 {name=l10 sig_type=std_logic lab=ns22}
@@ -107,17 +116,18 @@ device=resistor
 m=1}
 C {/home/hugodg/projects_sky130/temp_sensor/impedance-transformer/xschem/impedance-transformer.sym} 160 -80 0 0 {name=x1}
 C {/home/hugodg/projects_sky130/temp_sensor/impedance-transformer/xschem/impedance-transformer.sym} 150 200 0 0 {name=x2}
-C {devices/lab_pin.sym} -27.5 200 1 0 {name=l3 sig_type=std_logic lab=ns21}
-C {devices/gnd.sym} -472.5 200 0 0 {name=Vin5 value="DC 1.8"}
-C {devices/res.sym} -475 -80 3 0 {name=R1
-value=172.2
-footprint=1206
-device=resistor
-m=1}
-C {devices/res.sym} -442.5 200 3 0 {name=R2
-value=172.2
-footprint=1206
-device=resistor
-m=1}
-C {devices/vsource.sym} -565 -80 1 0 {name=Vin2 value="DC 0 AC 1"}
-C {devices/gnd.sym} -625 -80 0 0 {name=l5 lab=GND}
+C {devices/vsource.sym} -485 -80 1 0 {name=Vin value="DC 1.8 AC 1"}
+C {devices/gnd.sym} -545 -80 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} -5 -80 1 0 {name=l8 sig_type=std_logic lab=ns11}
+C {devices/gnd.sym} -550 232.5 0 0 {name=l16 lab=GND}
+C {devices/lab_pin.sym} -22.5 200 1 0 {name=l13 sig_type=std_logic lab=ns21}
+C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator-pex.sym} -230 -80 0 0 {name=x3}
+C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator-pex.sym} -217.5 200 0 0 {name=x4}
+C {devices/gnd.sym} -217.5 250 0 0 {name=l3 lab=GND}
+C {devices/gnd.sym} -230 -30 0 0 {name=l4 lab=GND}
+C {devices/vsource.sym} -275 -325 1 0 {name=Vin2 value="DC 3.3 AC 0"}
+C {devices/gnd.sym} -335 -325 0 0 {name=l6 lab=GND}
+C {devices/lab_pin.sym} -225 -325 1 0 {name=l7 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} -230 -140 1 0 {name=l12 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} -217.5 140 1 0 {name=l14 sig_type=std_logic lab=vd}
+C {devices/vsource.sym} -512.5 200 1 0 {name=Vin3 value="DC 1.8 AC 0"}

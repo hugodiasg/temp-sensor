@@ -1,28 +1,39 @@
-SQ NAME=l0:LEN=150:W=6:S=3:N=1.75:METAL=MET5:EXIT=MET4:XORG=200:YORG=200
-pi l0 2.5
-save l0
-cifsave l0 l0.cif 1 100 poly
-mv l0.cif ~/projects_sky130/temp_sensor/ask_modulator/mag/
-cd ~/projects_sky130/temp_sensor/ask_modulator/mag/
+ASITIC>  optsq
 
-*ESPECS
+Desired inductance and accuracy in percent (e.g. '2 5' for 2nH within 5%)? (nH) 1.02 0.05
 
-Pi Model at f=2.45 GHz:  Q = 3.386 , 3.387 , 3.392 
-L = 1.077 nH R = 4.88 
-Cs1 = 10.78 fF Rs1 = 41.95 
-Cs2 = 10.54 fF Rs2 = 5.649      Est. Resonance = 47.13 GHz
+Name? l0
 
-=================================================================================================
+Length? 120
 
+Min/Step/Max Spacing? 2 0.05 10
 
+Min/Step/Max Width? 2 0.05 25
+
+Metal layer? met5
+
+Exit metal layer? met4
+
+Frequency? (GHz) 2.5
+
+Simulation started at:  seg 28 fev 2022 22:22:00 -03
+
+Completed in 561873 iterations
+Simulation ended at:  seg 28 fev 2022 22:22:35 -03
+
+Pi Model at f=2.5 GHz:  Q = 5.445 , 5.446 , 5.471 
+L = 1.02 nH R = 2.915 
+Cs1 = 33.25 fF Rs1 = 27.49 
+Cs2 = 35.92 fF Rs2 = -8.97      Est. Resonance = 27.67 GHz
+Found:  n =3.5000, w =11.8000, s =2.1000
+L =1.0201, R_sh = 90.9155(s), 90.9663(d)  Q = 5.4448, 5.4461, 5.4706(d)
 ASITIC>  pix l0 2.45
 
 maxL = 3061.22, maxT =  1.55, maxW =  1.55 (lambda = 61224.49, delta =  1.94)
 Performing Analysis at 2.45 GHz
-Generating capacitance matrix (24x24)...
-Generating inductance matrix (32x32).....
-Pi Model at f=2.45 GHz:  Q = 3.373 , 3.376 , 3.396 
-L = 1.081 nH R = 4.869 
-Cs1 = 43.75 fF Rs1 = 23.73 
-Cs2 = 41.19 fF Rs2 = 21.97      Est. Resonance = 23.4 GHz
-
+Generating capacitance matrix (75x75)...
+Generating inductance matrix (120x120).....
+Pi Model at f=2.45 GHz:  Q = 4.369 , 4.377 , 4.406 
+L = 993 pH R = 3.443 
+Cs1 = 58.53 fF Rs1 = 24.1 
+Cs2 = 52.93 fF Rs2 = 22.94      Est. Resonance = 21.24 GHz

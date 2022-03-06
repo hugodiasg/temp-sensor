@@ -1,27 +1,38 @@
-ASITIC>  pi l0 2.45
+Desired inductance and accuracy in percent (e.g. '2 5' for 2nH within 5%)? (nH) 0.6 0.05
 
-Warning:  KCL violation at port 2 of segment 13 in device l0.
-Warning:  KCL violation at port 2 of segment 14 in device l0.
-Pi Model at f=2.45 GHz:  Q = 3.332 , 3.332 , 3.335 
-L = 593.9 pH R = 2.739 
-Cs1 = 12.5 fF Rs1 = 110.8 
-Cs2 = 13.32 fF Rs2 = -74.12      Est. Resonance = 67.83 GHz
+Name? l0
+
+Length? 80
+
+Min/Step/Max Spacing? 2 0.05 10
+
+Min/Step/Max Width? 2 0.05 20
+
+Metal layer? met5
+
+Exit metal layer? met4
+
+Frequency? (GHz) 2.45
+
+Simulation started at:  ter 01 mar 2022 22:36:57 -03
+
+Completed in 365819 iterations
+Simulation ended at:  ter 01 mar 2022 22:37:16 -03
+
+Pi Model at f=2.45 GHz:  Q = 3.455 , 3.455 , 3.459 
+L = 600.2 pH R = 2.668 
+Cs1 = 13.68 fF Rs1 = 96.01 
+Cs2 = 14.51 fF Rs2 = -62.61      Est. Resonance = 62.48 GHz
+Found:  n =3.2500, w =7.9500, s =2.0500
+L =0.6002, R_sh = 34.6548(s), 34.6595(d)  Q = 3.4548, 3.4553, 3.4588(d)
 ASITIC>  pix l0 2.45
 
-Warning:  KCL violation at port 2 of segment 13 in device l0.
-Warning:  KCL violation at port 2 of segment 14 in device l0.
 maxL = 3061.22, maxT =  1.55, maxW =  1.55 (lambda = 61224.49, delta =  1.94)
 Performing Analysis at 2.45 GHz
 Generating capacitance matrix (42x42)...
 Generating inductance matrix (70x70).....
-Pi Model at f=2.45 GHz:  Q = 3.09 , 3.094 , 3.099 
-L = 592.1 pH R = 2.935 
-Cs1 = 29.74 fF Rs1 = 58.67 
-Cs2 = 24.89 fF Rs2 = 13.53      Est. Resonance = 41.69 GHz
-ASITIC>  geom l0
-
-Square spiral <l0> has the following geometry:
-L1 =  80.00, L2 =  80.00, W =   7.70, S =   2.50, N =   3.25
-Total length =  687.23 (um), Total Area = 5287.97 (um^2)
-Located at (216.00,216.00) with 15 segments.
+Pi Model at f=2.45 GHz:  Q = 3.171 , 3.173 , 3.179 
+L = 598 pH R = 2.89 
+Cs1 = 26.59 fF Rs1 = 63.35 
+Cs2 = 25.14 fF Rs2 = 19.11      Est. Resonance = 44.02 GHz
 

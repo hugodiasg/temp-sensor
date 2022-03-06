@@ -2,7 +2,7 @@
 *+ /home/hugodg/projects_sky130/temp_sensor/impedance-transformer/xschem/impedance-transformer.sch
 .subckt impedance-transformer gnd in out
 *.PININFO gnd:B in:B out:B
-XC0 in gnd sky130_fd_pr__cap_mim_m3_2 W=24.559 L=24.559 MF=9 m=9
-XC1 out gnd sky130_fd_pr__cap_mim_m3_2 W=29.008 L=29.008 MF=12 m=12
+XC0 in gnd sky130_fd_pr__cap_mim_m3_2 W=22.93 L=22.93 MF=9 m=9
+XC1 out gnd sky130_fd_pr__cap_mim_m3_2 W=24.07 L=24.07 MF=16 m=16
 .ends
 .end

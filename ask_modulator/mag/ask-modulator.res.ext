@@ -1,17 +1,17 @@
 scale 1000 1 500000
-rnode "in.t0" 0 452.336 9796 -3646 0
-rnode "in" 0 2537.66 6340 -5360 0
+rnode "in.t0" 0 400.9 9796 -3646 0
+rnode "in" 0 2249.1 6340 -5360 0
 resist "in" "in.t0" 448.598
-rnode "gnd" 0 0 6340 -6180 0
-rnode "vd.t2" 0 25053.6 10063 11661 0
-rnode "vd.t0" 0 25121.7 10063 6691 0
-rnode "vd.t1" 0 173474 10063 1721 0
-rnode "vd" 0 11100.2 6340 -8720 0
+rnode "gnd" 0 0 6344 -7206 0
+rnode "vd.t2" 0 42340.4 9720 1452 0
+rnode "vd.t0" 0 40084.5 9720 6632 0
+rnode "vd.t1" 0 46900.5 9720 11812 0
+rnode "vd" 0 1144.65 6340 16440 0
 resist "vd.t1" "vd.t0" 0.066
 resist "vd.t0" "vd.t2" 0.066
-resist "vd" "vd.t1" 2.666
-rnode "out" 0 155660 6340 -3040 0
+resist "vd" "vd.t1" 0.714
+rnode "out" 0 176760 6340 -3040 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 7280 -988 7281 -987  "None" "vd.t2" 38720 0 "out" -14040 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 7280 9372 7281 9373  "None" "vd.t1" 38720 0 "out" -14040 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 7280 4192 7281 4193  "None" "vd.t0" 38720 0 "out" -14040 0
 device msubckt sky130_fd_pr__nfet_g5v0d10v5 9746 -4516 9747 -4515  "gnd" "in.t0" 200 0 "out" 1740 0 "gnd" 1740 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 7728 9326 7729 9327  "None" "vd.t2" 37040 0 "out" -13431 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 7728 -614 7729 -613  "None" "vd.t1" 37040 0 "out" -13431 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 7728 4356 7729 4357  "None" "vd.t0" 37040 0 "out" -13431 0

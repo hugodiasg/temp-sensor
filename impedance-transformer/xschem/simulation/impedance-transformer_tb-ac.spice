@@ -6,9 +6,11 @@ R3 ns12 GND 50 m=1
 R4 ns22 net1 50 m=1
 x1 ns11 ns12 GND impedance-transformer
 x2 ns21 ns22 GND impedance-transformer
-R1 net2 ns11 172.2 m=1
-R2 GND ns21 172.2 m=1
+R1 net2 net3 152 m=1
+R2 GND net4 152 m=1
 Vin2 net2 GND DC 0 AC 1
+C1 net3 ns11 3.7p m=1
+C2 net4 ns21 3.7p m=1
 **** begin user architecture code
 
 
@@ -53,11 +55,9 @@ let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
 *plot z22
 *plot smith z22
 let z_in =z11-z12*z21/(z22+z0)
-plot ph(z_in)
-plot mag(z_in)
 let z_output=z22-(z12*z21/(z11+zl))
-plot ph(z_output)
-plot mag(z_output)
+plot ph(z_in) ph(z_output)
+plot mag(z_in) mag(z_output)
 let gamma=(mag(z_output)-mag(z_in))/(mag(z_output)+mag(z_in))
 plot gamma*100
 .endc
@@ -78,8 +78,8 @@ plot gamma*100
 *.iopin gnd
 *.iopin in
 *.iopin out
-XC0 in gnd sky130_fd_pr__cap_mim_m3_2 W=24.43 L=24.43 MF=9 m=9
-XC1 out gnd sky130_fd_pr__cap_mim_m3_2 W=24.962 L=24.962 MF=16 m=16
+XC0 in gnd sky130_fd_pr__cap_mim_m3_2 W=25.911 L=25.911 MF=9 m=9
+XC1 out gnd sky130_fd_pr__cap_mim_m3_2 W=25.781 L=25.781 MF=16 m=16
 x1 in out l1
 .ends
 
@@ -91,12 +91,12 @@ x1 in out l1
 .subckt l1  p1 p2
 *.iopin p2
 *.iopin p1
-L0 p1 net3 592.7p m=1
-Cs1 p1 net1 26.83f m=1
-Cs2 p2 net2 24.25f m=1
-Rs1 net1 GND 65.02 m=1
-Rs2 net2 GND 14.4 m=1
-R1 p2 net3 2.935 m=1
+L0 p1 net3 529.2p m=1
+Cs1 p1 net1 29.38f m=1
+Cs2 p2 net2 25f m=1
+Rs1 net1 GND 69.31 m=1
+Rs2 net2 GND 3.196 m=1
+R1 p2 net3 2.702 m=1
 .ends
 
 .GLOBAL GND

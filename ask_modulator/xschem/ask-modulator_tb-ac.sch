@@ -78,13 +78,11 @@ let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
 *plot z11
 *plot z12
 *plot z21
-plot z22 xlimit 2.4G 2.5G
-plot ph(z22) xlimit 2.4G 2.5G
-plot z22 
-*plot smith z22
+*plot z22 
 let z_output= z22-(z12*z21/(z11+z0))
-plot z_output
-plot ph(z_output)
+let z_in=z11-(z12*z21)/(z22+z0)
+plot z_output z_in
+plot ph(z_output) ph(z_in)
 .endc"
 
 }

@@ -37,7 +37,7 @@ let t=100n
 let id =-i(vdd)
 plot id
 plot in
-plot out 3.29583
+plot out 3.2951
 *S
 let vrms_rlc=sqrt(integ((out-vd)^2)/t)
 let vrms_nmos=sqrt(integ(out^2)/t)
