@@ -1,7 +1,8 @@
 # temp-sensor
 Temperature sensor wireless communication
 ASK Modulator
-Especs:
+Specs:
+
 | Name | Value
 | Carrier Frequency | 2.4GHz - 2.5GHz |
 | Apparent Potency | 2.35mW |
