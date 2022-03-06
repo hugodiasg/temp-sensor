@@ -4,6 +4,7 @@ ASK Modulator
 Specs:
 
 Name | Value
+--------- | ------:
 Carrier Frequency | 2.4GHz - 2.5GHz
 Apparent Potency | 2.35mW
 Drain Current | 1mA
