@@ -34,8 +34,14 @@ N 260 190 320 190 {
 lab=#net2}
 N -165 190 -145 190 {
 lab=ns21}
-N -225 190 -225 220 {
+N -335 190 -335 220 {
 lab=GND}
+N -335 190 -305 190 {
+lab=GND}
+N -245 190 -235 190 {
+lab=#net3}
+N -235 190 -225 190 {
+lab=#net3}
 C {devices/vsource.sym} 35 -250 2 0 {name=Vdd value="DC 3.3 AC 0"}
 C {devices/vsource.sym} -260 -90 1 0 {name=Vin value="DC 1.8 AC 1"}
 C {devices/gnd.sym} 20 -40 0 0 {name=l1 lab=GND}
@@ -119,6 +125,7 @@ value=50
 footprint=1206
 device=resistor
 m=1}
-C {devices/gnd.sym} -225 220 0 0 {name=l16 lab=GND}
+C {devices/gnd.sym} -335 220 0 0 {name=l16 lab=GND}
 C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator-pex.sym} 20 -90 0 0 {name=x1}
 C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator-pex.sym} 10 190 0 0 {name=x2}
+C {devices/vsource.sym} -275 190 1 0 {name=Vin2 value="DC 1.8"}

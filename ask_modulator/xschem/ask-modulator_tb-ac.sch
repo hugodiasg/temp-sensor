@@ -34,7 +34,7 @@ N 400 200 460 200 {
 lab=#net2}
 N -25 200 -5 200 {
 lab=ns21}
-N -85 200 -85 230 {
+N -115 200 -85 200 {
 lab=GND}
 C {devices/vsource.sym} 175 -240 2 0 {name=Vdd value="DC 3.3 AC 0"}
 C {devices/vsource.sym} -120 -80 1 0 {name=Vin value="DC 1.8 AC 1"}
@@ -114,9 +114,5 @@ value=50
 footprint=1206
 device=resistor
 m=1}
-C {devices/res.sym} -55 200 1 0 {name=R5
-value=50
-footprint=1206
-device=resistor
-m=1}
-C {devices/gnd.sym} -85 230 0 0 {name=l16 lab=GND}
+C {devices/vsource.sym} -55 200 1 0 {name=Vin2 value="DC 1.8 "}
+C {devices/gnd.sym} -115 200 0 0 {name=l4 lab=GND}

@@ -44,7 +44,8 @@ N -422.5 200 -362.5 200 {
 lab=#net3}
 N -482.5 200 -422.5 200 {
 lab=#net3}
-N -455 -80 -395 -80 {}
+N -455 -80 -395 -80 {
+lab=#net1}
 C {devices/vsource.sym} -485 -80 1 0 {name=Vin value="DC 1.8 AC 1"}
 C {devices/gnd.sym} 160 -30 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=ns12}
@@ -96,6 +97,7 @@ plot ph(z_in) ph(z_output)
 plot mag(z_in) mag(z_output)
 let gamma=(mag(z_output)-mag(z_in))/(mag(z_output)+mag(z_in))
 plot gamma
+plot smithgrid ac.v(ns11) ac.v(ns12) ac.v(ns21) ac.v(ns22) 
 .endc"
 
 }
