@@ -48,7 +48,7 @@ Area | 0.022mm²
 
 #### 3.2 Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/156936953-32667419-e65a-44e5-a9e3-9a2000ced55e.png)
+![image](https://user-images.githubusercontent.com/80465879/157763862-80e357fb-cd03-4b21-bc23-bb35dac79379.png)
 
 #### 3.3 Layout:
 
@@ -74,7 +74,7 @@ Area | 0.0538mm²
 
 #### 4.2 Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/156934676-48617c00-b7ea-4c80-bd68-df5aa75e0ff3.png)
+![image](https://user-images.githubusercontent.com/80465879/157763649-df599fd6-033a-4d69-af7a-6ac128a25b0a.png)
 
 #### 4.3 Layout:
 
