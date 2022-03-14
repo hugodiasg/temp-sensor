@@ -32,7 +32,7 @@ User Wrapper Area | 0.0758mm²
 
 #### 2.3 Layout: 
 
-![image](https://user-images.githubusercontent.com/80465879/156934805-25a7cc69-54c1-4565-9fe1-d1d9f04efe13.png)
+![image](https://user-images.githubusercontent.com/80465879/158095389-9c97b67d-c040-4b6a-bd27-b9130057c0bf.png)
 
 ### 3. ASK Modulator
 #### 3.1 Specs:
@@ -52,7 +52,7 @@ Area | 0.022mm²
 
 #### 3.3 Layout:
 
-![image](https://user-images.githubusercontent.com/80465879/156934742-08f6ef7f-451f-43f1-9a0c-ad52ea9c52a0.png)
+![image](https://user-images.githubusercontent.com/80465879/158095248-fdb7e7cf-fa73-457f-8f9b-243dc0f7540a.png)
 
 #### 3.4 Simulation:
 
@@ -78,7 +78,7 @@ Area | 0.0538mm²
 
 #### 4.3 Layout:
 
-![image](https://user-images.githubusercontent.com/80465879/156934775-285f71c5-b285-4f41-8e49-396062ac482d.png)
+![image](https://user-images.githubusercontent.com/80465879/158095155-cbabb889-b652-4ba4-b6b0-d5bb81f61815.png)
 
 #### 4.4 Simulation:
 
