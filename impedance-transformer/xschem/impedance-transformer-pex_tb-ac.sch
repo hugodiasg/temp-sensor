@@ -52,7 +52,7 @@ C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=ns12}
 C {devices/gnd.sym} -545 -80 0 0 {name=l5 lab=GND}
 C {devices/code_shown.sym} 415 -875 0 0 {name=Simulation only_toplevel=false value="
 
-.ac lin 1MEG 1.5G 4G
+.ac dec 100MEG 10 4G
 .control
 destroy all
 set units=degrees

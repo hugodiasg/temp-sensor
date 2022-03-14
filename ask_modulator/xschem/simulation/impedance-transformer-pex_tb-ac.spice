@@ -15,7 +15,7 @@ Vin3 net3 GND DC 1.8 AC 0
 
 
 
-.ac lin 1MEG 1.5G 4G
+.ac dec 100MEG 10 4G
 .control
 destroy all
 set units=degrees
@@ -60,6 +60,7 @@ plot ph(z_in) ph(z_output)
 plot mag(z_in) mag(z_output)
 let gamma=(mag(z_output)-mag(z_in))/(mag(z_output)+mag(z_in))
 plot gamma
+plot smithgrid ac.v(ns11) ac.v(ns12) ac.v(ns21) ac.v(ns22)
 .endc
 
 
