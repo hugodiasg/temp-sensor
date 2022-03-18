@@ -21,7 +21,6 @@ C {devices/iopin.sym} 360 -40 1 0 {name=p1 lab=gnd}
 C {devices/ipin.sym} 300 -90 0 0 {name=p3 lab=in}
 C {devices/opin.sym} 400 -130 0 0 {name=p4 lab=out}
 C {devices/iopin.sym} 360 -262.5 3 0 {name=p2 lab=vd}
-C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym} 497.5 -195 1 0 {name=x1}
 C {devices/code.sym} 640 -150 0 0 {name=RC_ext only_toplevel=false value="
 * NGSPICE file created from ask-modulator.ext - technology: sky130A
 
@@ -75,3 +74,4 @@ C12 vd 0 13.98fF
 
 
 "}
+C {/home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/l0.sym} 497.5 -195 1 0 {name=x1}

@@ -1,66 +1,43 @@
 ** sch_path:
-*+ /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer-pex_tb-ac.sch
-**.subckt impedance-transformer-pex_tb-ac
-Vin net1 GND AC 1
-Vin1 net2 GND DC 0 AC 1
-R3 ns12 GND 50 m=1
-R4 ns22 net2 50 m=1
-x1 ns11 ns12 GND impedance-transformer-pex
-x2 ns21 ns22 GND impedance-transformer-pex
-R1 GND net3 191.6 m=1
-C1 net3 ns21 19.6852p m=1
-R2 net1 net4 191.6 m=1
-C2 net4 ns11 19.6852p m=1
+*+ /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer-pex_tb-tran.sch
+**.subckt impedance-transformer-pex_tb-tran
+Vdd vd GND 3.3
+Vin2 in GND PULSE(0V 1.8V 0.5ns 0.1ns 0.1ns 50ns 100ns)
+R1 out GND 50 m=1
+x1 in2 out GND impedance-transformer-pex
+x2 vd in2 in GND ask-modulator-pex
 **** begin user architecture code
 
 
 
-.ac dec 1Meg 100Meg 4G
+*.tran 0.2n 30n
+.tran 0.005n 100n
+*.tran 0.3n 400n
+*.tran 0.05n 1.3n
+
 .control
 destroy all
-set units=degrees
 run
 
 set color0=white
 set color1=black
 
-let z0=50
-let zs=191.7
 
-* Find two S parameters from test circuit
-let s11 = v(ns11)
-let s12 = v(ns12)
-let s21 = v(ns21)
-let s22 = v(ns22)
-
-* Extract Y parameters
-*let StoYDelS = ((1+s11)*(1+s22)-s12*s21)*z0
-*let y11 = ((1+s22)*(1-s11)+s12*s21/StoYDelS
-*let y12=-2*s12/StoYDelS
-*let y21=-2*s21/StoYDelS
-*let y22 = ((1+s11)*(1-s22)+s12+s21)/StoYDelS
-
-* Extract Z parameters
-let StoZDelS = ((1-s11)*(1-s22)-s12*s21)/z0
-let z11 = ((1+s11)*(1-s22)+s12*s21)/StoZDelS
-let z12 = 2*s12/StoZDelS
-let z21 = 2*s21/StoZDelS
-let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
-
-*plot z11
-*plot z12
-*plot z21
-*plot z22 xlimit 2.4G 2.5G
-*plot ph(z22) xlimit 2.4G 2.5G
-*plot z22
-*plot smith z22
-let z_in =z11-z12*z21/(z22+zs)
-let z_output=z22-(z12*z21/(z11+z0))
-plot ph(z_in) ph(z_output)
-plot mag(z_in) mag(z_output)
-let gamma=(mag(z_output)-mag(z_in))/(mag(z_output)+mag(z_in))
-plot gamma
-plot smithgrid ac.v(ns11) ac.v(ns12) ac.v(ns21) ac.v(ns22)
+let t=100n
+let id =-i(vdd)
+plot id
+plot in
+plot out
+*S
+let vrms_rlc=sqrt(integ((out-vd)^2)/t)
+let vrms_nmos=sqrt(integ(out^2)/t)
+let irms=sqrt(integ((-i(vdd))^2)/t)
+let srms_rlc=vrms_rlc*irms
+let srms_nmos=vrms_nmos*irms
+let srms=srms_rlc+srms_nmos
+plot srms
+plot out xlimit 50.5n 51n
+plot out  xlimit .5n 1n
 .endc
 
 
@@ -79,7 +56,6 @@ plot smithgrid ac.v(ns11) ac.v(ns12) ac.v(ns21) ac.v(ns22)
 *.iopin gnd
 *.iopin in
 *.iopin out
-*  xl1 -  l1  IS MISSING !!!!
 **** begin user architecture code
 
 * NGSPICE file created from impedance-transformer.ext - technology: sky130A
@@ -179,6 +155,109 @@ C31 out gnd 70.58fF
 
 
 **** end user architecture code
+x1 in out l1
+.ends
+
+
+* expanding   symbol:
+*+  /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym # of pins=4
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sch
+.subckt ask-modulator-pex  vd out in gnd
+*.iopin gnd
+*.ipin in
+*.opin out
+*.iopin vd
+**** begin user architecture code
+
+
+* NGSPICE file created from ask-modulator.ext - technology: sky130A
+
+.subckt sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN w_n201_n1098# a_n35_500# a_n35_n932#
+X0 a_n35_n932# a_n35_500# w_n201_n1098# sky130_fd_pr__res_xhigh_po_0p35 l=5e+06u
+C0 a_n35_n932# w_n201_n1098# 1.08fF
+C1 a_n35_500# w_n201_n1098# 1.08fF
+.ends
+
+.subckt sky130_fd_pr__nfet_g5v0d10v5_PWYS4E a_n108_n870# a_n50_n958# w_n278_n1128#  a_50_n870#
+X0 a_50_n870# a_n50_n958# a_n108_n870# w_n278_n1128# sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p
++ pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=8.7e+06u l=500000u
+C0 a_50_n870# a_n108_n870# 1.03fF
+C1 a_50_n870# w_n278_n1128# 0.84fF
+C2 a_n108_n870# w_n278_n1128# 0.84fF
+C3 a_n50_n958# w_n278_n1128# 0.52fF
+.ends
+
+.subckt sky130_fd_pr__cap_mim_m3_2_97K3D8 c2_n2519_n7620# m4_n2619_n7720# VSUBS
+X0 c2_n2519_n7620# m4_n2619_n7720# sky130_fd_pr__cap_mim_m3_2 l=2.44e+07u w=2.44e+07u
+X1 c2_n2519_n7620# m4_n2619_n7720# sky130_fd_pr__cap_mim_m3_2 l=2.44e+07u w=2.44e+07u
+X2 c2_n2519_n7620# m4_n2619_n7720# sky130_fd_pr__cap_mim_m3_2 l=2.44e+07u w=2.44e+07u
+C0 m4_n2619_n7720# c2_n2519_n7620# 118.49fF
+C1 c2_n2519_n7620# VSUBS 0.26fF
+C2 m4_n2619_n7720# VSUBS 30.70fF
+.ends
+
+*.subckt ask-modulator in out vd gnd
+Xsky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0 gnd vd out sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN
+Xsky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5_PWYS4E
+Xsky130_fd_pr__cap_mim_m3_2_97K3D8_0 vd out gnd sky130_fd_pr__cap_mim_m3_2_97K3D8
+
+R0 vd vd.t1 0.714
+R1 vd.t0 vd.t2 0.066
+R2 vd.t1 vd.t0 0.066
+R3 in in.t0 448.598
+C0 gnd in 0.36fF
+C1 vd gnd 1.55fF
+C2 out in 0.46fF
+C3 vd out -0.86fF
+C4 out gnd 0.13fF
+C5 in.t0 0 0.40fF
+C6 vd.t2 0 42.34fF
+C7 vd.t0 0 40.08fF
+C8 vd.t1 0 46.90fF
+C9 gnd 0 -0.14fF
+C10 out 0 235.88fF
+C11 in 0 4.90fF
+C12 vd 0 13.98fF
+*.ends
+
+
+
+
+**** end user architecture code
+x1 vd out l0
+.ends
+
+
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/l1.sym
+*+ # of pins=2
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/l1.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/l1.sch
+.subckt l1  p1 p2
+*.iopin p2
+*.iopin p1
+L0 p1 net3 598p m=1
+Cs1 p1 net1 26.59f m=1
+Cs2 p2 net2 25.14f m=1
+Rs1 net1 GND 63.55 m=1
+Rs2 net2 GND 19.11 m=1
+R1 p2 net3 2.89 m=1
+.ends
+
+
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/l0.sym # of
+*+ pins=2
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/l0.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/l0.sch
+.subckt l0  p1 p2
+*.iopin p2
+*.iopin p1
+L0 p1 net3 993p m=1
+Cs1 p1 net1 58.53f m=1
+Cs2 p2 net2 52.93f m=1
+Rs1 net1 GND 24.1 m=1
+Rs2 net2 GND 22.94 m=1
+R1 p2 net3 3.443 m=1
 .ends
 
 .GLOBAL GND

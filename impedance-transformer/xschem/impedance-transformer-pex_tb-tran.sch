@@ -59,8 +59,6 @@ C {devices/gnd.sym} 127.5 -192.5 2 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} -87.5 -122.5 2 0 {name=l10 sig_type=std_logic lab=in}
 C {devices/lab_pin.sym} -162.5 -82.5 2 0 {name=l11 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} -322.5 -2.5 1 0 {name=l12 sig_type=std_logic lab=in}
-C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator-pex.sym} -162.5 -2.5 0 0 {name=x1}
-C {/home/hugodg/projects_sky130/temp_sensor/impedance-transformer/xschem/impedance-transformer-pex.sym} 160 -2.5 0 0 {name=x2}
 C {devices/gnd.sym} 160 47.5 0 0 {name=l4 lab=GND}
 C {devices/res.sym} 350 27.5 0 0 {name=R1
 value=50
@@ -69,3 +67,5 @@ device=resistor
 m=1}
 C {devices/gnd.sym} 350 57.5 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 0 -2.5 1 0 {name=l6 sig_type=std_logic lab=in2}
+C {/home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer-pex.sym} 160 -2.5 0 0 {name=x1}
+C {/home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym} -162.5 -2.5 0 0 {name=x2}

@@ -16,7 +16,6 @@ lab=out}
 C {devices/iopin.sym} 467.5 -137.5 1 0 {name=p1 lab=gnd}
 C {devices/iopin.sym} 332.5 -237.5 2 0 {name=p2 lab=in}
 C {devices/iopin.sym} 595 -237.5 2 1 {name=p3 lab=out}
-C {/home/hugodg/projects_sky130/temp_sensor/impedance-transformer/xschem/l1.sym} 460 -235 0 0 {name=xl1}
 C {devices/code.sym} 720 -247.5 0 0 {name=RC_Ext only_toplevel=false value="* NGSPICE file created from impedance-transformer.ext - technology: sky130A
 
 .subckt sky130_fd_pr__cap_mim_m3_2_4GE4YE c2_n2372_n7179# m4_n2472_n7279# VSUBS
@@ -112,3 +111,4 @@ C31 out gnd 70.58fF
 *.ends
 
 "}
+C {/home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/l1.sym} 460 -235 0 0 {name=x1}
