@@ -16,7 +16,7 @@
 
 Name | Value
 --------- | ------:
-Harness Area | 10.33mm²
+Harness User Project Area | 10.33mm²
 User Wrapper Area | 0.0758mm²
 
 #### 2.2 Pins:
