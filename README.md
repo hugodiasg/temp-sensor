@@ -82,7 +82,8 @@ Area | 0.0538mm²
 
 #### 4.4 Simulation:
 
-![image](https://user-images.githubusercontent.com/80465879/156935854-bd2c81ac-dd8b-4438-a2bf-e6c9801d1531.png)
+![image](https://user-images.githubusercontent.com/80465879/158992276-8d27d4aa-c914-427b-9cd1-bf1bc35db584.png)
 
-![image](https://user-images.githubusercontent.com/80465879/156935861-5a420033-b3ca-4c09-9c9c-714c1185246e.png)
+![image](https://user-images.githubusercontent.com/80465879/158992336-cb575c7f-9eca-4401-9220-5720115976be.png)
+
 
