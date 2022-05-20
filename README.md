@@ -2,7 +2,8 @@
 # Temperature sensor wireless communication
 
  The circuit is a temperature sensor with 2.4GHz wireless communication with Sky130nm technology.
- Other blocks on progress...
+ 
+ Other blocks in progress...
  
 ### General Block Diagram
 
