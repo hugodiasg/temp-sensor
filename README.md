@@ -5,7 +5,7 @@
  
  Other blocks in progress...
  
-### General Block Diagram
+### Block Diagram
 
 ![image](https://user-images.githubusercontent.com/80465879/169625179-8cd3d2a1-2061-4c8f-9a96-f0d7ffa67104.png)
  
