@@ -1,0 +1,56 @@
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_G8P5KT in circuit sensor (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_G8PMZT in circuit sensor (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_G8P52V in circuit sensor (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_S7RYHB in circuit sensor (0)(3 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_GYGCLT in circuit sensor (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_LFNPUG in circuit sensor (0)(1 instance)
+
+Class sensor (0):  Merged 21 parallel devices.
+Subcircuit summary:
+Circuit 1: sensor                          |Circuit 2: sensor                          
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (6)                |sky130_fd_pr__pfet_01v8 (6)                
+sky130_fd_pr__nfet_01v8 (24->3)            |sky130_fd_pr__nfet_01v8 (24->3)            
+Number of devices: 9                       |Number of devices: 9                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sensor                          |Circuit 2: sensor                          
+-------------------------------------------|-------------------------------------------
+vts                                        |vts                                        
+vd                                         |vd                                         
+vtd                                        |vtd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sensor and sensor are equivalent.
+Circuits match uniquely.
