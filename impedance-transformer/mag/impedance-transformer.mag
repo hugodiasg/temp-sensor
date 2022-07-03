@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1647223422
+timestamp 1656877310
 << mvpsubdiff >>
 rect 406200 555400 408200 555424
 rect 406200 552976 408200 553000
@@ -174,10 +174,10 @@ timestamp 1647142466
 transform 1 0 428586 0 1 544626
 box -2586 -10228 2608 10228
 << labels >>
-flabel metal1 404800 529000 407200 531600 0 FreeSans 1600 0 0 0 out
-port 4 nsew
-flabel metal1 404800 575000 406600 576800 0 FreeSans 1600 0 0 0 in
+flabel metal1 404800 529000 407200 531600 0 FreeSans 9600 0 0 0 out
+port 6 nsew
+flabel metal1 404800 575000 406600 576800 0 FreeSans 9600 0 0 0 in
 port 5 nsew
-flabel metal1 404800 556000 406600 557800 0 FreeSans 1600 0 0 0 gnd
+flabel metal1 404800 556000 406600 557800 0 FreeSans 9600 0 0 0 gnd
 port 2 nsew
 << end >>

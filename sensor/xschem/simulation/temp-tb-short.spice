@@ -4,7 +4,7 @@ VDD vd GND 1.8
 x1 vd vts vtd GND sensor
 **** begin user architecture code
 
-.dc temp -50 100 1
+.dc temp -30 80 1
 .control
 run
 set color0=white

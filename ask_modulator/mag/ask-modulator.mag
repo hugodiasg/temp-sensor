@@ -1,17 +1,17 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1647223472
+timestamp 1656877262
 << mvpsubdiff >>
-rect 6560 -7206 6584 -7006
-rect 6944 -7206 6968 -7006
+rect 6561 -7206 6585 -7006
+rect 6945 -7206 6969 -7006
 << mvpsubdiffcont >>
-rect 6584 -7206 6944 -7006
+rect 6585 -7206 6945 -7006
 << locali >>
-rect 6568 -7206 6584 -7006
-rect 6944 -7206 6960 -7006
+rect 6569 -7206 6585 -7006
+rect 6945 -7206 6961 -7006
 << viali >>
-rect 6584 -7206 6944 -7006
+rect 6585 -7206 6945 -7006
 << metal1 >>
 rect 6300 16620 9480 16640
 rect 6300 16140 8840 16620
@@ -37,11 +37,11 @@ rect 9718 -4646 9884 -4572
 rect 9720 -5160 9880 -4646
 rect 6340 -5360 9880 -5160
 rect 10480 -6765 10660 -3740
-rect 6572 -7006 6956 -7000
+rect 6573 -7006 6957 -7000
 rect 10480 -7006 10664 -6765
-rect 6344 -7206 6584 -7006
-rect 6944 -7206 10664 -7006
-rect 6572 -7212 6956 -7206
+rect 6345 -7206 6585 -7006
+rect 6945 -7206 10664 -7006
+rect 6573 -7212 6957 -7206
 << via1 >>
 rect 8840 16140 9460 16620
 rect 7720 -2760 8600 -1680
@@ -137,12 +137,12 @@ timestamp 1647142466
 transform 0 1 9872 -1 0 -2093
 box -201 -1098 201 1098
 << labels >>
-flabel metal1 6340 -3040 6540 -2840 0 FreeSans 128 0 0 0 out
+flabel metal1 6340 -3040 6540 -2840 0 FreeSans 9600 0 0 0 out
 port 2 nsew
-flabel metal1 6340 -5360 6540 -5160 0 FreeSans 128 0 0 0 in
+flabel metal1 6340 -5360 6540 -5160 0 FreeSans 9600 0 0 0 in
 port 1 nsew
-flabel metal1 6344 -7206 6544 -7006 0 FreeSans 128 0 0 0 gnd
-port 0 nsew
-flabel metal1 6340 16440 6540 16640 0 FreeSans 128 0 0 0 vd
+flabel metal1 6340 16440 6540 16640 0 FreeSans 9600 0 0 0 vd
 port 3 nsew
+flabel metal1 6345 -7206 6545 -7006 0 FreeSans 9600 0 0 0 gnd
+port 0 nsew
 << end >>

@@ -13,7 +13,7 @@ lab=GND}
 C {devices/gnd.sym} -80 -310 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} -80 -490 2 0 {name=VDD value=1.8}
 C {devices/lab_pin.sym} 70 -350 2 0 {name=l5 sig_type=std_logic lab=vtd}
-C {devices/code_shown.sym} 415 -670 0 0 {name=Simulation only_toplevel=false value=".dc temp -50 100 1
+C {devices/code_shown.sym} 415 -670 0 0 {name=Simulation only_toplevel=false value=".dc temp -30 80 1
 .control
 run
 set color0=white
