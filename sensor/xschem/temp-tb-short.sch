@@ -30,9 +30,9 @@ let tc=deriv(vts)
 plot idd
 *plot is1 is2 il3 isat4
 plot vts-vtd
-plot tc
+plot tc ylabel 'mV/°C'
 plot vts vtd 
-plot tc xlimit 20 50
+plot tc ylabel 'mV/°C' xlimit 20 50
 plot vts vtd xlimit 20 50
 .endc
 "}

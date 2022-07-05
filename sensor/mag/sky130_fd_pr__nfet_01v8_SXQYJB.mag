@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1657046858
+timestamp 1657052488
 << pwell >>
 rect -296 -1773 296 1773
 << nmos >>
@@ -192,10 +192,8 @@ rect -84 -1217 84 -1183
 rect -84 -1325 84 -1291
 rect -84 -1635 84 -1601
 << locali >>
-rect -260 1703 -164 1737
-rect 164 1703 260 1737
-rect -260 1641 -226 1703
-rect 226 1641 260 1703
+rect -260 1641 -226 1737
+rect 226 1641 260 1737
 rect -100 1601 -84 1635
 rect 84 1601 100 1635
 rect -146 1551 -112 1567
@@ -265,6 +263,9 @@ rect 226 -1703 260 -1641
 rect -260 -1737 -164 -1703
 rect 164 -1737 260 -1703
 << viali >>
+rect -226 1703 -164 1737
+rect -164 1703 164 1737
+rect 164 1703 226 1737
 rect -84 1601 84 1635
 rect -146 1375 -112 1551
 rect 112 1375 146 1551
@@ -298,6 +299,10 @@ rect -146 -1551 -112 -1375
 rect 112 -1551 146 -1375
 rect -84 -1635 84 -1601
 << metal1 >>
+rect -238 1737 238 1743
+rect -238 1703 -226 1737
+rect 226 1703 238 1737
+rect -238 1697 238 1703
 rect -96 1635 96 1641
 rect -96 1601 -84 1635
 rect 84 1601 96 1635
@@ -430,5 +435,5 @@ rect -96 -1641 96 -1635
 string FIXED_BBOX -243 -1720 243 1720
 string gencell sky130_fd_pr__nfet_01v8
 string library sky130
-string parameters w 1.0 l 1.0 m 8 nf 1 diffcov 100 polycov 100 guard 1 glc 1 grc 1 gtc 1 gbc 1 tbcov 100 rlcov 100 topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.15 wmin 0.42 compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt  sky130_fd_bs_flash__special_sonosfet_star  sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt  sky130_fd_pr__nfet_03v3_nvt} full_metal 1 viasrc 100 viadrn 100 viagate 100 viagb 0 viagr 0 viagl 0 viagt 0
+string parameters w 1.0 l 1.0 m 8 nf 1 diffcov 100 polycov 100 guard 1 glc 1 grc 1 gtc 1 gbc 1 tbcov 100 rlcov 100 topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.15 wmin 0.42 compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt  sky130_fd_bs_flash__special_sonosfet_star  sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt  sky130_fd_pr__nfet_03v3_nvt} full_metal 1 viasrc 100 viadrn 100 viagate 100 viagb 0 viagr 0 viagl 0 viagt 100
 << end >>
