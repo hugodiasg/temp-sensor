@@ -24,31 +24,29 @@ Proportional To Absolute Temperature (PTAT) sensor.
 Name | Value (at 35 °)
 --------- | ------:
 Vdd | 1.8 V
-TC (Temperature Coeficient) | -2.15 mV/°C
+TC (Temperature Coeficient) | -2.22 mV/°C
 Output offset | 0.46 V
-Max error (20 - 50 °C) |
-Max error (-30 - 80 °C) |
-Potency | 8.78 uW
-Idd | 4.85 uA
-Area | 0.000605 mm²
+Max error (20 - 50 °C) | 0.37%
+Max error (-30 - 80 °C) | 1.22%
+Potency | 28.4 uW
+Idd | 16 uA
+Area | 0.000941 mm²
 
 #### Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/177055996-e134912f-95f4-4608-b892-b1738087683a.png)
+![image](https://user-images.githubusercontent.com/80465879/177609346-133e59ce-d4f7-438a-ba97-b75ad03b928b.png)
 
 #### Layout:
 
-![image](https://user-images.githubusercontent.com/80465879/177056179-a92ac045-337e-4c51-b998-62f29ff9ce0a.png)
+![image](https://user-images.githubusercontent.com/80465879/177610777-130655cd-fb5f-4945-b5fe-72e04fa90989.png)
 
 #### Simulation: 
 
-![image](https://user-images.githubusercontent.com/80465879/177056015-86d2eafe-7e5a-42f8-97ea-ffa15204df7b.png)
+![image](https://user-images.githubusercontent.com/80465879/177610908-607702c2-c2e3-43de-aefe-c75bc681a195.png)
 
-![image](https://user-images.githubusercontent.com/80465879/177056022-92b3982f-b846-4ebd-877e-4ed37bbeb973.png)
+![image](https://user-images.githubusercontent.com/80465879/177610930-12bbef73-6572-4abd-8c5d-73e5b12d292e.png)
 
-![image](https://user-images.githubusercontent.com/80465879/177056029-1978016e-a6fe-4fda-b96b-01c324f37234.png)
-
-![image](https://user-images.githubusercontent.com/80465879/177056035-82d76c0e-ac9d-4303-8489-3b647ef827a0.png)
+![image](https://user-images.githubusercontent.com/80465879/177610964-c529b3e8-4b11-47ac-a0e5-9192946a9cd7.png)
 
 ### OTA Miller (AmpOp)
 
