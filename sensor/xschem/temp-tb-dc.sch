@@ -352,7 +352,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/code.sym} -640 -510 0 0 {name=RC_Extraction only_toplevel=false value="
+C {devices/code.sym} -700 -590 0 0 {name=RC_Extraction only_toplevel=false value="
 R0 vd.n23 vd.n22 222.87
 R1 vd.n10 vd.n9 222.87
 R2 vd.n24 vd.n23 149.458
