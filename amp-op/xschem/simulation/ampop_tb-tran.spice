@@ -1,0 +1,689 @@
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop_tb-tran.sch
+**.subckt ampop_tb-tran
+VIN2 in2 GND 0
+VIN1 in1 GND sin(0 1 100k)
+ibias ib GND 5.53u
+VDD vd GND 1.8
+VSS vs GND 0
+Cl out GND 4p m=1
+x1 vd in1 in2 out ib vs ampop
+**** begin user architecture code
+
+*cmd step stop
+.tran 10n 20u
+.control
+set color0=white
+set color1=black
+destroy all
+run
+plot out in1
+.endc
+
+ .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop.sym # of pins=6
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop.sch
+.subckt ampop  vd in1 in2 out ib vs
+*.iopin vd
+*.opin out
+*.ipin in1
+*.ipin in2
+*.iopin vs
+*.iopin ib
+X1 vd net1 out ib vs buffer
+X2 vd ib net1 in2 in1 vs ota
+.ends
+
+
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym # of pins=5
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sch
+.subckt buffer  vd in out ib gnd
+*.iopin vd
+*.iopin ib
+*.iopin out
+*.iopin in
+*.iopin gnd
+**** begin user architecture code
+
+R0 in.n1 in.n0 150.875
+R1 in.n5 in.n4 150.49
+R2 in.n3 in.n2 150.488
+R3 in.n7 in.n6 141.16
+R4 in.n0 in.t9 25.228
+R5 in.n6 in.t7 24.105
+R6 in.n0 in.t2 24.104
+R7 in.n2 in.t4 24.103
+R8 in.n4 in.t0 24.102
+R9 in.n1 in.t5 24.102
+R10 in.n5 in.t8 24.102
+R11 in.n3 in.t6 24.102
+R12 in.n7 in.t3 24.102
+R13 in.n9 in.t1 24.1
+R14 in.n14 in.n13 9.3
+R15 in in.n14 5.261
+R16 in.n8 in.n7 1.785
+R17 in.n2 in.n1 1.103
+R18 in.n4 in.n3 1.094
+R19 in.n6 in.n5 0.41
+R20 in.n14 in.n12 0.076
+R21 in.n12 in.n8 0.014
+R22 in.n12 in.n11 0.005
+R23 in.n10 in.n9 0.005
+R24 in.n11 in.n10 0.001
+R25 out.t0 out.n7 175.091
+R26 out.n0 out.t2 175.044
+R27 out.n2 out.n1 150.491
+R28 out.n4 out.n3 150.491
+R29 out.n6 out.n5 141.106
+R30 out out.t0 26.91
+R31 out.n5 out.t1 24.103
+R32 out.n6 out.t7 24.103
+R33 out.n4 out.t5 24.103
+R34 out.n2 out.t3 24.102
+R35 out.n0 out.t6 24.102
+R36 out.n1 out.t9 24.102
+R37 out.n3 out.t4 24.102
+R38 out.n7 out.t8 24.102
+R39 out.n7 out.n6 1.085
+R40 out.n3 out.n2 0.988
+R41 out.n5 out.n4 0.913
+R42 out.n1 out.n0 0.863
+R43 net2.n4 net2.t6 40.035
+R44 net2.n0 net2.t11 40.035
+R45 net2.n8 net2.t0 39.528
+R46 net2.n7 net2.t4 39.528
+R47 net2.n6 net2.t5 39.528
+R48 net2.n5 net2.t3 39.528
+R49 net2.n4 net2.t2 39.528
+R50 net2.n3 net2.t9 39.528
+R51 net2.n2 net2.t10 39.528
+R52 net2.n1 net2.t8 39.528
+R53 net2.n0 net2.t7 39.528
+R54 net2.n10 net2.t1 28.57
+R55 net2.n8 net2.n7 1.982
+R56 net2.n9 net2.n3 1.708
+R57 net2 net2.n10 0.985
+R58 net2.n5 net2.n4 0.507
+R59 net2.n6 net2.n5 0.507
+R60 net2.n7 net2.n6 0.507
+R61 net2.n1 net2.n0 0.507
+R62 net2.n2 net2.n1 0.507
+R63 net2.n3 net2.n2 0.507
+R64 net2.n10 net2.n9 0.335
+R65 net2.n9 net2.n8 0.303
+R66 vd.n53 vd.n52 379.482
+R67 vd.n40 vd.n34 379.482
+R68 vd.n54 vd.n53 297.411
+R69 vd.n41 vd.n40 297.411
+R70 vd.n19 vd.n16 131.387
+R71 vd.n4 vd.n1 131.387
+R72 vd.n24 vd.n21 131.011
+R73 vd.n9 vd.n6 131.011
+R74 vd.n29 vd.n24 54.211
+R75 vd.n14 vd.n9 54.211
+R76 vd.n29 vd.n19 53.835
+R77 vd.n14 vd.n4 53.835
+R78 vd.n57 vd.n14 8.271
+R79 vd.n57 vd.n29 7.938
+R80 vd.n57 vd.n56 4.028
+R81 vd.n55 vd.n45 0.296
+R82 vd vd.n57 0.28
+R83 vd.n42 vd.n32 0.228
+R84 vd.n56 vd.n55 0.18
+R85 vd.n56 vd.n42 0.167
+R86 vd.n19 vd.n18 0.161
+R87 vd.n24 vd.n23 0.161
+R88 vd.n4 vd.n3 0.161
+R89 vd.n9 vd.n8 0.161
+R90 vd.n23 vd.n22 0.139
+R91 vd.n8 vd.n7 0.139
+R92 vd.n18 vd.n17 0.139
+R93 vd.n3 vd.n2 0.139
+R94 vd.n42 vd.n41 0.017
+R95 vd.n55 vd.n54 0.017
+R96 vd.n16 vd.n15 0.015
+R97 vd.n21 vd.n20 0.015
+R98 vd.n1 vd.n0 0.015
+R99 vd.n6 vd.n5 0.015
+R100 vd.n52 vd.n51 0.013
+R101 vd.n34 vd.n33 0.013
+R102 vd.n26 vd.n25 0.013
+R103 vd.n27 vd.n26 0.013
+R104 vd.n11 vd.n10 0.013
+R105 vd.n12 vd.n11 0.013
+R106 vd.n53 vd.n50 0.003
+R107 vd.n47 vd.n46 0.003
+R108 vd.n36 vd.n35 0.003
+R109 vd.n40 vd.n39 0.003
+R110 vd.n50 vd.n49 0.003
+R111 vd.n37 vd.n36 0.003
+R112 vd.n48 vd.n47 0.003
+R113 vd.n39 vd.n38 0.003
+R114 vd.n49 vd.n48 0.002
+R115 vd.n38 vd.n37 0.002
+R116 vd.n29 vd.n28 0.002
+R117 vd.n28 vd.n27 0.002
+R118 vd.n14 vd.n13 0.002
+R119 vd.n13 vd.n12 0.002
+R120 vd.n32 vd.n31 0.001
+R121 vd.n45 vd.n44 0.001
+R122 vd.n44 vd.n43 0.001
+R123 vd.n31 vd.n30 0.001
+R124 ib.n0 ib.t2 24.837
+R125 ib.n0 ib.t0 24.107
+R126 ib.n1 ib.t1 17.747
+R127 ib ib.n1 1.062
+R128 ib.n1 ib.n0 0.387
+C0 in net1 0.88fF
+C1 net1 out 1.67fF
+C2 in out 1.39fF
+C3 net1 net4 0.18fF
+C4 ib net1 0.04fF
+C5 net3 net1 0.47fF
+C6 in net4 2.12fF
+C7 out net4 2.13fF
+C8 ib in 0.06fF
+C9 ib out 0.00fF
+C10 vd net1 2.04fF
+C11 net3 in 1.40fF
+C12 net3 out 2.33fF
+C13 in vd 0.81fF
+C14 vd out 1.79fF
+C15 ib net4 0.04fF
+C16 net3 net4 2.19fF
+C17 net3 ib 0.01fF
+C18 net2 net1 2.18fF
+C19 vd net4 0.09fF
+C20 ib vd 0.02fF
+C21 net3 vd 3.38fF
+C22 net2 in 0.55fF
+C23 net2 out 2.13fF
+C24 net2 net4 1.85fF
+C25 net3 net2 0.62fF
+C26 net2 vd 4.36fF
+C27 vd.n0 gnd 0.41fF $ **FLOATING
+C28 vd.n1 gnd 0.07fF $ **FLOATING
+C29 vd.n2 gnd 0.39fF $ **FLOATING
+C30 vd.n3 gnd 0.04fF $ **FLOATING
+C31 vd.n4 gnd 0.04fF $ **FLOATING
+C32 vd.n5 gnd 0.41fF $ **FLOATING
+C33 vd.n6 gnd 0.07fF $ **FLOATING
+C34 vd.n7 gnd 0.39fF $ **FLOATING
+C35 vd.n8 gnd 0.04fF $ **FLOATING
+C36 vd.n9 gnd 0.04fF $ **FLOATING
+C37 vd.n10 gnd 0.09fF $ **FLOATING
+C38 vd.n11 gnd 0.09fF $ **FLOATING
+C39 vd.n12 gnd 0.43fF $ **FLOATING
+C40 vd.n13 gnd 0.02fF $ **FLOATING
+C41 vd.n14 gnd 0.59fF $ **FLOATING
+C42 vd.n15 gnd 0.41fF $ **FLOATING
+C43 vd.n16 gnd 0.07fF $ **FLOATING
+C44 vd.n17 gnd 0.39fF $ **FLOATING
+C45 vd.n18 gnd 0.04fF $ **FLOATING
+C46 vd.n19 gnd 0.04fF $ **FLOATING
+C47 vd.n20 gnd 0.41fF $ **FLOATING
+C48 vd.n21 gnd 0.07fF $ **FLOATING
+C49 vd.n22 gnd 0.39fF $ **FLOATING
+C50 vd.n23 gnd 0.04fF $ **FLOATING
+C51 vd.n24 gnd 0.04fF $ **FLOATING
+C52 vd.n25 gnd 0.09fF $ **FLOATING
+C53 vd.n26 gnd 0.09fF $ **FLOATING
+C54 vd.n27 gnd 0.43fF $ **FLOATING
+C55 vd.n28 gnd 0.02fF $ **FLOATING
+C56 vd.n29 gnd 0.62fF $ **FLOATING
+C57 vd.n30 gnd 1.56fF $ **FLOATING
+C58 vd.n31 gnd 0.04fF $ **FLOATING
+C59 vd.n32 gnd 0.77fF $ **FLOATING
+C60 vd.n33 gnd 1.56fF $ **FLOATING
+C61 vd.n34 gnd 0.18fF $ **FLOATING
+C62 vd.n35 gnd 0.15fF $ **FLOATING
+C63 vd.n36 gnd 0.17fF $ **FLOATING
+C64 vd.n37 gnd 1.21fF $ **FLOATING
+C65 vd.n38 gnd 1.21fF $ **FLOATING
+C66 vd.n39 gnd 0.17fF $ **FLOATING
+C67 vd.n40 gnd 0.15fF $ **FLOATING
+C68 vd.n41 gnd 0.09fF $ **FLOATING
+C69 vd.n42 gnd 0.12fF $ **FLOATING
+C70 vd.n43 gnd 1.56fF $ **FLOATING
+C71 vd.n44 gnd 0.04fF $ **FLOATING
+C72 vd.n45 gnd 0.41fF $ **FLOATING
+C73 vd.n46 gnd 0.15fF $ **FLOATING
+C74 vd.n47 gnd 0.17fF $ **FLOATING
+C75 vd.n48 gnd 1.21fF $ **FLOATING
+C76 vd.n49 gnd 1.21fF $ **FLOATING
+C77 vd.n50 gnd 0.17fF $ **FLOATING
+C78 vd.n51 gnd 1.56fF $ **FLOATING
+C79 vd.n52 gnd 0.18fF $ **FLOATING
+C80 vd.n53 gnd 0.15fF $ **FLOATING
+C81 vd.n54 gnd 0.09fF $ **FLOATING
+C82 vd.n55 gnd 0.42fF $ **FLOATING
+C83 vd.n56 gnd 1.70fF $ **FLOATING
+C84 vd.n57 gnd 15.86fF $ **FLOATING
+C85 net2.t11 gnd 0.65fF
+C86 net2.t7 gnd 0.65fF
+C87 net2.n0 gnd 0.82fF $ **FLOATING
+C88 net2.t8 gnd 0.65fF
+C89 net2.n1 gnd 0.42fF $ **FLOATING
+C90 net2.t10 gnd 0.65fF
+C91 net2.n2 gnd 0.42fF $ **FLOATING
+C92 net2.t9 gnd 0.65fF
+C93 net2.n3 gnd 0.53fF $ **FLOATING
+C94 net2.t0 gnd 0.65fF
+C95 net2.t4 gnd 0.65fF
+C96 net2.t5 gnd 0.65fF
+C97 net2.t3 gnd 0.65fF
+C98 net2.t2 gnd 0.65fF
+C99 net2.t6 gnd 0.65fF
+C100 net2.n4 gnd 0.82fF $ **FLOATING
+C101 net2.n5 gnd 0.42fF $ **FLOATING
+C102 net2.n6 gnd 0.42fF $ **FLOATING
+C103 net2.n7 gnd 0.56fF $ **FLOATING
+C104 net2.n8 gnd 0.53fF $ **FLOATING
+C105 net2.n9 gnd 0.23fF $ **FLOATING
+C106 net2.t1 gnd 0.03fF
+C107 net2.n10 gnd 0.37fF $ **FLOATING
+C108 out.t8 gnd 0.59fF
+C109 out.t1 gnd 0.59fF
+C110 out.t4 gnd 0.59fF
+C111 out.t9 gnd 0.59fF
+C112 out.t2 gnd 0.95fF
+C113 out.t6 gnd 0.59fF
+C114 out.n0 gnd 2.73fF $ **FLOATING
+C115 out.n1 gnd 2.86fF $ **FLOATING
+C116 out.t3 gnd 0.59fF
+C117 out.n2 gnd 0.87fF $ **FLOATING
+C118 out.n3 gnd 0.87fF $ **FLOATING
+C119 out.t5 gnd 0.59fF
+C120 out.n4 gnd 0.92fF $ **FLOATING
+C121 out.n5 gnd 0.93fF $ **FLOATING
+C122 out.t7 gnd 0.59fF
+C123 out.n6 gnd 0.85fF $ **FLOATING
+C124 out.n7 gnd 0.92fF $ **FLOATING
+C125 out.t0 gnd 0.62fF
+C126 in.t0 gnd 0.41fF
+C127 in.t5 gnd 0.41fF
+C128 in.t9 gnd 0.44fF
+C129 in.t2 gnd 0.41fF
+C130 in.n0 gnd 1.13fF $ **FLOATING
+C131 in.n1 gnd 0.58fF $ **FLOATING
+C132 in.t4 gnd 0.41fF
+C133 in.n2 gnd 0.58fF $ **FLOATING
+C134 in.t6 gnd 0.41fF
+C135 in.n3 gnd 0.59fF $ **FLOATING
+C136 in.n4 gnd 0.58fF $ **FLOATING
+C137 in.t8 gnd 0.41fF
+C138 in.n5 gnd 0.69fF $ **FLOATING
+C139 in.t7 gnd 0.41fF
+C140 in.n6 gnd 0.69fF $ **FLOATING
+C141 in.t3 gnd 0.41fF
+C142 in.n7 gnd 0.49fF $ **FLOATING
+C143 in.n8 gnd 0.22fF $ **FLOATING
+C144 in.t1 gnd 0.41fF
+C145 in.n9 gnd 0.17fF $ **FLOATING
+C146 in.n10 gnd 0.00fF $ **FLOATING
+C147 in.n11 gnd 0.01fF $ **FLOATING
+C148 in.n12 gnd 0.02fF $ **FLOATING
+C149 in.n13 gnd 0.02fF $ **FLOATING
+C150 in.n14 gnd 0.25fF $ **FLOATING
+C151 net4 gnd 1.49fF
+C152 ib gnd 1.87fF
+C153 out gnd 13.46fF
+C154 net3 gnd 3.38fF
+C155 vd gnd 18.59fF
+C156 net1 gnd 17.83fF
+C157 net2 gnd 8.89fF
+C158 in gnd 6.08fF
+
+
+**** end user architecture code
+XM3 net2 net2 vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM1 net2 out net4 gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net3 in net4 gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net3 net3 vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 net4 ib gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 out net3 vd vd sky130_fd_pr__pfet_01v8 L=1 W=10 nf=10 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM7 out net1 gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM8 net1 net2 vd vd sky130_fd_pr__pfet_01v8 L=1 W=10 nf=10 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM9 net1 net1 gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM10 ib ib gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sym # of pins=6
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sch
+.subckt ota  vd ib out in2 in1 vs
+*.iopin vd
+*.iopin vs
+*.iopin ib
+*.ipin in1
+*.ipin in2
+*.opin out
+XCC out d sky130_fd_pr__cap_mim_m3_1 W=21 L=21 MF=1 m=1
+**** begin user architecture code
+
+
+RR0 vs.n20 vs.n14 202.916
+R1 vs.n7 vs.n1 202.916
+R2 vs.n21 vs.n20 121.975
+R3 vs.n8 vs.n7 121.975
+R4 vs.n28 vs.n27 2.673
+R5 vs.n29 vs.n28 1.458
+R6 vs vs.n29 1.104
+R7 vs.n27 vs.n26 0.911
+R8 vs.n25 vs.n24 0.348
+R9 vs.n12 vs.n11 0.348
+R10 vs.n28 vs.n25 0.135
+R11 vs.n29 vs.n12 0.135
+R12 vs.n25 vs.n21 0.09
+R13 vs.n12 vs.n8 0.09
+R14 vs.n14 vs.n13 0.04
+R15 vs.n1 vs.n0 0.04
+R16 vs.n18 vs.n17 0.037
+R17 vs.n5 vs.n4 0.037
+R18 vs.n16 vs.n15 0.034
+R19 vs.n20 vs.n19 0.034
+R20 vs.n3 vs.n2 0.034
+R21 vs.n7 vs.n6 0.034
+R22 vs.n17 vs.n16 0.016
+R23 vs.n4 vs.n3 0.016
+R24 vs.n19 vs.n18 0.016
+R25 vs.n6 vs.n5 0.016
+R26 vs.n24 vs.n23 0.001
+R27 vs.n11 vs.n10 0.001
+R28 vs.n23 vs.n22 0.001
+R29 vs.n10 vs.n9 0.001
+R30 out.n10 out.n4 394.54
+R31 out.n11 out.n10 313.599
+R32 out.n12 out.n2 0.386
+R33 out out.n12 0.168
+R34 out.n12 out.n11 0.052
+R35 out.n4 out.n3 0.013
+R36 out.n8 out.n7 0.003
+R37 out.n6 out.n5 0.003
+R38 out.n10 out.n9 0.003
+R39 out.n7 out.n6 0.002
+R40 out.n9 out.n8 0.002
+R41 out.n2 out.n1 0.001
+R42 out.n1 out.n0 0.001
+R43 in1 in1.t0 88.743
+R44 in2 in2.t0 90.145
+R45 ib.n3 ib.t5 196.178
+R46 ib.n2 ib.t3 196.178
+R47 ib.n1 ib.t4 196.178
+R48 ib.n0 ib.t6 196.178
+R49 ib.n0 ib.t7 162.082
+R50 ib.n5 ib.t0 160.028
+R51 ib.n4 ib.t2 160.028
+R52 ib.n6 ib.t1 6.282
+R53 ib.n4 ib.n3 2.041
+R54 ib.n5 ib.n4 2.041
+R55 ib ib.n6 1.518
+R56 ib.n1 ib.n0 0.537
+R57 ib.n2 ib.n1 0.537
+R58 ib.n3 ib.n2 0.537
+R59 ib.n6 ib.n5 0.266
+R60 vd.n5 vd.n1 507.374
+R61 vd.n32 vd.n26 394.54
+R62 vd.n19 vd.n13 394.54
+R63 vd.n44 vd.n43 394.54
+R64 vd.n7 vd.n6 331.818
+R65 vd.n33 vd.n32 313.599
+R66 vd.n20 vd.n19 313.599
+R67 vd.n45 vd.n44 313.599
+R68 vd vd.n49 3.951
+R69 vd.n35 vd.n34 2.876
+R70 vd.n8 vd.n7 1.417
+R71 vd.n36 vd.n35 1.333
+R72 vd.n35 vd.n21 0.835
+R73 vd.n34 vd.n24 0.386
+R74 vd.n21 vd.n11 0.386
+R75 vd.n49 vd.n48 0.376
+R76 vd vd.n36 0.229
+R77 vd.n36 vd.n8 0.211
+R78 vd.n49 vd.n45 0.063
+R79 vd.n34 vd.n33 0.052
+R80 vd.n21 vd.n20 0.052
+R81 vd.n26 vd.n25 0.013
+R82 vd.n13 vd.n12 0.013
+R83 vd.n43 vd.n42 0.013
+R84 vd.n6 vd.n5 0.004
+R85 vd.n1 vd.n0 0.004
+R86 vd.n30 vd.n29 0.003
+R87 vd.n17 vd.n16 0.003
+R88 vd.n40 vd.n39 0.003
+R89 vd.n28 vd.n27 0.003
+R90 vd.n32 vd.n31 0.003
+R91 vd.n15 vd.n14 0.003
+R92 vd.n19 vd.n18 0.003
+R93 vd.n44 vd.n41 0.003
+R94 vd.n38 vd.n37 0.003
+R95 vd.n29 vd.n28 0.002
+R96 vd.n16 vd.n15 0.002
+R97 vd.n41 vd.n40 0.002
+R98 vd.n31 vd.n30 0.002
+R99 vd.n18 vd.n17 0.002
+R100 vd.n39 vd.n38 0.002
+R101 vd.n4 vd.n3 0.002
+R102 vd.n3 vd.n2 0.002
+R103 vd.n5 vd.n4 0.002
+R104 vd.n48 vd.n47 0.001
+R105 vd.n24 vd.n23 0.001
+R106 vd.n11 vd.n10 0.001
+R107 vd.n23 vd.n22 0.001
+R108 vd.n10 vd.n9 0.001
+R109 vd.n47 vd.n46 0.001
+C0 w_460_9160# vs 0.25fF
+C1 vs out 0.29fF
+C2 vs e 0.43fF
+C3 in2 in1 0.06fF
+C4 w_460_9160# vd 0.57fF
+C5 in2 d 0.06fF
+C6 vd out 0.34fF
+C7 vs c 0.57fF
+C8 w_460_9160# ib 0.42fF
+C9 ib out 0.09fF
+C10 vd e 1.05fF
+C11 ib e 0.91fF
+C12 vd c 0.00fF
+C13 ib c 0.01fF
+C14 vs vd 0.07fF
+C15 w_460_9160# in1 0.18fF
+C16 vs ib 0.06fF
+C17 w_460_9160# d 0.31fF
+C18 out d 0.01fF
+C19 e d 0.26fF
+C20 ib vd 2.28fF
+C21 in1 c 0.25fF
+C22 c d 0.13fF
+C23 in1 vs 0.08fF
+C24 in2 w_460_9160# 0.53fF
+C25 vs d 0.55fF
+C26 in1 vd 0.01fF
+C27 vd d 0.01fF
+C28 in1 ib 0.03fF
+C29 in2 c 0.07fF
+C30 ib d 0.04fF
+C31 in2 vs 0.05fF
+C32 w_460_9160# e 0.07fF
+C33 in2 vd 0.02fF
+C34 e out 0.05fF
+C35 in2 ib 0.20fF
+C36 in1 d 0.01fF
+C37 w_460_9160# c 0.56fF
+C38 c e 0.00fF
+C39 w_460_9160# 0 7.23fF
+C40 vd.n0 0 0.19fF $ **FLOATING
+C41 vd.n1 0 3.35fF $ **FLOATING
+C42 vd.n2 0 0.16fF $ **FLOATING
+C43 vd.n3 0 0.33fF $ **FLOATING
+C44 vd.n4 0 2.51fF $ **FLOATING
+C45 vd.n5 0 2.68fF $ **FLOATING
+C46 vd.n6 0 0.32fF $ **FLOATING
+C47 vd.n7 0 3.66fF $ **FLOATING
+C48 vd.n8 0 2.18fF $ **FLOATING
+C49 vd.n9 0 1.48fF $ **FLOATING
+C50 vd.n10 0 0.03fF $ **FLOATING
+C51 vd.n11 0 0.12fF $ **FLOATING
+C52 vd.n12 0 1.48fF $ **FLOATING
+C53 vd.n13 0 0.13fF $ **FLOATING
+C54 vd.n14 0 0.11fF $ **FLOATING
+C55 vd.n15 0 0.22fF $ **FLOATING
+C56 vd.n16 0 1.02fF $ **FLOATING
+C57 vd.n17 0 1.02fF $ **FLOATING
+C58 vd.n18 0 0.22fF $ **FLOATING
+C59 vd.n19 0 0.11fF $ **FLOATING
+C60 vd.n20 0 0.07fF $ **FLOATING
+C61 vd.n21 0 0.70fF $ **FLOATING
+C62 vd.n22 0 1.48fF $ **FLOATING
+C63 vd.n23 0 0.03fF $ **FLOATING
+C64 vd.n24 0 0.12fF $ **FLOATING
+C65 vd.n25 0 1.48fF $ **FLOATING
+C66 vd.n26 0 0.13fF $ **FLOATING
+C67 vd.n27 0 0.11fF $ **FLOATING
+C68 vd.n28 0 0.22fF $ **FLOATING
+C69 vd.n29 0 1.02fF $ **FLOATING
+C70 vd.n30 0 1.02fF $ **FLOATING
+C71 vd.n31 0 0.22fF $ **FLOATING
+C72 vd.n32 0 0.11fF $ **FLOATING
+C73 vd.n33 0 0.07fF $ **FLOATING
+C74 vd.n34 0 0.81fF $ **FLOATING
+C75 vd.n35 0 0.26fF $ **FLOATING
+C76 vd.n36 0 0.10fF $ **FLOATING
+C77 vd.n37 0 0.11fF $ **FLOATING
+C78 vd.n38 0 0.22fF $ **FLOATING
+C79 vd.n39 0 1.02fF $ **FLOATING
+C80 vd.n40 0 1.02fF $ **FLOATING
+C81 vd.n41 0 0.22fF $ **FLOATING
+C82 vd.n42 0 1.48fF $ **FLOATING
+C83 vd.n43 0 0.13fF $ **FLOATING
+C84 vd.n44 0 0.11fF $ **FLOATING
+C85 vd.n45 0 0.07fF $ **FLOATING
+C86 vd.n46 0 1.48fF $ **FLOATING
+C87 vd.n47 0 0.03fF $ **FLOATING
+C88 vd.n48 0 0.12fF $ **FLOATING
+C89 vd.n49 0 0.87fF $ **FLOATING
+C90 ib.t1 0 0.12fF
+C91 ib.t7 0 0.52fF
+C92 ib.t6 0 0.62fF
+C93 ib.n0 0 0.57fF $ **FLOATING
+C94 ib.t4 0 0.62fF
+C95 ib.n1 0 0.26fF $ **FLOATING
+C96 ib.t3 0 0.62fF
+C97 ib.n2 0 0.26fF $ **FLOATING
+C98 ib.t5 0 0.62fF
+C99 ib.n3 0 0.31fF $ **FLOATING
+C100 ib.t2 0 0.52fF
+C101 ib.n4 0 0.32fF $ **FLOATING
+C102 ib.t0 0 0.52fF
+C103 ib.n5 0 0.26fF $ **FLOATING
+C104 ib.n6 0 0.34fF $ **FLOATING
+C105 out.n0 0 0.93fF $ **FLOATING
+C106 out.n1 0 0.02fF $ **FLOATING
+C107 out.n2 0 0.07fF $ **FLOATING
+C108 out.n3 0 0.93fF $ **FLOATING
+C109 out.n4 0 0.08fF $ **FLOATING
+C110 out.n5 0 0.07fF $ **FLOATING
+C111 out.n6 0 0.14fF $ **FLOATING
+C112 out.n7 0 0.64fF $ **FLOATING
+C113 out.n8 0 0.64fF $ **FLOATING
+C114 out.n9 0 0.14fF $ **FLOATING
+C115 out.n10 0 0.07fF $ **FLOATING
+C116 out.n11 0 0.04fF $ **FLOATING
+C117 out.n12 0 0.42fF $ **FLOATING
+C118 vs.n0 0 0.94fF $ **FLOATING
+C119 vs.n1 0 0.10fF $ **FLOATING
+C120 vs.n2 0 0.08fF $ **FLOATING
+C121 vs.n3 0 0.18fF $ **FLOATING
+C122 vs.n4 0 0.53fF $ **FLOATING
+C123 vs.n5 0 0.53fF $ **FLOATING
+C124 vs.n6 0 0.18fF $ **FLOATING
+C125 vs.n7 0 0.08fF $ **FLOATING
+C126 vs.n8 0 0.06fF $ **FLOATING
+C127 vs.n9 0 0.94fF $ **FLOATING
+C128 vs.n10 0 0.04fF $ **FLOATING
+C129 vs.n11 0 0.13fF $ **FLOATING
+C130 vs.n12 0 0.29fF $ **FLOATING
+C131 vs.n13 0 0.94fF $ **FLOATING
+C132 vs.n14 0 0.10fF $ **FLOATING
+C133 vs.n15 0 0.08fF $ **FLOATING
+C134 vs.n16 0 0.18fF $ **FLOATING
+C135 vs.n17 0 0.53fF $ **FLOATING
+C136 vs.n18 0 0.53fF $ **FLOATING
+C137 vs.n19 0 0.18fF $ **FLOATING
+C138 vs.n20 0 0.08fF $ **FLOATING
+C139 vs.n21 0 0.06fF $ **FLOATING
+C140 vs.n22 0 0.94fF $ **FLOATING
+C141 vs.n23 0 0.04fF $ **FLOATING
+C142 vs.n24 0 0.13fF $ **FLOATING
+C143 vs.n25 0 0.29fF $ **FLOATING
+C144 vs.n26 0 9.30fF $ **FLOATING
+C145 vs.n27 0 2.86fF $ **FLOATING
+C146 vs.n28 0 0.47fF $ **FLOATING
+C147 vs.n29 0 0.23fF $ **FLOATING
+C148 vd 0 27.83fF
+C149 ib 0 -31.45fF
+C150 vs 0 21.62fF
+C151 c 0 -2.70fF
+C152 in2 0 0.40fF
+C153 in1 0 1.82fF
+C154 out 0 5.47fF
+C155 e 0 2.80fF
+C156 d 0 16.90fF
+
+
+**** end user architecture code
+XM5 ib ib vd vd sky130_fd_pr__pfet_01v8 L=1 W=6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 b ib vd vd sky130_fd_pr__pfet_01v8 L=1 W=6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM8 out ib vd vd sky130_fd_pr__pfet_01v8 L=1 W=30 nf=4 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM1 c in1 b b sky130_fd_pr__pfet_01v8 L=1 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 d in2 b b sky130_fd_pr__pfet_01v8 L=1 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 c c vs vs sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 d c vs vs sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM7 out d vs vs sky130_fd_pr__nfet_01v8 L=1 W=9 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end

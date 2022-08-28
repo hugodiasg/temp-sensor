@@ -1,19 +1,8 @@
-Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
 
 Subcircuit pins:
-Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_1      
--------------------------------------------|-------------------------------------------
-1                                          |1                                          
-2                                          |2                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
-Warning: Equate pins:  cell sky130_fd_pr__pfet_g5v0d10v5 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__pfet_g5v0d10v5 is a placeholder, treated as a black box.
-
-Subcircuit pins:
-Circuit 1: sky130_fd_pr__pfet_g5v0d10v5    |Circuit 2: sky130_fd_pr__pfet_g5v0d10v5    
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
 -------------------------------------------|-------------------------------------------
 1                                          |1                                          
 2                                          |2                                          
@@ -21,12 +10,12 @@ Circuit 1: sky130_fd_pr__pfet_g5v0d10v5    |Circuit 2: sky130_fd_pr__pfet_g5v0d1
 4                                          |4                                          
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
-Device classes sky130_fd_pr__pfet_g5v0d10v5 and sky130_fd_pr__pfet_g5v0d10v5 are equivalent.
-Warning: Equate pins:  cell sky130_fd_pr__nfet_g5v0d10v5 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__nfet_g5v0d10v5 is a placeholder, treated as a black box.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
 
 Subcircuit pins:
-Circuit 1: sky130_fd_pr__nfet_g5v0d10v5    |Circuit 2: sky130_fd_pr__nfet_g5v0d10v5    
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
 -------------------------------------------|-------------------------------------------
 1                                          |1                                          
 2                                          |2                                          
@@ -34,38 +23,35 @@ Circuit 1: sky130_fd_pr__nfet_g5v0d10v5    |Circuit 2: sky130_fd_pr__nfet_g5v0d1
 4                                          |4                                          
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
-Device classes sky130_fd_pr__nfet_g5v0d10v5 and sky130_fd_pr__nfet_g5v0d10v5 are equivalent.
-Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_2NYK3R in circuit ota (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__pfet_g5v0d10v5_GYMD5T in circuit ota (0)(4 instances)
-Flattening unmatched subcell sky130_fd_pr__pfet_g5v0d10v5_GYM5UZ in circuit ota (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__pfet_g5v0d10v5_G8J5UZ in circuit ota (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__nfet_g5v0d10v5_9YTB7P in circuit ota (0)(2 instances)
-Flattening unmatched subcell sky130_fd_pr__nfet_g5v0d10v5_G8BGHZ in circuit ota (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__pfet_g5v0d10v5_8C84A7 in circuit ota (0)(1 instance)
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_CL66SD in circuit buffer (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_BLSBYX in circuit buffer (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8L4H97 in circuit buffer (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8C4HA7 in circuit buffer (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_GVTB53 in circuit buffer (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8LYGA7 in circuit buffer (0)(2 instances)
 
-Class ota (0):  Merged 4 parallel devices.
+Class buffer (0):  Merged 54 parallel devices.
 Subcircuit summary:
-Circuit 1: ota                             |Circuit 2: ota                             
+Circuit 1: buffer                          |Circuit 2: buffer                          
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
-sky130_fd_pr__pfet_g5v0d10v5 (10->7)       |sky130_fd_pr__pfet_g5v0d10v5 (7)           
-sky130_fd_pr__nfet_g5v0d10v5 (4->3)        |sky130_fd_pr__nfet_g5v0d10v5 (3)           
-Number of devices: 11                      |Number of devices: 11                      
-Number of nets: 10                         |Number of nets: 10                         
+sky130_fd_pr__nfet_01v8 (42->6)            |sky130_fd_pr__nfet_01v8 (6)                
+sky130_fd_pr__pfet_01v8 (22->4)            |sky130_fd_pr__pfet_01v8 (4)                
+Number of devices: 10                      |Number of devices: 10                      
+Number of nets: 9                          |Number of nets: 9                          
 ---------------------------------------------------------------------------------------
 Circuits match uniquely.
 Netlists match uniquely.
 
 Subcircuit pins:
-Circuit 1: ota                             |Circuit 2: ota                             
+Circuit 1: buffer                          |Circuit 2: buffer                          
 -------------------------------------------|-------------------------------------------
 vd                                         |vd                                         
-in2                                        |in2                                        
-in1                                        |in1                                        
-ib                                         |ib                                         
-vs                                         |vs                                         
+in                                         |in                                         
+gnd                                        |gnd                                        
 out                                        |out                                        
+ib                                         |ib                                         
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
-Device classes ota and ota are equivalent.
+Device classes buffer and buffer are equivalent.
 Circuits match uniquely.
