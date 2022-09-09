@@ -1,7 +1,7 @@
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop_tb-tran.sch
 **.subckt ampop_tb-tran
 VIN2 in2 GND 0
-VIN1 in1 GND sin(0 1 100k)
+VIN1 in1 GND sin(0.9 0.9 1k)
 ibias ib GND 5.53u
 VDD vd GND 1.8
 VSS vs GND 0
@@ -10,7 +10,7 @@ x1 vd in1 in2 out ib vs ampop
 **** begin user architecture code
 
 *cmd step stop
-.tran 10n 20u
+.tran 3u 6m
 .control
 set color0=white
 set color1=black

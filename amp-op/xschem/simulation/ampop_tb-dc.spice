@@ -9,7 +9,7 @@ Cl out GND 4p m=1
 x1 vd in1 in2 out ib vs ampop
 **** begin user architecture code
 
-.dc VIN1 -1.8 1.8 0.01
+.dc VIN1 -1.8 1.8 70u
 .end
 .control
 set color0=white

@@ -25,7 +25,7 @@ N 895 -725 895 -715 { lab=GND}
 C {devices/gnd.sym} 895 -715 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 1190 -935 0 0 {name=VDD value=1.8}
 C {devices/code_shown.sym} 1635 -980 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
-.tran 0.5n 5u
+.tran 10n 10m
 .control
 set color0=white
 set color1=black
@@ -46,7 +46,7 @@ C {devices/lab_pin.sym} 1190 -965 0 0 {name=l1 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1040 -630 0 0 {name=l4 sig_type=std_logic lab=in}
 C {devices/gnd.sym} 1080 -540 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 1230 -720 0 0 {name=l9 sig_type=std_logic lab=clk}
-C {devices/vsource.sym} 895 -1015 0 0 {name=gin value="v='1000*TIME'"}
+C {devices/vsource.sym} 895 -1015 0 0 {name=vin value="PULSE(0 1.8 0 0.46081s 0.46081s 0 0.92162s)"}
 C {devices/gnd.sym} 895 -985 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 895 -1045 0 0 {name=l12 sig_type=std_logic lab=in}
 C {devices/code.sym} 1660 -1210 0 0 {name=TT_MODELS
@@ -58,8 +58,6 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 spice_ignore=false}
 C {devices/lab_pin.sym} 1080 -720 0 0 {name=l13 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1340 -630 3 1 {name=l5 sig_type=std_logic lab=out}
-C {devices/sqwsource.sym} 895 -755 0 0 {name=V1 vhi=1.8 freq=10e6}
-C {/home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1190 -630 0 0 {name=x1}
 C {devices/vsource.sym} 1300 -935 0 0 {name=vpwr value=1.8}
 C {devices/gnd.sym} 1300 -905 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} 1300 -965 0 0 {name=l14 sig_type=std_logic lab=vpwr}
@@ -69,4 +67,5 @@ C {devices/vsource.sym} 1385 -940 0 0 {name=vgndd value=0}
 C {devices/gnd.sym} 1385 -910 0 0 {name=l17 lab=GND}
 C {devices/lab_pin.sym} 1385 -970 0 0 {name=l18 sig_type=std_logic lab=gnd_d}
 C {devices/lab_pin.sym} 1260 -540 0 0 {name=l19 sig_type=std_logic lab=gnd_d}
-C {devices/parax_cap.sym} 1340 -620 0 0 {name=C1 gnd=0 value=3f m=1}
+C {devices/sqwsource.sym} 895 -755 0 0 {name=V3 vhi=1.8 freq=10e6}
+C {/home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1190 -630 0 0 {name=x1}

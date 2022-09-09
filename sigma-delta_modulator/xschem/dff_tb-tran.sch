@@ -22,7 +22,6 @@ S {}
 E {}
 N 895 -795 895 -785 { lab=clk}
 N 895 -725 895 -715 { lab=GND}
-C {devices/vsource.sym} 895 -755 0 0 {name=vclk value="PULSE(0V 1.8V 0.5ns 0.1ns 0.1ns 50ns 100ns)"}
 C {devices/gnd.sym} 895 -715 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 1190 -935 0 0 {name=VDD value=1.8}
 C {devices/code_shown.sym} 1445 -980 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
@@ -56,6 +55,8 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {sky130_stdcells/dfrbp_1.sym} 1210 -630 0 0 {name=x1 VGND=GND VNB=GND VPB=VD VPWR=VD prefix=sky130_fd_sc_hd__ }
 C {devices/lab_pin.sym} 1300 -630 0 1 {name=l13 sig_type=std_logic lab=qn}
+C {sky130_stdcells/dfbbn_2.sym} 1210 -620 0 0 {name=x1 VGND=GND VNB=GND VPB=VD VPWR=VD prefix=sky130_fd_sc_hd__ }
+C {devices/lab_pin.sym} 1120 -590 0 0 {name=l6 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1120 -610 0 0 {name=l3 sig_type=std_logic lab=vd}
+C {devices/sqwsource.sym} 895 -755 0 0 {name=V3 vhi=1.8 freq=10e6}

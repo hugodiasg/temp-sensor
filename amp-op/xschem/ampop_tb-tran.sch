@@ -33,14 +33,14 @@ N 1140 -645 1155 -645 { lab=in2}
 N 1140 -705 1155 -705 { lab=in1}
 N 1185 -765 1185 -755 { lab=vd}
 C {devices/vsource.sym} 755 -600 0 0 {name=VIN2 value=0}
-C {devices/vsource.sym} 755 -705 0 0 {name=VIN1 value="sin(0 1 100k)"}
+C {devices/vsource.sym} 755 -705 0 0 {name=VIN1 value="sin(0 10m 1k)"}
 C {devices/isource.sym} 755 -485 0 0 {name=ibias value=5.53u}
 C {devices/gnd.sym} 755 -665 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 990 -915 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1120 -920 0 0 {name=VSS value=0
 }
 C {devices/code_shown.sym} 1475 -930 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
-.tran 10n 20u 
+.tran 3u 6m 
 .control
 set color0=white
 set color1=black

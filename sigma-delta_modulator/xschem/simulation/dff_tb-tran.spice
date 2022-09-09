@@ -3,7 +3,7 @@
 vclk clk GND PULSE(0V 1.8V 0.5ns 0.1ns 0.1ns 50ns 100ns)
 VDD vd GND 1.8
 vin in GND PULSE(0V 1.8V 0.5ns 0.1ns 0.1ns 1.5us 3us)
-x1 clk in vd GND GND VD VD q qn sky130_fd_sc_hd__dfrbp_1
+x1 clk in vd vd GND GND VD VD q qn sky130_fd_sc_hd__dfbbn_2
 **** begin user architecture code
 
 *cmd step stop
