@@ -20,24 +20,51 @@ K {}
 V {}
 S {}
 E {}
-N 755 -640 755 -630 { lab=in2}
-N 755 -745 755 -735 { lab=in1}
-N 755 -525 755 -515 { lab=ib}
-N 755 -675 755 -665 { lab=GND}
-N 755 -570 755 -560 { lab=GND}
-N 755 -455 755 -445 { lab=GND}
-N 1225 -605 1225 -590 { lab=ib}
-N 1185 -585 1185 -575 { lab=vs}
-N 1315 -665 1325 -665 { lab=out}
-N 1140 -645 1155 -645 { lab=in2}
-N 1140 -705 1155 -705 { lab=in1}
-N 1185 -765 1185 -755 { lab=vd}
-C {devices/vsource.sym} 755 -600 0 0 {name=VIN2 value=0}
-C {devices/vsource.sym} 755 -705 0 0 {name=VIN1 value="sin(0 10m 1k)"}
-C {devices/isource.sym} 755 -485 0 0 {name=ibias value=5.53u}
-C {devices/gnd.sym} 755 -665 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} 990 -915 0 0 {name=VDD value=1.8}
-C {devices/vsource.sym} 1120 -920 0 0 {name=VSS value=0
+N 365 -755 365 -745 { lab=in1}
+N 365 -535 365 -525 { lab=ib}
+N 365 -685 365 -675 { lab=GND}
+N 365 -465 365 -455 { lab=GND}
+N 1220 -625 1220 -610 { lab=ib}
+N 1180 -605 1180 -595 { lab=vs}
+N 1310 -685 1320 -685 { lab=out}
+N 1135 -665 1150 -665 { lab=in2}
+N 1135 -725 1150 -725 { lab=in1}
+N 1180 -785 1180 -775 { lab=vd}
+N 1085 -665 1135 -665 {
+lab=in2}
+N 1105 -760 1105 -635 {
+lab=GND}
+N 1085 -730 1085 -665 {
+lab=in2}
+N 1055 -665 1085 -665 {
+lab=in2}
+N 1085 -790 1180 -790 {
+lab=vd}
+N 1180 -790 1180 -785 {
+lab=vd}
+N 1180 -815 1180 -790 {
+lab=vd}
+N 1055 -725 1135 -725 {
+lab=in1}
+N 1105 -635 1105 -585 {
+lab=GND}
+N 1085 -585 1105 -585 {
+lab=GND}
+N 1085 -605 1085 -585 {
+lab=GND}
+N 1085 -585 1085 -565 {
+lab=GND}
+N 825 -725 865 -725 {
+lab=in1}
+N 825 -665 1055 -665 {
+lab=in2}
+N 865 -725 1055 -725 {
+lab=in1}
+C {devices/vsource.sym} 365 -715 0 0 {name=VIN1 value="sin(1 1 1k)"}
+C {devices/isource.sym} 365 -495 0 0 {name=ibias value=5.53u}
+C {devices/gnd.sym} 365 -675 0 0 {name=l2 lab=GND}
+C {devices/vsource.sym} 980 -985 0 0 {name=VDD value=1.8}
+C {devices/vsource.sym} 1110 -990 0 0 {name=VSS value=0
 }
 C {devices/code_shown.sym} 1475 -930 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
 .tran 3u 6m 
@@ -48,15 +75,13 @@ destroy all
 run
 plot out in1
 .endc"}
-C {devices/gnd.sym} 1120 -890 0 0 {name=l6 lab=GND}
-C {devices/gnd.sym} 990 -885 0 0 {name=l7 lab=GND}
-C {devices/gnd.sym} 755 -560 0 0 {name=l8 lab=GND}
-C {devices/gnd.sym} 755 -445 0 0 {name=l9 lab=GND}
-C {devices/lab_pin.sym} 755 -525 0 0 {name=l17 sig_type=std_logic lab=ib}
-C {devices/lab_pin.sym} 755 -745 0 0 {name=l10 sig_type=std_logic lab=in1}
-C {devices/lab_pin.sym} 755 -640 0 0 {name=l11 sig_type=std_logic lab=in2}
-C {devices/lab_pin.sym} 990 -945 0 0 {name=l1 sig_type=std_logic lab=vd}
-C {devices/lab_pin.sym} 1120 -950 0 0 {name=l4 sig_type=std_logic lab=vs}
+C {devices/gnd.sym} 1110 -960 0 0 {name=l6 lab=GND}
+C {devices/gnd.sym} 980 -955 0 0 {name=l7 lab=GND}
+C {devices/gnd.sym} 365 -455 0 0 {name=l9 lab=GND}
+C {devices/lab_pin.sym} 365 -535 0 0 {name=l17 sig_type=std_logic lab=ib}
+C {devices/lab_pin.sym} 365 -755 0 0 {name=l10 sig_type=std_logic lab=in1}
+C {devices/lab_pin.sym} 980 -1015 0 0 {name=l1 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} 1110 -1020 0 0 {name=l4 sig_type=std_logic lab=vs}
 C {devices/code.sym} 1500 -640 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -64,16 +89,29 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {devices/lab_pin.sym} 1140 -645 0 0 {name=l3 sig_type=std_logic lab=in2}
-C {devices/lab_pin.sym} 1140 -705 0 0 {name=l5 sig_type=std_logic lab=in1}
-C {devices/lab_pin.sym} 1225 -590 2 0 {name=l12 sig_type=std_logic lab=ib}
-C {devices/lab_pin.sym} 1325 -665 2 0 {name=l15 sig_type=std_logic lab=out}
-C {devices/capa.sym} 1315 -635 0 0 {name=Cl
+C {devices/lab_pin.sym} 825 -665 0 0 {name=l3 sig_type=std_logic lab=in2}
+C {devices/lab_pin.sym} 825 -725 0 0 {name=l5 sig_type=std_logic lab=in1}
+C {devices/lab_pin.sym} 1220 -610 2 0 {name=l12 sig_type=std_logic lab=ib}
+C {devices/lab_pin.sym} 1320 -685 2 0 {name=l15 sig_type=std_logic lab=out}
+C {devices/capa.sym} 1310 -655 0 0 {name=Cl
 m=1
 value=4p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/gnd.sym} 1315 -605 0 0 {name=l16 lab=GND}
-C {devices/lab_pin.sym} 1185 -765 0 0 {name=l18 sig_type=std_logic lab=vd}
-C {devices/lab_pin.sym} 1185 -575 0 1 {name=l19 sig_type=std_logic lab=vs}
-C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop.sym} 1210 -670 0 0 {name=x1}
+C {devices/gnd.sym} 1310 -625 0 0 {name=l16 lab=GND}
+C {devices/lab_pin.sym} 1180 -815 0 0 {name=l18 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} 1180 -595 0 1 {name=l19 sig_type=std_logic lab=vs}
+C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop.sym} 1205 -690 0 0 {name=x1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 1085 -635 0 1 {name=R1
+W=0.35
+L=20
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 1085 -760 0 1 {name=R2
+W=0.35
+L=20
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {devices/gnd.sym} 1085 -565 0 0 {name=l13 lab=GND}

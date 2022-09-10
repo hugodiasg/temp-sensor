@@ -1,6 +1,6 @@
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop_tb-ac.sch
 **.subckt ampop_tb-ac
-VIN2 in2 GND 0
+VIN2 in2 GND 0.9
 VIN1 in1 GND DC 0 AC 1
 ibias ib GND 5.53u
 VDD vd GND 1.8

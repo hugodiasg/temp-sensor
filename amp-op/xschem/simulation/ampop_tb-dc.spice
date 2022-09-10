@@ -1,12 +1,13 @@
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop_tb-dc.sch
 **.subckt ampop_tb-dc
-VIN2 in2 GND 0
 VIN1 in1 GND 3
 ibias ib GND 5.53u
 VDD vd GND 1.8
 VSS vs GND 0
 Cl out GND 4p m=1
 x1 vd in1 in2 out ib vs ampop
+XR1 GND in2 GND sky130_fd_pr__res_xhigh_po_0p35 L=20 mult=1 m=1
+XR2 in2 vd GND sky130_fd_pr__res_xhigh_po_0p35 L=20 mult=1 m=1
 **** begin user architecture code
 
 .dc VIN1 -1.8 1.8 70u
