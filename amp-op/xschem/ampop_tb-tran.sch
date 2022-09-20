@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,10 +19,10 @@ K {}
 V {}
 S {}
 E {}
-N 365 -755 365 -745 { lab=in1}
-N 365 -535 365 -525 { lab=ib}
-N 365 -685 365 -675 { lab=GND}
-N 365 -465 365 -455 { lab=GND}
+N 575 -775 575 -765 { lab=in1}
+N 575 -555 575 -545 { lab=ib}
+N 575 -705 575 -695 { lab=GND}
+N 575 -485 575 -475 { lab=GND}
 N 1220 -625 1220 -610 { lab=ib}
 N 1180 -605 1180 -595 { lab=vs}
 N 1310 -685 1320 -685 { lab=out}
@@ -60,9 +59,9 @@ N 825 -665 1055 -665 {
 lab=in2}
 N 865 -725 1055 -725 {
 lab=in1}
-C {devices/vsource.sym} 365 -715 0 0 {name=VIN1 value="sin(1 1 1k)"}
-C {devices/isource.sym} 365 -495 0 0 {name=ibias value=5.53u}
-C {devices/gnd.sym} 365 -675 0 0 {name=l2 lab=GND}
+C {devices/vsource.sym} 575 -735 0 0 {name=VIN1 value="sin(1 1 1k)"}
+C {devices/isource.sym} 575 -515 0 0 {name=ibias value=5.53u}
+C {devices/gnd.sym} 575 -695 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 980 -985 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1110 -990 0 0 {name=VSS value=0
 }
@@ -77,9 +76,9 @@ plot out in1
 .endc"}
 C {devices/gnd.sym} 1110 -960 0 0 {name=l6 lab=GND}
 C {devices/gnd.sym} 980 -955 0 0 {name=l7 lab=GND}
-C {devices/gnd.sym} 365 -455 0 0 {name=l9 lab=GND}
-C {devices/lab_pin.sym} 365 -535 0 0 {name=l17 sig_type=std_logic lab=ib}
-C {devices/lab_pin.sym} 365 -755 0 0 {name=l10 sig_type=std_logic lab=in1}
+C {devices/gnd.sym} 575 -475 0 0 {name=l9 lab=GND}
+C {devices/lab_pin.sym} 575 -555 0 0 {name=l17 sig_type=std_logic lab=ib}
+C {devices/lab_pin.sym} 575 -775 0 0 {name=l10 sig_type=std_logic lab=in1}
 C {devices/lab_pin.sym} 980 -1015 0 0 {name=l1 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1110 -1020 0 0 {name=l4 sig_type=std_logic lab=vs}
 C {devices/code.sym} 1500 -640 0 0 {name=TT_MODELS

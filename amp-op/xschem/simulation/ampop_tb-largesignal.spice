@@ -1,27 +1,23 @@
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop_tb-largesignal.sch
 **.subckt ampop_tb-largesignal
-VIN2 in2 GND DC 0
-VIN1 in1 GND pulse(0 1 2u 2n 2n 10u 1u)
 ibias ib GND 5.53u
 VDD vd GND 1.8
 VSS vs GND 0
+V1 in1 GND pulse 0 1.8 '0.495/ 1k ' '0.01/1k ' '0.01/1k ' '0.49/1k ' '1/1k '
 Cl out GND 4p m=1
 x1 vd in1 in2 out ib vs ampop
+XR1 GND in2 GND sky130_fd_pr__res_xhigh_po_0p35 L=20 mult=1 m=1
+XR2 in2 vd GND sky130_fd_pr__res_xhigh_po_0p35 L=20 mult=1 m=1
 **** begin user architecture code
 
 *cmd step stop
-.tran 0.1n 3u
-.end
-* Control
+.tran 0.1u 1m
 .control
 set color0=white
 set color1=black
-
 destroy all
 run
-let out_div2=(maximum(out)-minimum(out))/2+minimum(out)
-plot out in1 out_div2 xlimit 2u 3u
-*plot deriv(out)/1e6 xlimit 2u 3u ylabel 'uV/s'
+plot out in1
 .endc
 
  .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
@@ -33,7 +29,7 @@ plot out in1 out_div2 xlimit 2u 3u
 * expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop.sym # of pins=6
 ** sym_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop.sym
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop.sch
-.subckt ampop  vd in1 in2 out ib vs
+.subckt ampop vd in1 in2 out ib vs
 *.iopin vd
 *.opin out
 *.ipin in1
@@ -48,7 +44,7 @@ X2 vd ib net1 in2 in1 vs ota
 * expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym # of pins=5
 ** sym_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sch
-.subckt buffer  vd in out ib gnd
+.subckt buffer vd in out ib gnd
 *.iopin vd
 *.iopin ib
 *.iopin out
@@ -383,7 +379,7 @@ XM10 ib ib gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf
 * expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sym # of pins=6
 ** sym_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sym
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sch
-.subckt ota  vd ib out in2 in1 vs
+.subckt ota vd ib out in2 in1 vs
 *.iopin vd
 *.iopin vs
 *.iopin ib
