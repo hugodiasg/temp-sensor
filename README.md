@@ -50,40 +50,46 @@ Area | 0.000941 mm²
 
 ### OTA Miller (AmpOp)
 
-Miller Operational Transconductance Amplifier (OTA).
+Miller Operational Transconductance Amplifier (OTA) with Buffer.
 
 #### Specs:
 
 Name | Value
 --------- | ------:
 Vdd | 1.8 V
-Vss | -1.8 V
+Vss | 0 V
 Open-loop Gain | 74 dB
-Phase margin | > 44 °
-GBW | 2.75 MHz
-Slew Rate | 3.7 uV/s
-CMRR | 74.5 dB
-Area | 0.0012 mm²
+Phase margin | > 40 °
+GBW | 3.72 MHz
+Slew Rate | 0.73 uV/s
+CMRR | 73.75 dB
+Area | 0.0031 mm²
 
 #### Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/177055738-14bb7e93-295e-49b9-acbe-39ac5c1a95de.png)
+![image](https://user-images.githubusercontent.com/80465879/202614145-99bab9f4-cc48-473f-8f9f-44363222b760.png)
+
+![image](https://user-images.githubusercontent.com/80465879/202614207-54152198-1f7e-4db7-8ee2-c6f41477f29e.png)
+
+![image](https://user-images.githubusercontent.com/80465879/202614272-f4cd747a-8b49-4e88-8865-83f13926fed8.png)
 
 #### Layout:
 
-![image](https://user-images.githubusercontent.com/80465879/177055945-1adf86da-f10c-44e6-848a-03f9aed6973b.png)
+![image](https://user-images.githubusercontent.com/80465879/202619004-342566af-1f81-4dce-a99b-dd3e9469e6dc.png)
 
 #### Simulation:
- 
-![image](https://user-images.githubusercontent.com/80465879/177055754-e0957be9-ddd8-4a33-a840-28c73a3b0f6d.png)
 
-![image](https://user-images.githubusercontent.com/80465879/177055803-e2561d66-7dd3-48d4-986a-c286f5ea6b30.png)
+![image](https://user-images.githubusercontent.com/80465879/202615358-6942bcd9-a71b-4e79-8686-3589a57b8cdf.png)
 
-![image](https://user-images.githubusercontent.com/80465879/177055808-1adb03f2-f88c-44e7-8d64-64d59eeafbca.png)
+![image](https://user-images.githubusercontent.com/80465879/202614755-3c7e56c1-417b-4840-a55d-cb49e2f327cb.png)
 
-![image](https://user-images.githubusercontent.com/80465879/177055901-542d9ca2-4ac0-4600-bb65-126c5942df42.png)
+![image](https://user-images.githubusercontent.com/80465879/202617256-478c70c4-2b69-47fe-b96d-d5461111c988.png)
 
-![image](https://user-images.githubusercontent.com/80465879/177055913-4af6d0ec-0c94-41ed-a94a-496aa6f38192.png)
+![image](https://user-images.githubusercontent.com/80465879/202616113-b931cf16-5c5c-4ea3-ac27-fc59356524e0.png)
+
+![image](https://user-images.githubusercontent.com/80465879/202616366-15468720-ef4a-4122-b476-e5998b223620.png)
+
+![image](https://user-images.githubusercontent.com/80465879/202616720-18e560ce-91ed-4bab-a16f-863b04332201.png)
 
 ### ASK Modulator
 
