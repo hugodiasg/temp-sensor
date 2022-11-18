@@ -1,0 +1,170 @@
+timestamp 1668742990
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use ota ota_0 1 0 -4851 0 1 -4906
+use buffer buffer_0 1 0 -13880 0 1 -1424
+port "vs" 5 -5400 -240 -5200 -60 m1
+port "out" 7 8120 780 8260 920 m1
+port "in2" 9 -5380 760 -5220 920 m1
+port "in1" 3 -5380 1660 -5220 1800 m1
+port "ib" 2 -5380 2380 -5270 2490 m1
+port "vd" 1 -1660 4140 -1550 4250 m1
+node "vs" 7 4101.21 -5400 -240 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 202400 2680 1724400 18360 0 0 0 0 0 0 0 0
+node "out" 0 126.228 8120 780 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19600 560 0 0 0 0 0 0 0 0 0 0
+node "in2" 0 125.925 -5380 760 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25600 640 0 0 0 0 0 0 0 0 0 0
+node "m1_n613_1694#" 0 382.392 -613 1694 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 149800 1898 0 0 0 0 0 0 0 0 0 0
+node "in1" 0 110.296 -5380 1660 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22400 600 0 0 0 0 0 0 0 0 0 0
+node "ib" 0 86.7704 -5380 2380 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12100 440 0 0 0 0 0 0 0 0 0 0
+node "m1_n1210_3570#" 4 1775.69 -1210 3570 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 506000 7560 112000 2080 0 0 0 0 0 0 0 0
+node "vd" 3 2140.06 -1660 4140 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1055960 11046 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "m1_n613_1694#" "vd" 9.76038
+cap "m1_n613_1694#" "m1_n1210_3570#" 236.007
+cap "vs" "m1_n1210_3570#" 56.9394
+cap "m1_n613_1694#" "vs" 11.9025
+cap "ib" "in1" 7.68254
+cap "in2" "in1" 8.91139
+cap "vs" "in2" 12.4235
+cap "vd" "m1_n1210_3570#" 519.382
+cap "ota_0/vs" "ota_0/XM1/w_n296_n519#" 27.4094
+cap "ota_0/in2" "ota_0/vs" 13.1435
+cap "ota_0/in1" "ota_0/vs" 7.57546
+cap "ota_0/in2" "ota_0/XM1/a_n158_n300#" -25.0844
+cap "ota_0/vs" "ota_0/XM1/a_n158_n300#" 73.6019
+cap "ota_0/in2" "ota_0/XM2/a_100_n300#" -7.43415
+cap "ota_0/XM2/a_100_n300#" "ota_0/vs" 234.236
+cap "ota_0/in2" "ota_0/XCC/c1_n2150_n2100#" -1.29357
+cap "ota_0/XCC/c1_n2150_n2100#" "ota_0/vs" 41.0313
+cap "ota_0/in2" "ota_0/vs" 9.3679
+cap "ota_0/out" "ota_0/XM2/a_100_n300#" -2.0046
+cap "ota_0/in2" "ota_0/XM2/a_100_n300#" -3.17441
+cap "ota_0/vs" "ota_0/XM2/a_100_n300#" 638.156
+cap "ota_0/XM1/w_n296_n519#" "ota_0/vs" 12.9123
+cap "ota_0/out" "ota_0/in2" -0.651814
+cap "ota_0/out" "ota_0/vs" 87.1375
+cap "ota_0/XM1/a_n158_n300#" "ota_0/vs" 32.0719
+cap "ota_0/XM1/a_n158_n300#" "ota_0/in2" -10.4783
+cap "ota_0/XM8/a_29_n847#" "vs" 0.14842
+cap "ota_0/XM8/a_287_n847#" "vs" 0.000445702
+cap "ota_0/out" "ota_0/XM2/a_100_n300#" -27.5656
+cap "vs" "ota_0/XM8/a_n229_n847#" 0.14842
+cap "ota_0/XM8/w_n683_n969#" "vs" 4.38458
+cap "vs" "ota_0/XM2/a_100_n300#" 299.143
+cap "ota_0/out" "buffer_0/ib" 0.039012
+cap "vs" "ota_0/out" 306.479
+cap "ota_0/XM4/a_n260_n274#" "ota_0/XM2/a_100_n300#" -1.27634
+cap "ota_0/XM8/a_n487_n847#" "vs" 0.14842
+cap "ota_0/XM4/a_n260_n274#" "buffer_0/ib" 0.0426659
+cap "ota_0/XM4/a_n260_n274#" "ota_0/out" -42.4663
+cap "ota_0/XM4/a_n260_n274#" "vs" 1020.81
+cap "ota_0/XM7/a_n389_n624#" "buffer_0/ib" 1.47446
+cap "ota_0/out" "vs" 300.747
+cap "ota_0/XM7/a_n389_n624#" "vs" 55.2943
+cap "ota_0/XM8/a_287_n847#" "vs" 0.122234
+cap "ota_0/out" "ota_0/XCC/m3_n2250_n2200#" -0.874861
+cap "ota_0/XM7/a_n389_n624#" "ota_0/XCC/m3_n2250_n2200#" -0.0174544
+cap "buffer_0/ib" "vs" 0.931288
+cap "ota_0/XM7/a_n389_n624#" "ota_0/out" -0.484487
+cap "ota_0/XM8/w_n683_n969#" "vs" 1.44944
+cap "ota_0/XM7/a_n229_n538#" "buffer_0/ib" 0.144254
+cap "ota_0/XCC/m3_n2250_n2200#" "vs" 22.2792
+cap "ota_0/out" "buffer_0/ib" 1.77415
+cap "buffer_0/gnd" "buffer_0/a_16120_1800#" 0.0537595
+cap "buffer_0/gnd" "buffer_0/ib" 51.454
+cap "buffer_0/gnd" "ota_0/out" 7.76497
+cap "buffer_0/gnd" "buffer_0/in" 2.46838
+cap "buffer_0/gnd" "buffer_0/ib" 22.7897
+cap "buffer_0/gnd" "buffer_0/net4" 12.2783
+cap "buffer_0/net3" "buffer_0/gnd" 1.04473
+cap "buffer_0/gnd" "buffer_0/a_16120_1800#" 0.0117447
+cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "buffer_0/out" -0.0984693
+cap "buffer_0/out" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" 0.923614
+cap "ota_0/XM1/a_n158_n300#" "ota_0/vs" 0.246992
+cap "ota_0/in1" "ota_0/ib" -3.84127
+cap "ota_0/in1" "ota_0/vs" 2.33944
+cap "ota_0/XM1/w_n296_n519#" "ota_0/vs" 1.07101
+cap "ota_0/in1" "ota_0/in2" -8.91139
+cap "ota_0/in2" "ota_0/vs" 1.44853
+cap "ota_0/XM2/a_100_n300#" "ota_0/vs" 7.06495
+cap "ota_0/XM1/w_n296_n519#" "ota_0/vs" 0.625631
+cap "ota_0/XM4/a_n260_n274#" "ota_0/XM8/a_287_n847#" 1.24542
+cap "vs" "ota_0/sky130_fd_pr__pfet_01v8_G8TPYT_0/w_n296_n819#" 0.334757
+cap "ota_0/out" "vs" 10.9317
+cap "ota_0/XM2/a_100_n300#" "ota_0/XM8/a_287_n847#" 2.7141
+cap "ota_0/XM4/a_n260_n274#" "vs" 3.7705
+cap "ota_0/XM8/a_287_n847#" "vs" 0.0887717
+cap "ota_0/XM8/a_287_n847#" "ota_0/sky130_fd_pr__pfet_01v8_G8TPYT_0/w_n296_n819#" 0.438241
+cap "ota_0/XM2/a_100_n300#" "vs" 22.8264
+cap "ota_0/XM8/a_287_n847#" "ota_0/out" 1.93425
+cap "vs" "ota_0/XM8/w_n683_n969#" 0.173491
+cap "ota_0/XM8/a_287_n847#" "ota_0/XM8/w_n683_n969#" 45.2382
+cap "ota_0/XM7/a_n389_n624#" "vs" 0.411422
+cap "ota_0/XM7/a_n389_n624#" "ota_0/XM8/a_287_n847#" 25.5098
+cap "ota_0/out" "ota_0/XM8/w_n683_n969#" 3.07097
+cap "ota_0/XM7/a_n389_n624#" "ota_0/out" -2.84217e-14
+cap "ota_0/XM8/a_287_n847#" "buffer_0/vd" 6.23132
+cap "vs" "ota_0/XM8/a_287_n847#" 2.91835
+cap "ota_0/XM8/a_287_n847#" "buffer_0/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n616_n197#" 1.99582
+cap "ota_0/out" "buffer_0/vd" -3.32978
+cap "vs" "ota_0/out" 10.3927
+cap "ota_0/out" "ota_0/XM8/a_287_n847#" 160.855
+cap "ota_0/XM8/a_287_n847#" "ota_0/XM7/a_n229_n538#" 23.4511
+cap "buffer_0/vd" "ota_0/XM8/a_287_n847#" 1.5679
+cap "buffer_0/gnd" "ota_0/out" 3.01263
+cap "buffer_0/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n616_n197#" "buffer_0/vd" -0.0377282
+cap "buffer_0/gnd" "ota_0/XM8/a_287_n847#" 23.5705
+cap "buffer_0/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n616_n197#" "ota_0/XM8/a_287_n847#" 1.0084
+cap "buffer_0/net2" "buffer_0/vd" -3.55271e-15
+cap "buffer_0/in" "buffer_0/gnd" 5.24515
+cap "buffer_0/net3" "buffer_0/vd" 3.41061e-13
+cap "buffer_0/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n416_n100#" "buffer_0/vd" 2.84217e-14
+cap "buffer_0/in" "buffer_0/vd" 5.68434e-14
+cap "buffer_0/net4" "buffer_0/gnd" 6.17228
+cap "buffer_0/net3" "buffer_0/gnd" 0.0553772
+cap "buffer_0/out" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" -0.00562057
+cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "buffer_0/out" 0.0314079
+cap "ota_0/in1" "ota_0/ib" -3.84127
+cap "ota_0/ib" "ota_0/vd" -16.2973
+cap "ota_0/vd" "ota_0/XM8/a_287_n847#" 21.8171
+cap "ota_0/vd" "ota_0/out" -2.44569
+cap "ota_0/XM8/a_287_n847#" "ota_0/out" 7.38205
+cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_0/a_n616_n197#" "buffer_0/vd" 9.63431
+cap "ota_0/out" "ota_0/XM8/w_n683_n969#" 36.0101
+cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_0/a_n616_n197#" "ota_0/XM8/a_287_n847#" 0.123035
+cap "buffer_0/vd" "ota_0/XM8/a_287_n847#" 24.8131
+cap "buffer_0/vd" "ota_0/XM8/w_n683_n969#" 31.2532
+cap "ota_0/XM8/a_287_n847#" "ota_0/XM8/w_n683_n969#" 160.061
+cap "buffer_0/vd" "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_0/a_n416_n100#" 0.854361
+cap "buffer_0/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n616_n197#" "ota_0/XM8/a_287_n847#" 0.781716
+cap "buffer_0/vd" "ota_0/out" -5.35204
+cap "ota_0/XM8/a_287_n847#" "ota_0/out" 95.8131
+cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_0/a_n616_n197#" "ota_0/XM8/a_287_n847#" 0.19961
+cap "buffer_0/vd" "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_0/a_n616_n197#" 2.12662
+cap "buffer_0/vd" "ota_0/XM8/a_287_n847#" 11.4418
+cap "buffer_0/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n616_n197#" "ota_0/XM8/a_287_n847#" 0.0998049
+cap "buffer_0/vd" "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_0/a_n416_n100#" 0.212968
+cap "buffer_0/vd" "buffer_0/net2" -9.09495e-13
+cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_0/a_n416_n100#" "buffer_0/vd" 1.13687e-13
+cap "ota_0/vd" "ota_0/ib" 74.3143
+cap "ota_0/vd" "ota_0/XM8/a_287_n847#" 263.288
+cap "ota_0/vd" "ota_0/XM8/a_n287_n750#" 8.7316
+cap "ota_0/XM8/w_n683_n969#" "ota_0/XM8/a_287_n847#" 27.5016
+cap "ota_0/XM8/w_n683_n969#" "buffer_0/vd" 29.3883
+cap "buffer_0/vd" "ota_0/XM8/a_287_n847#" -35.0444
+merge "buffer_0/gnd" "ota_0/vs" -2600.17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -101614 -2130 -633200 -7260 0 0 0 0 0 0 0 0
+merge "ota_0/vs" "vs"
+merge "vs" "VSUBS"
+merge "ota_0/XM8/a_287_n847#" "ota_0/ib" -1072.95 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -44120 -1502 0 0 0 0 0 0 0 0 0 0
+merge "ota_0/ib" "ib"
+merge "ib" "buffer_0/ib"
+merge "buffer_0/ib" "m1_n1210_3570#"
+merge "ota_0/in1" "in1" -110.296 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -22400 -600 0 0 0 0 0 0 0 0 0 0
+merge "ota_0/in2" "in2" -147.405 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -25600 -640 0 0 0 0 0 0 0 0 0 0
+merge "buffer_0/in" "ota_0/out" -531.555 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -53540 -1296 0 0 0 0 0 0 0 0 0 0
+merge "ota_0/out" "m1_n613_1694#"
+merge "buffer_0/out" "out" -102.675 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12500 -460 0 0 0 0 0 0 0 0 0 0
+merge "ota_0/vd" "buffer_0/vd" -975.647 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -59866 -2126 0 0 0 0 0 0 0 0 0 0
+merge "buffer_0/vd" "vd"

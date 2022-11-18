@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,20 +19,12 @@ K {}
 V {}
 S {}
 E {}
-N 150 -1920 150 -1840 {
-lab=QN}
 N 150 -2000 150 -1980 {
 lab=in_comp}
 N -50 -2000 20 -2000 {
 lab=in}
-N 350 -1920 350 -1790 {
-lab=gnd}
 N 200 -1790 200 -1760 {
 lab=gnd}
-N 350 -2000 350 -1980 {
-lab=in_comp}
-N 850 -2000 850 -1840 {
-lab=QN}
 N 50 -1980 50 -1790 {
 lab=gnd}
 N 130 -1790 200 -1790 {
@@ -42,24 +33,14 @@ N 130 -1950 130 -1790 {
 lab=gnd}
 N 80 -2000 150 -2000 {
 lab=in_comp}
-N 150 -2000 350 -2000 {
-lab=in_comp}
 N 200 -1790 350 -1790 {
 lab=gnd}
 N 50 -1790 130 -1790 {
 lab=gnd}
-N 150 -1840 850 -1840 {
-lab=QN}
-N 850 -2020 890 -2020 {
+N 850 -2000 890 -2000 {
 lab=out}
 N 670 -1960 670 -1795 {
 lab=reset_b_dff}
-N 350 -2030 350 -2000 {
-lab=in_comp}
-N 350 -2030 480 -2030 {
-lab=in_comp}
-N 480 -2030 510 -2030 {
-lab=in_comp}
 N 650 -2000 670 -2000 {
 lab=out_comp}
 N 560 -2130 560 -2080 {
@@ -67,8 +48,6 @@ lab=vd}
 N 560 -1910 560 -1790 {
 lab=gnd}
 N 520 -2050 520 -2030 {
-lab=in_comp}
-N 510 -2030 520 -2030 {
 lab=in_comp}
 N 520 -2030 520 -1940 {
 lab=in_comp}
@@ -84,20 +63,30 @@ N 350 -1790 560 -1790 {
 lab=gnd}
 N 670 -1980 670 -1960 {
 lab=reset_b_dff}
-N 670 -2130 670 -2100 {
+N 150 -2000 265 -2000 {
+lab=in_comp}
+N 670 -2130 670 -2020 {
 lab=clk}
-N 670 -2100 680 -2100 {
-lab=clk}
-N 760 -2100 760 -2060 {
-lab=#net1}
-N 670 -2060 760 -2060 {
-lab=#net1}
-N 670 -2060 670 -2020 {
-lab=#net1}
+N 320 -2000 320 -1970 {
+lab=in_comp}
+N 265 -2000 320 -2000 {
+lab=in_comp}
+N 320 -1910 320 -1790 {
+lab=gnd}
+N 320 -2000 520 -2000 {
+lab=in_comp}
+N 850 -2020 870 -2020 {
+lab=QN}
+N 870 -2020 870 -1830 {
+lab=QN}
+N 150 -1830 870 -1830 {
+lab=QN}
+N 150 -1920 150 -1830 {
+lab=QN}
 C {devices/code.sym} 1060 -2190 0 0 {name=RC_extraction only_toplevel=false value="
 "}
 C {devices/ipin.sym} -45 -2000 0 0 {name=p4 lab=in}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 350 -1950 0 0 {name=C1 model=cap_mim_m3_1 W=27.196 L=27.196 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 320 -1940 0 0 {name=C1 model=cap_mim_m3_1 W=27.196 L=27.196 MF=1 spiceprefix=X}
 C {devices/iopin.sym} 200 -1770 1 0 {name=p6 lab=gnd}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} 150 -1950 0 0 {name=R2
 W=0.35
@@ -106,13 +95,13 @@ model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
 C {devices/iopin.sym} 670 -2130 3 0 {name=p2 lab=clk}
-C {devices/iopin.sym} 890 -2020 0 0 {name=p3 lab=out}
+C {devices/iopin.sym} 890 -2000 0 0 {name=p3 lab=out}
 C {devices/iopin.sym} 670 -1800 1 0 {name=p7 lab=reset_b_dff}
 C {devices/iopin.sym} 790 -2130 3 0 {name=p1 lab=vpwr}
 C {devices/iopin.sym} 860 -2130 3 0 {name=p8 lab=gnd_d}
-C {devices/lab_pin.sym} 320 -2000 1 0 {name=l3 sig_type=std_logic lab=in_comp}
+C {devices/lab_pin.sym} 310 -2000 1 0 {name=l3 sig_type=std_logic lab=in_comp}
 C {devices/lab_pin.sym} 650 -2000 1 0 {name=l4 sig_type=std_logic lab=out_comp}
-C {devices/lab_pin.sym} 490 -1840 1 0 {name=l5 sig_type=std_logic lab=QN}
+C {devices/lab_pin.sym} 490 -1830 1 0 {name=l5 sig_type=std_logic lab=QN}
 C {devices/iopin.sym} 560 -2130 3 0 {name=p5 lab=vd}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} 50 -2000 3 0 {name=R1
 W=0.35
@@ -149,4 +138,3 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_stdcells/dfrbp_1.sym} 760 -2000 0 0 {name=x1 VGND=GND_D VNB=GND_D VPB=VPWR VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 720 -2100 0 0 {name=x2 VGND=GND_D VNB=GND_D VPB=VPWR VPWR=VPWR prefix=sky130_fd_sc_hd__ }

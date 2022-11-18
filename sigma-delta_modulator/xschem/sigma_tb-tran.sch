@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,12 +24,13 @@ N 895 -725 895 -715 { lab=GND}
 C {devices/gnd.sym} 895 -715 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 1190 -935 0 0 {name=VDD value=1.8}
 C {devices/code_shown.sym} 1635 -980 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
-.tran 10n 10m
 .control
+destroy all
+save all
 set color0=white
 set color1=black
 set temp=27
-destroy all
+tran 1n 2u
 run
 
 plot in x1.in_comp x1.out_comp x1.QN
@@ -46,7 +46,7 @@ C {devices/lab_pin.sym} 1190 -965 0 0 {name=l1 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1040 -630 0 0 {name=l4 sig_type=std_logic lab=in}
 C {devices/gnd.sym} 1080 -540 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 1230 -720 0 0 {name=l9 sig_type=std_logic lab=clk}
-C {devices/vsource.sym} 895 -1015 0 0 {name=vin value="PULSE(0 1.8 0 0.46081s 0.46081s 0 0.92162s)"}
+C {devices/vsource.sym} 895 -1015 0 0 {name=vin value=0}
 C {devices/gnd.sym} 895 -985 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 895 -1045 0 0 {name=l12 sig_type=std_logic lab=in}
 C {devices/code.sym} 1660 -1210 0 0 {name=TT_MODELS

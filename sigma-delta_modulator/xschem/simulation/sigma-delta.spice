@@ -1,26 +1,21 @@
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sch
-**.subckt sigma-delta vd in gnd clk out reset_b_dff
-*.iopin vd
-*.ipin in
-*.iopin gnd
-*.iopin clk
-*.iopin out
-*.iopin reset_b_dff
-XN1 net1 net3 clk clk sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+.subckt sigma-delta in gnd clk out reset_b_dff vpwr gnd_d vd
+*.PININFO in:I gnd:B clk:B out:B reset_b_dff:B vpwr:B gnd_d:B vd:B
+XC1 in_comp gnd sky130_fd_pr__cap_mim_m3_1 W=27.196 L=27.196 MF=1 m=1
+XR2 QN in_comp gnd sky130_fd_pr__res_xhigh_po_0p35 L=36 mult=1 m=1
+XR1 in_comp in gnd sky130_fd_pr__res_xhigh_po_0p35 L=36 mult=1 m=1
+XN1 out_comp in_comp gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XP1 out_comp in_comp vd vd sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
-XP1 net1 net3 vd vd sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XC1 net3 gnd sky130_fd_pr__cap_mim_m3_1 W=27.196 L=27.196 MF=1 m=1
-XR1 net3 in gnd sky130_fd_pr__res_xhigh_po_0p35 L=37 mult=1 m=1
-XR2 net2 net3 gnd sky130_fd_pr__res_xhigh_po_0p35 L=37 mult=1 m=1
-x2 clk net1 reset_b_dff VGND VNB VPB VPWR out net2 sky130_fd_sc_hd__dfrbp_1
+x1 clk out_comp reset_b_dff GND_D GND_D VPWR VPWR QN out sky130_fd_sc_hd__dfrbp_1
 **** begin user architecture code
 
 
 
 
 **** end user architecture code
-**.ends
+.ends
 .end

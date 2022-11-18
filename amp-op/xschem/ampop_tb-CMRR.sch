@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,7 +37,7 @@ N 660 -755 675 -755 { lab=in11}
 N 705 -815 705 -805 { lab=vd}
 N 1295 -625 1295 -610 { lab=ib2}
 N 1255 -605 1255 -595 { lab=vs}
-N 1385 -685 1395 -685 { lab=out1}
+N 1385 -685 1395 -685 { lab=out2}
 N 1210 -665 1225 -665 { lab=in22}
 N 1210 -725 1225 -725 { lab=in12}
 N 1255 -785 1255 -775 { lab=vd}
@@ -49,14 +48,12 @@ C {devices/vsource.sym} 990 -915 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1120 -920 0 0 {name=VSS value=0
 }
 C {devices/code_shown.sym} 1475 -995 0 0 {name=Simulation only_toplevel=false value="**cmd step stop
-.ac dec 2000 1 110Meg
-.end
-
 .control
+destroy all
 set color0=white
 set color1=black
-
-destroy all
+save all
+ac dec 2000 1 110Meg
 run
 *CMRR
 let gain_common=db(OUT1/IN11)

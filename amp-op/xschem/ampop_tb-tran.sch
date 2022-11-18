@@ -59,18 +59,19 @@ N 825 -665 1055 -665 {
 lab=in2}
 N 865 -725 1055 -725 {
 lab=in1}
-C {devices/vsource.sym} 575 -735 0 0 {name=VIN1 value="sin(1 1 1k)"}
+C {devices/vsource.sym} 575 -735 0 0 {name=VIN1 value="sin(0.9 0.9 1k)"}
 C {devices/isource.sym} 575 -515 0 0 {name=ibias value=5.53u}
 C {devices/gnd.sym} 575 -695 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 980 -985 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1110 -990 0 0 {name=VSS value=0
 }
 C {devices/code_shown.sym} 1475 -930 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
-.tran 3u 6m 
 .control
+destroy all
+save all 
+tran 1u 2m
 set color0=white
 set color1=black
-destroy all
 run
 plot out in1
 .endc"}

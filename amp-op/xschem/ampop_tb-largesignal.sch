@@ -64,11 +64,12 @@ C {devices/vsource.sym} 330 -505 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 460 -510 0 0 {name=VSS value=0
 }
 C {devices/code_shown.sym} 825 -450 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
-.tran 0.1u 1m
 .control
+destroy all
 set color0=white
 set color1=black
-destroy all
+save all
+tran 0.1u 1m
 run
 plot out in1
 .endc"}

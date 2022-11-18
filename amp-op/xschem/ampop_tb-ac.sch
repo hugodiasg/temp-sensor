@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -48,16 +47,13 @@ C {devices/gnd.sym} 755 -665 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 990 -915 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1120 -920 0 0 {name=VSS value=0}
 C {devices/code_shown.sym} 1425 -1020 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
-
-.ac dec 2000 1 110Meg
-.end
-
 .control
+destroy all
+save all
 set units=degrees
 set color0=white
 set color1=black
-
-destroy all
+ac dec 2000 1 110Meg
 run
 let gain = db(abs(OUT/IN1))
 let gain_3db = maximum(gain)-3
@@ -90,10 +86,10 @@ m=1
 value=4p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/gnd.sym} 1275 -545 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 1145 -735 0 0 {name=l18 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1145 -515 0 1 {name=l19 sig_type=std_logic lab=vs}
 C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop.sym} 1170 -610 0 0 {name=x1}
 C {devices/vsource.sym} 755 -595 0 0 {name=VIN2 value="DC 0"}
 C {devices/gnd.sym} 755 -555 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} 755 -635 0 0 {name=l11 sig_type=std_logic lab=in2}
+C {devices/gnd.sym} 1275 -545 0 0 {name=l13 lab=GND}

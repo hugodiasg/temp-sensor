@@ -1,2 +1,2 @@
-netgen -batch lvs "../mag/ota.spice ota" "../xschem/simulation/ota.spice ota" setup.tcl comp.out
+netgen -batch lvs "../mag/ampop.spice ampop" "../xschem/simulation/ampop.spice ampop" setup.tcl comp.out
 

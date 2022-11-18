@@ -59,13 +59,13 @@ C {devices/gnd.sym} 755 -665 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 990 -915 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1120 -920 0 0 {name=VSS value=0
 }
-C {devices/code_shown.sym} 1470 -880 0 0 {name=Simulation only_toplevel=false value=".dc VIN1 -0.1 1.8 1m
-.end
+C {devices/code_shown.sym} 1470 -880 0 0 {name=Simulation only_toplevel=false value="
 .control
+destroy all
 set color0=white
 set color1=black
-
-destroy all
+save all
+dc VIN1 -0.1 1.8 1m
 run
 plot out in1
 .endc"}
