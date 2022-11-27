@@ -19,34 +19,29 @@ K {}
 V {}
 S {}
 E {}
-N 895 -795 895 -785 { lab=clk}
-N 895 -725 895 -715 { lab=GND}
-C {devices/gnd.sym} 895 -715 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} 1190 -935 0 0 {name=VDD value=1.8}
+N 725 -1055 725 -1045 { lab=clk}
+N 725 -985 725 -975 { lab=GND}
+C {devices/gnd.sym} 725 -975 0 0 {name=l2 lab=GND}
 C {devices/code_shown.sym} 1635 -980 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
+*PULSE ( V1 V2 TD TR TF PW PER PHASE)
 .control
 destroy all
 save all
 set color0=white
 set color1=black
 set temp=27
-tran 1n 2u
+tran 10n 2m
 run
 
-plot in x1.in_comp x1.out_comp x1.QN
-plot clk
-plot in
-plot out
+plot in out
 
 
 .endc"}
-C {devices/gnd.sym} 1190 -905 0 0 {name=l7 lab=GND}
-C {devices/lab_pin.sym} 895 -795 0 0 {name=l10 sig_type=std_logic lab=clk}
-C {devices/lab_pin.sym} 1190 -965 0 0 {name=l1 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} 725 -1055 0 0 {name=l10 sig_type=std_logic lab=clk}
 C {devices/lab_pin.sym} 1040 -630 0 0 {name=l4 sig_type=std_logic lab=in}
 C {devices/gnd.sym} 1080 -540 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 1230 -720 0 0 {name=l9 sig_type=std_logic lab=clk}
-C {devices/vsource.sym} 895 -1015 0 0 {name=vin value=0}
+C {devices/vsource.sym} 895 -1015 0 0 {name=vin value="PULSE (0 1.8 0 2m 2m 0 2m)"}
 C {devices/gnd.sym} 895 -985 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 895 -1045 0 0 {name=l12 sig_type=std_logic lab=in}
 C {devices/code.sym} 1660 -1210 0 0 {name=TT_MODELS
@@ -56,16 +51,15 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {devices/lab_pin.sym} 1080 -720 0 0 {name=l13 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1340 -630 3 1 {name=l5 sig_type=std_logic lab=out}
 C {devices/vsource.sym} 1300 -935 0 0 {name=vpwr value=1.8}
 C {devices/gnd.sym} 1300 -905 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} 1300 -965 0 0 {name=l14 sig_type=std_logic lab=vpwr}
 C {devices/lab_pin.sym} 1270 -720 1 0 {name=l15 sig_type=std_logic lab=vpwr}
 C {devices/lab_pin.sym} 1300 -720 1 0 {name=l16 sig_type=std_logic lab=vpwr}
-C {devices/vsource.sym} 1385 -940 0 0 {name=vgndd value=0}
-C {devices/gnd.sym} 1385 -910 0 0 {name=l17 lab=GND}
-C {devices/lab_pin.sym} 1385 -970 0 0 {name=l18 sig_type=std_logic lab=gnd_d}
-C {devices/lab_pin.sym} 1260 -540 0 0 {name=l19 sig_type=std_logic lab=gnd_d}
-C {devices/sqwsource.sym} 895 -755 0 0 {name=V3 vhi=1.8 freq=10e6}
+C {devices/sqwsource.sym} 725 -1015 0 0 {name=V3 vhi=1.8 freq=10e6}
 C {/home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1190 -630 0 0 {name=x1}
+C {devices/vsource.sym} 1120 -945 0 0 {name=vd value=1.8}
+C {devices/gnd.sym} 1120 -915 0 0 {name=l1 lab=GND}
+C {devices/lab_pin.sym} 1120 -975 0 0 {name=l3 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} 1070 -720 0 0 {name=l7 sig_type=std_logic lab=vd}

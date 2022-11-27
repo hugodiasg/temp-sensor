@@ -44,7 +44,7 @@ lab=reset_b_dff}
 N 650 -2000 670 -2000 {
 lab=out_comp}
 N 560 -2130 560 -2080 {
-lab=vd}
+lab=#net1}
 N 560 -1910 560 -1790 {
 lab=gnd}
 N 520 -2050 520 -2030 {
@@ -52,7 +52,7 @@ lab=in_comp}
 N 520 -2030 520 -1940 {
 lab=in_comp}
 N 560 -2080 560 -2050 {
-lab=vd}
+lab=#net1}
 N 560 -1940 560 -1910 {
 lab=gnd}
 N 560 -2020 560 -1970 {
@@ -76,13 +76,15 @@ lab=gnd}
 N 320 -2000 520 -2000 {
 lab=in_comp}
 N 850 -2020 870 -2020 {
-lab=QN}
+lab=Q}
 N 870 -2020 870 -1830 {
-lab=QN}
+lab=Q}
 N 150 -1830 870 -1830 {
-lab=QN}
+lab=Q}
 N 150 -1920 150 -1830 {
-lab=QN}
+lab=Q}
+N 560 -2200 560 -2130 {
+lab=#net1}
 C {devices/code.sym} 1060 -2190 0 0 {name=RC_extraction only_toplevel=false value="
 "}
 C {devices/ipin.sym} -45 -2000 0 0 {name=p4 lab=in}
@@ -97,12 +99,10 @@ mult=1}
 C {devices/iopin.sym} 670 -2130 3 0 {name=p2 lab=clk}
 C {devices/iopin.sym} 890 -2000 0 0 {name=p3 lab=out}
 C {devices/iopin.sym} 670 -1800 1 0 {name=p7 lab=reset_b_dff}
-C {devices/iopin.sym} 790 -2130 3 0 {name=p1 lab=vpwr}
-C {devices/iopin.sym} 860 -2130 3 0 {name=p8 lab=gnd_d}
+C {devices/iopin.sym} 810 -2130 3 0 {name=p1 lab=vpwr}
 C {devices/lab_pin.sym} 310 -2000 1 0 {name=l3 sig_type=std_logic lab=in_comp}
 C {devices/lab_pin.sym} 650 -2000 1 0 {name=l4 sig_type=std_logic lab=out_comp}
-C {devices/lab_pin.sym} 490 -1830 1 0 {name=l5 sig_type=std_logic lab=QN}
-C {devices/iopin.sym} 560 -2130 3 0 {name=p5 lab=vd}
+C {devices/lab_pin.sym} 490 -1830 1 0 {name=l5 sig_type=std_logic lab=Q}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} 50 -2000 3 0 {name=R1
 W=0.35
 L=36
@@ -137,4 +137,5 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {sky130_stdcells/dfrbp_1.sym} 760 -2000 0 0 {name=x1 VGND=GND_D VNB=GND_D VPB=VPWR VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/dfrbp_1.sym} 760 -2000 0 0 {name=x1 VGND=GND VNB=GND VPB=VPWR VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {devices/iopin.sym} 560 -2200 3 0 {name=p5 lab=vd}

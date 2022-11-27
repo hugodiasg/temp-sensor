@@ -1,18 +1,4 @@
 
-Circuit 1 cell sky130_fd_pr__res_xhigh_po_0p35 and Circuit 2 cell sky130_fd_pr__res_xhigh_po_0p35 are black boxes.
-Warning: Equate pins:  cell sky130_fd_pr__res_xhigh_po_0p35 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__res_xhigh_po_0p35 is a placeholder, treated as a black box.
-
-Subcircuit pins:
-Circuit 1: sky130_fd_pr__res_xhigh_po_0p35 |Circuit 2: sky130_fd_pr__res_xhigh_po_0p35 
--------------------------------------------|-------------------------------------------
-1                                          |1                                          
-2                                          |2                                          
-3                                          |3                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes sky130_fd_pr__res_xhigh_po_0p35 and sky130_fd_pr__res_xhigh_po_0p35 are equivalent.
-
 Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
 Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
 Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
@@ -42,6 +28,20 @@ Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_xhigh_po_0p35 and Circuit 2 cell sky130_fd_pr__res_xhigh_po_0p35 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__res_xhigh_po_0p35 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__res_xhigh_po_0p35 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_xhigh_po_0p35 |Circuit 2: sky130_fd_pr__res_xhigh_po_0p35 
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_xhigh_po_0p35 and sky130_fd_pr__res_xhigh_po_0p35 are equivalent.
 
 Circuit 1 cell sky130_fd_pr__cap_mim_m3_1 and Circuit 2 cell sky130_fd_pr__cap_mim_m3_1 are black boxes.
 Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
@@ -83,108 +83,90 @@ VPB                                        |(no matching pin)
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_sc_hd__dfrbp_1 and sky130_fd_sc_hd__dfrbp_1 are equivalent.
-Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_RGJZ8N in circuit sigma-delta (0)(2 instances)
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_XGSNAL in circuit sigma-delta (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__nfet_01v8_648S5X in circuit sigma-delta (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_EFDHR4 in circuit sigma-delta (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_EK42PW in circuit sigma-delta (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_X78HBF in circuit sigma-delta (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_A4KLY5 in circuit sigma-delta (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_ARMGAU in circuit sigma-delta (0)(1 instance)
 
 Class sigma-delta (0):  Merged 10 series devices.
 Subcircuit summary:
 Circuit 1: sigma-delta                     |Circuit 2: sigma-delta                     
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__res_xhigh_po_0p35 (12->2)    |sky130_fd_pr__res_xhigh_po_0p35 (2)        
 sky130_fd_sc_hd__dfrbp_1 (1)               |sky130_fd_sc_hd__dfrbp_1 (1)               
 sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+sky130_fd_pr__res_xhigh_po_0p35 (12->2)    |sky130_fd_pr__res_xhigh_po_0p35 (2)        
 sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
 sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
 Number of devices: 6                       |Number of devices: 6                       
-Number of nets: 22 **Mismatch**            |Number of nets: 20 **Mismatch**            
+Number of nets: 19                         |Number of nets: 19                         
 ---------------------------------------------------------------------------------------
 NET mismatches: Class fragments follow (with fanout counts):
 Circuit 1: sigma-delta                     |Circuit 2: sigma-delta                     
 
 ---------------------------------------------------------------------------------------
-Net: clk                                   |Net: clk                                   
-  sky130_fd_sc_hd__dfrbp_1/CLK = 1         |  sky130_fd_sc_hd__dfrbp_1/1 = 1           
+Net: vpwr                                  |Net: vpwr                                  
+  sky130_fd_sc_hd__dfrbp_1/VPWR = 1        |  sky130_fd_sc_hd__dfrbp_1/6 = 1           
+  sky130_fd_sc_hd__dfrbp_1/VPB = 1         |  sky130_fd_sc_hd__dfrbp_1/7 = 1           
                                            |                                           
-Net: reset_b_dff                           |Net: reset_b_dff                           
-  sky130_fd_sc_hd__dfrbp_1/RESET_B = 1     |  sky130_fd_sc_hd__dfrbp_1/3 = 1           
+Net: Q                                     |Net: Q                                     
+  sky130_fd_sc_hd__dfrbp_1/Q = 1           |  sky130_fd_sc_hd__dfrbp_1/8 = 1           
+  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  |  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: gnd                                   |Net: gnd                                   
+  sky130_fd_sc_hd__dfrbp_1/VGND = 1        |  sky130_fd_sc_hd__dfrbp_1/5 = 1           
+  sky130_fd_sc_hd__dfrbp_1/VNB = 1         |  sky130_fd_sc_hd__dfrbp_1/4 = 1           
+  sky130_fd_pr__res_xhigh_po_0p35/3 = 2    |  sky130_fd_pr__res_xhigh_po_0p35/3 = 2    
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/4 = 1            |  sky130_fd_pr__nfet_01v8/4 = 1            
+  sky130_fd_pr__cap_mim_m3_1/2 = 1         |  sky130_fd_pr__cap_mim_m3_1/2 = 1         
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: out_comp                              |Net: out_comp                              
+  sky130_fd_sc_hd__dfrbp_1/D = 1           |  sky130_fd_sc_hd__dfrbp_1/2 = 1           
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: dummy_29                              |Net: dummy_19                              
+  sky130_fd_sc_hd__dfrbp_1/proxy9 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyVPB = 1    
+                                           |                                           
+Net: dummy_28                              |Net: dummy_18                              
+  sky130_fd_sc_hd__dfrbp_1/proxy8 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyVNB = 1    
+                                           |                                           
+Net: dummy_27                              |Net: dummy_17                              
+  sky130_fd_sc_hd__dfrbp_1/proxy7 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyQ_N = 1    
+                                           |                                           
+Net: dummy_26                              |Net: dummy_16                              
+  sky130_fd_sc_hd__dfrbp_1/proxy6 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyQ = 1      
+                                           |                                           
+Net: dummy_25                              |Net: dummy_15                              
+  sky130_fd_sc_hd__dfrbp_1/proxy5 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyVPWR = 1   
+                                           |                                           
+Net: dummy_24                              |Net: dummy_14                              
+  sky130_fd_sc_hd__dfrbp_1/proxy4 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyVGND = 1   
+                                           |                                           
+Net: dummy_23                              |Net: dummy_13                              
+  sky130_fd_sc_hd__dfrbp_1/proxy3 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyRESET_B =  
+                                           |                                           
+Net: dummy_22                              |Net: dummy_12                              
+  sky130_fd_sc_hd__dfrbp_1/proxy2 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyD = 1      
+                                           |                                           
+Net: dummy_21                              |Net: dummy_11                              
+  sky130_fd_sc_hd__dfrbp_1/proxy1 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyCLK = 1    
                                            |                                           
 Net: out                                   |Net: out                                   
   sky130_fd_sc_hd__dfrbp_1/Q_N = 1         |  sky130_fd_sc_hd__dfrbp_1/9 = 1           
                                            |                                           
-Net: dummy_29                              |Net: dummy_12                              
-  sky130_fd_sc_hd__dfrbp_1/proxy7 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyCLK = 1    
+Net: reset_b_dff                           |Net: reset_b_dff                           
+  sky130_fd_sc_hd__dfrbp_1/RESET_B = 1     |  sky130_fd_sc_hd__dfrbp_1/3 = 1           
                                            |                                           
-Net: sky130_fd_pr__pfet_01v8_XGSNAL:XP1/w_ |Net: dummy_13                              
-  sky130_fd_pr__pfet_01v8/4 = 1            |  sky130_fd_sc_hd__dfrbp_1/proxyD = 1      
-                                           |                                           
-Net: x1/VPB                                |Net: dummy_14                              
-  sky130_fd_sc_hd__dfrbp_1/VPB = 1         |  sky130_fd_sc_hd__dfrbp_1/proxyRESET_B =  
-                                           |                                           
-Net: dummy_31                              |Net: dummy_15                              
-  sky130_fd_sc_hd__dfrbp_1/proxy9 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyVGND = 1   
-                                           |                                           
-Net: dummy_23                              |Net: dummy_16                              
-  sky130_fd_sc_hd__dfrbp_1/proxy1 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyVPWR = 1   
-                                           |                                           
-Net: dummy_24                              |Net: dummy_17                              
-  sky130_fd_sc_hd__dfrbp_1/proxy2 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyQ = 1      
-                                           |                                           
-Net: dummy_25                              |Net: dummy_18                              
-  sky130_fd_sc_hd__dfrbp_1/proxy3 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyQ_N = 1    
-                                           |                                           
-Net: dummy_26                              |Net: dummy_19                              
-  sky130_fd_sc_hd__dfrbp_1/proxy4 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyVNB = 1    
-                                           |                                           
-Net: dummy_27                              |Net: dummy_20                              
-  sky130_fd_sc_hd__dfrbp_1/proxy5 = 1      |  sky130_fd_sc_hd__dfrbp_1/proxyVPB = 1    
-                                           |                                           
-Net: dummy_28                              |Net: in_comp                               
-  sky130_fd_sc_hd__dfrbp_1/proxy6 = 1      |  sky130_fd_pr__cap_mim_m3_1/1 = 1         
-                                           |  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  
-                                           |  sky130_fd_pr__nfet_01v8/2 = 1            
-                                           |  sky130_fd_pr__pfet_01v8/2 = 1            
-                                           |                                           
-Net: gnd                                   |Net: gnd                                   
-  sky130_fd_pr__res_xhigh_po_0p35/3 = 2    |  sky130_fd_pr__res_xhigh_po_0p35/3 = 2    
-  sky130_fd_sc_hd__dfrbp_1/VNB = 1         |  sky130_fd_pr__cap_mim_m3_1/2 = 1         
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
-  sky130_fd_pr__nfet_01v8/4 = 1            |  sky130_fd_pr__nfet_01v8/4 = 1            
-                                           |                                           
-Net: dummy_30                              |Net: QN                                    
-  sky130_fd_sc_hd__dfrbp_1/proxy8 = 1      |  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  
-                                           |  sky130_fd_sc_hd__dfrbp_1/8 = 1           
-                                           |                                           
-Net: vd                                    |Net: vd                                    
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/4 = 1            
-                                           |                                           
-Net: gnd_d                                 |Net: gnd_d                                 
-  sky130_fd_sc_hd__dfrbp_1/VGND = 1        |  sky130_fd_sc_hd__dfrbp_1/4 = 1           
-                                           |  sky130_fd_sc_hd__dfrbp_1/5 = 1           
-                                           |                                           
-Net: vpwr                                  |Net: vpwr                                  
-  sky130_fd_sc_hd__dfrbp_1/VPWR = 1        |  sky130_fd_sc_hd__dfrbp_1/6 = 1           
-                                           |  sky130_fd_sc_hd__dfrbp_1/7 = 1           
-                                           |                                           
-Net: m1_8280_1120#                         |(no matching net)                          
-  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  |                                           
-  sky130_fd_pr__pfet_01v8/2 = 1            |                                           
-  sky130_fd_pr__nfet_01v8/2 = 1            |                                           
-  sky130_fd_pr__cap_mim_m3_1/1 = 1         |                                           
-  sky130_fd_pr__cap_mim_m3_1/2 = 1         |                                           
-                                           |                                           
-Net: x1/Q                                  |(no matching net)                          
-  sky130_fd_sc_hd__dfrbp_1/Q = 1           |                                           
-  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: x1/D                                  |Net: out_comp                              
-  sky130_fd_sc_hd__dfrbp_1/D = 1           |  sky130_fd_sc_hd__dfrbp_1/2 = 1           
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+Net: clk                                   |Net: clk                                   
+  sky130_fd_sc_hd__dfrbp_1/CLK = 1         |  sky130_fd_sc_hd__dfrbp_1/1 = 1           
 ---------------------------------------------------------------------------------------
 DEVICE mismatches: Class fragments follow (with node fanout counts):
 Circuit 1: sigma-delta                     |Circuit 2: sigma-delta                     
@@ -194,17 +176,17 @@ Instance: sky130_fd_sc_hd__dfrbp_1:x1      |Instance: sky130_fd_sc_hd__dfrbp_1:1
   CLK = 1                                  |  proxyCLK = 1                             
   D = 3                                    |  proxyD = 1                               
   RESET_B = 1                              |  proxyRESET_B = 1                         
-  VGND = 1                                 |  proxyVGND = 1                            
-  VPWR = 1                                 |  proxyVPWR = 1                            
+  VGND = 7                                 |  proxyVGND = 1                            
+  VPWR = 2                                 |  proxyVPWR = 1                            
   Q = 2                                    |  proxyQ = 1                               
   Q_N = 1                                  |  proxyQ_N = 1                             
-  VNB = 5                                  |  proxyVNB = 1                             
-  VPB = 1                                  |  proxyVPB = 1                             
+  VNB = 7                                  |  proxyVNB = 1                             
+  VPB = 2                                  |  proxyVPB = 1                             
   proxy1 = 1                               |  1 = 1                                    
   proxy2 = 1                               |  2 = 3                                    
   proxy3 = 1                               |  3 = 1                                    
-  proxy4 = 1                               |  4 = 2                                    
-  proxy5 = 1                               |  5 = 2                                    
+  proxy4 = 1                               |  4 = 7                                    
+  proxy5 = 1                               |  5 = 7                                    
   proxy6 = 1                               |  6 = 2                                    
   proxy7 = 1                               |  7 = 2                                    
   proxy8 = 1                               |  8 = 2                                    
@@ -215,20 +197,15 @@ Netlists do not match.
 Subcircuit pins:
 Circuit 1: sigma-delta                     |Circuit 2: sigma-delta                     
 -------------------------------------------|-------------------------------------------
-clk                                        |clk                                        
+vpwr                                       |(no matching pin)                          
+vd                                         |vd                                         
+gnd                                        |gnd                                        
+out                                        |out                                        
 reset_b_dff                                |reset_b_dff                                
-gnd_d                                      |out **Mismatch**                           
-vpwr                                       |(no matching pin)                          
-out                                        |(no matching pin)                          
-vd                                         |(no matching pin)                          
-gnd                                        |vpwr **Mismatch**                          
+clk                                        |clk                                        
 in                                         |in                                         
-(no matching pin)                          |gnd                                        
-(no matching pin)                          |gnd_d                                      
-(no matching pin)                          |vd                                         
-out                                        |(no matching pin)                          
+(no matching pin)                          |vpwr                                       
 vpwr                                       |(no matching pin)                          
-vd                                         |(no matching pin)                          
 ---------------------------------------------------------------------------------------
 Cell pin lists for sigma-delta and sigma-delta altered to match.
 Device classes sigma-delta and sigma-delta are equivalent.

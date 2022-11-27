@@ -1,16 +1,5 @@
 * NGSPICE file created from sigma-delta.ext - technology: sky130A
 
-.subckt sky130_fd_pr__res_xhigh_po_0p35_RGJZ8N a_48_650# a_380_650# a_n450_n1082#
-+ a_214_n1082# a_214_650# a_48_n1082# a_n284_650# a_n118_650# a_n284_n1082# a_n450_650#
-+ a_n580_n1212# a_n118_n1082# a_380_n1082#
-X0 a_n450_n1082# a_n450_650# a_n580_n1212# sky130_fd_pr__res_xhigh_po_0p35 l=6.5e+06u
-X1 a_n118_n1082# a_n118_650# a_n580_n1212# sky130_fd_pr__res_xhigh_po_0p35 l=6.5e+06u
-X2 a_380_n1082# a_380_650# a_n580_n1212# sky130_fd_pr__res_xhigh_po_0p35 l=6.5e+06u
-X3 a_214_n1082# a_214_650# a_n580_n1212# sky130_fd_pr__res_xhigh_po_0p35 l=6.5e+06u
-X4 a_n284_n1082# a_n284_650# a_n580_n1212# sky130_fd_pr__res_xhigh_po_0p35 l=6.5e+06u
-X5 a_48_n1082# a_48_650# a_n580_n1212# sky130_fd_pr__res_xhigh_po_0p35 l=6.5e+06u
-.ends
-
 .subckt sky130_fd_sc_hd__dfrbp_1 CLK D RESET_B VGND VPWR Q Q_N VNB VPB
 X0 Q a_1283_21# VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=2.8e+11p pd=2.56e+06u as=1.5393e+12p ps=1.452e+07u w=1e+06u l=150000u
 X1 a_1217_47# a_27_47# a_1108_47# VNB sky130_fd_pr__nfet_01v8 ad=1.338e+11p pd=1.5e+06u as=1.422e+11p ps=1.51e+06u w=360000u l=150000u
@@ -46,11 +35,22 @@ X30 VGND CLK a_27_47# VNB sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=1.092e+11p ps=1
 X31 a_761_289# a_543_47# VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0p pd=0u as=0p ps=0u w=840000u l=150000u
 .ends
 
-.subckt sky130_fd_pr__pfet_01v8_XGSNAL a_n33_n397# a_n73_n300# a_15_n300#
+.subckt sky130_fd_pr__pfet_01v8_EFDHR4 a_n33_n397# a_n73_n300# a_15_n300# w_n211_n519#
 X0 a_15_n300# a_n33_n397# a_n73_n300# w_n211_n519# sky130_fd_pr__pfet_01v8 ad=8.7e+11p pd=6.58e+06u as=8.7e+11p ps=6.58e+06u w=3e+06u l=150000u
 .ends
 
-.subckt sky130_fd_pr__nfet_01v8_648S5X a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
+.subckt sky130_fd_pr__res_xhigh_po_0p35_EK42PW a_380_n1032# a_48_600# a_380_600# a_n450_n1032#
++ a_214_n1032# a_214_600# a_48_n1032# a_n284_600# a_n118_600# a_n580_n1162# a_n284_n1032#
++ a_n450_600# a_n118_n1032#
+X0 a_380_n1032# a_380_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+X1 a_214_n1032# a_214_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+X2 a_n284_n1032# a_n284_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+X3 a_n450_n1032# a_n450_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+X4 a_48_n1032# a_48_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+X5 a_n118_n1032# a_n118_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_X78HBF a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
 X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
 .ends
 
@@ -58,15 +58,26 @@ X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=2.
 X0 c1_n2770_n2720# m3_n2870_n2820# sky130_fd_pr__cap_mim_m3_1 l=2.72e+07u w=2.72e+07u
 .ends
 
-.subckt sigma-delta in gnd clk out reset_b_dff vpwr gnd_d vd
-Xsky130_fd_pr__res_xhigh_po_0p35_RGJZ8N_0 m1_6620_5000# m1_6960_5000# in m1_6780_3260#
-+ m1_6960_5000# m1_6780_3260# m1_6300_5000# m1_6620_5000# m1_6440_3280# m1_6300_5000#
-+ gnd m1_6440_3280# m1_8280_1120# sky130_fd_pr__res_xhigh_po_0p35_RGJZ8N
-Xx1 clk x1/D reset_b_dff gnd_d vpwr x1/Q out gnd x1/VPB sky130_fd_sc_hd__dfrbp_1
-XXR2 m1_7920_5020# m1_8240_5000# m1_8280_1120# m1_8080_3280# m1_8240_5000# m1_8080_3280#
-+ m1_7580_5000# m1_7920_5020# m1_7760_3280# m1_7580_5000# gnd m1_7760_3280# x1/Q sky130_fd_pr__res_xhigh_po_0p35_RGJZ8N
-XXP1 m1_8280_1120# x1/D vd sky130_fd_pr__pfet_01v8_XGSNAL
-XXN1 x1/D m1_8280_1120# gnd gnd sky130_fd_pr__nfet_01v8_648S5X
-XXC1 m1_8280_1120# m1_8280_1120# sky130_fd_pr__cap_mim_m3_1_A4KLY5
+.subckt sky130_fd_pr__res_xhigh_po_0p35_ARMGAU a_380_n1032# a_48_600# a_380_600# a_n450_n1032#
++ a_214_n1032# a_214_600# a_48_n1032# a_n284_600# a_n118_600# a_n580_n1162# a_n284_n1032#
++ a_n450_600# a_n118_n1032#
+X0 a_380_n1032# a_380_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+X1 a_214_n1032# a_214_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+X2 a_n284_n1032# a_n284_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+X3 a_n450_n1032# a_n450_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+X4 a_48_n1032# a_48_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+X5 a_n118_n1032# a_n118_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
+.ends
+
+.subckt sigma-delta in vpwr out clk reset_b_dff gnd vd
+Xx1 clk out_comp reset_b_dff gnd vpwr Q out gnd vpwr sky130_fd_sc_hd__dfrbp_1
+Xsky130_fd_pr__pfet_01v8_EFDHR4_0 in_comp vd out_comp vd sky130_fd_pr__pfet_01v8_EFDHR4
+XXR2 Q m1_n1710_5800# m1_n1400_5790# in_comp m1_n1550_4170# m1_n1400_5790# m1_n1550_4170#
++ m1_n2050_5780# m1_n1710_5800# gnd m1_n1890_4160# m1_n2050_5780# m1_n1890_4160# sky130_fd_pr__res_xhigh_po_0p35_EK42PW
+XXN1 gnd in_comp out_comp gnd sky130_fd_pr__nfet_01v8_X78HBF
+XXC1 in_comp gnd sky130_fd_pr__cap_mim_m3_1_A4KLY5
+Xsky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0 in_comp m1_n3250_5800# m1_n2930_5790# in
++ m1_n3070_4170# m1_n2930_5790# m1_n3070_4170# m1_n3590_5800# m1_n3250_5800# gnd m1_n3420_4160#
++ m1_n3590_5800# m1_n3420_4160# sky130_fd_pr__res_xhigh_po_0p35_ARMGAU
 .ends
 
