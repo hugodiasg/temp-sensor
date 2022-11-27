@@ -30,10 +30,11 @@ save all
 set color0=white
 set color1=black
 set temp=27
-tran 10n 2m
+tran 1n 50u
 run
 
 plot in out
+plot out xlimit 35u 50u
 
 
 .endc"}
@@ -41,7 +42,7 @@ C {devices/lab_pin.sym} 725 -1055 0 0 {name=l10 sig_type=std_logic lab=clk}
 C {devices/lab_pin.sym} 1040 -630 0 0 {name=l4 sig_type=std_logic lab=in}
 C {devices/gnd.sym} 1080 -540 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 1230 -720 0 0 {name=l9 sig_type=std_logic lab=clk}
-C {devices/vsource.sym} 895 -1015 0 0 {name=vin value="PULSE (0 1.8 0 2m 2m 0 2m)"}
+C {devices/vsource.sym} 895 -1015 0 0 {name=vin value="1.17571"}
 C {devices/gnd.sym} 895 -985 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 895 -1045 0 0 {name=l12 sig_type=std_logic lab=in}
 C {devices/code.sym} 1660 -1210 0 0 {name=TT_MODELS
