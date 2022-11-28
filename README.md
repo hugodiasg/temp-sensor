@@ -91,6 +91,41 @@ Area | 0.0031 mm²
 
 ![image](https://user-images.githubusercontent.com/80465879/202616720-18e560ce-91ed-4bab-a16f-863b04332201.png)
 
+### Sigma-Delta Modulator
+
+Sigma-Delta Modulator to convert the analog signal from sensor to digital pulses.
+
+#### Specs:
+
+Name | Value
+--------- | ------:
+Vdd | 1.8 V
+Clock | 10 MHz
+Range(in) | 0 to 1.8 V
+Area | 0.002 mm²
+
+#### Schematic:
+
+![image](https://user-images.githubusercontent.com/80465879/204171763-5529f0f3-2c64-455d-95b7-b9505cd716eb.png)
+
+#### Layout:
+
+![image](https://user-images.githubusercontent.com/80465879/204171840-ff37650d-9fbe-49a3-af5d-3e6928b87c09.png)
+
+#### Simulation:
+
+T = -20 °C (1.34035 V)
+
+![image](https://user-images.githubusercontent.com/80465879/204172738-b3dcb38b-aea3-4a5e-9a68-ad16b06742ad.png)
+
+T = 36 °C (1.20571 V)
+
+![image](https://user-images.githubusercontent.com/80465879/204172950-6a96c49b-7ff5-425d-a7da-6718f3f482c9.png)
+
+T = 50 °C (1.17571 V)
+
+![image](https://user-images.githubusercontent.com/80465879/204173231-60355ab8-fa74-4fe3-a2cd-c16a5c91af69.png)
+
 ### ASK Modulator
 
 Amplitude-shift keying (ASK) modulator to convert shift keying in 2.4 GHz signals.
