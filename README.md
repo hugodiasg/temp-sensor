@@ -34,7 +34,7 @@ Area | 0.000941 mm²
 
 #### Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/177609346-133e59ce-d4f7-438a-ba97-b75ad03b928b.png)
+![image](https://user-images.githubusercontent.com/80465879/204549864-2503b9a7-9630-4643-ae74-73462582ec73.png)
 
 #### Layout:
 
@@ -143,7 +143,7 @@ Area | 0.022 mm²
 
 #### Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/157763862-80e357fb-cd03-4b21-bc23-bb35dac79379.png)
+![image](https://user-images.githubusercontent.com/80465879/204550882-45dcfdbf-62ab-4c5d-bc5f-ef3c6e397ee9.png)
 
 #### Layout:
 
@@ -171,7 +171,7 @@ Area | 0.0538 mm²
 
 #### Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/157763649-df599fd6-033a-4d69-af7a-6ac128a25b0a.png)
+![image](https://user-images.githubusercontent.com/80465879/204552243-ca3d273f-706c-47c7-8aed-0907b504275a.png)
 
 #### Layout:
 
