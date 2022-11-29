@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,17 +28,18 @@ N 1015 -670 1030 -670 { lab=in1}
 N 1070 -730 1070 -720 { lab=vd}
 N 805 -535 805 -525 { lab=vd}
 N 805 -465 805 -455 { lab=ib}
-C {devices/vsource.sym} 755 -705 0 0 {name=VIN1 value="sin(0 1 100k)"}
+C {devices/vsource.sym} 755 -705 0 0 {name=VIN1 value="sin(0.5 1 1k)"}
 C {devices/gnd.sym} 755 -665 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 990 -915 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1120 -920 0 0 {name=VSS value=0
 }
 C {devices/code_shown.sym} 1475 -930 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
-.tran 10n 20u 
 .control
 set color0=white
 set color1=black
 destroy all
+save all
+tran 2u 2m 
 run
 plot out in1
 .endc"}
@@ -60,7 +60,7 @@ C {devices/lab_pin.sym} 1080 -575 2 0 {name=l12 sig_type=std_logic lab=ib}
 C {devices/lab_pin.sym} 1200 -650 2 0 {name=l15 sig_type=std_logic lab=out}
 C {devices/lab_pin.sym} 1070 -730 0 0 {name=l18 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1060 -570 0 1 {name=l19 sig_type=std_logic lab=vs}
-C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym} 1100 -650 0 0 {name=X1}
 C {devices/isource.sym} 805 -495 0 0 {name=ibias value=20u}
 C {devices/lab_pin.sym} 805 -455 0 0 {name=l17 sig_type=std_logic lab=ib}
 C {devices/lab_pin.sym} 805 -535 0 0 {name=l3 sig_type=std_logic lab=vd}
+C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym} 1100 -650 0 0 {name=X1}

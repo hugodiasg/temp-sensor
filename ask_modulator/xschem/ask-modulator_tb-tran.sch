@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -22,12 +23,13 @@ C {devices/lab_pin.sym} 155 -190 2 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/gnd.sym} -60 -170 2 0 {name=l5 lab=GND}
 C {devices/code_shown.sym} 400 -635 0 0 {name=Simulation only_toplevel=false value="
 *.tran 0.2n 30n
-.tran 0.005n 100n
 *.tran 0.3n 400n
 *.tran 0.05n 1.3n
 
 .control
 destroy all
+save all
+tran 0.005n 100n
 run
 
 set color0=white
@@ -50,9 +52,15 @@ plot out 3.2950864 xlimit 50.5n 51n
 plot out 3.2950864 xlimit .5n 1n
 .endc"
 }
-C {devices/code_shown.sym} 410 -70 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
 C {devices/gnd.sym} 155 -270 2 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} -60 -100 2 0 {name=l4 sig_type=std_logic lab=in}
 C {devices/lab_pin.sym} 165 -160 2 0 {name=l7 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 5 -80 1 0 {name=l8 sig_type=std_logic lab=in}
-C {/home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator.sym} 165 -80 0 0 {name=x1}
+C {/home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sym} 165 -80 0 0 {name=x1}
+C {devices/code.sym} 390 -790 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+"
+spice_ignore=false}

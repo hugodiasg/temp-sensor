@@ -1,19 +1,10 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
 S {}
 E {}
-T {LIN
-} -70 -300 0 0 0.4 0.4 {}
-T {SAT} -290 -160 0 0 0.4 0.4 {}
-T {SAT} -70 -150 0 0 0.4 0.4 {}
-T {SAT} 190 -270 0 0 0.4 0.4 {}
-T {SAT} 200 10 0 0 0.4 0.4 {}
-T {SAT} -190 20 0 0 0.4 0.4 {}
-T {SAT} -320 150 0 0 0.4 0.4 {}
-T {SAT} -70 150 0 0 0.4 0.4 {}
-T {SAT} 180 150 0 0 0.4 0.4 {}
 N -40 260 -40 290 {
 lab=gnd}
 N -150 190 -140 190 {
@@ -266,7 +257,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/code.sym} 470 -160 0 0 {name=RC_Extraction only_toplevel=false value="
+C {devices/code.sym} 470 -250 0 0 {name=RC_Extraction only_toplevel=false value="
 R0 vd.n23 vd.n22 222.87
 R1 vd.n10 vd.n9 222.87
 R2 vd.n24 vd.n23 149.458

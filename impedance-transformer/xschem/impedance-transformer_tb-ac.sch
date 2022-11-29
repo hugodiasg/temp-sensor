@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -31,17 +32,19 @@ lab=GND}
 N -260 -80 -80 -80 {
 lab=ns11}
 N -455 -80 -380 -80 {
-lab=#net3}
+lab=#net2}
 N -242.5 200 -67.5 200 {
 lab=ns21}
-N -550 200 -362.5 200 {}
+N -550 200 -362.5 200 {
+lab=GND}
 C {devices/gnd.sym} 160 -30 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=ns12}
 C {devices/code_shown.sym} 402.5 -1025 0 0 {name=Simulation only_toplevel=false value="
 
-.ac dec 1MEG 1Meg 3G
 .control
 destroy all
+save all
+ac lin 1MEG 1G 4G
 set units=degrees
 run
 
@@ -87,7 +90,6 @@ plot gamma
 .endc"
 
 }
-C {devices/code_shown.sym} 420 -30 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
 C {devices/vsource.sym} 500 200 3 1 {name=Vin1 value="DC 0 AC 1"}
 C {devices/gnd.sym} 150 250 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} 320 200 1 0 {name=l10 sig_type=std_logic lab=ns22}
@@ -130,3 +132,10 @@ footprint=1206
 device="ceramic capacitor"}
 C {/home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer.sym} 160 -80 0 0 {name=x1}
 C {/home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer.sym} 150 200 0 0 {name=x2}
+C {devices/code.sym} 410 -1220 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+"
+spice_ignore=false}

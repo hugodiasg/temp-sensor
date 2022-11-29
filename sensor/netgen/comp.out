@@ -1,3 +1,5 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
 Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
 Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
 
@@ -11,6 +13,8 @@ Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
 Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
 Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
 
@@ -42,7 +46,6 @@ sky130_fd_pr__nfet_01v8 (24->3)            |sky130_fd_pr__nfet_01v8 (24->3)
 Number of devices: 9                       |Number of devices: 9                       
 Number of nets: 8                          |Number of nets: 8                          
 ---------------------------------------------------------------------------------------
-Circuits match uniquely.
 Netlists match uniquely.
 
 Subcircuit pins:
@@ -55,4 +58,6 @@ vts                                        |vts
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sensor and sensor are equivalent.
-Circuits match uniquely.
+
+Final result: Circuits match uniquely.
+.

@@ -1,15 +1,18 @@
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/sensor/xschem/temp-tb-short.sch
 **.subckt temp-tb-short
 VDD vd GND 1.8
+.save i(vdd)
 x1 vd vts vtd GND sensor
 **** begin user architecture code
 
-.dc temp -30 80 1
+
 .control
-run
+destroy all
+save all
 set color0=white
 set color1=black
-
+dc temp -30 80 1
+run
 let idd=-i(vdd)
 *let is1=-i(vs1)
 *let is2=-i(vs2)
@@ -28,8 +31,8 @@ plot vts vtd xlimit 20 50
 .endc
 
 
-
-.lib /home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt
+ .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
 **** end user architecture code
 **.ends
@@ -37,7 +40,7 @@ plot vts vtd xlimit 20 50
 * expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/sensor/xschem/sensor.sym # of pins=4
 ** sym_path: /home/hugodg/projects-sky130/temp-sensor/sensor/xschem/sensor.sym
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/sensor/xschem/sensor.sch
-.subckt sensor  vd vts vtd gnd
+.subckt sensor vd vts vtd gnd
 *.iopin vd
 *.opin vts
 *.opin vtd

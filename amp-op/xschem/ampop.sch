@@ -43,7 +43,7 @@ C {devices/ipin.sym} -155 -45 0 0 {name=p3 lab=in1}
 C {devices/ipin.sym} -155 -15 0 0 {name=p1 lab=in2}
 C {devices/iopin.sym} 60 140 1 0 {name=p4 lab=vs}
 C {devices/iopin.sym} 10 140 1 0 {name=p6 lab=ib}
-C {devices/code.sym} 310 -210 0 0 {name=RC_extraction only_toplevel=false value="
+C {devices/code.sym} 290 -180 0 0 {name=RC_extraction only_toplevel=false value="
 R0 in1 in1.t0 88.243
 R1 in2 in2.t0 88.786
 R2 vs.n0 vs.n4 362.164

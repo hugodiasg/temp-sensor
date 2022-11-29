@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,13 +38,15 @@ C {devices/gnd.sym} 755 -665 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 990 -915 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1120 -920 0 0 {name=VSS value=-1.8
 }
-C {devices/code_shown.sym} 1470 -880 0 0 {name=Simulation only_toplevel=false value=".dc VIN1 -1.8 1.8 0.01
-.end
+C {devices/code_shown.sym} 1470 -880 0 0 {name=Simulation only_toplevel=false value="
 .control
 set color0=white
 set color1=black
 
 destroy all
+save all
+dc VIN1 -1.8 1.8 0.01
+
 run
 plot out in1
 .endc"}
@@ -71,4 +72,10 @@ C {devices/lab_pin.sym} 1230 -615 0 1 {name=l19 sig_type=std_logic lab=vs}
 C {devices/lab_pin.sym} 990 -945 0 0 {name=l1 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1120 -950 0 0 {name=l4 sig_type=std_logic lab=vs}
 C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sym} 1175 -670 0 0 {name=X1}
-C {devices/code_shown.sym} 1430 -660 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
+C {devices/code.sym} 1450 -1090 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+"
+spice_ignore=false}

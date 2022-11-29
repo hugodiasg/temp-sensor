@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,8 +32,7 @@ N 1220 -670 1230 -670 { lab=out}
 N 1230 -670 1240 -670 { lab=out}
 C {devices/code_shown.sym} 1425 -1020 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
 
-.ac dec 2000 1 110Meg
-.end
+
 
 .control
 set units=degrees
@@ -42,6 +40,8 @@ set color0=white
 set color1=black
 
 destroy all
+save all
+ac dec 2000 1 110Meg
 run
 let gain = db(abs(OUT/IN1))
 let gain_3db = maximum(gain)-3
@@ -75,7 +75,6 @@ C {devices/lab_pin.sym} 1035 -690 0 0 {name=l5 sig_type=std_logic lab=in1}
 C {devices/lab_pin.sym} 1100 -595 2 0 {name=l12 sig_type=std_logic lab=ib}
 C {devices/lab_pin.sym} 1090 -750 0 0 {name=l18 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1080 -590 0 0 {name=l19 sig_type=std_logic lab=vs}
-C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym} 1120 -670 0 0 {name=X1}
 C {devices/lab_pin.sym} 1240 -670 2 0 {name=l15 sig_type=std_logic lab=out}
 C {devices/capa.sym} 1230 -640 0 0 {name=Cl
 m=1
@@ -83,3 +82,4 @@ value=4p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 1230 -610 0 0 {name=l16 lab=GND}
+C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym} 1120 -670 0 0 {name=X1}

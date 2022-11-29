@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,14 +36,15 @@ C {devices/gnd.sym} 755 -665 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 990 -915 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1120 -920 0 0 {name=VSS value=0
 }
-C {devices/code_shown.sym} 1470 -880 0 0 {name=Simulation only_toplevel=false value=".dc VIN1 -0.5 1.8 0.01
+C {devices/code_shown.sym} 1470 -880 0 0 {name=Simulation only_toplevel=false value="
 *.dc ibias 1u 100u 1u
-.end
 .control
 set color0=white
 set color1=black
 
 destroy all
+save all
+dc VIN1 -0.5 1.8 0.01
 run
 plot out in1
 *plot out in1 xlimit -1.8 0
@@ -68,7 +68,6 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym} 1100 -650 0 0 {name=X1}
 C {devices/lab_pin.sym} 755 -525 0 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1220 -650 2 0 {name=l15 sig_type=std_logic lab=out}
 C {devices/capa.sym} 1210 -620 0 0 {name=Cl
@@ -77,3 +76,4 @@ value=4p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 1210 -590 0 0 {name=l16 lab=GND}
+C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym} 1100 -650 0 0 {name=X1}

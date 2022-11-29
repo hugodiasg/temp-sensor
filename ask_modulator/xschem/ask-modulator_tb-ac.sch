@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -43,10 +44,10 @@ C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=ns12}
 C {devices/lab_pin.sym} 175 -190 2 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/gnd.sym} -180 -80 0 0 {name=l5 lab=GND}
 C {devices/code_shown.sym} 415 -865 0 0 {name=Simulation only_toplevel=false value="
-
-.ac lin 1MEG 2G 4G
 .control
 destroy all
+save all
+ac lin 1MEG 2G 4G
 set units=degrees
 run
 
@@ -86,7 +87,6 @@ plot ph(z_output) ph(z_in)
 .endc"
 
 }
-C {devices/code_shown.sym} 410 0 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
 C {devices/gnd.sym} 175 -270 2 0 {name=l6 lab=GND}
 C {ask-modulator.sym} 160 -80 0 0 {name=xask0}
 C {devices/lab_pin.sym} 160 -140 2 0 {name=l7 sig_type=std_logic lab=vd}
@@ -116,3 +116,10 @@ device=resistor
 m=1}
 C {devices/vsource.sym} -55 200 1 0 {name=Vin2 value="DC 1.8 "}
 C {devices/gnd.sym} -115 200 0 0 {name=l4 lab=GND}
+C {devices/code.sym} 665 -52.5 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+"
+spice_ignore=false}

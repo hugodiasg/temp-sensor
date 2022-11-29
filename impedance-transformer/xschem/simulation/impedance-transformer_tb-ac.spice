@@ -2,9 +2,11 @@
 *+ /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer_tb-ac.sch
 **.subckt impedance-transformer_tb-ac
 Vin1 net1 GND DC 0 AC 1
+.save i(vin1)
 R3 ns12 GND 50 m=1
 R4 ns22 net1 50 m=1
 Vin net2 GND AC 1
+.save i(vin)
 R1 net2 net3 191.6 m=1
 C1 net3 ns11 19.68521p m=1
 R2 GND net4 191.6 m=1
@@ -15,9 +17,10 @@ x2 ns21 ns22 GND impedance-transformer
 
 
 
-.ac dec 1MEG 1Meg 3G
 .control
 destroy all
+save all
+ac lin 1MEG 1G 4G
 set units=degrees
 run
 
@@ -62,8 +65,8 @@ let gamma=(mag(z_output)-mag(z_in))/(mag(z_output)+mag(z_in))
 plot gamma
 .endc
 
-
-.lib /home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt
+ .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
 **** end user architecture code
 **.ends
@@ -74,13 +77,84 @@ plot gamma
 *+ /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer.sym
 ** sch_path:
 *+ /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer.sch
-.subckt impedance-transformer  in out gnd
+.subckt impedance-transformer in out gnd
 *.iopin gnd
 *.iopin in
 *.iopin out
-XC0 in gnd sky130_fd_pr__cap_mim_m3_2 W=22.93 L=22.93 VM=9 m=9
-XC1 out gnd sky130_fd_pr__cap_mim_m3_2 W=24.07 L=24.07 VM=16 m=16
+XC0 in gnd sky130_fd_pr__cap_mim_m3_2 W=22.93 L=22.93 MF=9 m=9
+XC1 out gnd sky130_fd_pr__cap_mim_m3_2 W=24.07 L=24.07 MF=16 m=16
 x1 in out l1
+**** begin user architecture code
+
+* NGSPICE file created from impedance-transformer.ext - technology: sky130A
+
+R0 in in.n1 0.704
+R1 in.n0 in.t3 0.125
+R2 in.n1 in.n0 0.089
+R3 in.t8 in.t7 0.066
+R4 in.t6 in.t8 0.066
+R5 in.t2 in.t1 0.066
+R6 in.t0 in.t2 0.066
+R7 in.t5 in.t4 0.066
+R8 in.t3 in.t5 0.066
+R9 in.n1 in.t6 0.037
+R10 in.n0 in.t0 0.037
+R11 out out.n2 0.325
+R12 out.n0 out.t13 0.094
+R13 out.n1 out.n0 0.079
+R14 out.t14 out.t15 0.066
+R15 out.t12 out.t14 0.066
+R16 out.t13 out.t12 0.066
+R17 out.t10 out.t11 0.066
+R18 out.t8 out.t10 0.066
+R19 out.t9 out.t8 0.066
+R20 out.t6 out.t7 0.066
+R21 out.t4 out.t6 0.066
+R22 out.t5 out.t4 0.066
+R23 out.t2 out.t3 0.066
+R24 out.t0 out.t2 0.066
+R25 out.t1 out.t0 0.066
+R26 out.n2 out.n1 0.064
+R27 out.n2 out.t1 0.041
+R28 out.n0 out.t9 0.018
+R29 out.n1 out.t5 0.018
+C0 out.t7 gnd 33.56fF
+C1 out.t6 gnd 33.64fF
+C2 out.t4 gnd 33.64fF
+C3 out.t5 gnd 29.89fF
+C4 out.t11 gnd 33.56fF
+C5 out.t10 gnd 33.64fF
+C6 out.t8 gnd 33.64fF
+C7 out.t9 gnd 29.89fF
+C8 out.t15 gnd 33.56fF
+C9 out.t14 gnd 33.64fF
+C10 out.t12 gnd 33.64fF
+C11 out.t13 gnd 89.97fF
+C12 out.n0 gnd 28.18fF $ **FLOATING
+C13 out.n1 gnd 13.26fF $ **FLOATING
+C14 out.t3 gnd 33.56fF
+C15 out.t2 gnd 33.64fF
+C16 out.t0 gnd 33.64fF
+C17 out.t1 gnd 33.03fF
+C18 out.n2 gnd 41.48fF $ **FLOATING
+C19 in.t7 gnd 32.16fF
+C20 in.t8 gnd 32.25fF
+C21 in.t6 gnd 30.87fF
+C22 in.t1 gnd 32.16fF
+C23 in.t2 gnd 32.25fF
+C24 in.t0 gnd 30.87fF
+C25 in.t4 gnd 32.16fF
+C26 in.t5 gnd 32.25fF
+C27 in.t3 gnd 30.02fF
+C28 in.n0 gnd 11.26fF $ **FLOATING
+C29 in.n1 gnd 57.09fF $ **FLOATING
+C30 in gnd 55.98fF
+C31 out gnd 70.58fF
+
+
+
+
+**** end user architecture code
 .ends
 
 
@@ -88,7 +162,7 @@ x1 in out l1
 *+ # of pins=2
 ** sym_path: /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/l1.sym
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/l1.sch
-.subckt l1  p1 p2
+.subckt l1 p1 p2
 *.iopin p2
 *.iopin p1
 L0 p1 net3 598p m=1

@@ -19,9 +19,7 @@ K {}
 V {}
 S {}
 E {}
-N 495 -750 495 -740 { lab=in11}
 N 495 -530 495 -520 { lab=ib1}
-N 495 -680 495 -670 { lab=GND}
 N 495 -460 495 -450 { lab=GND}
 N 1020 -740 1020 -730 { lab=in12}
 N 1025 -465 1025 -455 { lab=ib2}
@@ -41,9 +39,9 @@ N 1385 -685 1395 -685 { lab=out2}
 N 1210 -665 1225 -665 { lab=in22}
 N 1210 -725 1225 -725 { lab=in12}
 N 1255 -785 1255 -775 { lab=vd}
-C {devices/vsource.sym} 495 -710 0 0 {name=VIN11 value="DC 0 AC 1"}
+N 385 -750 385 -740 { lab=in11}
+N 385 -680 385 -670 { lab=GND}
 C {devices/isource.sym} 495 -490 0 0 {name=ibias2 value=5.53u}
-C {devices/gnd.sym} 495 -670 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 990 -915 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1120 -920 0 0 {name=VSS value=0
 }
@@ -67,14 +65,13 @@ C {devices/gnd.sym} 1120 -890 0 0 {name=l6 lab=GND}
 C {devices/gnd.sym} 990 -885 0 0 {name=l7 lab=GND}
 C {devices/gnd.sym} 495 -450 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} 495 -530 0 0 {name=l17 sig_type=std_logic lab=ib1}
-C {devices/lab_pin.sym} 495 -750 0 0 {name=l10 sig_type=std_logic lab=in11}
-C {devices/vsource.sym} 1020 -700 0 0 {name=VIN12 value="DC 0 AC 1"}
+C {devices/vsource.sym} 1020 -700 0 0 {name=VIN12 value="DC 0 AC 0.5"}
 C {devices/isource.sym} 1025 -425 0 0 {name=ibias1 value=5.53u}
 C {devices/gnd.sym} 1020 -660 0 0 {name=l21 lab=GND}
 C {devices/gnd.sym} 1025 -385 0 0 {name=l22 lab=GND}
 C {devices/lab_pin.sym} 1025 -465 0 0 {name=l23 sig_type=std_logic lab=ib2}
 C {devices/lab_pin.sym} 1020 -740 0 0 {name=l24 sig_type=std_logic lab=in12}
-C {devices/vsource.sym} 1015 -575 0 0 {name=VIN22 value="DC 0 AC 1 180"}
+C {devices/vsource.sym} 1015 -575 0 0 {name=VIN22 value="DC 0 AC 0.5 180"}
 C {devices/gnd.sym} 1015 -535 0 0 {name=l25 lab=GND}
 C {devices/lab_pin.sym} 1015 -615 0 0 {name=l26 sig_type=std_logic lab=in22}
 C {devices/lab_pin.sym} 990 -945 0 0 {name=l1 sig_type=std_logic lab=vd}
@@ -86,7 +83,6 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {devices/lab_pin.sym} 660 -695 0 0 {name=l29 sig_type=std_logic lab=in11}
 C {devices/lab_pin.sym} 660 -755 0 0 {name=l30 sig_type=std_logic lab=in11}
 C {devices/lab_pin.sym} 745 -640 2 0 {name=l31 sig_type=std_logic lab=ib1}
 C {devices/lab_pin.sym} 845 -715 2 0 {name=l32 sig_type=std_logic lab=out1}
@@ -112,3 +108,7 @@ C {devices/gnd.sym} 1385 -625 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 1255 -785 0 0 {name=l18 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1255 -595 0 1 {name=l27 sig_type=std_logic lab=vs}
 C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop.sym} 1280 -690 0 0 {name=x2}
+C {devices/vsource.sym} 385 -710 0 0 {name=VIN1 value="DC 0 AC 0.5"}
+C {devices/gnd.sym} 385 -670 0 0 {name=l8 lab=GND}
+C {devices/lab_pin.sym} 385 -750 0 0 {name=l11 sig_type=std_logic lab=in11}
+C {devices/lab_pin.sym} 660 -695 0 0 {name=l2 sig_type=std_logic lab=in11}

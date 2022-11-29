@@ -3,11 +3,6 @@
 *.PININFO vd:B out:O in1:I in2:I vs:B ib:B
 X1 vd net1 out ib vs buffer
 X2 vd ib net1 in2 in1 vs ota
-**** begin user architecture code
-
-
-
-**** end user architecture code
 .ends
 
 * expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym # of pins=5

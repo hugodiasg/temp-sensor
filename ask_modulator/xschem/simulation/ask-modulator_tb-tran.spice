@@ -1,18 +1,21 @@
-** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator_tb-tran.sch
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator_tb-tran.sch
 **.subckt ask-modulator_tb-tran
 Vdd vd GND 3.3
+.save i(vdd)
 Vin in GND PULSE(0V 1.8V 0.5ns 0.1ns 0.1ns 50ns 100ns)
+.save i(vin)
 x1 vd out in GND ask-modulator
 **** begin user architecture code
 
 
 *.tran 0.2n 30n
-.tran 0.005n 100n
 *.tran 0.3n 400n
 *.tran 0.05n 1.3n
 
 .control
 destroy all
+save all
+tran 0.005n 100n
 run
 
 set color0=white
@@ -35,43 +38,66 @@ plot out 3.2950864 xlimit 50.5n 51n
 plot out 3.2950864 xlimit .5n 1n
 .endc
 
-
-.lib /home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt
+ .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
 **** end user architecture code
 **.ends
 
 * expanding   symbol:
-*+  /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator.sym # of pins=4
-** sym_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator.sym
-** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/ask-modulator.sch
-.subckt ask-modulator  vd out in gnd
+*+  /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sym # of pins=4
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sch
+.subckt ask-modulator vd out in gnd
 *.iopin gnd
 *.ipin in
 *.opin out
 *.iopin vd
-XC0 vd out sky130_fd_pr__cap_mim_m3_2 W=24.5 L=24.5 MF=3 m=3
-x1 vd out l0
+XC0 vd out sky130_fd_pr__cap_mim_m3_2 W=24.4 L=24.4 MF=3 m=3
 XM1 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=8.7 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
 XR1 out vd gnd sky130_fd_pr__res_xhigh_po_0p35 L=5 mult=1 m=1
+x1 vd out l0
+**** begin user architecture code
+
+
+R0 vd vd.t1 0.714
+R1 vd.t0 vd.t2 0.066
+R2 vd.t1 vd.t0 0.066
+R3 in in.t0 448.598
+C0 gnd in 0.36fF
+C1 vd gnd 1.55fF
+C2 out in 0.46fF
+C3 vd out -0.86fF
+C4 out gnd 0.13fF
+C5 in.t0 0 0.40fF
+C6 vd.t2 0 42.34fF
+C7 vd.t0 0 40.08fF
+C8 vd.t1 0 46.90fF
+C9 gnd 0 -0.14fF
+C10 out 0 235.88fF
+C11 in 0 4.90fF
+C12 vd 0 13.98fF
+
+
+**** end user architecture code
 .ends
 
 
-* expanding   symbol:  /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym # of
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/l0.sym # of
 *+ pins=2
-** sym_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sym
-** sch_path: /home/hugodg/projects_sky130/temp_sensor/ask_modulator/xschem/l0.sch
-.subckt l0  p1 p2
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/l0.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/l0.sch
+.subckt l0 p1 p2
 *.iopin p2
 *.iopin p1
-L0 p1 net3 992p m=1
-Cs1 p1 net1 58.52f m=1
+L0 p1 net3 993p m=1
+Cs1 p1 net1 58.53f m=1
 Cs2 p2 net2 52.93f m=1
-Rs1 net1 GND 23.79 m=1
-Rs2 net2 GND 23.25 m=1
-R1 p2 net3 4.869 m=1
+Rs1 net1 GND 24.1 m=1
+Rs2 net2 GND 22.94 m=1
+R1 p2 net3 3.443 m=1
 .ends
 
 .GLOBAL GND

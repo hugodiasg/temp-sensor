@@ -1,21 +1,21 @@
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ampop_tb-CMRR.sch
 **.subckt ampop_tb-CMRR
-VIN11 in11 GND DC 0 AC 1
-.save i(vin11)
 ibias2 ib1 GND 5.53u
 VDD vd GND 1.8
 .save i(vdd)
 VSS vs GND 0
 .save i(vss)
-VIN12 in12 GND DC 0 AC 1
+VIN12 in12 GND DC 0 AC 0.5
 .save i(vin12)
 ibias1 ib2 GND 5.53u
-VIN22 in22 GND DC 0 AC 1 180
+VIN22 in22 GND DC 0 AC 0.5 180
 .save i(vin22)
 Cl out1 GND 4p m=1
 x1 vd in11 in11 out1 ib1 vs ampop
 Cl1 out2 GND 4p m=1
 x2 vd in12 in22 out2 ib2 vs ampop
+VIN1 in11 GND DC 0 AC 0.5
+.save i(vin1)
 **** begin user architecture code
 
 **cmd step stop

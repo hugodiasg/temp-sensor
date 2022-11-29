@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
@@ -19,8 +20,8 @@ B 5 -2.5 -62.5 2.5 -57.5 {name=vd dir=inout }
 B 5 147.5 -32.5 152.5 -27.5 {name=vts dir=out }
 B 5 147.5 27.5 152.5 32.5 {name=vtd dir=out }
 B 5 -2.5 57.5 2.5 62.5 {name=gnd dir=inout }
-T {@sensor} -45 -6 0 0 0.3 0.3 {}
-T {@s} 135 -52 0 0 0.2 0.2 {}
+T {@symname} -45 -6 0 0 0.3 0.3 {}
+T {@sensor} 135 -52 0 0 0.2 0.2 {}
 T {vd} -5 -34 0 1 0.2 0.2 {}
 T {vts} 125 -34 0 1 0.2 0.2 {}
 T {vtd} 125 26 0 1 0.2 0.2 {}

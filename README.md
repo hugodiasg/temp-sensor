@@ -34,7 +34,7 @@ Area | 0.000941 mm²
 
 #### Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/204549864-2503b9a7-9630-4643-ae74-73462582ec73.png)
+![image](https://user-images.githubusercontent.com/80465879/177609346-133e59ce-d4f7-438a-ba97-b75ad03b928b.png)
 
 #### Layout:
 
@@ -50,81 +50,40 @@ Area | 0.000941 mm²
 
 ### OTA Miller (AmpOp)
 
-Miller Operational Transconductance Amplifier (OTA) with Buffer.
+Miller Operational Transconductance Amplifier (OTA).
 
 #### Specs:
 
 Name | Value
 --------- | ------:
 Vdd | 1.8 V
-Vss | 0 V
+Vss | -1.8 V
 Open-loop Gain | 74 dB
-Phase margin | > 40 °
-GBW | 3.72 MHz
-Slew Rate | 0.73 uV/s
-CMRR | 73.75 dB
-Area | 0.0031 mm²
+Phase margin | > 44 °
+GBW | 2.75 MHz
+Slew Rate | 3.7 uV/s
+CMRR | 74.5 dB
+Area | 0.0012 mm²
 
 #### Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/202614145-99bab9f4-cc48-473f-8f9f-44363222b760.png)
-
-![image](https://user-images.githubusercontent.com/80465879/202614207-54152198-1f7e-4db7-8ee2-c6f41477f29e.png)
-
-![image](https://user-images.githubusercontent.com/80465879/202614272-f4cd747a-8b49-4e88-8865-83f13926fed8.png)
+![image](https://user-images.githubusercontent.com/80465879/177055738-14bb7e93-295e-49b9-acbe-39ac5c1a95de.png)
 
 #### Layout:
 
-![image](https://user-images.githubusercontent.com/80465879/202619004-342566af-1f81-4dce-a99b-dd3e9469e6dc.png)
+![image](https://user-images.githubusercontent.com/80465879/177055945-1adf86da-f10c-44e6-848a-03f9aed6973b.png)
 
 #### Simulation:
+ 
+![image](https://user-images.githubusercontent.com/80465879/177055754-e0957be9-ddd8-4a33-a840-28c73a3b0f6d.png)
 
-![image](https://user-images.githubusercontent.com/80465879/202615358-6942bcd9-a71b-4e79-8686-3589a57b8cdf.png)
+![image](https://user-images.githubusercontent.com/80465879/177055803-e2561d66-7dd3-48d4-986a-c286f5ea6b30.png)
 
-![image](https://user-images.githubusercontent.com/80465879/202614755-3c7e56c1-417b-4840-a55d-cb49e2f327cb.png)
+![image](https://user-images.githubusercontent.com/80465879/177055808-1adb03f2-f88c-44e7-8d64-64d59eeafbca.png)
 
-![image](https://user-images.githubusercontent.com/80465879/202617256-478c70c4-2b69-47fe-b96d-d5461111c988.png)
+![image](https://user-images.githubusercontent.com/80465879/177055901-542d9ca2-4ac0-4600-bb65-126c5942df42.png)
 
-![image](https://user-images.githubusercontent.com/80465879/202616113-b931cf16-5c5c-4ea3-ac27-fc59356524e0.png)
-
-![image](https://user-images.githubusercontent.com/80465879/202616366-15468720-ef4a-4122-b476-e5998b223620.png)
-
-![image](https://user-images.githubusercontent.com/80465879/202616720-18e560ce-91ed-4bab-a16f-863b04332201.png)
-
-### Sigma-Delta Modulator
-
-Sigma-Delta Modulator to convert the analog signal from sensor to digital pulses.
-
-#### Specs:
-
-Name | Value
---------- | ------:
-Vdd | 1.8 V
-Clock | 10 MHz
-Range(in) | 0 to 1.8 V
-Area | 0.002 mm²
-
-#### Schematic:
-
-![image](https://user-images.githubusercontent.com/80465879/204171763-5529f0f3-2c64-455d-95b7-b9505cd716eb.png)
-
-#### Layout:
-
-![image](https://user-images.githubusercontent.com/80465879/204171840-ff37650d-9fbe-49a3-af5d-3e6928b87c09.png)
-
-#### Simulation:
-
-T = -20 °C (1.34035 V)
-
-![image](https://user-images.githubusercontent.com/80465879/204172738-b3dcb38b-aea3-4a5e-9a68-ad16b06742ad.png)
-
-T = 36 °C (1.20571 V)
-
-![image](https://user-images.githubusercontent.com/80465879/204172950-6a96c49b-7ff5-425d-a7da-6718f3f482c9.png)
-
-T = 50 °C (1.17571 V)
-
-![image](https://user-images.githubusercontent.com/80465879/204173231-60355ab8-fa74-4fe3-a2cd-c16a5c91af69.png)
+![image](https://user-images.githubusercontent.com/80465879/177055913-4af6d0ec-0c94-41ed-a94a-496aa6f38192.png)
 
 ### ASK Modulator
 
@@ -143,7 +102,7 @@ Area | 0.022 mm²
 
 #### Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/204550882-45dcfdbf-62ab-4c5d-bc5f-ef3c6e397ee9.png)
+![image](https://user-images.githubusercontent.com/80465879/157763862-80e357fb-cd03-4b21-bc23-bb35dac79379.png)
 
 #### Layout:
 
@@ -171,7 +130,7 @@ Area | 0.0538 mm²
 
 #### Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/204552243-ca3d273f-706c-47c7-8aed-0907b504275a.png)
+![image](https://user-images.githubusercontent.com/80465879/157763649-df599fd6-033a-4d69-af7a-6ac128a25b0a.png)
 
 #### Layout:
 
@@ -179,9 +138,8 @@ Area | 0.0538 mm²
 
 #### Simulation:
 
-![image](https://user-images.githubusercontent.com/80465879/204568576-a73b0228-9727-446e-815d-9259090ef060.png)
+![image](https://user-images.githubusercontent.com/80465879/158992276-8d27d4aa-c914-427b-9cd1-bf1bc35db584.png)
 
-![image](https://user-images.githubusercontent.com/80465879/204569579-1dffb124-6a12-4726-83db-7c79eeca8a5c.png)
-
+![image](https://user-images.githubusercontent.com/80465879/158992336-cb575c7f-9eca-4401-9220-5720115976be.png)
 
 

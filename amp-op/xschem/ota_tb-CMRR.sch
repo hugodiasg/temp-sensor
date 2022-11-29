@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -49,14 +48,16 @@ C {devices/vsource.sym} 990 -915 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1120 -920 0 0 {name=VSS value=-1.8
 }
 C {devices/code_shown.sym} 1475 -995 0 0 {name=Simulation only_toplevel=false value="**cmd step stop
-.ac dec 2000 1 110Meg
-.end
+
+
 
 .control
 set color0=white
 set color1=black
 
 destroy all
+save all
+ac dec 2000 1 110Meg
 run
 *CMRR
 let gain_common=db(OUT1/IN11)
@@ -108,4 +109,10 @@ C {devices/lab_pin.sym} 760 -620 3 0 {name=l18 sig_type=std_logic lab=vs}
 C {devices/lab_pin.sym} 1280 -615 3 0 {name=l19 sig_type=std_logic lab=vs}
 C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sym} 705 -675 0 0 {name=X1}
 C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sym} 1225 -670 0 0 {name=X2}
-C {devices/code_shown.sym} 1500 -555 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}
+C {devices/code.sym} 1440 -1170 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+"
+spice_ignore=false}
