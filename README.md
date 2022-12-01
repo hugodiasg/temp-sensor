@@ -71,7 +71,7 @@ Area | 0.0031 mm²
 
 ![image](https://user-images.githubusercontent.com/80465879/202614207-54152198-1f7e-4db7-8ee2-c6f41477f29e.png)
 
-![image](https://user-images.githubusercontent.com/80465879/202614272-f4cd747a-8b49-4e88-8865-83f13926fed8.png)
+![image](https://user-images.githubusercontent.com/80465879/205141348-4d942547-6910-47bb-9243-0fda0f9b81b6.png)
 
 #### Layout:
 
@@ -90,6 +90,43 @@ Area | 0.0031 mm²
 ![image](https://user-images.githubusercontent.com/80465879/202616366-15468720-ef4a-4122-b476-e5998b223620.png)
 
 ![image](https://user-images.githubusercontent.com/80465879/202616720-18e560ce-91ed-4bab-a16f-863b04332201.png)
+
+### Buffer
+
+Buffer to isolate devices inputs and outputs. 
+
+#### Specs:
+
+Name | Value
+--------- | ------:
+Vdd | 1.8 V
+Vss | 0 V
+Min. out | 50 mV
+Max. out | 1.2 V
+Phase margin | > -100 °
+GBW | 39.81 MHz
+Slew Rate | 0.1 mV/s
+Area | 0.00072 mm²
+
+#### Schematic:
+
+![image](https://user-images.githubusercontent.com/80465879/205141371-7c65a156-3e64-42ed-94fe-f2fa2c5074a7.png)
+
+#### Layout:
+
+![image](https://user-images.githubusercontent.com/80465879/205145885-3d48bba5-483f-4d22-bc0a-50c6c47b0351.png)
+
+#### Simulation:
+
+![image](https://user-images.githubusercontent.com/80465879/205143383-5042e228-a8c3-4083-83a6-e421315627e9.png)
+
+![image](https://user-images.githubusercontent.com/80465879/205143007-6639e374-74d1-4196-bc70-4eca93fc8094.png)
+
+![image](https://user-images.githubusercontent.com/80465879/205143062-7fd0b7ac-3cb4-4fb4-9bdf-138e9f88ac53.png)
+
+![image](https://user-images.githubusercontent.com/80465879/205142650-50746f17-757b-4f08-b62a-c0b82e83f315.png)
+
+![image](https://user-images.githubusercontent.com/80465879/205144952-4c96cf5b-7db9-4cb2-b2ed-611c868e251c.png)
 
 ### Sigma-Delta Modulator
 
