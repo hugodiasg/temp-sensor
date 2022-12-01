@@ -1,0 +1,86 @@
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota_tb-CMRR.sch
+**.subckt ota_tb-CMRR
+VIN11 in11 GND DC 0 AC 1
+.save i(vin11)
+ibias2 ib1 GND 5.53u
+VDD vd GND 1.8
+.save i(vdd)
+VSS vs GND -1.8
+.save i(vss)
+VIN12 in12 GND DC 0 AC 1
+.save i(vin12)
+ibias1 ib2 GND 5.53u
+VIN22 in22 GND DC 0 AC 1 180
+.save i(vin22)
+Cl1 out1 GND 4p m=1
+Cl2 out2 GND 4p m=1
+X1 vd ib1 out1 in11 in11 vs ota
+X2 vd ib2 out2 in22 in12 vs ota
+**** begin user architecture code
+
+**cmd step stop
+
+
+
+.control
+set color0=white
+set color1=black
+
+destroy all
+save all
+ac dec 2000 1 110Meg
+run
+*CMRR
+let gain_common=db(OUT1/IN11)
+*plot gain_common
+let gain_diff=db(OUT2/(IN12-IN22))
+*plot gain_diff
+let cmrr=gain_diff-gain_common
+plot cmrr ylabel 'dB'
+.endc
+
+ .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sym # of pins=6
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sch
+.subckt ota vd ib out in2 in1 vs
+*.iopin vd
+*.iopin vs
+*.iopin ib
+*.ipin in1
+*.ipin in2
+*.opin out
+XCC out d sky130_fd_pr__cap_mim_m3_1 W=21 L=21 MF=1 m=1
+XM5 ib ib vd vd sky130_fd_pr__pfet_01v8 L=1 W=6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 b ib vd vd sky130_fd_pr__pfet_01v8 L=1 W=6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM8 out ib vd vd sky130_fd_pr__pfet_01v8 L=1 W=30 nf=4 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM1 c in1 b b sky130_fd_pr__pfet_01v8 L=1 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 d in2 b b sky130_fd_pr__pfet_01v8 L=1 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 c c vs vs sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 d c vs vs sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM7 out d vs vs sky130_fd_pr__nfet_01v8 L=1 W=9 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end
