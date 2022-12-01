@@ -101,12 +101,12 @@ Name | Value
 --------- | ------:
 Vdd | 1.8 V
 Vss | 0 V
-Min. out | 50 mV
+Min. out | 35 mV
 Max. out | 1.2 V
-Phase margin | > -100 °
-GBW | 39.81 MHz
-Slew Rate | 0.1 mV/s
-Area | 0.00072 mm²
+Phase margin | > -109 °
+GBW | 37.8 MHz
+Slew Rate | 0.3 mV/s
+Area | 0.00073 mm²
 
 #### Schematic:
 
@@ -114,19 +114,19 @@ Area | 0.00072 mm²
 
 #### Layout:
 
-![image](https://user-images.githubusercontent.com/80465879/205145885-3d48bba5-483f-4d22-bc0a-50c6c47b0351.png)
+![image](https://user-images.githubusercontent.com/80465879/205154928-1d03320c-50a5-4ea0-9e84-34d23aa9ac9b.png)
 
 #### Simulation:
 
-![image](https://user-images.githubusercontent.com/80465879/205143383-5042e228-a8c3-4083-83a6-e421315627e9.png)
+![image](https://user-images.githubusercontent.com/80465879/205154798-69f23032-c651-4ddd-9eb8-30d5caba453e.png)
 
-![image](https://user-images.githubusercontent.com/80465879/205143007-6639e374-74d1-4196-bc70-4eca93fc8094.png)
+![image](https://user-images.githubusercontent.com/80465879/205155538-363e0c55-bb44-48a2-9722-016a08bad108.png)
 
-![image](https://user-images.githubusercontent.com/80465879/205143062-7fd0b7ac-3cb4-4fb4-9bdf-138e9f88ac53.png)
+![image](https://user-images.githubusercontent.com/80465879/205155591-5f5a82fa-d9af-4f3a-acf2-0d952ad5a0fb.png)
 
-![image](https://user-images.githubusercontent.com/80465879/205142650-50746f17-757b-4f08-b62a-c0b82e83f315.png)
+![image](https://user-images.githubusercontent.com/80465879/205156191-1be1ca16-5a43-40da-8b0d-cf72f3767276.png)
 
-![image](https://user-images.githubusercontent.com/80465879/205144952-4c96cf5b-7db9-4cb2-b2ed-611c868e251c.png)
+![image](https://user-images.githubusercontent.com/80465879/205156545-fd59b20d-3fb6-47a0-be3f-f41343cde332.png)
 
 ### Sigma-Delta Modulator
 
