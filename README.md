@@ -48,9 +48,9 @@ Area | 0.000941 mm²
 
 ![image](https://user-images.githubusercontent.com/80465879/177610964-c529b3e8-4b11-47ac-a0e5-9192946a9cd7.png)
 
-### OTA Miller (AmpOp)
+### OTA Miller
 
-Miller Operational Transconductance Amplifier (OTA) with Buffer.
+Miller Operational Transconductance Amplifier (OTA) to provide gain to the sensor signals.
 
 #### Specs:
 
@@ -58,38 +58,34 @@ Name | Value
 --------- | ------:
 Vdd | 1.8 V
 Vss | 0 V
-Open-loop Gain | 74 dB
-Phase margin | > 40 °
-GBW | 3.72 MHz
-Slew Rate | 0.73 uV/s
-CMRR | 73.75 dB
+Open-loop Gain | 76.4 dB
+Phase margin | > 64.5 °
+GBW | 4.7 MHz
+Slew Rate | 7.8 uV/s
+CMRR | 79 dB
 Area | 0.0031 mm²
 
 #### Schematic:
 
-![image](https://user-images.githubusercontent.com/80465879/202614145-99bab9f4-cc48-473f-8f9f-44363222b760.png)
-
-![image](https://user-images.githubusercontent.com/80465879/202614207-54152198-1f7e-4db7-8ee2-c6f41477f29e.png)
-
-![image](https://user-images.githubusercontent.com/80465879/205141348-4d942547-6910-47bb-9243-0fda0f9b81b6.png)
+![image](https://user-images.githubusercontent.com/80465879/205181604-eb580386-f5b0-4f36-af25-9f3da83b30d7.png)
 
 #### Layout:
 
-![image](https://user-images.githubusercontent.com/80465879/202619004-342566af-1f81-4dce-a99b-dd3e9469e6dc.png)
+![image](https://user-images.githubusercontent.com/80465879/205185786-f55c0835-7123-4753-8e03-b5af304f53de.png)
 
 #### Simulation:
 
-![image](https://user-images.githubusercontent.com/80465879/202615358-6942bcd9-a71b-4e79-8686-3589a57b8cdf.png)
+![image](https://user-images.githubusercontent.com/80465879/205182919-d2a425e6-51e8-47ff-8a1a-046aec8586f3.png)
 
-![image](https://user-images.githubusercontent.com/80465879/202614755-3c7e56c1-417b-4840-a55d-cb49e2f327cb.png)
+![image](https://user-images.githubusercontent.com/80465879/205183206-cd21e908-dae2-4e32-aff0-925c90aee79b.png)
 
-![image](https://user-images.githubusercontent.com/80465879/202617256-478c70c4-2b69-47fe-b96d-d5461111c988.png)
+![image](https://user-images.githubusercontent.com/80465879/205183232-f35cda8b-cb8b-463e-969d-1d419d681e16.png)
 
-![image](https://user-images.githubusercontent.com/80465879/202616113-b931cf16-5c5c-4ea3-ac27-fc59356524e0.png)
+![image](https://user-images.githubusercontent.com/80465879/205184468-d6fc8bc1-0fa4-4633-b274-1454abf6867c.png)
 
-![image](https://user-images.githubusercontent.com/80465879/202616366-15468720-ef4a-4122-b476-e5998b223620.png)
+![image](https://user-images.githubusercontent.com/80465879/205184786-902ba2f3-9310-43f4-b1df-2c4d767550ae.png)
 
-![image](https://user-images.githubusercontent.com/80465879/202616720-18e560ce-91ed-4bab-a16f-863b04332201.png)
+![image](https://user-images.githubusercontent.com/80465879/205185129-0124f948-5c1c-40e1-93ca-c6494f1e94d0.png)
 
 ### Buffer
 
