@@ -172,7 +172,8 @@ Area | 0.022 mm²
 
 #### Simulation:
 
-<img src="https://user-images.githubusercontent.com/80465879/156936018-c29da456-ba1e-4673-b168-62b3e4492b89.png" ><img src="https://user-images.githubusercontent.com/80465879/156935980-32720b57-b6b0-48c5-b4cf-1804c36cf6fd.png" >
+![image](https://user-images.githubusercontent.com/80465879/207927154-dc65ff38-8478-4895-a29e-5e452e1267f3.png)![image](https://user-images.githubusercontent.com/80465879/207927303-13c36c8b-1451-4ae7-822e-938c847858d9.png)
+
 
 ### Impedance Transformer:
 
@@ -196,7 +197,8 @@ Area | 0.0538 mm²
 
 #### Simulation:
 
-<img src="https://user-images.githubusercontent.com/80465879/204568576-a73b0228-9727-446e-815d-9259090ef060.png" ><img src="https://user-images.githubusercontent.com/80465879/204569579-1dffb124-6a12-4726-83db-7c79eeca8a5c.png" >
+![image](https://user-images.githubusercontent.com/80465879/207935280-1966e77f-a824-44f1-9237-6413dc707e26.png)![image](https://user-images.githubusercontent.com/80465879/207935519-426e6924-d164-413e-908b-d37cc1c67715.png)
+
 
 
 
