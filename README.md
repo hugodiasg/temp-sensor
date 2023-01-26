@@ -3,17 +3,16 @@
 
  The circuit is a temperature sensor with 2.4 GHz wireless communication with CMOS 130nm (Sky130nm) technology to measure the human temperature.
  
- Other blocks in progress...
- 
 ### Block Diagram
 
 The main blocks are:
 - Sensor: to detect the local temperature;
 - Gain: to amplifier the sensor signals;
 - Mixed signal: to convert analog signals to digital.
-- ASK (RF): to convert digital signals to RF signals.
+- RF: to convert digital signals to RF signals and match them with a antenna.
 
-<img src="https://user-images.githubusercontent.com/80465879/169625179-8cd3d2a1-2061-4c8f-9a96-f0d7ffa67104.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/214938144-e171245b-292b-456b-baac-e44f31a250e5.png" width="500vh" >
+
  
 ### Sensor
 
