@@ -167,23 +167,24 @@ Amplitude-shift keying (ASK) modulator to convert shift keying in 2.4 GHz signal
 Name | Value
 --------- | ------:
 Carrier Frequency | 2.4 GHz - 2.5 GHz
-Apparent Potency | 2.35 mW
+Apparent Potency | 0.9 mW
 Drain Current | 1 mA
-Output impedance (ON)| 191.1-j3.3 ohms
-Output impedance (OFF)| 191.6-j3.7 ohms
-Area | 0.022 mm²
+Output impedance (ON)| 168.7 + j28.02 ohms
+Area | 0.021 mm²
 
 #### Schematic:
 
-<img src="https://user-images.githubusercontent.com/80465879/204550882-45dcfdbf-62ab-4c5d-bc5f-ef3c6e397ee9.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/216435880-da1a4681-cfe5-4faf-bd24-5edf4da47dca.png" width="500vh" >
 
 #### Layout:
 
-<img src="https://user-images.githubusercontent.com/80465879/177055528-ac488221-4558-4116-9fee-d8ae2b8a0518.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/216435979-e2d1bc25-c25b-464a-8a7c-c6d37a40cf85.png" width="500vh" >
 
 #### Simulation:
 
-<img src="https://user-images.githubusercontent.com/80465879/207927303-13c36c8b-1451-4ae7-822e-938c847858d9.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/216436135-eb10c0a7-af95-4e4f-8539-d4d23125f2d2.png" width="500vh" >
+
+<img src="https://user-images.githubusercontent.com/80465879/216436797-ae1dbadb-11e1-4913-8bd4-cfc07e72b090.png" width="500vh" >
 
 ### Impedance Transformer:
 
