@@ -7,12 +7,10 @@ R3 ns12 GND 50 m=1
 R4 ns22 net1 50 m=1
 Vin net2 GND AC 1
 .save i(vin)
-R1 net2 net3 191.6 m=1
-C1 net3 ns11 19.68521p m=1
-R2 GND net4 191.6 m=1
-C2 net4 ns21 19.68521p m=1
 x1 ns11 ns12 GND impedance-transformer
 x2 ns21 ns22 GND impedance-transformer
+R1 net2 ns11 50 m=1
+R2 GND ns21 50 m=1
 **** begin user architecture code
 
 
@@ -20,7 +18,7 @@ x2 ns21 ns22 GND impedance-transformer
 .control
 destroy all
 save all
-ac lin 1MEG 1G 4G
+ac lin 1MEG 0.1G 3G
 set units=degrees
 run
 
@@ -50,14 +48,7 @@ let z12 = 2*s12/StoZDelS
 let z21 = 2*s21/StoZDelS
 let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
 
-*plot z11
-*plot z12
-*plot z21
-*plot z22 xlimit 2.4G 2.5G
-*plot ph(z22) xlimit 2.4G 2.5G
-*plot z22
-*plot smith z22
-let z_in =z11-z12*z21/(z22+zl)
+let z_in =z11-z12*z21/(z22+z0)
 let z_output=z22-(z12*z21/(z11+z0))
 plot ph(z_in) ph(z_output)
 plot mag(z_in) mag(z_output)
@@ -67,6 +58,9 @@ plot gamma
 
  .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 .include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+*C= 19.68521p R= 191.6
 
 **** end user architecture code
 **.ends

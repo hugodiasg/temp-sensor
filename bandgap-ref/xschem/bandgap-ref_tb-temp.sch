@@ -19,14 +19,12 @@ destroy all
 save all
 set color0=white
 set color1=black
-dc temp -30 80 1
+dc temp 0 60 1
 run
 let idd=-i(vdd)
 let tc=deriv(out)
 
 plot idd
-plot tc ylabel 'mV/°C' xlimit 20 50
-plot out xlimit 20 50
 plot tc ylabel 'mV/°C'
 plot out
 .endc

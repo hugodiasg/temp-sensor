@@ -116,7 +116,7 @@ device=resistor
 m=1}
 C {devices/vsource.sym} -55 200 1 0 {name=Vin2 value="DC 1.8 "}
 C {devices/gnd.sym} -115 200 0 0 {name=l4 lab=GND}
-C {devices/code.sym} 665 -52.5 0 0 {name=TT_MODELS
+C {devices/code.sym} 445 -1032.5 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt

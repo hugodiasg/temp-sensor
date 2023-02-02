@@ -1,53 +1,75 @@
 * NGSPICE file created from ask-modulator.ext - technology: sky130A
 
-.subckt sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN w_n201_n1098# a_n35_500# a_n35_n932#
-X0 a_n35_n932# a_n35_500# w_n201_n1098# sky130_fd_pr__res_xhigh_po_0p35 l=5e+06u
-C0 a_n35_n932# w_n201_n1098# 1.08fF
-C1 a_n35_500# w_n201_n1098# 1.08fF
+.subckt sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN a_n165_n1062# a_n35_500# a_n35_n932#
+X0 a_n35_n932# a_n35_500# a_n165_n1062# sky130_fd_pr__res_xhigh_po_0p35 l=5e+06u
+C0 a_n35_n932# a_n35_500# 0.02fF
+C1 a_n35_n932# a_n165_n1062# 0.66fF
+C2 a_n35_500# a_n165_n1062# 0.66fF
 .ends
 
-.subckt sky130_fd_pr__nfet_g5v0d10v5_PWYS4E a_n108_n870# a_n50_n958# w_n278_n1128#
-+ a_50_n870#
-X0 a_50_n870# a_n50_n958# a_n108_n870# w_n278_n1128# sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=8.7e+06u l=500000u
-C0 a_50_n870# a_n108_n870# 1.03fF
-C1 a_50_n870# w_n278_n1128# 0.84fF
-C2 a_n108_n870# w_n278_n1128# 0.84fF
-C3 a_n50_n958# w_n278_n1128# 0.52fF
+.subckt sky130_fd_pr__nfet_01v8_5JJSBP a_15_n200# a_n175_n374# a_n73_n200# a_n33_n288#
+X0 a_15_n200# a_n33_n288# a_n73_n200# a_n175_n374# sky130_fd_pr__nfet_01v8 ad=5.8e+11p pd=4.58e+06u as=5.8e+11p ps=4.58e+06u w=2e+06u l=150000u
+C0 a_n73_n200# a_15_n200# 0.32fF
+C1 a_n73_n200# a_n33_n288# 0.02fF
+C2 a_n33_n288# a_15_n200# 0.02fF
+C3 a_15_n200# a_n175_n374# 0.17fF
+C4 a_n73_n200# a_n175_n374# 0.21fF
+C5 a_n33_n288# a_n175_n374# 0.35fF
 .ends
 
 .subckt sky130_fd_pr__cap_mim_m3_2_97K3D8 c2_n2519_n7620# m4_n2619_n7720# VSUBS
 X0 c2_n2519_n7620# m4_n2619_n7720# sky130_fd_pr__cap_mim_m3_2 l=2.44e+07u w=2.44e+07u
 X1 c2_n2519_n7620# m4_n2619_n7720# sky130_fd_pr__cap_mim_m3_2 l=2.44e+07u w=2.44e+07u
 X2 c2_n2519_n7620# m4_n2619_n7720# sky130_fd_pr__cap_mim_m3_2 l=2.44e+07u w=2.44e+07u
-C0 m4_n2619_n7720# c2_n2519_n7620# 118.49fF
-C1 c2_n2519_n7620# VSUBS 0.26fF
-C2 m4_n2619_n7720# VSUBS 30.70fF
+C0 m4_n2619_n7720# c2_n2519_n7620# 107.02fF
+C1 c2_n2519_n7620# VSUBS 3.23fF
+C2 m4_n2619_n7720# VSUBS 27.96fF
 .ends
 
 .subckt ask-modulator in out vd gnd
 Xsky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0 gnd vd out sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN
-Xsky130_fd_pr__nfet_g5v0d10v5_PWYS4E_0 out in gnd gnd sky130_fd_pr__nfet_g5v0d10v5_PWYS4E
+Xsky130_fd_pr__nfet_01v8_5JJSBP_0 gnd gnd out in sky130_fd_pr__nfet_01v8_5JJSBP
 Xsky130_fd_pr__cap_mim_m3_2_97K3D8_0 vd out gnd sky130_fd_pr__cap_mim_m3_2_97K3D8
-X0 vd.t1 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X1 gnd in.t0 out gnd sky130_fd_pr__nfet_g5v0d10v5 ad=2.523e+12p pd=1.798e+07u as=2.523e+12p ps=1.798e+07u w=0u l=0u
-X2 vd.t0 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X3 vd.t2 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X0 vd.t2 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X1 vd.t1 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X2 gnd in.t0 out gnd sky130_fd_pr__nfet_01v8 ad=5.8e+11p pd=4.58e+06u as=5.8e+11p ps=4.58e+06u w=0u l=0u
+X3 vd.t0 out sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
 R0 vd vd.t1 0.714
 R1 vd.t0 vd.t2 0.066
 R2 vd.t1 vd.t0 0.066
-R3 in in.t0 448.598
-C0 gnd in 0.36fF
-C1 vd gnd 1.55fF
-C2 out in 0.46fF
-C3 vd out -0.86fF
-C4 out gnd 0.13fF
-C5 in.t0 0 0.40fF
-C6 vd.t2 0 42.34fF
-C7 vd.t0 0 40.08fF
-C8 vd.t1 0 46.90fF
-C9 gnd 0 -0.14fF
-C10 out 0 235.88fF
-C11 in 0 4.90fF
-C12 vd 0 13.98fF
+R3 gnd.n15 gnd.n14 71.405
+R4 gnd.n18 gnd.n17 71.152
+R5 gnd.n6 gnd.n5 67.749
+R6 gnd.n8 gnd.n7 67.387
+R7 gnd gnd.n20 4.959
+R8 gnd.n9 gnd.n8 1.449
+R9 gnd.n20 gnd.n9 0.359
+R10 gnd.n5 gnd.n4 0.13
+R11 gnd.n20 gnd.n19 0.114
+R12 gnd.n17 gnd.n16 0.109
+R13 gnd.n19 gnd.n15 0.094
+R14 gnd.n9 gnd.n6 0.031
+R15 gnd.n11 gnd.n10 0.026
+R16 gnd.n19 gnd.n18 0.017
+R17 gnd.n12 gnd.n11 0.017
+R18 gnd.n13 gnd.n12 0.01
+R19 gnd.n2 gnd.n1 0.007
+R20 gnd.n1 gnd.n0 0.007
+R21 gnd.n3 gnd.n2 0.002
+R22 gnd.n6 gnd.n3 0.001
+R23 gnd.n15 gnd.n13 0.001
+R24 in in.t0 396.948
+C0 in gnd 0.07fF
+C1 in out 0.25fF
+C2 gnd vd 0.37fF
+C3 vd out 3.12fF
+C4 gnd out 0.33fF
+C5 in 0 1.68fF
+C6 vd.t2 0 36.61fF
+C7 vd.t0 0 34.66fF
+C8 vd.t1 0 49.33fF
+C9 gnd 0 -0.63fF
+C10 out 0 217.77fF
+C11 vd 0 13.16fF
 .ends
 

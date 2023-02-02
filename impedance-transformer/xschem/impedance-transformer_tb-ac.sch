@@ -37,6 +37,12 @@ N -242.5 200 -67.5 200 {
 lab=ns21}
 N -550 200 -362.5 200 {
 lab=GND}
+N -380 -80 -320 -80 {
+lab=#net2}
+N -360 200 -300 200 {
+lab=GND}
+N -365 200 -360 200 {
+lab=GND}
 C {devices/gnd.sym} 160 -30 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=ns12}
 C {devices/code_shown.sym} 402.5 -1025 0 0 {name=Simulation only_toplevel=false value="
@@ -44,7 +50,7 @@ C {devices/code_shown.sym} 402.5 -1025 0 0 {name=Simulation only_toplevel=false 
 .control
 destroy all
 save all
-ac lin 1MEG 1G 4G
+ac lin 1MEG 0.1G 3G
 set units=degrees
 run
 
@@ -74,14 +80,7 @@ let z12 = 2*s12/StoZDelS
 let z21 = 2*s21/StoZDelS
 let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
 
-*plot z11
-*plot z12
-*plot z21
-*plot z22 xlimit 2.4G 2.5G
-*plot ph(z22) xlimit 2.4G 2.5G
-*plot z22 
-*plot smith z22
-let z_in =z11-z12*z21/(z22+zl)
+let z_in =z11-z12*z21/(z22+z0)
 let z_output=z22-(z12*z21/(z11+z0))
 plot ph(z_in) ph(z_output) 
 plot mag(z_in) mag(z_output)
@@ -110,26 +109,6 @@ C {devices/gnd.sym} -545 -80 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} -5 -80 1 0 {name=l8 sig_type=std_logic lab=ns11}
 C {devices/gnd.sym} -550 232.5 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} -22.5 200 1 0 {name=l13 sig_type=std_logic lab=ns21}
-C {devices/res.sym} -350 -80 3 0 {name=R1
-value=191.6
-footprint=1206
-device=resistor
-m=1}
-C {devices/capa.sym} -290 -80 3 0 {name=C1
-m=1
-value=19.68521p
-footprint=1206
-device="ceramic capacitor"}
-C {devices/res.sym} -332.5 200 3 0 {name=R2
-value=191.6
-footprint=1206
-device=resistor
-m=1}
-C {devices/capa.sym} -272.5 200 3 0 {name=C2
-m=1
-value=19.68521p
-footprint=1206
-device="ceramic capacitor"}
 C {/home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer.sym} 160 -80 0 0 {name=x1}
 C {/home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer.sym} 150 200 0 0 {name=x2}
 C {devices/code.sym} 410 -1220 0 0 {name=TT_MODELS
@@ -139,3 +118,16 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
+C {devices/code_shown.sym} -482.5 -1095 0 0 {name=Simulation1 only_toplevel=false value="*C= 19.68521p R= 191.6"
+
+}
+C {devices/res.sym} -290 -80 3 0 {name=R1
+value=50
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} -270 200 3 0 {name=R2
+value=50
+footprint=1206
+device=resistor
+m=1}

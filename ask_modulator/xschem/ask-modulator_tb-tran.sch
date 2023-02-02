@@ -15,7 +15,7 @@ N 315 -80 325 -80 {
 lab=out}
 N 5 -80 20 -80 {
 lab=in}
-C {devices/vsource.sym} 155 -240 2 0 {name=Vdd value=3.3}
+C {devices/vsource.sym} 155 -240 2 0 {name=Vdd value=1.8}
 C {devices/vsource.sym} -60 -140 2 0 {name=Vin value="PULSE(0V	1.8V	0.5ns	0.1ns	0.1ns	50ns	100ns)"}
 C {devices/gnd.sym} 165 -30 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 325 -80 1 0 {name=l2 sig_type=std_logic lab=out}
@@ -39,7 +39,8 @@ let t=100n
 let id =-i(vdd)
 plot id
 plot in
-plot out 3.2951
+*plot out 3.2951
+plot out
 *S
 let vrms_rlc=sqrt(integ((out-vd)^2)/t)
 let vrms_nmos=sqrt(integ(out^2)/t)
@@ -47,9 +48,9 @@ let irms=sqrt(integ((-i(vdd))^2)/t)
 let srms_rlc=vrms_rlc*irms
 let srms_nmos=vrms_nmos*irms
 let srms=srms_rlc+srms_nmos
-plot srms
-plot out 3.2950864 xlimit 50.5n 51n
-plot out 3.2950864 xlimit .5n 1n
+*plot srms
+*plot out 3.2950864 xlimit 50.5n 51n
+*plot out 3.2950864 xlimit .5n 1n
 .endc"
 }
 C {devices/gnd.sym} 155 -270 2 0 {name=l6 lab=GND}

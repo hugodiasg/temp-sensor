@@ -20,7 +20,7 @@ destroy all
 save all
 set color0=white
 set color1=black
-dc temp -30 80 1
+dc temp -100 170 1
 run
 let idd=-i(vdd)
 *let is1=-i(vs1)
@@ -37,6 +37,8 @@ plot tc ylabel 'mV/°C'
 plot vts vtd 
 plot tc ylabel 'mV/°C' xlimit 20 50
 plot vts vtd xlimit 20 50
+
+wrdata ~/ptat-temp-tb.txt vts
 .endc
 "}
 C {devices/gnd.sym} -80 -530 2 0 {name=l2 lab=GND}
