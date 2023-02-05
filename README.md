@@ -171,7 +171,7 @@ Name | Value
 Carrier Frequency | 2.4 GHz - 2.5 GHz
 Apparent Potency | 0.9 mW
 Drain Current | 1 mA
-Output impedance (ON)| 186.01 + j25.24 ohms
+Output impedance (ON)| 197.06 - j11.02 ohms
 Area | 0.021 mm²
 
 #### Schematic:
