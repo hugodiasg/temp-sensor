@@ -62,7 +62,7 @@ Vss | 0 V
 Open-loop Gain | 76.4 dB
 Phase margin | > 64.5 °
 GBW | 4.7 MHz
-Slew Rate | 7.8 uV/s
+Slew Rate | 77.8 mV/s
 CMRR | 79 dB
 Area | 0.0031 mm²
 
@@ -86,7 +86,7 @@ Area | 0.0031 mm²
 
 <img src="https://user-images.githubusercontent.com/80465879/205184786-902ba2f3-9310-43f4-b1df-2c4d767550ae.png" width="500vh" >
 
-<img src="https://user-images.githubusercontent.com/80465879/205185129-0124f948-5c1c-40e1-93ca-c6494f1e94d0.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/216799366-2158b5ad-d6a8-4ad0-9abb-9c8777bba2d5.png" width="500vh" >
 
 ### Buffer
 
@@ -148,17 +148,17 @@ Area | 0.002 mm²
 
 #### Simulation:
 
-T = -20 °C (1.34035 V)
+T = 15 °C
 
-<img src="https://user-images.githubusercontent.com/80465879/204172738-b3dcb38b-aea3-4a5e-9a68-ad16b06742ad.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/216799212-cc938f3e-406f-4347-9b7a-1aae8decda94.png" width="500vh" >
 
-T = 36 °C (1.20571 V)
+T = 35 °C
 
-<img src="https://user-images.githubusercontent.com/80465879/204172950-6a96c49b-7ff5-425d-a7da-6718f3f482c9.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/216799222-b488ee23-b690-41ae-b5f9-cfecfc851621.png" width="500vh" >
 
-T = 50 °C (1.17571 V)
+T = 60 °C 
 
-<img src="https://user-images.githubusercontent.com/80465879/204173231-60355ab8-fa74-4fe3-a2cd-c16a5c91af69.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/216799232-1762f93f-b921-4483-a9df-67a73ed414f3.png" width="500vh" >
 
 ### ASK Modulator
 
@@ -186,7 +186,8 @@ Area | 0.021 mm²
 
 <img src="https://user-images.githubusercontent.com/80465879/216436135-eb10c0a7-af95-4e4f-8539-d4d23125f2d2.png" width="500vh" >
 
-<img src="https://user-images.githubusercontent.com/80465879/216436797-ae1dbadb-11e1-4913-8bd4-cfc07e72b090.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/216799332-be823329-2288-4f42-9b19-674ef92e970a.png" width="500vh" >
+
 
 ### Impedance Transformer:
 
