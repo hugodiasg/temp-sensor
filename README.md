@@ -203,18 +203,22 @@ Area | 0.0538 mm²
 
 #### Schematic:
 
-<img src="https://user-images.githubusercontent.com/80465879/204552243-ca3d273f-706c-47c7-8aed-0907b504275a.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/216872162-880ceba2-6559-4b82-92dd-53b0bdd6d7c8.png" width="500vh" >
 
 #### Layout:
 
-<img src="https://user-images.githubusercontent.com/80465879/177055540-845ad8b1-1d47-4cf3-a5df-5b320aba620a.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/216872067-ab80baf8-a8ac-4bde-83bd-2ab8b27d1a8f.png" width="500vh" >
 
 #### Simulation:
 
 
-<img src="https://user-images.githubusercontent.com/80465879/207935280-1966e77f-a824-44f1-9237-6413dc707e26.png" width="500vh" >
+<img src="" width="500vh" >
 
-<img src="https://user-images.githubusercontent.com/80465879/213778103-8830f528-1e74-4b38-9fe3-08111a8a2c48.png" width="500vh" >
+![image](https://user-images.githubusercontent.com/80465879/216872320-016d08df-4d82-4911-b520-56ec6a09c2d5.png)
+
+
+
+
 
 
 
