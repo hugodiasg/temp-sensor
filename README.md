@@ -199,7 +199,7 @@ Name | Value
 --------- | ------:
 Frequency | 2.45 GHz
 Load | 50.0 + j0.0 ohms
-Area | 0.0538 mm²
+Area | 0.037 mm²
 
 #### Schematic:
 
@@ -212,9 +212,8 @@ Area | 0.0538 mm²
 #### Simulation:
 
 
-<img src="" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/216872320-016d08df-4d82-4911-b520-56ec6a09c2d5.png" width="500vh" >
 
-![image](https://user-images.githubusercontent.com/80465879/216872320-016d08df-4d82-4911-b520-56ec6a09c2d5.png)
 
 
 
