@@ -1,70 +1,66 @@
-** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator_tb-ac.sch
-**.subckt ask-modulator_tb-ac
+** sch_path:
+*+ /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer_tb-ac2.sch
+**.subckt impedance-transformer_tb-ac2
+Vin1 net1 GND DC 0 AC 1
+.save i(vin1)
+R4 out net1 50 m=1
+x2 out_ask out GND impedance-transformer
+x1 vd out_ask GND GND ask-modulator
 Vdd vd GND DC 1.8 AC 0
 .save i(vdd)
-Vin net1 GND DC 1.8 AC 1
-.save i(vin)
-xask0 vd ns12 ns11 GND ask-modulator
-Vin1 net2 GND DC 0 AC 1
-.save i(vin1)
-xask1 vd ns22 ns21 GND ask-modulator
-R1 ns11 net1 50 m=1
-R3 ns12 GND 50 m=1
-R4 ns22 net2 50 m=1
-Vin2 ns21 GND DC 1.8
-.save i(vin2)
 **** begin user architecture code
+
 
 
 .control
 destroy all
 save all
-ac lin 1MEG 2G 4G
+ac lin 1MEG 0.1G 3G
 set units=degrees
 run
 
 set color0=white
 set color1=black
 
-let z0=50
-
-* Find two S parameters from test circuit
-let s11 = v(ns11)
-let s12 = v(ns12)
-let s21 = v(ns21)
-let s22 = v(ns22)
-
-* Extract Y parameters
-*let StoYDelS = ((1+s11)*(1+s22)-s12*s21)*z0
-*let y11 = ((1+s22)*(1-s11)+s12*s21/StoYDelS
-*let y12=-2*s12/StoYDelS
-*let y21=-2*s21/StoYDelS
-*let y22 = ((1+s11)*(1-s22)+s12+s21)/StoYDelS
-
-* Extract Z parameters
-let StoZDelS = ((1-s11)*(1-s22)-s12*s21)/z0
-let z11 = ((1+s11)*(1-s22)+s12*s21)/StoZDelS
-let z12 = 2*s12/StoZDelS
-let z21 = 2*s21/StoZDelS
-let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
-
-*plot z11
-*plot z12
-*plot z21
-*plot z22
-let z_out= z22-(z12*z21/(z11+z0))
-let z_in=z11-(z12*z21)/(z22+z0)
-plot z_out z_in
-plot ph(z_out) ph(z_in)
+plot smithgrid out
 .endc
 
  .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 .include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
+
+*C= 19.68521p R= 191.6
+
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  ask-modulator.sym # of pins=4
+* expanding   symbol:
+*+  /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer.sym # of pins=3
+** sym_path:
+*+ /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer.sym
+** sch_path:
+*+ /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer.sch
+.subckt impedance-transformer in out gnd
+*.iopin gnd
+*.iopin in
+*.iopin out
+XC0 in gnd sky130_fd_pr__cap_mim_m3_2 W=23.2 L=23.2 MF=9 m=9
+XC1 out gnd sky130_fd_pr__cap_mim_m3_2 W=19.6 L=19.6 MF=25 m=25
+x1 in out l1
+**** begin user architecture code
+
+* NGSPICE file created from impedance-transformer.ext - technology: sky130A
+
+
+
+
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:
+*+  /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sym # of pins=4
 ** sym_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sym
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sch
 .subckt ask-modulator vd out in gnd
@@ -121,6 +117,22 @@ C11 vd 0 13.16fF
 XM1 out in gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/l1.sym
+*+ # of pins=2
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/l1.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/l1.sch
+.subckt l1 p1 p2
+*.iopin p2
+*.iopin p1
+L0 p1 net3 0.6198n m=1
+Cs1 p1 net1 28.82f m=1
+Cs2 p2 net2 59.62f m=1
+Rs1 net1 GND 59.62 m=1
+Rs2 net2 GND 17.33 m=1
+R1 p2 net3 3.029 m=1
 .ends
 
 

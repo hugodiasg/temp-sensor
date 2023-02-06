@@ -37,7 +37,7 @@ N -25 200 -5 200 {
 lab=ns21}
 N -115 200 -85 200 {
 lab=GND}
-C {devices/vsource.sym} 175 -240 2 0 {name=Vdd value="DC 3.3 AC 0"}
+C {devices/vsource.sym} 175 -240 2 0 {name=Vdd value="DC 1.8 AC 0"}
 C {devices/vsource.sym} -120 -80 1 0 {name=Vin value="DC 1.8 AC 1"}
 C {devices/gnd.sym} 160 -30 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 330 -80 1 0 {name=l2 sig_type=std_logic lab=ns12}
@@ -80,10 +80,10 @@ let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
 *plot z12
 *plot z21
 *plot z22 
-let z_output= z22-(z12*z21/(z11+z0))
+let z_out= z22-(z12*z21/(z11+z0))
 let z_in=z11-(z12*z21)/(z22+z0)
-plot z_output z_in
-plot ph(z_output) ph(z_in)
+plot z_out z_in
+plot ph(z_out) ph(z_in)
 .endc"
 
 }

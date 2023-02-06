@@ -1,8 +1,17 @@
 ** sch_path:
-*+ /home/hugodg/projects_sky130/temp_sensor/impedance-transformer/xschem/impedance-transformer.sch
+*+ /home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer.sch
 .subckt impedance-transformer gnd in out
 *.PININFO gnd:B in:B out:B
-XC0 in gnd sky130_fd_pr__cap_mim_m3_2 W=22.93 L=22.93 MF=9 m=9
-XC1 out gnd sky130_fd_pr__cap_mim_m3_2 W=24.07 L=24.07 MF=16 m=16
+XC0 in gnd sky130_fd_pr__cap_mim_m3_2 W=23.2 L=23.2 MF=9 m=9
+XC1 out gnd sky130_fd_pr__cap_mim_m3_2 W=19.6 L=19.6 MF=25 m=25
+**** begin user architecture code
+
+* NGSPICE file created from impedance-transformer.ext - technology: sky130A
+
+
+
+
+
+**** end user architecture code
 .ends
 .end

@@ -11,6 +11,8 @@ N -80 -460 -80 -440 {
 lab=vd}
 N -80 -320 -80 -310 {
 lab=GND}
+N 80 -660 80 -650 {
+lab=GND}
 C {devices/gnd.sym} -80 -310 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} -80 -490 2 0 {name=VDD value=1.8}
 C {devices/lab_pin.sym} 70 -350 2 0 {name=l5 sig_type=std_logic lab=vtd}
@@ -28,7 +30,9 @@ let idd=-i(vdd)
 *let il3=-i(vl3)
 *let isat4=-i(vsat4)
 
+
 let tc=deriv(vts)
+let err=(vts-v_lin)/vts*100
 
 plot idd
 *plot is1 is2 il3 isat4
@@ -37,8 +41,10 @@ plot tc ylabel 'mV/°C'
 plot vts vtd 
 plot tc ylabel 'mV/°C' xlimit 20 50
 plot vts vtd xlimit 20 50
+plot vts v_lin
+plot err
 
-wrdata ~/ptat-temp-tb.txt vts
+*wrdata ~/ptat-temp-tb.txt vts
 .endc
 "}
 C {devices/gnd.sym} -80 -530 2 0 {name=l2 lab=GND}
@@ -52,3 +58,6 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
+C {devices/vsource.sym} 80 -620 2 0 {name=Bvts value="v=-0.00222727*(temper-35)+1.20625"}
+C {devices/gnd.sym} 80 -660 2 0 {name=l6 lab=GND}
+C {devices/lab_pin.sym} 80 -590 0 0 {name=l7 sig_type=std_logic lab=v_lin}

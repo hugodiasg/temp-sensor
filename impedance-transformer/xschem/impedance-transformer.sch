@@ -5,9 +5,6 @@ K {}
 V {}
 S {}
 E {}
-T {L=598 pH} 410 -340 0 0 0.4 0.4 {}
-T {Cs = 9.612 pF} 180 -160 0 0 0.4 0.4 {}
-T {Cl = 18.832 pF} 590 -150 0 0 0.4 0.4 {}
 N 360 -237.5 360 -220 {
 lab=in}
 N 360 -237.5 422.5 -237.5 {
@@ -25,75 +22,66 @@ lab=in}
 N 567.5 -237.5 597.5 -237.5 {
 lab=out}
 C {devices/iopin.sym} 467.5 -137.5 1 0 {name=p1 lab=gnd}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 360 -190 0 0 {name=C0 model=cap_mim_m3_2 W=22.93 L=22.93 MF=9 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 567.5 -190 0 1 {name=C1 model=cap_mim_m3_2 W=24.07 L=24.07 MF=16 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 360 -190 0 0 {name=C0 model=cap_mim_m3_2 W=23.2 L=23.2 MF=9 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 567.5 -190 0 1 {name=C1 model=cap_mim_m3_2 W=19.6 L=19.6 MF=25 spiceprefix=X}
 C {devices/iopin.sym} 332.5 -237.5 2 0 {name=p2 lab=in}
 C {devices/iopin.sym} 595 -237.5 2 1 {name=p3 lab=out}
 C {/home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/l1.sym} 460 -235 0 0 {name=x1}
-C {devices/code.sym} 760 -337.5 0 0 {name=RC_Ext only_toplevel=false value="* NGSPICE file created from impedance-transformer.ext - technology: sky130A
+C {devices/code.sym} 760 -337.5 0 0 {name=RC_Ext only_toplevel=false value="* NGSPICE file created from impedance-transformer.ext - technology: sky
 
-R0 in in.n1 0.704
-R1 in.n0 in.t3 0.125
-R2 in.n1 in.n0 0.089
-R3 in.t8 in.t7 0.066
-R4 in.t6 in.t8 0.066
-R5 in.t2 in.t1 0.066
-R6 in.t0 in.t2 0.066
-R7 in.t5 in.t4 0.066
-R8 in.t3 in.t5 0.066
-R9 in.n1 in.t6 0.037
-R10 in.n0 in.t0 0.037
-R11 out out.n2 0.325
-R12 out.n0 out.t13 0.094
-R13 out.n1 out.n0 0.079
-R14 out.t14 out.t15 0.066
-R15 out.t12 out.t14 0.066
-R16 out.t13 out.t12 0.066
-R17 out.t10 out.t11 0.066
-R18 out.t8 out.t10 0.066
-R19 out.t9 out.t8 0.066
-R20 out.t6 out.t7 0.066
-R21 out.t4 out.t6 0.066
-R22 out.t5 out.t4 0.066
-R23 out.t2 out.t3 0.066
-R24 out.t0 out.t2 0.066
-R25 out.t1 out.t0 0.066
-R26 out.n2 out.n1 0.064
-R27 out.n2 out.t1 0.041
-R28 out.n0 out.t9 0.018
-R29 out.n1 out.t5 0.018
-C0 out.t7 gnd 33.56fF
-C1 out.t6 gnd 33.64fF
-C2 out.t4 gnd 33.64fF
-C3 out.t5 gnd 29.89fF
-C4 out.t11 gnd 33.56fF
-C5 out.t10 gnd 33.64fF
-C6 out.t8 gnd 33.64fF
-C7 out.t9 gnd 29.89fF
-C8 out.t15 gnd 33.56fF
-C9 out.t14 gnd 33.64fF
-C10 out.t12 gnd 33.64fF
-C11 out.t13 gnd 89.97fF
-C12 out.n0 gnd 28.18fF $ **FLOATING
-C13 out.n1 gnd 13.26fF $ **FLOATING
-C14 out.t3 gnd 33.56fF
-C15 out.t2 gnd 33.64fF
-C16 out.t0 gnd 33.64fF
-C17 out.t1 gnd 33.03fF
-C18 out.n2 gnd 41.48fF $ **FLOATING
-C19 in.t7 gnd 32.16fF
-C20 in.t8 gnd 32.25fF
-C21 in.t6 gnd 30.87fF
-C22 in.t1 gnd 32.16fF
-C23 in.t2 gnd 32.25fF
-C24 in.t0 gnd 30.87fF
-C25 in.t4 gnd 32.16fF
-C26 in.t5 gnd 32.25fF
-C27 in.t3 gnd 30.02fF
-C28 in.n0 gnd 11.26fF $ **FLOATING
-C29 in.n1 gnd 57.09fF $ **FLOATING
-C30 in gnd 55.98fF
-C31 out gnd 70.58fF
-
+R0 in in.t0 0.216
+R1 gnd gnd.t0 0.383
+R2 gnd.t1 gnd.n0 0.007
+R3 gnd.t0 gnd.n3 0.004
+R4 gnd.n1 gnd.t2 0.004
+R5 gnd.t0 gnd.t1 0.003
+R6 gnd.t0 gnd.n2 0.002
+R7 gnd.t0 gnd.n1 0.001
+R8 out out.t13 0.516
+R9 out.n0 out.t5 0.095
+R10 out.n2 out.n1 0.087
+R11 out.t15 out.n2 0.087
+R12 out.n1 out.n0 0.077
+R13 out.t0 out.t1 0.067
+R14 out.t2 out.t4 0.067
+R15 out.t7 out.t10 0.067
+R16 out.t10 out.t12 0.067
+R17 out.t6 out.t9 0.067
+R18 out.t9 out.t17 0.067
+R19 out.t17 out.t2 0.067
+R20 out.t2 out.t11 0.067
+R21 out.t5 out.t8 0.067
+R22 out.t16 out.t15 0.067
+R23 out.t14 out.t16 0.067
+R24 out.t3 out.t14 0.067
+R25 out.t13 out.t3 0.067
+R26 out.n0 out.t0 0.023
+R27 out.n1 out.t7 0.023
+R28 out.n2 out.t6 0.023
+C0 out in 1.21fF
+C1 out gnd 62.91fF
+C2 out.t11 gnd 30.83fF
+C3 out.t4 gnd 30.83fF
+C4 out.t2 gnd 230.79fF
+C5 out.t17 gnd 30.83fF
+C6 out.t9 gnd 30.83fF
+C7 out.t6 gnd 28.66fF
+C8 out.t12 gnd 30.83fF
+C9 out.t10 gnd 30.83fF
+C10 out.t7 gnd 28.66fF
+C11 out.t1 gnd 30.83fF
+C12 out.t0 gnd 28.66fF
+C13 out.t8 gnd 30.83fF
+C14 out.t5 gnd 35.32fF
+C15 out.n0 gnd 13.61fF $ **FLOATING
+C16 out.n1 gnd 12.30fF $ **FLOATING
+C17 out.n2 gnd 13.77fF $ **FLOATING
+C18 out.t15 gnd 34.82fF
+C19 out.t16 gnd 30.83fF
+C20 out.t14 gnd 30.83fF
+C21 out.t3 gnd 30.83fF
+C22 out.t13 gnd 49.05fF
+C23 in.t0 gnd 403.11fF
+C24 in gnd 40.32fF
 
 "}

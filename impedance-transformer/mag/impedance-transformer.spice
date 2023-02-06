@@ -1,118 +1,165 @@
 * NGSPICE file created from impedance-transformer.ext - technology: sky130A
 
-.subckt sky130_fd_pr__cap_mim_m3_2_4GE4YE c2_n2372_n7179# m4_n2472_n7279# VSUBS
-X0 c2_n2372_n7179# m4_n2472_n7279# sky130_fd_pr__cap_mim_m3_2 l=2.293e+07u w=2.293e+07u
-X1 c2_n2372_n7179# m4_n2472_n7279# sky130_fd_pr__cap_mim_m3_2 l=2.293e+07u w=2.293e+07u
-X2 c2_n2372_n7179# m4_n2472_n7279# sky130_fd_pr__cap_mim_m3_2 l=2.293e+07u w=2.293e+07u
-C0 m4_n2472_n7279# c2_n2372_n7179# 105.86fF
-C1 c2_n2372_n7179# VSUBS 0.26fF
-C2 m4_n2472_n7279# VSUBS 28.10fF
+.subckt sky130_fd_pr__cap_mim_m3_2_MH6WNN c2_n8327_n7360# m4_3069_n7440# c2_n2589_n7360#
++ c2_3149_n7360# m4_n8407_n7440# m4_n2669_n7440# VSUBS
+X0 c2_n2589_n7360# m4_n2669_n7440# sky130_fd_pr__cap_mim_m3_2 l=2.32e+07u w=2.32e+07u
+X1 c2_3149_n7360# m4_3069_n7440# sky130_fd_pr__cap_mim_m3_2 l=2.32e+07u w=2.32e+07u
+X2 c2_n8327_n7360# m4_n8407_n7440# sky130_fd_pr__cap_mim_m3_2 l=2.32e+07u w=2.32e+07u
+X3 c2_n2589_n7360# m4_n2669_n7440# sky130_fd_pr__cap_mim_m3_2 l=2.32e+07u w=2.32e+07u
+X4 c2_3149_n7360# m4_3069_n7440# sky130_fd_pr__cap_mim_m3_2 l=2.32e+07u w=2.32e+07u
+X5 c2_3149_n7360# m4_3069_n7440# sky130_fd_pr__cap_mim_m3_2 l=2.32e+07u w=2.32e+07u
+X6 c2_n2589_n7360# m4_n2669_n7440# sky130_fd_pr__cap_mim_m3_2 l=2.32e+07u w=2.32e+07u
+X7 c2_n8327_n7360# m4_n8407_n7440# sky130_fd_pr__cap_mim_m3_2 l=2.32e+07u w=2.32e+07u
+X8 c2_n8327_n7360# m4_n8407_n7440# sky130_fd_pr__cap_mim_m3_2 l=2.32e+07u w=2.32e+07u
+C0 c2_n2589_n7360# m4_n2669_n7440# 122.97fF
+C1 m4_n8407_n7440# m4_n2669_n7440# 3.48fF
+C2 c2_3149_n7360# m4_n2669_n7440# 3.73fF
+C3 m4_n8407_n7440# c2_n8327_n7360# 122.97fF
+C4 m4_3069_n7440# c2_3149_n7360# 122.97fF
+C5 m4_3069_n7440# m4_n2669_n7440# 3.48fF
+C6 m4_n8407_n7440# c2_n2589_n7360# 3.73fF
+C7 c2_3149_n7360# VSUBS 2.86fF
+C8 c2_n2589_n7360# VSUBS 2.86fF
+C9 c2_n8327_n7360# VSUBS 5.05fF
+C10 m4_3069_n7440# VSUBS 23.81fF
+C11 m4_n2669_n7440# VSUBS 17.01fF
+C12 m4_n8407_n7440# VSUBS 19.11fF
 .ends
 
-.subckt sky130_fd_pr__cap_mim_m3_2_8BWDGQ c2_n2486_n10078# m4_n2586_n10178# VSUBS
-X0 c2_n2486_n10078# m4_n2586_n10178# sky130_fd_pr__cap_mim_m3_2 l=2.407e+07u w=2.407e+07u
-X1 c2_n2486_n10078# m4_n2586_n10178# sky130_fd_pr__cap_mim_m3_2 l=2.407e+07u w=2.407e+07u
-X2 c2_n2486_n10078# m4_n2586_n10178# sky130_fd_pr__cap_mim_m3_2 l=2.407e+07u w=2.407e+07u
-X3 c2_n2486_n10078# m4_n2586_n10178# sky130_fd_pr__cap_mim_m3_2 l=2.407e+07u w=2.407e+07u
-C0 m4_n2586_n10178# c2_n2486_n10078# 154.16fF
-C1 c2_n2486_n10078# VSUBS 0.30fF
-C2 m4_n2586_n10178# VSUBS 40.10fF
+.subckt sky130_fd_pr__cap_mim_m3_2_C96Y74 m4_n7327_n10680# c2_n2229_n10600# m4_n12345_n10680#
++ m4_n2309_n10680# c2_7807_n10600# m4_7727_n10680# c2_n12265_n10600# c2_n7247_n10600#
++ c2_2789_n10600# m4_2709_n10680# VSUBS
+X0 c2_2789_n10600# m4_2709_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X1 c2_2789_n10600# m4_2709_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X2 c2_n2229_n10600# m4_n2309_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X3 c2_n7247_n10600# m4_n7327_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X4 c2_n12265_n10600# m4_n12345_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X5 c2_7807_n10600# m4_7727_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X6 c2_2789_n10600# m4_2709_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X7 c2_7807_n10600# m4_7727_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X8 c2_n7247_n10600# m4_n7327_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X9 c2_n2229_n10600# m4_n2309_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X10 c2_7807_n10600# m4_7727_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X11 c2_n7247_n10600# m4_n7327_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X12 c2_n7247_n10600# m4_n7327_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X13 c2_n2229_n10600# m4_n2309_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X14 c2_7807_n10600# m4_7727_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X15 c2_2789_n10600# m4_2709_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X16 c2_n2229_n10600# m4_n2309_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X17 c2_n12265_n10600# m4_n12345_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X18 c2_n12265_n10600# m4_n12345_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X19 c2_n12265_n10600# m4_n12345_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X20 c2_2789_n10600# m4_2709_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X21 c2_n2229_n10600# m4_n2309_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X22 c2_n12265_n10600# m4_n12345_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X23 c2_n7247_n10600# m4_n7327_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+X24 c2_7807_n10600# m4_7727_n10680# sky130_fd_pr__cap_mim_m3_2 l=1.96e+07u w=1.96e+07u
+C0 c2_7807_n10600# m4_2709_n10680# 5.25fF
+C1 m4_n12345_n10680# c2_n12265_n10600# 149.34fF
+C2 m4_n12345_n10680# m4_n7327_n10680# 4.93fF
+C3 m4_n7327_n10680# c2_n2229_n10600# 5.25fF
+C4 m4_2709_n10680# m4_7727_n10680# 4.93fF
+C5 c2_7807_n10600# m4_7727_n10680# 149.34fF
+C6 m4_n2309_n10680# c2_2789_n10600# 5.25fF
+C7 m4_n2309_n10680# c2_n2229_n10600# 149.34fF
+C8 c2_2789_n10600# m4_2709_n10680# 149.34fF
+C9 m4_n2309_n10680# m4_n7327_n10680# 4.93fF
+C10 m4_n12345_n10680# c2_n7247_n10600# 5.25fF
+C11 m4_n2309_n10680# m4_2709_n10680# 4.93fF
+C12 c2_n7247_n10600# m4_n7327_n10680# 149.34fF
+C13 c2_7807_n10600# VSUBS 3.25fF
+C14 c2_2789_n10600# VSUBS 3.25fF
+C15 c2_n2229_n10600# VSUBS 3.25fF
+C16 c2_n7247_n10600# VSUBS 3.25fF
+C17 c2_n12265_n10600# VSUBS 6.32fF
+C18 m4_7727_n10680# VSUBS 29.78fF
+C19 m4_2709_n10680# VSUBS 20.18fF
+C20 m4_n2309_n10680# VSUBS 20.18fF
+C21 m4_n7327_n10680# VSUBS 20.18fF
+C22 m4_n12345_n10680# VSUBS 23.15fF
 .ends
 
 .subckt impedance-transformer gnd out in
-Xsky130_fd_pr__cap_mim_m3_2_4GE4YE_1 in gnd gnd sky130_fd_pr__cap_mim_m3_2_4GE4YE
-Xsky130_fd_pr__cap_mim_m3_2_4GE4YE_2 in gnd gnd sky130_fd_pr__cap_mim_m3_2_4GE4YE
-Xsky130_fd_pr__cap_mim_m3_2_8BWDGQ_0 out gnd gnd sky130_fd_pr__cap_mim_m3_2_8BWDGQ
-Xsky130_fd_pr__cap_mim_m3_2_8BWDGQ_1 out gnd gnd sky130_fd_pr__cap_mim_m3_2_8BWDGQ
-Xsky130_fd_pr__cap_mim_m3_2_8BWDGQ_2 out gnd gnd sky130_fd_pr__cap_mim_m3_2_8BWDGQ
-Xsky130_fd_pr__cap_mim_m3_2_8BWDGQ_3 out gnd gnd sky130_fd_pr__cap_mim_m3_2_8BWDGQ
-Xsky130_fd_pr__cap_mim_m3_2_4GE4YE_0 in gnd gnd sky130_fd_pr__cap_mim_m3_2_4GE4YE
-X0 in.t4 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X1 in.t8 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X2 in.t3 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X3 out.t2 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X4 out.t14 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X5 out.t5 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X6 in.t1 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X7 out.t15 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X8 out.t3 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X9 out.t4 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X10 in.t0 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+XXC0 in gnd in in gnd gnd gnd sky130_fd_pr__cap_mim_m3_2_MH6WNN
+XXC1 gnd out gnd gnd out gnd out out out gnd gnd sky130_fd_pr__cap_mim_m3_2_C96Y74
+X0 in.t0 gnd.t0 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X1 out.t11 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X2 out.t12 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X3 out.t3 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X4 out.t13 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X5 in.t0 gnd.t1 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X6 out.t14 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X7 in.t0 gnd.t0 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X8 out.t0 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X9 out.t1 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X10 out.t6 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
 X11 out.t9 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X12 in.t7 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X13 out.t8 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X14 out.t6 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X15 in.t6 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X16 in.t5 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X17 out.t7 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X18 out.t10 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X19 out.t13 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X20 out.t1 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X21 out.t11 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X22 out.t0 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X23 out.t12 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-X24 in.t2 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
-R0 in in.n1 0.704
-R1 in.n0 in.t3 0.125
-R2 in.n1 in.n0 0.089
-R3 in.t8 in.t7 0.066
-R4 in.t6 in.t8 0.066
-R5 in.t2 in.t1 0.066
-R6 in.t0 in.t2 0.066
-R7 in.t5 in.t4 0.066
-R8 in.t3 in.t5 0.066
-R9 in.n1 in.t6 0.037
-R10 in.n0 in.t0 0.037
-R11 out out.n2 0.325
-R12 out.n0 out.t13 0.094
-R13 out.n1 out.n0 0.079
-R14 out.t14 out.t15 0.066
-R15 out.t12 out.t14 0.066
-R16 out.t13 out.t12 0.066
-R17 out.t10 out.t11 0.066
-R18 out.t8 out.t10 0.066
-R19 out.t9 out.t8 0.066
-R20 out.t6 out.t7 0.066
-R21 out.t4 out.t6 0.066
-R22 out.t5 out.t4 0.066
-R23 out.t2 out.t3 0.066
-R24 out.t0 out.t2 0.066
-R25 out.t1 out.t0 0.066
-R26 out.n2 out.n1 0.064
-R27 out.n2 out.t1 0.041
-R28 out.n0 out.t9 0.018
-R29 out.n1 out.t5 0.018
-C0 out.t7 gnd 33.56fF
-C1 out.t6 gnd 33.64fF
-C2 out.t4 gnd 33.64fF
-C3 out.t5 gnd 29.89fF
-C4 out.t11 gnd 33.56fF
-C5 out.t10 gnd 33.64fF
-C6 out.t8 gnd 33.64fF
-C7 out.t9 gnd 29.89fF
-C8 out.t15 gnd 33.56fF
-C9 out.t14 gnd 33.64fF
-C10 out.t12 gnd 33.64fF
-C11 out.t13 gnd 89.97fF
-C12 out.n0 gnd 28.18fF $ **FLOATING
-C13 out.n1 gnd 13.26fF $ **FLOATING
-C14 out.t3 gnd 33.56fF
-C15 out.t2 gnd 33.64fF
-C16 out.t0 gnd 33.64fF
-C17 out.t1 gnd 33.03fF
-C18 out.n2 gnd 41.48fF $ **FLOATING
-C19 in.t7 gnd 32.16fF
-C20 in.t8 gnd 32.25fF
-C21 in.t6 gnd 30.87fF
-C22 in.t1 gnd 32.16fF
-C23 in.t2 gnd 32.25fF
-C24 in.t0 gnd 30.87fF
-C25 in.t4 gnd 32.16fF
-C26 in.t5 gnd 32.25fF
-C27 in.t3 gnd 30.02fF
-C28 in.n0 gnd 11.26fF $ **FLOATING
-C29 in.n1 gnd 57.09fF $ **FLOATING
-C30 in gnd 55.98fF
-C31 out gnd 70.58fF
+X12 in.t0 gnd.t0 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X13 out.t5 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X14 out.t8 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X15 out.t7 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X16 out.t10 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X17 in.t0 gnd.t0 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X18 in.t0 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X19 out.t15 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X20 out.t16 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X21 in.t0 gnd.t0 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X22 out.t4 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X23 out.t2 gnd.t2 sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+X24 out.t17 gnd sky130_fd_pr__cap_mim_m3_2 l=0u w=0u
+R0 in in.t0 0.216
+R1 gnd gnd.t0 0.383
+R2 gnd.t1 gnd.n0 0.007
+R3 gnd.t0 gnd.n3 0.004
+R4 gnd.n1 gnd.t2 0.004
+R5 gnd.t0 gnd.t1 0.003
+R6 gnd.t0 gnd.n2 0.002
+R7 gnd.t0 gnd.n1 0.001
+R8 out out.t13 0.516
+R9 out.n0 out.t5 0.095
+R10 out.n2 out.n1 0.087
+R11 out.t15 out.n2 0.087
+R12 out.n1 out.n0 0.077
+R13 out.t0 out.t1 0.067
+R14 out.t2 out.t4 0.067
+R15 out.t7 out.t10 0.067
+R16 out.t10 out.t12 0.067
+R17 out.t6 out.t9 0.067
+R18 out.t9 out.t17 0.067
+R19 out.t17 out.t2 0.067
+R20 out.t2 out.t11 0.067
+R21 out.t5 out.t8 0.067
+R22 out.t16 out.t15 0.067
+R23 out.t14 out.t16 0.067
+R24 out.t3 out.t14 0.067
+R25 out.t13 out.t3 0.067
+R26 out.n0 out.t0 0.023
+R27 out.n1 out.t7 0.023
+R28 out.n2 out.t6 0.023
+C0 out in 1.21fF
+C1 out gnd 62.91fF
+C2 out.t11 gnd 30.83fF
+C3 out.t4 gnd 30.83fF
+C4 out.t2 gnd 230.79fF
+C5 out.t17 gnd 30.83fF
+C6 out.t9 gnd 30.83fF
+C7 out.t6 gnd 28.66fF
+C8 out.t12 gnd 30.83fF
+C9 out.t10 gnd 30.83fF
+C10 out.t7 gnd 28.66fF
+C11 out.t1 gnd 30.83fF
+C12 out.t0 gnd 28.66fF
+C13 out.t8 gnd 30.83fF
+C14 out.t5 gnd 35.32fF
+C15 out.n0 gnd 13.61fF $ **FLOATING
+C16 out.n1 gnd 12.30fF $ **FLOATING
+C17 out.n2 gnd 13.77fF $ **FLOATING
+C18 out.t15 gnd 34.82fF
+C19 out.t16 gnd 30.83fF
+C20 out.t14 gnd 30.83fF
+C21 out.t3 gnd 30.83fF
+C22 out.t13 gnd 49.05fF
+C23 in.t0 gnd 403.11fF
+C24 in gnd 40.32fF
 .ends
 

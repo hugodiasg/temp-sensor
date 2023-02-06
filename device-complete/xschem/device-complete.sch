@@ -90,11 +90,11 @@ destroy all
 save all
 set color0=white
 set color1=black
-set temp=60
+set temp=10
 set hcopypscolor = 1
 set wr_singlescale
 option numdgt=7
-tran 40p 5u
+tran 40p 75u
 let pot=-i(vdd)*vd
 save all
 
@@ -111,13 +111,14 @@ plot pot pot_avg pot_rms
 *hardcopy ~/56c2.ps out_ask
 *hardcopy ~/pot56c.ps pot_rms
 
-wrdata ~/temp60.txt vts out_sigma out_ask 
+*wrdata ~/temp60.txt vts out_sigma out_ask 
 
+linearize out_ask
 fft out_ask
 *hardcopy ~/fft56.ps mag(out_ask) xlimit 1G 4G ylimit 0 55u
 plot mag(out_ask) xlimit 1G 4G ylimit 0 55u
 
-wrdata ~/fft65.txt mag(out_ask)
+*wrdata ~/fft65.txt mag(out_ask)
 
 .endc
 

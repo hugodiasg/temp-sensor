@@ -1,89 +1,96 @@
 scale 1000 1 500000
-rnode "out.t7" 0 33556.9 416707 552297 0
-rnode "out.t6" 0 33642.7 416707 547183 0
-rnode "out.t4" 0 33642.7 416707 542069 0
-rnode "out.t5" 0 29893.2 416707 536955 0
-rnode "out.t11" 0 33556.9 422707 552297 0
-rnode "out.t10" 0 33642.7 422707 547183 0
-rnode "out.t8" 0 33642.7 422707 542069 0
-rnode "out.t9" 0 29893.2 422707 536955 0
-rnode "out.t15" 0 33556.9 428507 552297 0
-rnode "out.t14" 0 33642.7 428507 547183 0
-rnode "out.t12" 0 33642.7 428507 542069 0
-rnode "out.t13" 0 89970.9 428507 536955 0
-rnode "out.n0" 0 28183.6 422900 534564 0
-rnode "out.n1" 0 13262.3 417100 534564 0
-rnode "out.t3" 0 33556.9 411107 552297 0
-rnode "out.t2" 0 33642.7 411107 547183 0
-rnode "out.t0" 0 33642.7 411107 542069 0
-rnode "out.t1" 0 33034.6 411107 536955 0
-rnode "out.n2" 0 41482.9 412800 532612 0
-rnode "out" 0 9070.19 404800 529000 0
-resist "out.n1" "out.t5" 0.018
-resist "out.n0" "out.t9" 0.018
-resist "out.n2" "out.t1" 0.041
-resist "out.n2" "out.n1" 0.064
-resist "out.t1" "out.t0" 0.066
-resist "out.t0" "out.t2" 0.066
-resist "out.t2" "out.t3" 0.066
-resist "out.t5" "out.t4" 0.066
-resist "out.t4" "out.t6" 0.066
-resist "out.t6" "out.t7" 0.066
-resist "out.t9" "out.t8" 0.066
-resist "out.t8" "out.t10" 0.066
-resist "out.t10" "out.t11" 0.066
-resist "out.t13" "out.t12" 0.066
-resist "out.t12" "out.t14" 0.066
-resist "out.t14" "out.t15" 0.066
-resist "out.n1" "out.n0" 0.079
-resist "out.n0" "out.t13" 0.094
-resist "out" "out.n2" 0.325
-rnode "gnd" 0 0 404800 556000 0
-rnode "in.t7" 0 32159.7 416593 561835 0
-rnode "in.t8" 0 32250.4 416593 566721 0
-rnode "in.t6" 0 30872.5 416593 571607 0
-rnode "in.t1" 0 32159.7 422393 561835 0
-rnode "in.t2" 0 32250.4 422393 566721 0
-rnode "in.t0" 0 30872.5 422393 571607 0
-rnode "in.t4" 0 32159.7 428193 561835 0
-rnode "in.t5" 0 32250.4 428193 566721 0
-rnode "in.t3" 0 30017.4 428193 571607 0
-rnode "in.n0" 0 11256.3 422425 574975 0
-rnode "in.n1" 0 57086.4 416800 574975 0
-rnode "in" 0 10114.7 404800 575000 0
-resist "in.n0" "in.t0" 0.037
-resist "in.n1" "in.t6" 0.037
-resist "in.t3" "in.t5" 0.066
-resist "in.t5" "in.t4" 0.066
-resist "in.t0" "in.t2" 0.066
-resist "in.t2" "in.t1" 0.066
-resist "in.t6" "in.t8" 0.066
-resist "in.t8" "in.t7" 0.066
-resist "in.n1" "in.n0" 0.089
-resist "in.n0" "in.t3" 0.125
-resist "in" "in.n1" 0.704
-device csubckt sky130_fd_pr__cap_mim_m3_2 414300 564428 414301 564429  "None" "in.t8" 36368 0 "gnd" -13187 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 414300 559542 414301 559543  "None" "in.t7" 36368 0 "gnd" -13187 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 414300 569314 414301 569315  "None" "in.t6" 36368 0 "gnd" -13187 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 426100 549890 426101 549891  "None" "out.t15" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 426100 544776 426101 544777  "None" "out.t14" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 426100 534548 426101 534549  "None" "out.t13" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 426100 539662 426101 539663  "None" "out.t12" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 420300 549890 420301 549891  "None" "out.t11" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 420300 544776 420301 544777  "None" "out.t10" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 420300 534548 420301 534549  "None" "out.t9" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 420300 539662 420301 539663  "None" "out.t8" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 414300 549890 414301 549891  "None" "out.t7" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 414300 544776 414301 544777  "None" "out.t6" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 414300 534548 414301 534549  "None" "out.t5" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 414300 539662 414301 539663  "None" "out.t4" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 408700 549890 408701 549891  "None" "out.t3" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 408700 544776 408701 544777  "None" "out.t2" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 408700 534548 408701 534549  "None" "out.t1" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 408700 539662 408701 539663  "None" "out.t0" 38192 0 "gnd" -13849 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 425900 564428 425901 564429  "None" "in.t5" 36368 0 "gnd" -13187 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 425900 559542 425901 559543  "None" "in.t4" 36368 0 "gnd" -13187 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 425900 569314 425901 569315  "None" "in.t3" 36368 0 "gnd" -13187 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 420100 564428 420101 564429  "None" "in.t2" 36368 0 "gnd" -13187 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 420100 559542 420101 559543  "None" "in.t1" 36368 0 "gnd" -13187 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 420100 569314 420101 569315  "None" "in.t0" 36368 0 "gnd" -13187 0
+rnode "out.t11" 0 30833.6 2880 15834 0
+rnode "out.t4" 0 30833.6 -2138 15834 0
+rnode "out.t2" 0 230789 2880 11514 0
+rnode "out.t17" 0 30833.6 -12174 15834 0
+rnode "out.t9" 0 30833.6 -12174 20154 0
+rnode "out.t6" 0 28659.3 -12174 24474 0
+rnode "out.t12" 0 30833.6 -7156 15834 0
+rnode "out.t10" 0 30833.6 -7156 20154 0
+rnode "out.t7" 0 28659.3 -7156 24474 0
+rnode "out.t1" 0 30833.6 -2138 20154 0
+rnode "out.t0" 0 28659.3 -2138 24474 0
+rnode "out.t8" 0 30833.6 2880 20154 0
+rnode "out.t5" 0 35323.2 2880 24474 0
+rnode "out.n0" 0 13614.1 -2250 27020 0
+rnode "out.n1" 0 12304.5 -7032 27020 0
+rnode "out.n2" 0 13770.5 -12402 27020 0
+rnode "out.t15" 0 34815.4 -17192 24474 0
+rnode "out.t16" 0 30833.6 -17192 20154 0
+rnode "out.t14" 0 30833.6 -17192 15834 0
+rnode "out.t3" 0 30833.6 -17192 11514 0
+rnode "out.t13" 0 49051.5 -17192 7194 0
+rnode "out" 0 7884.68 -28700 5500 0
+resist "out.n2" "out.t6" 0.023
+resist "out.n1" "out.t7" 0.023
+resist "out.n0" "out.t0" 0.023
+resist "out.t13" "out.t3" 0.067
+resist "out.t3" "out.t14" 0.067
+resist "out.t14" "out.t16" 0.067
+resist "out.t16" "out.t15" 0.067
+resist "out.t5" "out.t8" 0.067
+resist "out.t2" "out.t11" 0.067
+resist "out.t17" "out.t2" 0.067
+resist "out.t9" "out.t17" 0.067
+resist "out.t6" "out.t9" 0.067
+resist "out.t10" "out.t12" 0.067
+resist "out.t7" "out.t10" 0.067
+resist "out.t2" "out.t4" 0.067
+resist "out.t0" "out.t1" 0.067
+resist "out.n1" "out.n0" 0.077
+resist "out.t15" "out.n2" 0.087
+resist "out.n2" "out.n1" 0.087
+resist "out.n0" "out.t5" 0.095
+resist "out" "out.t13" 0.515666
+rnode "gnd.t0" 0 0 -5467 -2540 0
+rnode "gnd.n0" 0 0 -6274 -3500 0
+rnode "gnd.t1" 0 -0 -10305 -4320 0
+rnode "gnd.t2" 0 0 -10305 8640 0
+rnode "gnd.n1" 0 0 -10305 8640 0
+rnode "gnd.n2" 0 0 -6274 -8540 0
+rnode "gnd.n3" 0 0 2969 8640 0
+rnode "gnd" 0 0 5800 4100 0
+resist "gnd.t0" "gnd.n1" 0.000988581
+resist "gnd.t0" "gnd.n2" 0.001875
+resist "gnd.t0" "gnd.t1" 0.003
+resist "gnd.n1" "gnd.t2" 0.00412024
+resist "gnd.t0" "gnd.n3" 0.00423692
+resist "gnd.t1" "gnd.n0" 0.007
+resist "gnd" "gnd.t0" 0.383006
+rnode "in.t0" 0 403105 2402 -8540 0
+rnode "in" 0 6804.75 5400 -13400 0
+resist "in" "in.t0" 0.216145
+device csubckt sky130_fd_pr__cap_mim_m3_2 -14134 10600 -14133 10601  "None" "out.t2" 31040 0 "gnd.t0" -23280 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -14134 13874 -14133 13875  "None" "out.t17" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -19152 18194 -19151 18195  "None" "out.t16" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -14134 10600 -14133 10601  "None" "out.t2" 31040 0 "gnd.t0" -23280 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -14134 10600 -14133 10601  "None" "out.t2" 31040 0 "gnd.t0" -23280 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -19152 22514 -19151 22515  "None" "out.t15" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -19152 13874 -19151 13875  "None" "out.t14" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -19152 5234 -19151 5235  "None" "out.t13" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -9116 13874 -9115 13875  "None" "out.t12" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -14134 10600 -14133 10601  "None" "out.t2" 31040 0 "gnd.t0" -23280 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 920 13874 921 13875  "None" "out.t11" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -9116 18194 -9115 18195  "None" "out.t10" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -14134 18194 -14133 18195  "None" "out.t9" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -14134 10600 -14133 10601  "None" "out.t2" 31040 0 "gnd" -23280 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 920 18194 921 18195  "None" "out.t8" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -9116 22514 -9115 22515  "None" "out.t7" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -14134 22514 -14133 22515  "None" "out.t6" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 920 22514 921 22515  "None" "out.t5" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -4098 13874 -4097 13875  "None" "out.t4" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -14134 10600 -14133 10601  "None" "out.t2" 31040 0 "gnd.t0" -23280 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -19152 9554 -19151 9555  "None" "out.t3" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -14134 10600 -14133 10601  "None" "out.t2" 31040 0 "gnd" -23280 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -14134 10600 -14133 10601  "None" "out.t2" 31040 0 "gnd.t2" -23280 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -4098 18194 -4097 18195  "None" "out.t1" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -4098 22514 -4097 22515  "None" "out.t0" 31040 0 "gnd" -11640 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -12265 -1960 -12264 -1959  "None" "in.t0" 36800 0 "gnd.t0" -13800 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -12265 -6280 -12264 -6279  "None" "in.t0" 36800 0 "gnd.t1" -13800 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -8327 -2320 -8326 -2319  "None" "in.t0" 36800 0 "gnd.t0" -13800 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -2589 -2320 -2588 -2319  "None" "in.t0" 36800 0 "gnd.t0" -13800 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -2229 -2720 -2228 -2719  "None" "in.t0" 36800 0 "gnd.t0" -13800 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -7247 -2720 -7246 -2719  "None" "in.t0" 36800 0 "gnd.t0" -13800 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -8327 3860 -8326 3861  "None" "in.t0" 36800 0 "gnd" -69000 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -8327 3860 -8326 3861  "None" "in.t0" 36800 0 "gnd" -69000 0
+device csubckt sky130_fd_pr__cap_mim_m3_2 -8327 3860 -8326 3861  "None" "in.t0" 36800 0 "gnd" -69000 0
