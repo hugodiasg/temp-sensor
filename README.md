@@ -115,15 +115,17 @@ Area | 0.00073 mm²
 
 #### Simulation:
 
-<img src="https://user-images.githubusercontent.com/80465879/205154798-69f23032-c651-4ddd-9eb8-30d5caba453e.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/217962283-2729af84-4fd9-44ae-8b4a-ecf5cccff6d3.png" width="500vh" >
 
-<img src="https://user-images.githubusercontent.com/80465879/205155538-363e0c55-bb44-48a2-9722-016a08bad108.png" width="500vh" >
+
+<img src="https://user-images.githubusercontent.com/80465879/217962512-e0330362-9dbc-4541-b9f5-ed5506b24460.png" width="500vh" >
 
 <img src="https://user-images.githubusercontent.com/80465879/205155591-5f5a82fa-d9af-4f3a-acf2-0d952ad5a0fb.png" width="500vh" >
 
-<img src="https://user-images.githubusercontent.com/80465879/205156191-1be1ca16-5a43-40da-8b0d-cf72f3767276.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/217962572-98980195-f384-40bf-815e-2b5da13122aa.png" width="500vh" >
 
-<img src="https://user-images.githubusercontent.com/80465879/205156545-fd59b20d-3fb6-47a0-be3f-f41343cde332.png" width="500vh" >
+<img src="https://user-images.githubusercontent.com/80465879/217962780-8cb11470-3abb-4f55-989b-91dc12a78aeb.png" width="500vh" >
+
 
 ### Sigma-Delta Modulator
 
