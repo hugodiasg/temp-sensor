@@ -39,7 +39,7 @@ Area | 0.000941 mm²
 
 <img src="https://user-images.githubusercontent.com/80465879/177610777-130655cd-fb5f-4945-b5fe-72e04fa90989.png" width="500vh" >
 
-#### Simulation: 
+#### Simulation(s): 
 
 <img src="https://user-images.githubusercontent.com/80465879/219472279-3cb43346-a334-4b93-a040-08a0064c2e12.png" width="500vh" >
 
@@ -74,7 +74,7 @@ Area | 0.0031 mm²
 
 <img src="https://user-images.githubusercontent.com/80465879/205185786-f55c0835-7123-4753-8e03-b5af304f53de.png" width="500vh" >
 
-#### Simulation:
+#### Simulation(s):
 
 <img src="https://user-images.githubusercontent.com/80465879/205182919-d2a425e6-51e8-47ff-8a1a-046aec8586f3.png" width="500vh" >
 
@@ -113,7 +113,7 @@ Area | 0.00073 mm²
 
 <img src="https://user-images.githubusercontent.com/80465879/205154928-1d03320c-50a5-4ea0-9e84-34d23aa9ac9b.png" width="500vh" >
 
-#### Simulation:
+#### Simulation(s):
 
 <img src="https://user-images.githubusercontent.com/80465879/217962283-2729af84-4fd9-44ae-8b4a-ecf5cccff6d3.png" width="500vh" >
 
@@ -148,7 +148,7 @@ Area | 0.002 mm²
 
 <img src="https://user-images.githubusercontent.com/80465879/204171840-ff37650d-9fbe-49a3-af5d-3e6928b87c09.png" width="500vh" >
 
-#### Simulation:
+#### Simulation(s):
 
 T = 15 °C
 
@@ -184,7 +184,7 @@ Area | 0.021 mm²
 
 <img src="https://user-images.githubusercontent.com/80465879/216435979-e2d1bc25-c25b-464a-8a7c-c6d37a40cf85.png" width="500vh" >
 
-#### Simulation:
+#### Simulation(s):
 
 <img src="https://user-images.githubusercontent.com/80465879/216436135-eb10c0a7-af95-4e4f-8539-d4d23125f2d2.png" width="500vh" >
 
@@ -211,7 +211,7 @@ Area | 0.037 mm²
 
 <img src="https://user-images.githubusercontent.com/80465879/216872067-ab80baf8-a8ac-4bde-83bd-2ab8b27d1a8f.png" width="500vh" >
 
-#### Simulation:
+#### Simulation(s):
 
 
 <img src="https://user-images.githubusercontent.com/80465879/216872320-016d08df-4d82-4911-b520-56ec6a09c2d5.png" width="500vh" >
