@@ -39,7 +39,7 @@ set color0=white
 set color1=black
 destroy all
 save all
-tran 2u 2m 
+tran 10u 2m 
 run
 plot out in1
 .endc"}
@@ -63,4 +63,4 @@ C {devices/lab_pin.sym} 1060 -570 0 1 {name=l19 sig_type=std_logic lab=vs}
 C {devices/isource.sym} 805 -495 0 0 {name=ibias value=20u}
 C {devices/lab_pin.sym} 805 -455 0 0 {name=l17 sig_type=std_logic lab=ib}
 C {devices/lab_pin.sym} 805 -535 0 0 {name=l3 sig_type=std_logic lab=vd}
-C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym} 1100 -650 0 0 {name=X1}
+C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym} 1100 -650 0 0 {name=X1}

@@ -19,7 +19,7 @@ destroy all
 save all
 set color0=white
 set color1=black
-dc temp 0 60 1
+dc temp -50 60 1
 run
 let idd=-i(vdd)
 let tc=deriv(out)
@@ -37,6 +37,8 @@ only_toplevel=true
 format="tcleval( @value )"
 value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+.include "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr/latest/models/corners/tt/nonfet.spice"
+.include "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr/latest/cells/npn_05v5/sky130_fd_pr__npn_05v5__wafer.corner.spice"
 "
 spice_ignore=false}
 C {/home/hugodg/projects-sky130/temp-sensor/bandgap-ref/xschem/bandgap-ref.sym} 290 -530 0 0 {name=x1}

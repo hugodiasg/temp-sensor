@@ -1,0 +1,151 @@
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/device-complete/xschem/device-complete.sch
+.subckt device-complete vd clk out vpwr ib ib2 vtd gnd
+*.PININFO vd:B clk:I out:O vpwr:B ib:B ib2:B vtd:O gnd:B
+x1 vpwr clk out_sigma out_buf1 vpwr gnd vd sigma-delta
+XR1 gnd in2 gnd sky130_fd_pr__res_xhigh_po_0p35 L=20 mult=1 m=1
+XR2 in2 vd gnd sky130_fd_pr__res_xhigh_po_0p35 L=20 mult=1 m=1
+x3 vd vts vtd gnd sensor
+X2 vd ib out_ota in2 out_buf1 gnd ota
+x6 vd out out_sigma gnd ask-modulator
+X4 vd vts out_buf1 ib2 gnd buffer
+X5 vd out_ota out_buf1 ib2 gnd buffer
+.ends
+
+* expanding   symbol:
+*+  /home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym # of pins=7
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sch
+.subckt sigma-delta vpwr clk out in reset_b_dff gnd vd
+*.PININFO in:I gnd:B clk:B out:B reset_b_dff:B vpwr:B vd:B
+**** begin user architecture code
+
+
+
+
+
+**** end user architecture code
+XC1 in_comp gnd sky130_fd_pr__cap_mim_m3_1 W=27.196 L=27.196 MF=1 m=1
+XR2 Q in_comp gnd sky130_fd_pr__res_xhigh_po_0p35 L=36 mult=1 m=1
+XR1 in_comp in gnd sky130_fd_pr__res_xhigh_po_0p35 L=36 mult=1 m=1
+XN1 out_comp in_comp gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XP1 out_comp in_comp vd vd sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=1 m=1
+x1 clk out_comp reset_b_dff GND GND VPWR VPWR Q out sky130_fd_sc_hd__dfrbp_1
+**** begin user architecture code
+
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/sensor/xschem/sensor.sym # of pins=4
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/sensor/xschem/sensor.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/sensor/xschem/sensor.sch
+.subckt sensor vd vts vtd gnd
+*.PININFO vd:B vts:O vtd:O gnd:B
+XP1 a a vd vd sky130_fd_pr__pfet_01v8 L=1 W=4 nf=2 m=1
+XP2 c a d d sky130_fd_pr__pfet_01v8 L=1 W=8 nf=4 m=1
+XP3 d vtd vd vd sky130_fd_pr__pfet_01v8 L=1 W=2 nf=1 m=1
+XP4 vts vtd vd vd sky130_fd_pr__pfet_01v8 L=5 W=2 nf=1 m=1
+XP5 b vtd c c sky130_fd_pr__pfet_01v8 L=1 W=8 nf=4 m=1
+XP6 vtd vtd vts vts sky130_fd_pr__pfet_01v8 L=1 W=16 nf=8 m=1
+XN1 a b gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=8
+XN2 b b gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=8
+XN3 vtd b gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=8
+**** begin user architecture code
+
+
+
+
+
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sym # of pins=6
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sch
+.subckt ota vd ib out in2 in1 vs
+*.PININFO vd:B vs:B ib:B in1:I in2:I out:O
+XCC out d sky130_fd_pr__cap_mim_m3_1 W=21 L=21 MF=1 m=1
+XM5 ib ib vd vd sky130_fd_pr__pfet_01v8 L=1 W=6 nf=1 m=1
+XM6 b ib vd vd sky130_fd_pr__pfet_01v8 L=1 W=6 nf=1 m=1
+XM8 out ib vd vd sky130_fd_pr__pfet_01v8 L=1 W=30 nf=4 m=1
+XM1 c in1 b b sky130_fd_pr__pfet_01v8 L=1 W=3 nf=1 m=1
+XM2 d in2 b b sky130_fd_pr__pfet_01v8 L=1 W=3 nf=1 m=1
+XM3 c c vs vs sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM4 d c vs vs sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM7 out d vs vs sky130_fd_pr__nfet_01v8 L=1 W=9 nf=2 m=1
+**** begin user architecture code
+
+
+
+
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:
+*+  /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sym # of pins=4
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sch
+.subckt ask-modulator vd out in gnd
+*.PININFO gnd:B in:I out:O vd:B
+XC0 vd out sky130_fd_pr__cap_mim_m3_2 W=24.4 L=24.4 MF=3 m=3
+XR1 out vd gnd sky130_fd_pr__res_xhigh_po_0p35 L=5 mult=1 m=1
+x1 vd out l0
+**** begin user architecture code
+
+
+
+
+
+**** end user architecture code
+XM1 out in gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym # of pins=5
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sch
+.subckt buffer vd in out ib gnd
+*.PININFO vd:B ib:B out:B in:B gnd:B
+XM3 net2 net2 vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
+XM1 net2 out net4 gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
+XM2 net3 in net4 gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
+XM4 net3 net3 vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
+XM5 net4 ib gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM6 out net3 vd vd sky130_fd_pr__pfet_01v8 L=1 W=10 nf=10 m=1
+XM7 out net1 gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
+XM8 net1 net2 vd vd sky130_fd_pr__pfet_01v8 L=1 W=10 nf=10 m=1
+XM9 net1 net1 gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
+XM10 ib ib gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+**** begin user architecture code
+
+
+
+
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/l0.sym # of
+*+ pins=2
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/l0.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/l0.sch
+.subckt l0 p1 p2
+*.PININFO p2:B p1:B
+L0 p1 net3 993p m=1
+Cs1 p1 net1 58.53f m=1
+Cs2 p2 net2 52.93f m=1
+Rs1 net1 GND 24.1 m=1
+Rs2 net2 GND 22.94 m=1
+R1 p2 net3 3.443 m=1
+.ends
+
+.GLOBAL GND
+.end

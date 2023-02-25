@@ -57,10 +57,10 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 spice_ignore=false}
 C {devices/gnd.sym} -65 -205 0 0 {name=l2 lab=GND}
 C {devices/lab_pin.sym} -65 -285 0 0 {name=l10 sig_type=std_logic lab=in1}
-C {devices/sqwsource.sym} -65 -245 0 0 {name=V1 vhi=1.8 freq=0.1k}
+C {devices/sqwsource.sym} -65 -245 0 0 {name=V1 vhi=1.8 freq=0.05k}
 C {devices/lab_pin.sym} 335 -240 0 0 {name=l5 sig_type=std_logic lab=in1}
 C {devices/lab_pin.sym} 400 -145 2 0 {name=l12 sig_type=std_logic lab=ib}
 C {devices/lab_pin.sym} 520 -220 2 0 {name=l15 sig_type=std_logic lab=out}
 C {devices/lab_pin.sym} 390 -300 0 0 {name=l18 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 380 -140 0 1 {name=l19 sig_type=std_logic lab=vs}
-C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym} 420 -220 0 0 {name=X1}
+C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym} 420 -220 0 0 {name=X1}

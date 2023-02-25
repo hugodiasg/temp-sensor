@@ -2,17 +2,9 @@
 **.subckt ask-modulator_tb-ac
 Vdd vd GND DC 1.8 AC 0
 .save i(vdd)
-Vin net1 GND DC 1.8 AC 1
-.save i(vin)
-xask0 vd ns12 ns11 GND ask-modulator
-Vin1 net2 GND DC 0 AC 1
-.save i(vin1)
-xask1 vd ns22 ns21 GND ask-modulator
-R1 ns11 net1 50 m=1
-R3 ns12 GND 50 m=1
-R4 ns22 net2 50 m=1
-Vin2 ns21 GND DC 1.8
-.save i(vin2)
+vtest out GND DC 0 AC 1
+.save i(vtest)
+xask1 vd out GND GND ask-modulator
 **** begin user architecture code
 
 
@@ -26,36 +18,11 @@ run
 set color0=white
 set color1=black
 
-let z0=50
+let i_out=-i(vtest)
+let z_out=out/i_out
 
-* Find two S parameters from test circuit
-let s11 = v(ns11)
-let s12 = v(ns12)
-let s21 = v(ns21)
-let s22 = v(ns22)
-
-* Extract Y parameters
-*let StoYDelS = ((1+s11)*(1+s22)-s12*s21)*z0
-*let y11 = ((1+s22)*(1-s11)+s12*s21/StoYDelS
-*let y12=-2*s12/StoYDelS
-*let y21=-2*s21/StoYDelS
-*let y22 = ((1+s11)*(1-s22)+s12+s21)/StoYDelS
-
-* Extract Z parameters
-let StoZDelS = ((1-s11)*(1-s22)-s12*s21)/z0
-let z11 = ((1+s11)*(1-s22)+s12*s21)/StoZDelS
-let z12 = 2*s12/StoZDelS
-let z21 = 2*s21/StoZDelS
-let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
-
-*plot z11
-*plot z12
-*plot z21
-*plot z22
-let z_out= z22-(z12*z21/(z11+z0))
-let z_in=z11-(z12*z21)/(z22+z0)
-plot z_out z_in
-plot ph(z_out) ph(z_in)
+plot mag(z_out)
+plot phase(z_out)
 .endc
 
  .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt

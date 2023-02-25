@@ -82,4 +82,4 @@ value=4p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 1230 -610 0 0 {name=l16 lab=GND}
-C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym} 1120 -670 0 0 {name=X1}
+C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym} 1120 -670 0 0 {name=X1}

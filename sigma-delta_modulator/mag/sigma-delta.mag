@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1669561651
+timestamp 1675537428
 << nwell >>
 rect -3920 2460 -3610 2720
 << psubdiff >>
@@ -294,8 +294,8 @@ use sky130_fd_pr__res_xhigh_po_0p35_ARMGAU  sky130_fd_pr__res_xhigh_po_0p35_ARMG
 timestamp 1669420244
 transform 1 0 -3144 0 1 5188
 box -616 -1198 616 1198
-use sky130_fd_sc_hd__dfrbp_1  x1 ~/sky130_workspace-centos7/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
-timestamp 1665323087
+use sky130_fd_sc_hd__dfrbp_1  x1 ~/sky130_workspace/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1675347716
 transform 1 0 -3862 0 1 1948
 box -38 -48 2154 592
 << labels >>

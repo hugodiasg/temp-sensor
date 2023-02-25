@@ -31,7 +31,7 @@ C {devices/code_shown.sym} 400 -635 0 0 {name=Simulation only_toplevel=false val
 .control
 destroy all
 save all
-tran 0.005n 100n
+tran 40p 10u
 run
 
 set color0=white

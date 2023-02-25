@@ -1,0 +1,444 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__cap_mim_m3_1 and Circuit 2 cell sky130_fd_pr__cap_mim_m3_1 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_xhigh_po_0p35 and Circuit 2 cell sky130_fd_pr__res_xhigh_po_0p35 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__res_xhigh_po_0p35 and sky130_fd_pr__res_xhigh_po_0p35 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__cap_mim_m3_2 and Circuit 2 cell sky130_fd_pr__cap_mim_m3_2 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__cap_mim_m3_2 and sky130_fd_pr__cap_mim_m3_2 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8_hvt and Circuit 2 cell sky130_fd_pr__pfet_01v8_hvt are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8_hvt and sky130_fd_pr__pfet_01v8_hvt are equivalent.
+
+Subcircuit summary:
+Circuit 1: sky130_fd_sc_hd__dfrbp_1        |Circuit 2: sky130_fd_sc_hd__dfrbp_1        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8_hvt (16)           |sky130_fd_pr__pfet_01v8_hvt (16)           
+sky130_fd_pr__nfet_01v8 (16)               |sky130_fd_pr__nfet_01v8 (16)               
+Number of devices: 32                      |Number of devices: 32                      
+Number of nets: 23                         |Number of nets: 23                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__dfrbp_1        |Circuit 2: sky130_fd_sc_hd__dfrbp_1        
+-------------------------------------------|-------------------------------------------
+VGND                                       |VGND                                       
+RESET_B                                    |RESET_B                                    
+VPB                                        |VPB                                        
+VNB                                        |VNB                                        
+VPWR                                       |VPWR                                       
+Q_N                                        |Q_N                                        
+D                                          |D                                          
+Q                                          |Q                                          
+CLK                                        |CLK                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__dfrbp_1 and sky130_fd_sc_hd__dfrbp_1 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8CLM97 in circuit sensor (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8CLK97 in circuit sensor (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_82U688 in circuit sensor (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_SXQYJB in circuit sensor (0)(3 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8CLZW6 in circuit sensor (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_3P9HCE in circuit sensor (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_37ZGCE in circuit sensor (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_G8PMZT in circuit sensor (0)(1 instance)
+
+Class sensor (0):  Merged 46 parallel devices.
+Subcircuit summary:
+Circuit 1: sensor                          |Circuit 2: sensor                          
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (25->7)            |sky130_fd_pr__pfet_01v8 (6) **Mismatch**   
+sky130_fd_pr__nfet_01v8 (32->4)            |sky130_fd_pr__nfet_01v8 (24->3) **Mismatch 
+Number of devices: 11 **Mismatch**         |Number of devices: 9 **Mismatch**          
+Number of nets: 15 **Mismatch**            |Number of nets: 8 **Mismatch**             
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: sensor                          |Circuit 2: sensor                          
+
+---------------------------------------------------------------------------------------
+Net: gnd                                   |Net: gnd                                   
+  sky130_fd_pr__nfet_01v8/(1|3) = 3        |  sky130_fd_pr__nfet_01v8/(1|3) = 3        
+  sky130_fd_pr__nfet_01v8/4 = 4            |  sky130_fd_pr__nfet_01v8/4 = 3            
+                                           |                                           
+Net: a_11196_4110#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/2 = 1            |                                           
+                                           |                                           
+Net: a_3396_4022#                          |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/2 = 1            |                                           
+                                           |                                           
+Net: w_3200_3900#                          |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/4 = 1            |                                           
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: sensor                          |Circuit 2: sensor                          
+
+---------------------------------------------------------------------------------------
+Instance: sky130_fd_pr__pfet_01v8:1        |(no matching instance)                     
+  (1,3) = (1,1)                            |                                           
+  2 = 1                                    |                                           
+  4 = 1                                    |                                           
+                                           |                                           
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:0        |(no matching instance)                     
+  (1,3) = (1,1)                            |                                           
+  2 = 1                                    |                                           
+  4 = 7                                    |                                           
+                                           |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+  Flattening non-matched subcircuits sensor sensor
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_2NYK3R in circuit ota (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_G8TFUZ in circuit ota (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_G8PDUZ in circuit ota (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_SXTBPF in circuit ota (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_G8TPYT in circuit ota (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_XABGW3 in circuit ota (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8ALGB7 in circuit ota (0)(1 instance)
+
+Class ota (0):  Merged 7 parallel devices.
+Subcircuit summary:
+Circuit 1: ota                             |Circuit 2: ota                             
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
+sky130_fd_pr__pfet_01v8 (11->6)            |sky130_fd_pr__pfet_01v8 (5) **Mismatch**   
+sky130_fd_pr__nfet_01v8 (6->4)             |sky130_fd_pr__nfet_01v8 (3) **Mismatch**   
+Number of devices: 11 **Mismatch**         |Number of devices: 9 **Mismatch**          
+Number of nets: 16 **Mismatch**            |Number of nets: 9 **Mismatch**             
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: ota                             |Circuit 2: ota                             
+
+---------------------------------------------------------------------------------------
+Net: vs                                    |Net: vs                                    
+  sky130_fd_pr__nfet_01v8/(1|3) = 3        |  sky130_fd_pr__nfet_01v8/(1|3) = 3        
+  sky130_fd_pr__nfet_01v8/4 = 4            |  sky130_fd_pr__nfet_01v8/4 = 3            
+                                           |                                           
+Net: a_4476_6842#                          |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/2 = 1            |                                           
+                                           |                                           
+Net: w_4280_6720#                          |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/4 = 1            |                                           
+                                           |                                           
+Net: a_n624_5082#                          |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/2 = 1            |                                           
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: ota                             |Circuit 2: ota                             
+
+---------------------------------------------------------------------------------------
+Instance: sky130_fd_pr__pfet_01v8:1        |(no matching instance)                     
+  (1,3) = (1,1)                            |                                           
+  2 = 1                                    |                                           
+  4 = 1                                    |                                           
+                                           |                                           
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:0        |(no matching instance)                     
+  (1,3) = (1,1)                            |                                           
+  2 = 1                                    |                                           
+  4 = 7                                    |                                           
+                                           |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+  Flattening non-matched subcircuits ota ota
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_CL66SD in circuit buffer (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_BLSBYX in circuit buffer (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8L4H97 in circuit buffer (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8C4HA7 in circuit buffer (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_GVTB53 in circuit buffer (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8LYGA7 in circuit buffer (0)(2 instances)
+
+Class buffer (0):  Merged 60 parallel devices.
+Subcircuit summary:
+Circuit 1: buffer                          |Circuit 2: buffer                          
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (46->7)            |sky130_fd_pr__nfet_01v8 (6) **Mismatch**   
+sky130_fd_pr__pfet_01v8 (26->5)            |sky130_fd_pr__pfet_01v8 (4) **Mismatch**   
+Number of devices: 12 **Mismatch**         |Number of devices: 10 **Mismatch**         
+Number of nets: 16 **Mismatch**            |Number of nets: 9 **Mismatch**             
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: buffer                          |Circuit 2: buffer                          
+
+---------------------------------------------------------------------------------------
+Net: gnd                                   |Net: gnd                                   
+  sky130_fd_pr__nfet_01v8/4 = 7            |  sky130_fd_pr__nfet_01v8/4 = 6            
+  sky130_fd_pr__nfet_01v8/(1|3) = 4        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+                                           |                                           
+Net: a_19796_3522#                         |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/2 = 1            |                                           
+                                           |                                           
+Net: w_19600_3400#                         |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/4 = 1            |                                           
+                                           |                                           
+Net: a_15496_2682#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/2 = 1            |                                           
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: buffer                          |Circuit 2: buffer                          
+
+---------------------------------------------------------------------------------------
+Instance: sky130_fd_pr__nfet_01v8:2        |(no matching instance)                     
+  (1,3) = (1,1)                            |                                           
+  2 = 1                                    |                                           
+  4 = 11                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: sky130_fd_pr__pfet_01v8:0        |(no matching instance)                     
+  (1,3) = (1,1)                            |                                           
+  2 = 1                                    |                                           
+  4 = 1                                    |                                           
+                                           |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+  Flattening non-matched subcircuits buffer buffer
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN in circuit ask-modulator (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_5JJSBP in circuit ask-modulator (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_2_97K3D8 in circuit ask-modulator (0)(1 instance)
+Flattening unmatched subcell l0 in circuit ask-modulator (1)(1 instance)
+
+Class ask-modulator (0):  Merged 2 parallel devices.
+Class ask-modulator (1):  Merged 1 series devices.
+Subcircuit summary:
+Circuit 1: ask-modulator                   |Circuit 2: ask-modulator                   
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__res_xhigh_po_0p35 (1)        |sky130_fd_pr__res_xhigh_po_0p35 (1)        
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+sky130_fd_pr__cap_mim_m3_2 (3->1)          |sky130_fd_pr__cap_mim_m3_2 (3->1)          
+(no matching element)                      |l (1)                                      
+(no matching element)                      |c (2)                                      
+(no matching element)                      |r (3->2)                                   
+Number of devices: 3 **Mismatch**          |Number of devices: 8 **Mismatch**          
+Number of nets: 3 **Mismatch**             |Number of nets: 7 **Mismatch**             
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: ask-modulator                   |Circuit 2: ask-modulator                   
+
+---------------------------------------------------------------------------------------
+(no matching net)                          |Net: vd                                    
+                                           |  sky130_fd_pr__cap_mim_m3_2/1 = 1         
+                                           |  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  
+                                           |  l/(end_a|end_b) = 1                      
+                                           |  c/top = 1                                
+                                           |                                           
+(no matching net)                          |Net: l0:1/net3                             
+                                           |  l/(end_a|end_b) = 1                      
+                                           |  r/(end_a|end_b) = 1                      
+                                           |                                           
+(no matching net)                          |Net: l0:1/net1                             
+                                           |  c/bottom = 1                             
+                                           |  r/(end_a|end_b) = 1                      
+                                           |                                           
+(no matching net)                          |Net: l0:1/net2                             
+                                           |  c/bottom = 1                             
+                                           |  r/(end_a|end_b) = 1                      
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: vd                                    |Net: out                                   
+  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  |  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+  sky130_fd_pr__cap_mim_m3_2/1 = 1         |  c/top = 1                                
+  sky130_fd_pr__cap_mim_m3_2/2 = 1         |  sky130_fd_pr__cap_mim_m3_2/2 = 1         
+                                           |  r/(end_a|end_b) = 1                      
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: gnd                                   |Net: gnd                                   
+  sky130_fd_pr__res_xhigh_po_0p35/3 = 1    |  sky130_fd_pr__res_xhigh_po_0p35/3 = 1    
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/4 = 1            |  sky130_fd_pr__nfet_01v8/4 = 1            
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: ask-modulator                   |Circuit 2: ask-modulator                   
+
+---------------------------------------------------------------------------------------
+(no matching instance)                     |Instance: l0:1/l:0                         
+                                           |  (end_a,end_b) = (4,2)                    
+                                           |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+(no matching instance)                     |Instance: l0:1/r:1                         
+                                           |  (end_a,end_b) = (5,2)                    
+                                           |                                           
+                                           |                                           
+(no matching instance)                     |Instance: l0:1/r:s1                        
+                                           |  (end_a,end_b) = (2,2)                    
+                                           |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+(no matching instance)                     |Instance: l0:1/c:s2                        
+                                           |  top = 5                                  
+                                           |  bottom = 2                               
+                                           |                                           
+(no matching instance)                     |Instance: l0:1/c:s1                        
+                                           |  top = 4                                  
+                                           |  bottom = 2                               
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Instance: sky130_fd_pr__cap_mim_m3_2_97K3D |Instance: sky130_fd_pr__cap_mim_m3_2:C0    
+  1 = 5                                    |  1 = 4                                    
+  2 = 5                                    |  2 = 5                                    
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Instance: sky130_fd_pr__res_xhigh_po_0p35_ |Instance: sky130_fd_pr__res_xhigh_po_0p35: 
+  (1,2) = (5,5)                            |  (1,2) = (5,4)                            
+  3 = 3                                    |  3 = 3                                    
+---------------------------------------------------------------------------------------
+Netlists do not match.
+  Flattening non-matched subcircuits ask-modulator ask-modulator
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_EFDHR4 in circuit sigma-delta (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_EK42PW in circuit sigma-delta (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_X78HBF in circuit sigma-delta (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_A4KLY5 in circuit sigma-delta (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_ARMGAU in circuit sigma-delta (0)(1 instance)
+
+Class sigma-delta (0):  Merged 10 series devices.
+Subcircuit summary:
+Circuit 1: sigma-delta                     |Circuit 2: sigma-delta                     
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+sky130_fd_sc_hd__dfrbp_1 (1)               |sky130_fd_sc_hd__dfrbp_1 (1)               
+sky130_fd_pr__res_xhigh_po_0p35 (12->2)    |sky130_fd_pr__res_xhigh_po_0p35 (2)        
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 10                         |Number of nets: 10                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sigma-delta                     |Circuit 2: sigma-delta                     
+-------------------------------------------|-------------------------------------------
+gnd                                        |gnd                                        
+in                                         |in                                         
+clk                                        |clk                                        
+reset_b_dff                                |reset_b_dff                                
+out                                        |out                                        
+vd                                         |vd                                         
+vpwr                                       |vpwr                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sigma-delta and sigma-delta are equivalent.
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_FT5NBF in circuit device-complete (0)(2 instances)
+
+Class device-complete (0):  Merged 7 parallel devices.
+Class device-complete (1):  Merged 1 parallel devices.
+Subcircuit summary:
+Circuit 1: device-complete                 |Circuit 2: device-complete                 
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (88->20)           |sky130_fd_pr__pfet_01v8 (19) **Mismatch**  
+sky130_fd_pr__nfet_01v8 (131->19)          |sky130_fd_pr__nfet_01v8 (40->18) **Mismatc 
+sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
+sky130_fd_pr__res_xhigh_po_0p35 (3)        |sky130_fd_pr__res_xhigh_po_0p35 (3)        
+sky130_fd_pr__cap_mim_m3_2 (3->1)          |sky130_fd_pr__cap_mim_m3_2 (3->1)          
+sigma-delta (1)                            |sigma-delta (1)                            
+(no matching element)                      |l (1)                                      
+(no matching element)                      |c (2)                                      
+(no matching element)                      |r (3->2)                                   
+Number of devices: 45 **Mismatch**         |Number of devices: 48 **Mismatch**         
+Number of nets: 33 **Mismatch**            |Number of nets: 31 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: device-complete                 |Circuit 2: device-complete                 
+
+---------------------------------------------------------------------------------------
+Net: /sensor_0/w_3200_3900#                |Net: ask-modulator:6/l0:1/net3             
+  sky130_fd_pr__pfet_01v8/4 = 1            |  l/(end_a|end_b) = 1                      
+                                           |  r/(end_a|end_b) = 1                      
+                                           |                                           
+Net: /sensor_0/a_3396_4022#                |Net: out                                   
+  sky130_fd_pr__pfet_01v8/2 = 1            |  sky130_fd_pr__cap_mim_m3_2/2 = 1         
+                                           |  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  
+                                           |  c/top = 1                                
+                                           |  r/(end_a|end_b) = 1                      
+                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: /sensor_0/a_11196_4110#               |Net: out_buf1                              
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sigma-delta/in = 1                       
+                                           |  sky130_fd_pr__pfet_01v8/2 = 1            
+                                           |  sky130_fd_pr__nfet_01v8/2 = 2            
+                                           |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
+                                           |                                           
+Net: gnd                                   |Net: gnd                                   
+  sky130_fd_pr__nfet_01v8/(1|3) = 14       |  sky130_fd_pr__nfet_01v8/(1|3) = 14       
+  sky130_fd_pr__nfet_01v8/4 = 19           |  sky130_fd_pr__nfet_01v8/4 = 18           
+  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  |  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  
+  sky130_fd_pr__res_xhigh_po_0p35/3 = 3    |  sky130_fd_pr__res_xhigh_po_0p35/3 = 3    
+  sigma-delta/gnd = 1                      |  sigma-delta/gnd = 1                      
+                                           |                                           
+Net: vd                                    |Net: vd                                    
+  sigma-delta/vd = 1                       |  sigma-delta/vd = 1                       
+  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  |  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  
+  sky130_fd_pr__pfet_01v8/(1|3) = 16       |  sky130_fd_pr__pfet_01v8/(1|3) = 14       
+  sky130_fd_pr__pfet_01v8/4 = 14           |  sky130_fd_pr__pfet_01v8/4 = 14           
+  sky130_fd_pr__cap_mim_m3_2/1 = 1         |  sky130_fd_pr__cap_mim_m3_2/1 = 1         
+  sky130_fd_pr__nfet_01v8/(1|3) = 3        |  l/(end_a|end_b) = 1                      
+  sky130_fd_pr__nfet_01v8/2 = 2            |  c/top = 1                                
+  sky130_fd_pr__cap_mim_m3_2/2 = 1         |                                           
+  sigma-delta/in = 1                       |                                           
+  sky130_fd_pr__pfet_01v8/2 = 1            |                                           
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: device-complete                 |Circuit 2: device-complete                 
+
+---------------------------------------------------------------------------------------
+Instance: sensor_0/sky130_fd_pr__pfet_01v8 |Instance: ask-modulator:6/l0:1/l:0         
+  (1,3) = (1,1)                            |  (end_a,end_b) = (34,2)                   
+  2 = 1                                    |                                           
+  4 = 1                                    |                                           
+                                           |                                           
+Instance: sensor_0/sky130_fd_pr__nfet_01v8 |(no matching instance)                     
+  (1,3) = (1,1)                            |                                           
+  2 = 1                                    |                                           
+  4 = 38                                   |                                           
+                                           |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+(no matching instance)                     |Instance: ask-modulator:6/l0:1/r:1         
+                                           |  (end_a,end_b) = (5,2)                    
+                                           |                                           
+                                           |                                           
+(no matching instance)                     |Instance: ask-modulator:6/l0:1/r:s1        
+                                           |  (end_a,end_b) = (2,2)                    
+                                           |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+
+Subcircuit pins:
+Circuit 1: device-complete                 |Circuit 2: device-complete                 
+-------------------------------------------|-------------------------------------------
+vd                                         |(no matching pin)                          
+gnd                                        |out **Mismatch**                           
+clk                                        |clk                                        
+vpwr                                       |vpwr                                       
+vtd                                        |vtd                                        
+ib                                         |ib                                         
+ib2                                        |ib2                                        
+(no matching pin)                          |vd                                         
+(no matching pin)                          |gnd                                        
+vd                                         |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for device-complete and device-complete altered to match.
+Device classes device-complete and device-complete are equivalent.
+
+Final result: Top level cell failed pin matching.

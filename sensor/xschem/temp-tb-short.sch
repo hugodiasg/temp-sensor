@@ -22,7 +22,7 @@ destroy all
 save all
 set color0=white
 set color1=black
-dc temp -100 170 1
+dc temp -100 300 1
 run
 let idd=-i(vdd)
 *let is1=-i(vs1)
@@ -32,7 +32,7 @@ let idd=-i(vdd)
 
 
 let tc=deriv(vts)
-let err=(vts-v_lin)/vts*100
+let err=abs((vts-v_lin))
 
 plot idd
 *plot is1 is2 il3 isat4
@@ -41,8 +41,8 @@ plot tc ylabel 'mV/°C'
 plot vts vtd 
 plot tc ylabel 'mV/°C' xlimit 20 50
 plot vts vtd xlimit 20 50
-plot vts v_lin
-plot err
+plot vts v_lin xlimit -100 215
+plot err xlimit -100 215
 
 *wrdata ~/ptat-temp-tb.txt vts
 .endc

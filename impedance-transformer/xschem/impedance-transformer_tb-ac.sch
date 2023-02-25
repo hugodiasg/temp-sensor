@@ -57,7 +57,7 @@ run
 set color0=white
 set color1=black
 
-let z0=50
+let z0=75
 let zl=191.7
 
 * Find two S parameters from test circuit
@@ -94,13 +94,13 @@ C {devices/gnd.sym} 150 250 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} 320 200 1 0 {name=l10 sig_type=std_logic lab=ns22}
 C {devices/gnd.sym} 560 200 0 1 {name=l11 lab=GND}
 C {devices/res.sym} 330 -35 0 0 {name=R3
-value=50
+value=75
 footprint=1206
 device=resistor
 m=1}
 C {devices/gnd.sym} 330 -5 0 0 {name=l15 lab=GND}
 C {devices/res.sym} 370 200 3 0 {name=R4
-value=50
+value=75
 footprint=1206
 device=resistor
 m=1}

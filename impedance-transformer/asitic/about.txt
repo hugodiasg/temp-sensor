@@ -1,0 +1,37 @@
+Desired inductance and accuracy in percent (e.g. '2 5' for 2nH within 5%)? (nH) 0.27375565119761675 2
+
+Name? l0
+
+Length? 80
+
+Min/Step/Max Spacing? 2 0.05 20
+
+Min/Step/Max Width? 2 0.05 20
+
+Metal layer? met5
+
+Exit metal layer? met4
+
+Frequency? (GHz) 2.5
+
+Simulation started at:  qua 08 fev 2023 19:45:36 -03
+
+Completed in 448769 iterations
+Simulation ended at:  qua 08 fev 2023 19:45:53 -03
+
+Pi Model at f=2.5 GHz:  Q = 3.799 , 3.8 , 3.802 
+L = 277.8 pH R = 1.147 
+Cs1 = 12.63 fF Rs1 = 131.7 
+Cs2 = 12.26 fF Rs2 = -121.2      Est. Resonance = 184.9 GHz
+Found:  n =2.2500, w =13.4500, s =2.0000
+L =0.2778, R_sh = 17.7402(s), 17.7418(d)  Q = 3.7994, 3.8002, 3.8015(d)
+ASITIC>  pix l0 2.5
+
+maxL = 3000.00, maxT =  1.54, maxW =  1.54 (lambda = 60000.00, delta =  1.92)
+Performing Analysis at 2.5 GHz
+Generating capacitance matrix (60x60)...
+Generating inductance matrix (90x90).....
+Pi Model at f=2.5 GHz:  Q = 3.125 , 3.126 , 3.129 
+L = 275 pH R = 1.379 
+Cs1 = 28.66 fF Rs1 = 55.23 
+Cs2 = 25.69 fF Rs2 = 26      Est. Resonance = 68.63 GHz

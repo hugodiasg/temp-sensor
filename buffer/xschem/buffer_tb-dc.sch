@@ -70,10 +70,4 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 spice_ignore=false}
 C {devices/lab_pin.sym} 755 -525 0 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1220 -650 2 0 {name=l15 sig_type=std_logic lab=out}
-C {devices/capa.sym} 1210 -620 0 0 {name=Cl
-m=1
-value=4p
-footprint=1206
-device="ceramic capacitor"}
-C {devices/gnd.sym} 1210 -590 0 0 {name=l16 lab=GND}
-C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/buffer.sym} 1100 -650 0 0 {name=X1}
+C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym} 1100 -650 0 0 {name=X1}

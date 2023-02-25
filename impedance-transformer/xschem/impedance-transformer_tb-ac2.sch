@@ -24,7 +24,7 @@ C {devices/code_shown.sym} 402.5 -1025 0 0 {name=Simulation only_toplevel=false 
 .control
 destroy all
 save all
-ac lin 1MEG 0.1G 3G
+ac lin 1k 1k 4G
 set units=degrees
 run
 
@@ -40,7 +40,7 @@ C {devices/gnd.sym} -322.5 -530 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} -152.5 -580 1 0 {name=l10 sig_type=std_logic lab=out}
 C {devices/gnd.sym} -12.5 -490 1 1 {name=l11 lab=GND}
 C {devices/res.sym} -102.5 -580 3 0 {name=R4
-value=50
+value=75
 footprint=1206
 device=resistor
 m=1}

@@ -83,6 +83,8 @@ XN3 vtd b gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf 
 **** begin user architecture code
 
 
+
+
 R0 vd.n23 vd.n22 222.87
 R1 vd.n10 vd.n9 222.87
 R2 vd.n24 vd.n23 149.458
