@@ -24,9 +24,9 @@ Name | Value (at 35 °)
 --------- | ------:
 Vdd | 1.8 V
 TC (Temperature Coeficient) | -2.22 mV/°C
-Output offset | 0.46 V
-Max error (20 - 50 °C) | 0.37%
-Max error (-30 - 80 °C) | 1.22%
+Output offset | 1.2 V
+Max error (20 - 50 °C) | 0.005 °C
+Max error (-100 - 200 °C) | 0.07 °C
 Potency | 28.4 uW
 Idd | 16 uA
 Area | 0.000941 mm²
