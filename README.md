@@ -27,7 +27,7 @@ TC (Temperature Coeficient) | -2.22 mV/°C
 Output offset | 1.2 V
 Max error (20 - 50 °C) | 0.005 °C
 Max error (-100 - 200 °C) | 0.07 °C
-Potency | 28.4 uW
+Potency | 28.3 uW
 Idd | 16 uA
 Area | 0.000941 mm²
 
