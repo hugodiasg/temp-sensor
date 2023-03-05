@@ -1,4 +1,19 @@
 
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
 Circuit 1 cell sky130_fd_pr__pfet_01v8_hvt and Circuit 2 cell sky130_fd_pr__pfet_01v8_hvt are black boxes.
 Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8_hvt is a placeholder, treated as a black box.
 Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8_hvt is a placeholder, treated as a black box.
@@ -28,21 +43,6 @@ Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
-
-Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
-Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
-
-Subcircuit pins:
-Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
--------------------------------------------|-------------------------------------------
-1                                          |1                                          
-2                                          |2                                          
-3                                          |3                                          
-4                                          |4                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
 
 Circuit 1 cell sky130_fd_pr__res_xhigh_po_0p35 and Circuit 2 cell sky130_fd_pr__res_xhigh_po_0p35 are black boxes.
 Warning: Equate pins:  cell sky130_fd_pr__res_xhigh_po_0p35 is a placeholder, treated as a black box.
@@ -106,8 +106,8 @@ Class sigma-delta (0):  Merged 10 series devices.
 Subcircuit summary:
 Circuit 1: sigma-delta                     |Circuit 2: sigma-delta                     
 -------------------------------------------|-------------------------------------------
-sky130_fd_sc_hd__dfrbp_1 (1)               |sky130_fd_sc_hd__dfrbp_1 (1)               
 sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+sky130_fd_sc_hd__dfrbp_1 (1)               |sky130_fd_sc_hd__dfrbp_1 (1)               
 sky130_fd_pr__res_xhigh_po_0p35 (12->2)    |sky130_fd_pr__res_xhigh_po_0p35 (2)        
 sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
 sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
@@ -119,13 +119,13 @@ Netlists match uniquely.
 Subcircuit pins:
 Circuit 1: sigma-delta                     |Circuit 2: sigma-delta                     
 -------------------------------------------|-------------------------------------------
-vd                                         |vd                                         
-vpwr                                       |vpwr                                       
 gnd                                        |gnd                                        
 in                                         |in                                         
 clk                                        |clk                                        
 reset_b_dff                                |reset_b_dff                                
 out                                        |out                                        
+vd                                         |vd                                         
+vpwr                                       |vpwr                                       
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sigma-delta and sigma-delta are equivalent.

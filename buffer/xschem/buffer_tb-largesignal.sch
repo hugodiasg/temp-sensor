@@ -63,4 +63,4 @@ C {devices/lab_pin.sym} 400 -145 2 0 {name=l12 sig_type=std_logic lab=ib}
 C {devices/lab_pin.sym} 520 -220 2 0 {name=l15 sig_type=std_logic lab=out}
 C {devices/lab_pin.sym} 390 -300 0 0 {name=l18 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 380 -140 0 1 {name=l19 sig_type=std_logic lab=vs}
-C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym} 420 -220 0 0 {name=X1}
+C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer-pex.sym} 420 -220 0 0 {name=X1}

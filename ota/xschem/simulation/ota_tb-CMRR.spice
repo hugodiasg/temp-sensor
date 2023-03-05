@@ -14,8 +14,8 @@ Cl out1 GND 4p m=1
 Cl1 out2 GND 4p m=1
 VIN1 in11 GND DC 0 AC 0.5
 .save i(vin1)
-X1 vd ib1 out1 in11 in11 vs ota
-X2 vd ib2 out2 in22 in12 vs ota
+X1 vd ib1 out1 in11 in11 vs ota-pex
+X2 vd ib2 out2 in22 in12 vs ota-pex
 **** begin user architecture code
 
 **cmd step stop
@@ -41,10 +41,10 @@ plot cmrr ylabel 'dB'
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sym # of pins=6
-** sym_path: /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sym
-** sch_path: /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sch
-.subckt ota vd ib out in2 in1 vs
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sym # of pins=6
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sch
+.subckt ota-pex vd ib out in2 in1 vs
 *.iopin vd
 *.iopin vs
 *.iopin ib

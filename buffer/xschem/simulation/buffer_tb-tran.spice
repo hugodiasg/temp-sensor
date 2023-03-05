@@ -7,7 +7,7 @@ VDD vd GND 1.8
 VSS vs GND 0
 .save i(vss)
 ibias vd ib 20u
-X1 vd in1 out ib vs buffer
+X1 vd in1 out ib vs buffer-pex
 **** begin user architecture code
 
 *cmd step stop
@@ -27,10 +27,11 @@ plot out in1
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym # of pins=5
-** sym_path: /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym
-** sch_path: /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sch
-.subckt buffer vd in out ib gnd
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer-pex.sym # of
+*+ pins=5
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer-pex.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer-pex.sch
+.subckt buffer-pex vd in out ib gnd
 *.iopin vd
 *.iopin ib
 *.iopin out

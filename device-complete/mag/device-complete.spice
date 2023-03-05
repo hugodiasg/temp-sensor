@@ -250,10 +250,10 @@ X1 c2_n2519_n7620# m4_n2619_n7720# sky130_fd_pr__cap_mim_m3_2 l=2.44e+07u w=2.44
 X2 c2_n2519_n7620# m4_n2619_n7720# sky130_fd_pr__cap_mim_m3_2 l=2.44e+07u w=2.44e+07u
 .ends
 
-.subckt ask-modulator gnd in vd
-Xsky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0 gnd vd vd sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN
-Xsky130_fd_pr__nfet_01v8_5JJSBP_0 gnd gnd vd in sky130_fd_pr__nfet_01v8_5JJSBP
-Xsky130_fd_pr__cap_mim_m3_2_97K3D8_0 vd vd sky130_fd_pr__cap_mim_m3_2_97K3D8
+.subckt ask-modulator gnd in out vd
+Xsky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0 gnd vd out sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN
+Xsky130_fd_pr__nfet_01v8_5JJSBP_0 gnd gnd out in sky130_fd_pr__nfet_01v8_5JJSBP
+Xsky130_fd_pr__cap_mim_m3_2_97K3D8_0 vd out sky130_fd_pr__cap_mim_m3_2_97K3D8
 .ends
 
 .subckt sky130_fd_pr__pfet_01v8_EFDHR4 a_n33_n397# a_n73_n300# a_15_n300# w_n211_n519#
@@ -325,7 +325,7 @@ X4 a_48_n1032# a_48_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
 X5 a_n118_n1032# a_n118_600# a_n580_n1162# sky130_fd_pr__res_xhigh_po_0p35 l=6e+06u
 .ends
 
-.subckt sigma-delta in vpwr out clk reset_b_dff vd gnd
+.subckt sigma-delta in vpwr clk reset_b_dff gnd vd out
 Xsky130_fd_pr__pfet_01v8_EFDHR4_0 in_comp vd out_comp vd sky130_fd_pr__pfet_01v8_EFDHR4
 Xx1 clk out_comp reset_b_dff gnd vpwr Q out gnd vpwr sky130_fd_sc_hd__dfrbp_1
 XXR2 Q m1_n1710_5800# m1_n1400_5790# in_comp m1_n1550_4170# m1_n1400_5790# m1_n1550_4170#
@@ -337,14 +337,14 @@ Xsky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0 in_comp m1_n3250_5800# m1_n2930_5790# 
 + m1_n3590_5800# m1_n3420_4160# sky130_fd_pr__res_xhigh_po_0p35_ARMGAU
 .ends
 
-.subckt device-complete vpwr vd gnd ib ib2 vtd clk
-Xsensor_0 vd vts vtd gnd sensor
-Xota_0 vd ib vd ota_0/in2 out_ota gnd ota
+.subckt device-complete out vpwr vd gnd ib ib2 clk
+Xsensor_0 vd vts sensor_0/vtd gnd sensor
+Xota_0 vd ib out_buf1 ota_0/in2 out_ota gnd ota
 Xsky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0 gnd gnd ota_0/in2 sky130_fd_pr__res_xhigh_po_0p35_FT5NBF
 Xsky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1 gnd vd ota_0/in2 sky130_fd_pr__res_xhigh_po_0p35_FT5NBF
-Xbuffer_0 vd ib2 vd out_ota gnd buffer
-Xbuffer_1 vd ib2 vd vts gnd buffer
-Xask-modulator_0 gnd out_sigma vd ask-modulator
-Xsigma-delta_0 vd vpwr out_sigma clk vpwr vd gnd sigma-delta
+Xbuffer_0 vd ib2 out_buf1 out_ota gnd buffer
+Xbuffer_1 vd ib2 out_buf1 vts gnd buffer
+Xask-modulator_0 gnd out_sigma out vd ask-modulator
+Xsigma-delta_0 out_buf1 vpwr clk vpwr gnd vd out_sigma sigma-delta
 .ends
 

@@ -1,13 +1,19 @@
 ** sch_path: /home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma_tb-tran.sch
 **.subckt sigma_tb-tran
-vin in GND 1.17571
+vin in1 GND 0
 .save i(vin)
 vpwr vpwr GND 1.8
 .save i(vpwr)
 V3 clk GND pulse 0 1.8 '0.495/ 10e6 ' '0.01/10e6 ' '0.01/10e6 ' '0.49/10e6 ' '1/10e6 '
-x1 vpwr clk out in vpwr GND vd sigma-delta
 vd vd GND 1.8
 .save i(vd)
+x1 vpwr clk out1 in1 vpwr GND vd sigma-delta-pex
+x2 vpwr clk out2 in2 vpwr GND vd sigma-delta-pex
+x3 vpwr clk out3 in3 vpwr GND vd sigma-delta-pex
+vin1 in2 GND 0.9
+.save i(vin1)
+vin2 in3 GND 1.8
+.save i(vin2)
 **** begin user architecture code
 
 *cmd step stop
@@ -21,9 +27,9 @@ set temp=27
 tran 1n 50u
 run
 
-plot in out
-plot out xlimit 35u 50u
-
+plot in1 out1
+plot in2 out2
+plot in3 out3
 
 .endc
 
@@ -34,10 +40,12 @@ plot out xlimit 35u 50u
 **.ends
 
 * expanding   symbol:
-*+  /home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym # of pins=7
-** sym_path: /home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym
-** sch_path: /home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sch
-.subckt sigma-delta vpwr clk out in reset_b_dff gnd vd
+*+  /home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta-pex.sym # of pins=7
+** sym_path:
+*+ /home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta-pex.sym
+** sch_path:
+*+ /home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta-pex.sch
+.subckt sigma-delta-pex vpwr clk out in reset_b_dff gnd vd
 *.ipin in
 *.iopin gnd
 *.iopin clk

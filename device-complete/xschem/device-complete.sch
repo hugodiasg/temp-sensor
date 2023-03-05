@@ -43,8 +43,6 @@ N -665 45 -665 155 {
 lab=out_buf1}
 N -1145 135 -1085 135 {
 lab=vts}
-N -430 15 -430 105 {
-lab=vd}
 N -535 90 -430 90 {
 lab=vd}
 N -310 45 -280 45 {
@@ -75,6 +73,10 @@ N 225 195 250 195 {
 lab=out_sigma}
 N 545 195 575 195 {
 lab=out}
+N -430 90 -430 105 {
+lab=vd}
+N -430 55 -430 90 {
+lab=vd}
 C {devices/lab_pin.sym} 115 105 0 0 {name=l9 sig_type=std_logic lab=clk}
 C {devices/lab_pin.sym} 575 195 3 1 {name=l5 sig_type=std_logic lab=out
 }
@@ -84,7 +86,7 @@ C {/home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-d
 C {devices/lab_pin.sym} -45 105 0 0 {name=l7 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} -795 215 0 0 {name=l11 sig_type=std_logic lab=in2}
 C {devices/lab_pin.sym} -380 250 2 0 {name=l13 sig_type=std_logic lab=ib}
-C {devices/lab_pin.sym} -430 15 0 0 {name=l19 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} -430 55 0 0 {name=l19 sig_type=std_logic lab=vd}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} -535 245 0 1 {name=R1
 W=0.35
 L=20

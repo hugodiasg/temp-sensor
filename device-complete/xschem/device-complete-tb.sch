@@ -22,35 +22,33 @@ destroy all
 save all
 set color0=white
 set color1=black
-set temp=35
+set temp=10
 set hcopypscolor = 1
 set wr_singlescale
 option numdgt=7
-tran 40p 75u
+tran 40p 100u
 let pot=-i(vdd)*vd
 save all
 
-plot x1.vts x1.out_sigma
-plot x1.vts x1.out_buf1 x1.out_ota 
-plot out
+*plot x1.vts x1.out_sigma
+*plot x1.vts x1.out_buf1 x1.out_ota 
+*plot out
  
 
-meas tran pot_rms rms pot from=0 to=5u
 meas tran pot_avg avg pot from=0 to=5u
-plot pot pot_avg pot_rms
+*plot pot pot_avg pot_rms
 
-*hardcopy ~/56c1.ps vts out_sigma
-*hardcopy ~/56c2.ps out_ask
-*hardcopy ~/pot56c.ps pot_rms
-
-*wrdata ~/temp60.txt vts out_sigma out_ask 
+wrdata ./tran10.txt x1.vts x1.out_sigma out
 
 linearize out
 fft out
 *hardcopy ~/fft56.ps mag(out_ask) xlimit 1G 4G ylimit 0 55u
-plot mag(out) xlimit 1G 4G ylimit 0 65u
+*plot mag(out) xlimit 1G 4G ylimit 0 65u
 
-*wrdata ~/fft65.txt mag(out_ask)
+wrdata ./fft10.txt mag(out)
+
+
+
 
 .endc
 
@@ -81,10 +79,10 @@ C {devices/isource.sym} 355 -395 0 0 {name=ibias1 value=20u}
 C {devices/gnd.sym} 355 -355 0 0 {name=l29 lab=GND}
 C {devices/lab_pin.sym} 355 -435 0 0 {name=l30 sig_type=std_logic lab=ib2}
 C {devices/lab_pin.sym} 570 -85 1 0 {name=l38 sig_type=std_logic lab=out}
-C {/home/hugodg/projects-sky130/temp-sensor/device-complete/xschem/device-complete.sym} 375 -95 0 0 {name=x1}
 C {devices/lab_pin.sym} 355 -185 1 0 {name=l5 sig_type=std_logic lab=ib2}
 C {devices/lab_pin.sym} 325 -185 1 0 {name=l6 sig_type=std_logic lab=ib}
 C {devices/lab_pin.sym} 225 -85 0 0 {name=l7 sig_type=std_logic lab=clk}
 C {devices/lab_pin.sym} 265 -185 1 0 {name=l11 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 295 -185 1 0 {name=l13 sig_type=std_logic lab=vpwr}
 C {devices/gnd.sym} 265 -5 0 1 {name=l15 lab=GND}
+C {/home/hugodg/projects-sky130/temp-sensor/device-complete/xschem/device-complete-pex.sym} 375 -95 0 0 {name=x1}

@@ -37,23 +37,26 @@ Flattening unmatched subcell sky130_fd_pr__pfet_01v8_3P9HCE in circuit sensor (0
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_37ZGCE in circuit sensor (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_G8PMZT in circuit sensor (0)(1 instance)
 
-Class sensor (0):  Merged 35 parallel devices.
+Class sensor (0):  Merged 46 parallel devices.
+Class sensor (1):  Merged 11 parallel devices.
 Subcircuit summary:
 Circuit 1: sensor                          |Circuit 2: sensor                          
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__pfet_01v8 (20->6)            |sky130_fd_pr__pfet_01v8 (6)                
-sky130_fd_pr__nfet_01v8 (24->3)            |sky130_fd_pr__nfet_01v8 (24->3)            
-Number of devices: 9                       |Number of devices: 9                       
-Number of nets: 8                          |Number of nets: 8                          
+sky130_fd_pr__pfet_01v8 (25->7)            |sky130_fd_pr__pfet_01v8 (11->7)            
+sky130_fd_pr__nfet_01v8 (32->4)            |sky130_fd_pr__nfet_01v8 (32->4)            
+Number of devices: 11                      |Number of devices: 11                      
+Number of nets: 15                         |Number of nets: 15                         
 ---------------------------------------------------------------------------------------
-Netlists match uniquely.
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match with 2 symmetries.
 
 Subcircuit pins:
 Circuit 1: sensor                          |Circuit 2: sensor                          
 -------------------------------------------|-------------------------------------------
+gnd                                        |gnd                                        
 vd                                         |vd                                         
 vtd                                        |vtd                                        
-gnd                                        |gnd                                        
 vts                                        |vts                                        
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.

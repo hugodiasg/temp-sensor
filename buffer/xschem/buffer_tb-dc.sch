@@ -70,4 +70,4 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 spice_ignore=false}
 C {devices/lab_pin.sym} 755 -525 0 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1220 -650 2 0 {name=l15 sig_type=std_logic lab=out}
-C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym} 1100 -650 0 0 {name=X1}
+C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer-pex.sym} 1100 -650 0 0 {name=X1}

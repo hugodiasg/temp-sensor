@@ -27,6 +27,8 @@ C {devices/code_shown.sym} 400 -635 0 0 {name=Simulation only_toplevel=false val
 *.tran 0.05n 1.3n
 
 .control
+set wr_singlescale
+option numdgt=7
 destroy all
 save all
 tran 0.005n 100n
@@ -37,27 +39,17 @@ set color1=black
 
 let t=100n
 let id =-i(vdd)
-plot id
-plot in
-*plot out 3.2951
-plot out
-*S
-let vrms_rlc=sqrt(integ((out-vd)^2)/t)
-let vrms_nmos=sqrt(integ(out^2)/t)
-let irms=sqrt(integ((-i(vdd))^2)/t)
-let srms_rlc=vrms_rlc*irms
-let srms_nmos=vrms_nmos*irms
-let srms=srms_rlc+srms_nmos
-*plot srms
-*plot out 3.2950864 xlimit 50.5n 51n
-*plot out 3.2950864 xlimit .5n 1n
+*plot id
+*plot in
+
+*plot out
+wrdata ./ask-modulator-data.txt out in 
 .endc"
 }
 C {devices/gnd.sym} 155 -270 2 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} -60 -100 2 0 {name=l4 sig_type=std_logic lab=in}
 C {devices/lab_pin.sym} 165 -160 2 0 {name=l7 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 5 -80 1 0 {name=l8 sig_type=std_logic lab=in}
-C {/home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sym} 165 -80 0 0 {name=x1}
 C {devices/code.sym} 390 -790 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -65,3 +57,4 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
+C {/home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym} 165 -80 0 0 {name=x1}

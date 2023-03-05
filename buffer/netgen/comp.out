@@ -29,22 +29,25 @@ Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_CL66SD in circuit buffer (0)(2 instances)
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8L4H97 in circuit buffer (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_BLSBYX in circuit buffer (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8L4H97 in circuit buffer (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8C4HA7 in circuit buffer (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_GVTB53 in circuit buffer (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8LYGA7 in circuit buffer (0)(2 instances)
 
-Class buffer (0):  Merged 54 parallel devices.
+Class buffer (0):  Merged 60 parallel devices.
+Class buffer (1):  Merged 6 parallel devices.
 Subcircuit summary:
 Circuit 1: buffer                          |Circuit 2: buffer                          
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__nfet_01v8 (42->6)            |sky130_fd_pr__nfet_01v8 (6)                
-sky130_fd_pr__pfet_01v8 (22->4)            |sky130_fd_pr__pfet_01v8 (4)                
-Number of devices: 10                      |Number of devices: 10                      
-Number of nets: 9                          |Number of nets: 9                          
+sky130_fd_pr__nfet_01v8 (46->7)            |sky130_fd_pr__nfet_01v8 (10->7)            
+sky130_fd_pr__pfet_01v8 (26->5)            |sky130_fd_pr__pfet_01v8 (8->5)             
+Number of devices: 12                      |Number of devices: 12                      
+Number of nets: 16                         |Number of nets: 16                         
 ---------------------------------------------------------------------------------------
-Netlists match uniquely.
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match with 2 symmetries.
 
 Subcircuit pins:
 Circuit 1: buffer                          |Circuit 2: buffer                          

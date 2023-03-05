@@ -4,7 +4,7 @@ Vdd vd GND 1.8
 .save i(vdd)
 Vin in GND PULSE(0V 1.8V 0.5ns 0.1ns 0.1ns 50ns 100ns)
 .save i(vin)
-x1 vd out in GND ask-modulator
+x1 vd out in GND ask-modulator-pex
 **** begin user architecture code
 
 
@@ -13,6 +13,8 @@ x1 vd out in GND ask-modulator
 *.tran 0.05n 1.3n
 
 .control
+set wr_singlescale
+option numdgt=7
 destroy all
 save all
 tran 0.005n 100n
@@ -23,20 +25,11 @@ set color1=black
 
 let t=100n
 let id =-i(vdd)
-plot id
-plot in
-*plot out 3.2951
-plot out
-*S
-let vrms_rlc=sqrt(integ((out-vd)^2)/t)
-let vrms_nmos=sqrt(integ(out^2)/t)
-let irms=sqrt(integ((-i(vdd))^2)/t)
-let srms_rlc=vrms_rlc*irms
-let srms_nmos=vrms_nmos*irms
-let srms=srms_rlc+srms_nmos
-*plot srms
-*plot out 3.2950864 xlimit 50.5n 51n
-*plot out 3.2950864 xlimit .5n 1n
+*plot id
+*plot in
+
+*plot out
+wrdata ./asdd.txt out in
 .endc
 
  .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
@@ -46,10 +39,10 @@ let srms=srms_rlc+srms_nmos
 **.ends
 
 * expanding   symbol:
-*+  /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sym # of pins=4
-** sym_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sym
-** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sch
-.subckt ask-modulator vd out in gnd
+*+  /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym # of pins=4
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sch
+.subckt ask-modulator-pex vd out in gnd
 *.iopin gnd
 *.ipin in
 *.opin out

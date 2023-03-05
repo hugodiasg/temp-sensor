@@ -49,17 +49,20 @@ Flattening unmatched subcell sky130_fd_pr__pfet_01v8_G8TPYT in circuit ota (0)(2
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_XABGW3 in circuit ota (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8ALGB7 in circuit ota (0)(1 instance)
 
-Class ota (0):  Merged 4 parallel devices.
+Class ota (0):  Merged 7 parallel devices.
+Class ota (1):  Merged 3 parallel devices.
 Subcircuit summary:
 Circuit 1: ota                             |Circuit 2: ota                             
 -------------------------------------------|-------------------------------------------
 sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
-sky130_fd_pr__pfet_01v8 (8->5)             |sky130_fd_pr__pfet_01v8 (5)                
-sky130_fd_pr__nfet_01v8 (4->3)             |sky130_fd_pr__nfet_01v8 (3)                
-Number of devices: 9                       |Number of devices: 9                       
-Number of nets: 9                          |Number of nets: 9                          
+sky130_fd_pr__pfet_01v8 (11->6)            |sky130_fd_pr__pfet_01v8 (8->6)             
+sky130_fd_pr__nfet_01v8 (6->4)             |sky130_fd_pr__nfet_01v8 (5->4)             
+Number of devices: 11                      |Number of devices: 11                      
+Number of nets: 16                         |Number of nets: 16                         
 ---------------------------------------------------------------------------------------
-Netlists match uniquely.
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match with 2 symmetries.
 
 Subcircuit pins:
 Circuit 1: ota                             |Circuit 2: ota                             

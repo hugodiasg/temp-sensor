@@ -27,12 +27,12 @@ N 1020 -670 1020 -660 { lab=GND}
 N 1025 -395 1025 -385 { lab=GND}
 N 1015 -615 1015 -605 { lab=in22}
 N 1015 -545 1015 -535 { lab=GND}
-N 735 -665 735 -650 { lab=ib1}
-N 695 -645 695 -635 { lab=vs}
-N 835 -715 845 -715 { lab=out1}
-N 630 -685 645 -685 { lab=in11}
-N 630 -745 645 -745 { lab=in11}
-N 685 -805 685 -795 { lab=vd}
+N 730 -665 730 -650 { lab=ib1}
+N 690 -645 690 -635 { lab=vs}
+N 830 -715 840 -715 { lab=out1}
+N 625 -685 640 -685 { lab=in11}
+N 625 -745 640 -745 { lab=in11}
+N 680 -805 680 -795 { lab=vd}
 N 1285 -635 1285 -620 { lab=ib2}
 N 1245 -615 1245 -605 { lab=vs}
 N 1385 -685 1395 -685 { lab=out2}
@@ -83,17 +83,17 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {devices/lab_pin.sym} 630 -745 0 0 {name=l30 sig_type=std_logic lab=in11}
-C {devices/lab_pin.sym} 735 -650 2 0 {name=l31 sig_type=std_logic lab=ib1}
-C {devices/lab_pin.sym} 845 -715 2 0 {name=l32 sig_type=std_logic lab=out1}
-C {devices/capa.sym} 835 -685 0 0 {name=Cl
+C {devices/lab_pin.sym} 625 -745 0 0 {name=l30 sig_type=std_logic lab=in11}
+C {devices/lab_pin.sym} 730 -650 2 0 {name=l31 sig_type=std_logic lab=ib1}
+C {devices/lab_pin.sym} 840 -715 2 0 {name=l32 sig_type=std_logic lab=out1}
+C {devices/capa.sym} 830 -685 0 0 {name=Cl
 m=1
 value=4p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/gnd.sym} 835 -655 0 0 {name=l33 lab=GND}
-C {devices/lab_pin.sym} 685 -805 0 0 {name=l34 sig_type=std_logic lab=vd}
-C {devices/lab_pin.sym} 695 -635 0 1 {name=l35 sig_type=std_logic lab=vs}
+C {devices/gnd.sym} 830 -655 0 0 {name=l33 lab=GND}
+C {devices/lab_pin.sym} 680 -805 0 0 {name=l34 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} 690 -635 0 1 {name=l35 sig_type=std_logic lab=vs}
 C {devices/lab_pin.sym} 1180 -655 0 0 {name=l3 sig_type=std_logic lab=in22}
 C {devices/lab_pin.sym} 1180 -715 0 0 {name=l5 sig_type=std_logic lab=in12}
 C {devices/lab_pin.sym} 1285 -620 2 0 {name=l12 sig_type=std_logic lab=ib2}
@@ -109,6 +109,6 @@ C {devices/lab_pin.sym} 1245 -605 0 1 {name=l27 sig_type=std_logic lab=vs}
 C {devices/vsource.sym} 385 -710 0 0 {name=VIN1 value="DC 0 AC 0.5"}
 C {devices/gnd.sym} 385 -670 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} 385 -750 0 0 {name=l11 sig_type=std_logic lab=in11}
-C {devices/lab_pin.sym} 630 -685 0 0 {name=l2 sig_type=std_logic lab=in11}
-C {/home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sym} 735 -715 0 0 {name=X1}
-C {/home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sym} 1285 -685 0 0 {name=X2}
+C {devices/lab_pin.sym} 625 -685 0 0 {name=l2 sig_type=std_logic lab=in11}
+C {/home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sym} 730 -715 0 0 {name=X1}
+C {/home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sym} 1285 -685 0 0 {name=X2}

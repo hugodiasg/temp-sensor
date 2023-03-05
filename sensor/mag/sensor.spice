@@ -69,5 +69,18 @@ Xsky130_fd_pr__nfet_01v8_SXQYJB_1 gnd a gnd a b a b b a gnd b gnd a b gnd b gnd 
 + b a gnd a gnd b a sky130_fd_pr__nfet_01v8_SXQYJB
 Xsky130_fd_pr__pfet_01v8_8CLM97_0 a d a d d c sky130_fd_pr__pfet_01v8_8CLM97
 Xsky130_fd_pr__pfet_01v8_G8PMZT_0 vd vtd d vd sky130_fd_pr__pfet_01v8_G8PMZT
+X0 a_11396_4198# a_11196_4110# a_11138_4198# gnd sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=1e+06u
+X1 a_3596_4119# a_3396_4022# a_3338_4119# w_3200_3900# sky130_fd_pr__pfet_01v8 ad=5.8e+11p pd=4.58e+06u as=5.8e+11p ps=4.58e+06u w=2e+06u l=1e+06u
+X2 a_8416_4119# a_8216_4022# a_8158_4119# w_8020_3900# sky130_fd_pr__pfet_01v8 ad=5.8e+11p pd=4.58e+06u as=5.8e+11p ps=4.58e+06u w=2e+06u l=1e+06u
+X3 a_11396_4616# a_11196_4528# a_11138_4616# gnd sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=1e+06u
+X4 a_11396_3362# a_11196_3274# a_11138_3362# gnd sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=1e+06u
+X5 a_11396_2526# a_11196_2438# a_11138_2526# gnd sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=1e+06u
+X6 a_6796_1879# a_6596_1782# a_6538_1879# w_6400_1660# sky130_fd_pr__pfet_01v8 ad=5.8e+11p pd=4.58e+06u as=5.8e+11p ps=4.58e+06u w=2e+06u l=1e+06u
+X7 a_2896_2999# a_2696_2902# a_2638_2999# w_2500_2780# sky130_fd_pr__pfet_01v8 ad=5.8e+11p pd=4.58e+06u as=5.8e+11p ps=4.58e+06u w=2e+06u l=1e+06u
+X8 a_3416_1879# a_3216_1782# a_3158_1879# w_3020_1660# sky130_fd_pr__pfet_01v8 ad=5.8e+11p pd=4.58e+06u as=5.8e+11p ps=4.58e+06u w=2e+06u l=1e+06u
+X9 a_11396_3780# a_11196_3692# a_11138_3780# gnd sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=1e+06u
+X10 a_11396_2944# a_11196_2856# a_11138_2944# gnd sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=1e+06u
+X11 a_11396_2108# a_11196_2020# a_11138_2108# gnd sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=1e+06u
+X12 a_11396_1690# a_11196_1602# a_11138_1690# gnd sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=1e+06u
 .ends
 

@@ -104,4 +104,4 @@ model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
 C {devices/gnd.sym} 1070 -545 0 0 {name=l13 lab=GND}
-C {/home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sym} 1220 -680 0 0 {name=X1}
+C {/home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sym} 1220 -680 0 0 {name=X1}

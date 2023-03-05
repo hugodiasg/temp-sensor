@@ -10,7 +10,7 @@ VSS vs GND 0
 Cl out GND 4p m=1
 XR1 GND in2 GND sky130_fd_pr__res_xhigh_po_0p35 L=10 mult=1 m=1
 XR2 in2 vd GND sky130_fd_pr__res_xhigh_po_0p35 L=10 mult=1 m=1
-X1 vd ib out in2 in1 vs ota
+X1 vd ib out in2 in1 vs ota-pex
 **** begin user architecture code
 
 *cmd step stop
@@ -30,10 +30,10 @@ plot out in1
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sym # of pins=6
-** sym_path: /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sym
-** sch_path: /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota.sch
-.subckt ota vd ib out in2 in1 vs
+* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sym # of pins=6
+** sym_path: /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sym
+** sch_path: /home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sch
+.subckt ota-pex vd ib out in2 in1 vs
 *.iopin vd
 *.iopin vs
 *.iopin ib
