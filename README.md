@@ -11,8 +11,7 @@ The main blocks are:
 - Mixed signal: to convert analog signals to digital.
 - RF: to convert digital signals to RF signals and match them with a antenna.
 
-<img src="https://user-images.githubusercontent.com/80465879/216462586-45cd049b-1da4-4b51-a907-60e95df6a15c.png" width="800vh" >
-
+<img src="https://user-images.githubusercontent.com/80465879/227039164-fc6fed13-e4c8-4ebe-b82c-839e981e72e3.png" width="800vh" >
  
 ### Sensor
 
