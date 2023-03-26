@@ -1,7 +1,7 @@
 # temp-sensor
 # Temperature sensor wireless communication
 
- The circuit is a temperature sensor with 2.4 GHz wireless communication with CMOS 130nm (Sky130nm) technology to measure the human temperature. The jupyter notebook of the device complete simulations and layout are [here](https://github.com/hugodiasg/temp-sensor/blob/main/jupyter-notebook/temp-sensor.ipynb).
+ The circuit is a temperature sensor with 2.4 GHz wireless communication with CMOS 130nm (Sky130nm) technology to measure the human temperature. 
  
 Below is information about each block that was designed for the device. 
 
@@ -15,6 +15,27 @@ The main blocks are:
 
 <img src="https://user-images.githubusercontent.com/80465879/227039164-fc6fed13-e4c8-4ebe-b82c-839e981e72e3.png" width="800vh" >
  
+
+### Device complete
+#### Specs:
+Name | Value (at 35 °)
+--------- | ------:
+Vdd | 1.8 V
+TC (Temperature Coeficient) | -2.22 mV/°C
+Output offset | 1.2 V
+Max error (20 - 50 °C) | 0.005 °C
+Max error (-100 - 200 °C) | 0.07 °C
+Potency | 1.5 mW
+Area | 0.04 mm²
+
+#### Layout:
+<img src="https://user-images.githubusercontent.com/80465879/227757049-48c2399b-01a4-47eb-acd6-e41b10a1143b.png" width="800vh" >
+
+<img src="https://user-images.githubusercontent.com/80465879/227757055-0c535273-1454-4154-afcd-d380949f9ff4.png" width="800vh" >
+
+#### Simulations:
+See [jupyter notebook](https://github.com/hugodiasg/temp-sensor/blob/main/jupyter-notebook/temp-sensor.ipynb).
+
 ### Sensor
 
 Proportional To Absolute Temperature (PTAT) sensor.
