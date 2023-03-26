@@ -1,7 +1,7 @@
 # temp-sensor
 # Temperature sensor wireless communication
 
- The circuit is a temperature sensor with 2.4 GHz wireless communication with CMOS 130nm (Sky130nm) technology to measure the human temperature.
+ The circuit is a temperature sensor with 2.4 GHz wireless communication with CMOS 130nm (Sky130nm) technology to measure the human temperature. The jupyter notebook of the device complete simulations and layout are [here](https://github.com/hugodiasg/temp-sensor/blob/main/jupyter-notebook/temp-sensor.ipynb).
  
 ### Block Diagram
 
