@@ -1,4 +1,4 @@
-** sch_path: /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sch
+** sch_path: /home/hugodg/projects/temp-sensor/buffer/xschem/buffer.sch
 .subckt buffer vd ib out in gnd
 *.PININFO vd:B ib:B out:B in:B gnd:B
 XM3 net2 net2 vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
@@ -19,5 +19,6 @@ XND1 net25 net21 net26 gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
 XND2 net27 net22 net28 gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
 XND3 net29 net23 net30 gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
 XND4 net32 net24 net31 gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XCc out net1 sky130_fd_pr__cap_mim_m3_2 W=21 L=21 m=1
 .ends
 .end

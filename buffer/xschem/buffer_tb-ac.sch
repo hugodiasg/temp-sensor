@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.2 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,17 +19,17 @@ K {}
 V {}
 S {}
 E {}
-N 805 -735 805 -725 { lab=in1}
-N 805 -515 805 -505 { lab=vd}
-N 805 -665 805 -655 { lab=GND}
-N 805 -445 805 -435 { lab=ib}
-N 1100 -610 1100 -595 { lab=ib}
-N 1080 -600 1080 -590 { lab=vs}
-N 1210 -670 1220 -670 { lab=out}
-N 1035 -690 1050 -690 { lab=in1}
-N 1090 -750 1090 -740 { lab=vd}
-N 1220 -670 1230 -670 { lab=out}
-N 1230 -670 1240 -670 { lab=out}
+N 555 -725 555 -715 { lab=in1}
+N 555 -505 555 -495 { lab=vd}
+N 555 -655 555 -645 { lab=GND}
+N 555 -435 555 -425 { lab=ib}
+N 850 -600 850 -585 { lab=ib}
+N 830 -590 830 -580 { lab=vs}
+N 960 -660 970 -660 { lab=out}
+N 785 -680 800 -680 { lab=in1}
+N 840 -740 840 -730 { lab=vd}
+N 970 -660 980 -660 { lab=out}
+N 980 -660 990 -660 { lab=out}
 C {devices/code_shown.sym} 1425 -1020 0 0 {name=Simulation only_toplevel=false value="*cmd step stop
 
 
@@ -41,7 +41,7 @@ set color1=black
 
 destroy all
 save all
-ac dec 2000 1 110Meg
+ac dec 1000 1 400Meg
 run
 let gain = db(abs(OUT/IN1))
 let gain_3db = maximum(gain)-3
@@ -49,7 +49,7 @@ let gain_3db = maximum(gain)-3
 plot  gain gain_3db ylabel 'dB'
 *Fase em graus
 let phase_out=(ph(OUT)-ph(IN1))
-plot  phase_out ylabel 'Degrees'
+plot  -180 phase_out 180 ylabel 'Degrees'
 .endc"}
 C {devices/code.sym} 1470 -480 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -58,28 +58,28 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {devices/vsource.sym} 805 -695 0 0 {name=VIN1 value="AC 1 DC 1"}
-C {devices/isource.sym} 805 -475 0 0 {name=ibias value=8u}
-C {devices/gnd.sym} 805 -655 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} 1040 -905 0 0 {name=VDD value=1.8}
-C {devices/vsource.sym} 1170 -910 0 0 {name=VSS value=0
+C {devices/vsource.sym} 555 -685 0 0 {name=VIN1 value="AC 1 DC 1"}
+C {devices/isource.sym} 555 -465 0 0 {name=ibias value=5u}
+C {devices/gnd.sym} 555 -645 0 0 {name=l2 lab=GND}
+C {devices/vsource.sym} 790 -895 0 0 {name=VDD value=1.8}
+C {devices/vsource.sym} 920 -900 0 0 {name=VSS value=0
 }
-C {devices/gnd.sym} 1170 -880 0 0 {name=l6 lab=GND}
-C {devices/gnd.sym} 1040 -875 0 0 {name=l7 lab=GND}
-C {devices/lab_pin.sym} 805 -435 0 0 {name=l17 sig_type=std_logic lab=ib}
-C {devices/lab_pin.sym} 805 -735 0 0 {name=l10 sig_type=std_logic lab=in1}
-C {devices/lab_pin.sym} 1040 -935 0 0 {name=l1 sig_type=std_logic lab=vd}
-C {devices/lab_pin.sym} 1170 -940 0 0 {name=l4 sig_type=std_logic lab=vs}
-C {devices/lab_pin.sym} 805 -515 0 0 {name=l3 sig_type=std_logic lab=vd}
-C {devices/lab_pin.sym} 1035 -690 0 0 {name=l5 sig_type=std_logic lab=in1}
-C {devices/lab_pin.sym} 1100 -595 2 0 {name=l12 sig_type=std_logic lab=ib}
-C {devices/lab_pin.sym} 1090 -750 0 0 {name=l18 sig_type=std_logic lab=vd}
-C {devices/lab_pin.sym} 1080 -590 0 0 {name=l19 sig_type=std_logic lab=vs}
-C {devices/lab_pin.sym} 1240 -670 2 0 {name=l15 sig_type=std_logic lab=out}
-C {devices/capa.sym} 1230 -640 0 0 {name=Cl
+C {devices/gnd.sym} 920 -870 0 0 {name=l6 lab=GND}
+C {devices/gnd.sym} 790 -865 0 0 {name=l7 lab=GND}
+C {devices/lab_pin.sym} 555 -425 0 0 {name=l17 sig_type=std_logic lab=ib}
+C {devices/lab_pin.sym} 555 -725 0 0 {name=l10 sig_type=std_logic lab=in1}
+C {devices/lab_pin.sym} 790 -925 0 0 {name=l1 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} 920 -930 0 0 {name=l4 sig_type=std_logic lab=vs}
+C {devices/lab_pin.sym} 555 -505 0 0 {name=l3 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} 785 -680 0 0 {name=l5 sig_type=std_logic lab=in1}
+C {devices/lab_pin.sym} 850 -585 2 0 {name=l12 sig_type=std_logic lab=ib}
+C {devices/lab_pin.sym} 840 -740 0 0 {name=l18 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} 830 -580 0 0 {name=l19 sig_type=std_logic lab=vs}
+C {devices/lab_pin.sym} 990 -660 2 0 {name=l15 sig_type=std_logic lab=out}
+C {devices/capa.sym} 980 -630 0 0 {name=Cl
 m=1
 value=4p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/gnd.sym} 1230 -610 0 0 {name=l16 lab=GND}
-C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer-pex.sym} 1120 -670 0 0 {name=X1}
+C {devices/gnd.sym} 980 -600 0 0 {name=l16 lab=GND}
+C {/home/hugodg/projects/temp-sensor/buffer/xschem/buffer-pex.sym} 870 -660 0 0 {name=X1}

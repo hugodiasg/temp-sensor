@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.2 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -182,6 +182,10 @@ N 1440 -1440 1440 -1420 {
 lab=#net31}
 N 1440 -1510 1440 -1500 {
 lab=#net32}
+N 720 -1470 720 -1370 {
+lab=#net1}
+N 780 -1470 840 -1470 {
+lab=out}
 C {devices/iopin.sym} 400 -1970 3 0 {name=p2 lab=vd}
 C {devices/iopin.sym} -30 -1610 2 0 {name=p1 lab=ib}
 C {sky130_fd_pr/pfet_01v8.sym} 360 -1800 0 0 {name=M3
@@ -445,3 +449,4 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 1440 -1470 0 1 {name=l6 sig_type=std_logic lab=gnd}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 750 -1470 1 0 {name=Cc model=cap_mim_m3_2 W=21 L=21 MF=1 spiceprefix=X}

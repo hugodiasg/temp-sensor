@@ -1,28 +1,31 @@
-** sch_path: /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer_tb-dc.sch
+** sch_path: /home/hugodg/projects/temp-sensor/buffer/xschem/buffer_tb-dc.sch
 **.subckt buffer_tb-dc
-VIN1 in1 GND 0.9
+VIN1 in1 GND 1.2
 .save i(vin1)
-ibias vd ib 8u
+ibias vd ib 5u
 VDD vd GND 1.8
 .save i(vdd)
 VSS vs GND 0
 .save i(vss)
-X1 vd in1 out ib vs buffer
+Cl out GND 4p m=1
+X1 vd in1 out ib vs buffer-pex
 **** begin user architecture code
 
 
-*.dc ibias 1u 100u 1u
+
 .control
 set color0=white
 set color1=black
 
 destroy all
 save all
-dc VIN1 -0.5 1.8 0.01
+*dc ibias 0 20u 0.01u
+dc VIN1 0.01 1.8 0.01
 run
-plot out in1
-*plot out in1 xlimit -1.8 0
-*plot out in1 xlimit 0 1.8
+let err = abs(out-in1)
+plot err ylabel 'Error (V)'
+plot v(out) v(in1)
+
 
 .endc
 
@@ -32,10 +35,10 @@ plot out in1
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym # of pins=5
-** sym_path: /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sym
-** sch_path: /home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer.sch
-.subckt buffer vd in out ib gnd
+* expanding   symbol:  /home/hugodg/projects/temp-sensor/buffer/xschem/buffer-pex.sym # of pins=5
+** sym_path: /home/hugodg/projects/temp-sensor/buffer/xschem/buffer-pex.sym
+** sch_path: /home/hugodg/projects/temp-sensor/buffer/xschem/buffer-pex.sch
+.subckt buffer-pex vd in out ib gnd
 *.iopin vd
 *.iopin ib
 *.iopin out
@@ -74,250 +77,119 @@ XM10 ib ib gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf
 **** begin user architecture code
 
 
-R0 in.n1 in.n0 150.875
-R1 in.n5 in.n4 150.49
-R2 in.n3 in.n2 150.488
-R3 in.n7 in.n6 141.16
-R4 in.n0 in.t9 25.228
-R5 in.n6 in.t7 24.105
-R6 in.n0 in.t2 24.104
-R7 in.n2 in.t4 24.103
-R8 in.n4 in.t0 24.102
-R9 in.n1 in.t5 24.102
-R10 in.n5 in.t8 24.102
-R11 in.n3 in.t6 24.102
-R12 in.n7 in.t3 24.102
-R13 in.n9 in.t1 24.1
-R14 in.n14 in.n13 9.3
-R15 in in.n14 8.355
-R16 in.n8 in.n7 1.785
-R17 in.n2 in.n1 1.103
-R18 in.n4 in.n3 1.094
-R19 in.n6 in.n5 0.41
-R20 in.n14 in.n12 0.076
-R21 in.n12 in.n8 0.014
-R22 in.n12 in.n11 0.005
-R23 in.n10 in.n9 0.005
-R24 in.n11 in.n10 0.001
-R25 out.t0 out.n7 175.091
-R26 out.n0 out.t2 175.044
-R27 out.n2 out.n1 150.491
-R28 out.n4 out.n3 150.491
-R29 out.n6 out.n5 141.106
-R30 out out.t0 28.796
-R31 out.n5 out.t1 24.103
-R32 out.n6 out.t7 24.103
-R33 out.n4 out.t5 24.103
-R34 out.n2 out.t3 24.102
-R35 out.n0 out.t6 24.102
-R36 out.n1 out.t9 24.102
-R37 out.n3 out.t4 24.102
-R38 out.n7 out.t8 24.102
-R39 out.n7 out.n6 1.085
-R40 out.n3 out.n2 0.988
-R41 out.n5 out.n4 0.913
-R42 out.n1 out.n0 0.863
-R43 vd.n53 vd.n52 379.482
-R44 vd.n40 vd.n34 379.482
-R45 vd.n54 vd.n53 297.411
-R46 vd.n41 vd.n40 297.411
-R47 vd.n19 vd.n16 131.387
-R48 vd.n4 vd.n1 131.387
-R49 vd.n24 vd.n21 131.011
-R50 vd.n9 vd.n6 131.011
-R51 vd.n29 vd.n24 54.211
-R52 vd.n14 vd.n9 54.211
-R53 vd.n29 vd.n19 53.835
-R54 vd.n14 vd.n4 53.835
-R55 vd.n57 vd.n14 8.271
-R56 vd.n57 vd.n29 7.938
-R57 vd.n57 vd.n56 4.028
-R58 vd vd.n57 1.201
-R59 vd.n55 vd.n45 0.296
-R60 vd.n42 vd.n32 0.228
-R61 vd.n56 vd.n55 0.18
-R62 vd.n56 vd.n42 0.167
-R63 vd.n19 vd.n18 0.161
-R64 vd.n24 vd.n23 0.161
-R65 vd.n4 vd.n3 0.161
-R66 vd.n9 vd.n8 0.161
-R67 vd.n23 vd.n22 0.139
-R68 vd.n8 vd.n7 0.139
-R69 vd.n18 vd.n17 0.139
-R70 vd.n3 vd.n2 0.139
-R71 vd.n42 vd.n41 0.017
-R72 vd.n55 vd.n54 0.017
-R73 vd.n16 vd.n15 0.015
-R74 vd.n21 vd.n20 0.015
-R75 vd.n1 vd.n0 0.015
-R76 vd.n6 vd.n5 0.015
-R77 vd.n52 vd.n51 0.013
-R78 vd.n34 vd.n33 0.013
-R79 vd.n26 vd.n25 0.013
-R80 vd.n27 vd.n26 0.013
-R81 vd.n11 vd.n10 0.013
-R82 vd.n12 vd.n11 0.013
-R83 vd.n53 vd.n50 0.003
-R84 vd.n47 vd.n46 0.003
-R85 vd.n36 vd.n35 0.003
-R86 vd.n40 vd.n39 0.003
-R87 vd.n50 vd.n49 0.003
-R88 vd.n37 vd.n36 0.003
-R89 vd.n48 vd.n47 0.003
-R90 vd.n39 vd.n38 0.003
-R91 vd.n49 vd.n48 0.002
-R92 vd.n38 vd.n37 0.002
-R93 vd.n29 vd.n28 0.002
-R94 vd.n28 vd.n27 0.002
-R95 vd.n14 vd.n13 0.002
-R96 vd.n13 vd.n12 0.002
-R97 vd.n32 vd.n31 0.001
-R98 vd.n45 vd.n44 0.001
-R99 vd.n44 vd.n43 0.001
-R100 vd.n31 vd.n30 0.001
-R101 ib.n0 ib.t2 24.837
-R102 ib.n0 ib.t0 24.107
-R103 ib.n1 ib.t1 17.747
-R104 ib ib.n1 4.155
-R105 ib.n1 ib.n0 0.387
-C0 net3 net4 2.13fF
-C1 in net2 1.15fF
-C2 out net3 3.71fF
-C3 out net4 4.05fF
-C4 vd net2 4.02fF
-C5 net1 net2 3.05fF
-C6 ib net4 0.05fF
-C7 in net3 1.75fF
-C8 in net4 3.76fF
-C9 vd net3 4.13fF
-C10 net1 net3 0.21fF
-C11 out in 2.79fF
-C12 net1 net4 0.05fF
-C13 out vd 1.60fF
-C14 in ib 0.09fF
-C15 out net1 1.73fF
-C16 in vd 0.31fF
-C17 net3 net2 0.42fF
-C18 in net1 0.33fF
-C19 net2 net4 1.84fF
-C20 net1 vd 2.57fF
-C21 out net2 2.47fF
-C22 ib.t1 gnd 0.02fF
-C23 ib.t2 gnd 0.45fF
-C24 ib.t0 gnd 0.44fF
-C25 ib.n0 gnd 0.61fF $ **FLOATING
-C26 ib.n1 gnd 0.39fF $ **FLOATING
-C27 vd.n0 gnd 0.28fF $ **FLOATING
-C28 vd.n1 gnd 0.05fF $ **FLOATING
-C29 vd.n2 gnd 0.27fF $ **FLOATING
-C30 vd.n3 gnd 0.03fF $ **FLOATING
-C31 vd.n4 gnd 0.03fF $ **FLOATING
-C32 vd.n5 gnd 0.28fF $ **FLOATING
-C33 vd.n6 gnd 0.05fF $ **FLOATING
-C34 vd.n7 gnd 0.27fF $ **FLOATING
-C35 vd.n8 gnd 0.03fF $ **FLOATING
-C36 vd.n9 gnd 0.03fF $ **FLOATING
-C37 vd.n10 gnd 0.06fF $ **FLOATING
-C38 vd.n11 gnd 0.06fF $ **FLOATING
-C39 vd.n12 gnd 0.29fF $ **FLOATING
-C40 vd.n13 gnd 0.02fF $ **FLOATING
-C41 vd.n14 gnd 0.40fF $ **FLOATING
-C42 vd.n15 gnd 0.28fF $ **FLOATING
-C43 vd.n16 gnd 0.05fF $ **FLOATING
-C44 vd.n17 gnd 0.27fF $ **FLOATING
-C45 vd.n18 gnd 0.03fF $ **FLOATING
-C46 vd.n19 gnd 0.03fF $ **FLOATING
-C47 vd.n20 gnd 0.28fF $ **FLOATING
-C48 vd.n21 gnd 0.05fF $ **FLOATING
-C49 vd.n22 gnd 0.27fF $ **FLOATING
-C50 vd.n23 gnd 0.03fF $ **FLOATING
-C51 vd.n24 gnd 0.03fF $ **FLOATING
-C52 vd.n25 gnd 0.06fF $ **FLOATING
-C53 vd.n26 gnd 0.06fF $ **FLOATING
-C54 vd.n27 gnd 0.29fF $ **FLOATING
-C55 vd.n28 gnd 0.02fF $ **FLOATING
-C56 vd.n29 gnd 0.42fF $ **FLOATING
-C57 vd.n30 gnd 1.06fF $ **FLOATING
-C58 vd.n31 gnd 0.03fF $ **FLOATING
-C59 vd.n32 gnd 0.52fF $ **FLOATING
-C60 vd.n33 gnd 1.06fF $ **FLOATING
-C61 vd.n34 gnd 0.12fF $ **FLOATING
-C62 vd.n35 gnd 0.10fF $ **FLOATING
-C63 vd.n36 gnd 0.12fF $ **FLOATING
-C64 vd.n37 gnd 0.82fF $ **FLOATING
-C65 vd.n38 gnd 0.82fF $ **FLOATING
-C66 vd.n39 gnd 0.12fF $ **FLOATING
-C67 vd.n40 gnd 0.10fF $ **FLOATING
-C68 vd.n41 gnd 0.06fF $ **FLOATING
-C69 vd.n42 gnd 0.08fF $ **FLOATING
-C70 vd.n43 gnd 1.06fF $ **FLOATING
-C71 vd.n44 gnd 0.03fF $ **FLOATING
-C72 vd.n45 gnd 0.28fF $ **FLOATING
-C73 vd.n46 gnd 0.10fF $ **FLOATING
-C74 vd.n47 gnd 0.12fF $ **FLOATING
-C75 vd.n48 gnd 0.82fF $ **FLOATING
-C76 vd.n49 gnd 0.82fF $ **FLOATING
-C77 vd.n50 gnd 0.12fF $ **FLOATING
-C78 vd.n51 gnd 1.06fF $ **FLOATING
-C79 vd.n52 gnd 0.12fF $ **FLOATING
-C80 vd.n53 gnd 0.10fF $ **FLOATING
-C81 vd.n54 gnd 0.06fF $ **FLOATING
-C82 vd.n55 gnd 0.29fF $ **FLOATING
-C83 vd.n56 gnd 1.16fF $ **FLOATING
-C84 vd.n57 gnd 10.99fF $ **FLOATING
-C85 out.t8 gnd 0.52fF
-C86 out.t1 gnd 0.52fF
-C87 out.t4 gnd 0.52fF
-C88 out.t9 gnd 0.52fF
-C89 out.t2 gnd 0.82fF
-C90 out.t6 gnd 0.52fF
-C91 out.n0 gnd 2.36fF $ **FLOATING
-C92 out.n1 gnd 2.48fF $ **FLOATING
-C93 out.t3 gnd 0.52fF
-C94 out.n2 gnd 0.76fF $ **FLOATING
-C95 out.n3 gnd 0.75fF $ **FLOATING
-C96 out.t5 gnd 0.52fF
-C97 out.n4 gnd 0.80fF $ **FLOATING
-C98 out.n5 gnd 0.81fF $ **FLOATING
-C99 out.t7 gnd 0.52fF
-C100 out.n6 gnd 0.74fF $ **FLOATING
-C101 out.n7 gnd 0.80fF $ **FLOATING
-C102 out.t0 gnd 0.79fF
-C103 in.t0 gnd 0.54fF
-C104 in.t5 gnd 0.54fF
-C105 in.t9 gnd 0.57fF
-C106 in.t2 gnd 0.54fF
-C107 in.n0 gnd 1.47fF $ **FLOATING
-C108 in.n1 gnd 0.76fF $ **FLOATING
-C109 in.t4 gnd 0.54fF
-C110 in.n2 gnd 0.76fF $ **FLOATING
-C111 in.t6 gnd 0.54fF
-C112 in.n3 gnd 0.76fF $ **FLOATING
-C113 in.n4 gnd 0.76fF $ **FLOATING
-C114 in.t8 gnd 0.54fF
-C115 in.n5 gnd 0.90fF $ **FLOATING
-C116 in.t7 gnd 0.54fF
-C117 in.n6 gnd 0.90fF $ **FLOATING
-C118 in.t3 gnd 0.54fF
-C119 in.n7 gnd 0.64fF $ **FLOATING
-C120 in.n8 gnd 0.28fF $ **FLOATING
-C121 in.t1 gnd 0.54fF
-C122 in.n9 gnd 0.23fF $ **FLOATING
-C123 in.n11 gnd 0.01fF $ **FLOATING
-C124 in.n12 gnd 0.02fF $ **FLOATING
-C125 in.n13 gnd 0.03fF $ **FLOATING
-C126 in.n14 gnd 0.50fF $ **FLOATING
-C127 net4 gnd -1.92fF
-C128 ib gnd 2.35fF
-C129 out gnd 3.80fF
-C130 net3 gnd -0.61fF
-C131 vd gnd -15.82fF
-C132 net1 gnd 16.37fF
-C133 net2 gnd 2.13fF
-C134 in gnd 4.77fF
+C0 net3 w_19600_3400# 0.0399f
+C1 net3 in 1.06f
+C2 net2 vd 2.85f
+C3 a_14316_3522# vd 0.0215f
+C4 a_19796_4422# vd 0.0104f
+C5 gnd w_19600_3400# 0.0414f
+C6 gnd in 0.0898f
+C7 a_14316_4422# vd 0.0237f
+C8 w_19600_3400# vd 0.0714f
+C9 vd in 0.16f
+C10 w_14120_3400# vd 0.116f
+C11 w_19600_4300# vd 0.0724f
+C12 w_14120_4300# vd 0.123f
+C13 net1 out 2.63f
+C14 net4 out 2.41f
+C15 net3 out 2.19f
+C16 net4 net1 0.0315f
+C17 net3 net1 0.16f
+C18 net4 ib 0.0512f
+C19 net3 net4 1.5f
+C20 a_21636_2682# in 0.0102f
+C21 gnd out 1.84f
+C22 vd out 1.05f
+C23 net1 gnd 4.77f
+C24 net4 gnd 0.596f
+C25 ib gnd 0.163f
+C26 net1 vd 1.48f
+C27 net3 gnd 0.387f
+C28 a_15696_2770# a_15438_2770# 0.0212f
+C29 net3 vd 2.15f
+C30 a_19996_3619# a_19738_3619# 0.0212f
+C31 a_14258_3619# a_14516_3619# 0.0212f
+C32 gnd vd 0.264f
+C33 a_15696_2770# in 0.0215f
+C34 a_19996_4519# a_19738_4519# 0.0212f
+C35 net2 in 0.615f
+C36 a_15496_2682# in 0.102f
+C37 a_19996_3619# w_19600_3400# 0.0649f
+C38 a_21636_1802# out 0.0539f
+C39 a_19738_3619# w_19600_3400# 0.0649f
+C40 w_19600_3400# a_19796_3522# 0.395f
+C41 w_14120_3400# a_14258_3619# 0.0649f
+C42 w_14120_3400# a_14516_3619# 0.0649f
+C43 a_14316_3522# in 0.01f
+C44 a_14516_4519# a_14258_4519# 0.0212f
+C45 a_14316_3522# w_14120_3400# 0.395f
+C46 a_19996_4519# w_19600_4300# 0.0649f
+C47 w_19600_4300# a_19738_4519# 0.0649f
+C48 w_19600_4300# a_19796_4422# 0.395f
+C49 a_14516_4519# w_14120_4300# 0.0649f
+C50 a_14556_1802# ib 0.0355f
+C51 w_14120_4300# a_14258_4519# 0.0649f
+C52 w_19600_3400# in 0.0115f
+C53 w_14120_3400# in 0.0401f
+C54 a_14316_4422# w_14120_4300# 0.395f
+C55 w_19600_4300# w_19600_3400# 0.0394f
+C56 w_14120_3400# w_14120_4300# 0.0394f
+C57 net2 out 2.04f
+C58 a_14498_1890# a_14756_1890# 0.0212f
+C59 a_19796_3522# out 0.0116f
+C60 net2 net1 1.99f
+C61 net4 net2 1.32f
+C62 a_21578_2770# a_21836_2770# 0.0212f
+C63 net3 net2 0.338f
+C64 a_21578_1890# a_21836_1890# 0.0212f
+C65 w_19600_3400# out 0.0264f
+C66 in out 1.56f
+C67 net3 a_19796_3522# 0.0141f
+C68 net1 in 0.296f
+C69 net4 in 2.43f
+C70 net2 gnd 0.342f
+C71 ib in 0.0824f
+C72 a_21836_1890# 0 0.0875f
+C73 a_21578_1890# 0 0.0875f
+C74 a_21636_1802# 0 0.6f
+C75 a_14756_1890# 0 0.0875f
+C76 a_14498_1890# 0 0.0875f
+C77 a_14556_1802# 0 0.607f
+C78 a_21836_2770# 0 0.0875f
+C79 a_21578_2770# 0 0.0875f
+C80 a_21636_2682# 0 0.6f
+C81 a_15696_2770# 0 0.0875f
+C82 a_15438_2770# 0 0.0875f
+C83 a_15496_2682# 0 0.607f
+C84 a_19996_3619# 0 0.0223f
+C85 a_19738_3619# 0 0.0223f
+C86 a_19796_3522# 0 0.225f
+C87 a_14516_3619# 0 0.0223f
+C88 a_14258_3619# 0 0.0223f
+C89 a_14316_3522# 0 0.226f
+C90 a_19996_4519# 0 0.0223f
+C91 a_19738_4519# 0 0.0223f
+C92 a_19796_4422# 0 0.226f
+C93 a_14516_4519# 0 0.0223f
+C94 a_14258_4519# 0 0.0223f
+C95 a_14316_4422# 0 0.226f
+C96 w_19600_3400# 0 1.6f
+C97 w_14120_3400# 0 1.6f
+C98 w_19600_4300# 0 1.6f
+C99 w_14120_4300# 0 1.6f
+C100 net4 0 1.22f
+C101 ib 0 2.02f
+C102 vd 0 19.5f
+C103 gnd 0 -0.969f
+C104 net1 0 21.9f
+C105 net2 0 4.04f
+C106 net3 0 3.79f
+C107 in 0 6.74f
+C108 out 0 11.9f
 
 
 **** end user architecture code
+XCc out net1 sky130_fd_pr__cap_mim_m3_2 W=21 L=21 MF=1 m=1
 .ends
 
 .GLOBAL GND
