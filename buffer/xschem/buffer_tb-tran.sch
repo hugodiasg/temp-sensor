@@ -1,4 +1,4 @@
-v {xschem version=3.4.2 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,10 +38,10 @@ C {devices/code_shown.sym} 1475 -930 0 0 {name=Simulation only_toplevel=false va
 .control
 set color0=white
 set color1=black
-set temp=10
+set temp=27
 destroy all
 save all
-tran 10u 1m
+tran 1u 1m
 run
 plot out in1
 .endc"}
@@ -60,7 +60,7 @@ C {devices/lab_pin.sym} 765 -680 0 0 {name=l5 sig_type=std_logic lab=in1}
 C {devices/lab_pin.sym} 830 -585 2 0 {name=l12 sig_type=std_logic lab=ib}
 C {devices/lab_pin.sym} 820 -740 0 0 {name=l18 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 810 -580 0 1 {name=l19 sig_type=std_logic lab=vs}
-C {devices/isource.sym} 805 -495 0 0 {name=ibias value=5u}
+C {devices/isource.sym} 805 -495 0 0 {name=ibias value=0.1u}
 C {devices/lab_pin.sym} 805 -455 0 0 {name=l17 sig_type=std_logic lab=ib}
 C {devices/lab_pin.sym} 805 -535 0 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/gnd.sym} 535 -645 0 0 {name=l2 lab=GND}
@@ -73,4 +73,4 @@ value=4p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 1010 -600 0 0 {name=l16 lab=GND}
-C {/home/hugodg/projects/temp-sensor/buffer/xschem/buffer-pex.sym} 850 -660 0 0 {name=X1}
+C {/foss/designs/temp-sensor/buffer/xschem/buffer-no-dummies.sym} 850 -660 0 0 {name=X1}

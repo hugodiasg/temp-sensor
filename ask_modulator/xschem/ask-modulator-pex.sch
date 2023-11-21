@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -9,91 +9,70 @@ N 400 -200 442.5 -200 {
 lab=out}
 N 400 -130 400 -107.5 {
 lab=gnd}
-N 400 -332.5 400 -312.5 {
+N 400 -422.5 400 -402.5 {
 lab=vd}
-N 400 -230 400 -200 {
-lab=out}
 N 400 -160 400 -130 {
 lab=gnd}
 N 340 -160 360 -160 {
 lab=in}
-N 542.5 -230 620 -230 {
-lab=out}
-N 400 -230 542.5 -230 {
-lab=out}
-N 542.5 -312.5 620 -312.5 {
-lab=vd}
-N 620 -312.5 620 -290 {
-lab=vd}
-N 400 -312.5 542.5 -312.5 {
-lab=vd}
-N 400 -312.5 400 -290 {
-lab=vd}
 N 400 -200 400 -190 {
+lab=out}
+N 400 -230 400 -200 {
+lab=out}
+N 400 -320 400 -300 {
+lab=out}
+N 400 -300 400 -230 {
 lab=out}
 C {devices/iopin.sym} 400 -110 1 0 {name=p1 lab=gnd}
 C {devices/ipin.sym} 340 -160 0 0 {name=p3 lab=in}
 C {devices/opin.sym} 440 -200 0 0 {name=p4 lab=out}
-C {devices/iopin.sym} 400 -332.5 3 0 {name=p2 lab=vd}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 400 -260 0 0 {name=C0 model=cap_mim_m3_2 W=24.4 L=24.4 MF=3 spiceprefix=X}
-C {devices/lab_pin.sym} 600 -260 0 0 {name=l1 sig_type=std_logic lab=gnd}
-C {sky130_fd_pr/res_xhigh_po_0p35.sym} 620 -260 0 0 {name=R1
-W=0.35
-L=5
-model=res_xhigh_po_0p35
-spiceprefix=X
-mult=1}
-C {/home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/l0.sym} 547.5 -275 1 0 {name=x1}
-C {devices/code.sym} 735 -562.5 0 0 {name=RC_ext only_toplevel=false value="
-R0 vd vd.t1 0.714
-R1 vd.t0 vd.t2 0.066
-R2 vd.t1 vd.t0 0.066
-R3 gnd.n15 gnd.n14 71.405
-R4 gnd.n18 gnd.n17 71.152
-R5 gnd.n6 gnd.n5 67.749
-R6 gnd.n8 gnd.n7 67.387
-R7 gnd gnd.n20 4.959
-R8 gnd.n9 gnd.n8 1.449
-R9 gnd.n20 gnd.n9 0.359
-R10 gnd.n5 gnd.n4 0.13
-R11 gnd.n20 gnd.n19 0.114
-R12 gnd.n17 gnd.n16 0.109
-R13 gnd.n19 gnd.n15 0.094
-R14 gnd.n9 gnd.n6 0.031
-R15 gnd.n11 gnd.n10 0.026
-R16 gnd.n19 gnd.n18 0.017
-R17 gnd.n12 gnd.n11 0.017
-R18 gnd.n13 gnd.n12 0.01
-R19 gnd.n2 gnd.n1 0.007
-R20 gnd.n1 gnd.n0 0.007
-R21 gnd.n3 gnd.n2 0.002
-R22 gnd.n6 gnd.n3 0.001
-R23 gnd.n15 gnd.n13 0.001
-R24 in in.t0 396.948
-C0 in gnd 0.07fF
-C1 in out 0.25fF
-C2 gnd vd 0.37fF
-C3 vd out 3.12fF
-C4 gnd out 0.33fF
-C5 in 0 1.68fF
-C6 vd.t2 0 36.61fF
-C7 vd.t0 0 34.66fF
-C8 vd.t1 0 49.33fF
-C9 gnd 0 -0.63fF
-C10 out 0 217.77fF
-C11 vd 0 13.16fF
+C {devices/iopin.sym} 400 -422.5 3 0 {name=p2 lab=vd}
+C {devices/code.sym} 535 -392.5 0 0 {name=RC_ext only_toplevel=false value="
+* NGSPICE file created from ask-modulator.ext - technology: sky130A
+
+*.subckt ask-modulator gnd in out vd
+X0 vd out sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
+X1 vd a_6866_12466# gnd.t2 sky130_fd_pr__res_xhigh_po_0p35 l=5
+X2 vd out sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
+X3 vd out sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
+X4 gnd.t1 in.t0 out.t0 gnd.t0 sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
+R0 out out.t0 9.21142
+R1 gnd.n20 gnd.n9 815.595
+R2 gnd.n20 gnd.t0 25.9602
+R3 gnd.n17 gnd.n14 25.7537
+R4 gnd.n9 gnd.t2 24.3172
+R5 gnd.n6 gnd.n3 24.2378
+R6 gnd.n26 gnd.t1 8.70236
+R7 gnd gnd.n26 2.5773
+R8 gnd.n23 gnd.n22 0.366293
+R9 gnd.n12 gnd.n11 0.366279
+R10 gnd.n11 gnd.n10 0.365897
+R11 gnd.n22 gnd.n21 0.365897
+R12 gnd.n6 gnd.n5 0.130535
+R13 gnd.n1 gnd.n0 0.1305
+R14 gnd.t2 gnd.n1 0.1305
+R15 gnd.n5 gnd.n4 0.1305
+R16 gnd.n19 gnd.n18 0.10956
+R17 gnd.t0 gnd.n19 0.10956
+R18 gnd.n16 gnd.n15 0.10956
+R19 gnd.n17 gnd.n16 0.109083
+R20 gnd.n14 gnd.n13 0.0264102
+R21 gnd.n8 gnd.n7 0.00762598
+R22 gnd.n9 gnd.n8 0.00762598
+R23 gnd.n3 gnd.n2 0.00762598
+R24 gnd.n24 gnd.n23 0.00240486
+R25 gnd.t0 gnd.n17 0.00197336
+R26 gnd.n25 gnd.n24 0.00186816
+R27 gnd.t2 gnd.n6 0.00146241
+R28 gnd.n26 gnd.n25 0.00124275
+R29 gnd.n20 gnd.n12 0.00101458
+R30 gnd.n23 gnd.n20 0.0010004
+R31 in in.t0 396.178
+C0 vd a_6866_12466# 0.0117f
+C1 out in 0.244f
+C2 vd out 0.139p
+C3 a_6866_12466# out 0.0171f
+*.ends
+
 "}
-C {sky130_fd_pr/nfet_01v8.sym} 380 -160 0 0 {name=M1
-L=0.15
-W=2
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
+C {/foss/designs/temp-sensor/ask_modulator/xschem/l0.sym} 397.5 -365 1 0 {name=x1}

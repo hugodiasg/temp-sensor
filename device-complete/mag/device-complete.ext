@@ -1,898 +1,602 @@
-timestamp 1677544314
+timestamp 0
 version 8.3
 tech sky130A
 style ngspice()
 scale 1000 1 500000
 resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
-use ask-modulator ask-modulator_0 1 0 -13100 0 1 8600
-use sky130_fd_pr__res_xhigh_po_0p35_FT5NBF sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1 1 0 15548 0 1 -3655
-use sky130_fd_pr__res_xhigh_po_0p35_FT5NBF sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0 1 0 16348 0 1 -3655
-use sigma-delta sigma-delta_0 1 0 -1890 0 1 -7930
-use sensor sensor_0 1 0 -9100 0 1 -15200
-use ota ota_0 1 0 20710 0 1 -11140
-use buffer buffer_1 1 0 -7675 0 1 -14830
-use buffer buffer_0 1 0 -7875 0 1 -6430
-port "ib" 6 18220 -15339 18220 -15339 m1
-port "ib2" 7 5520 -15379 5520 -15379 m2
-port "clk" 10 -8800 -9140 -8680 -9000 m1
-port "gnd" 5 27140 -15439 27140 -15439 m1
-port "vpwr" 2 -8740 -4960 -8740 -4960 m1
-port "out" 1 -8760 5620 -8740 5620 m1
-port "vd" 4 27420 -2180 27420 -2180 m1
-node "10umX10um" 0 0 -18000 12000 comment 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "vts" 7 5843.79 -1680 -14500 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2276000 23160 0 0 0 0 0 0 0 0 0 0
-node "ib" 6 6184.72 18220 -15339 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3815900 26098 426000 3440 0 0 0 0 0 0 0 0
-node "ib2" 9 6430.13 5520 -15379 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 270000 3480 2811800 26458 0 0 0 0 0 0 0 0
-node "m1_15500_n1600#" 3 2192 15500 -1600 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2163000 13340 1453000 6820 0 0 0 0 0 0 0 0
-node "clk" 3 2811.06 -8800 -9140 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1484800 12148 0 0 0 0 0 0 0 0 0 0
-node "out_buf1" 0 23954.1 -6755 -3755 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15259925 99030 0 0 0 0 0 0 0 0 0 0
-node "out_ota" 0 7820.33 5000 -3300 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5738000 57780 0 0 0 0 0 0 0 0 0 0
-node "gnd" 3 38998.7 27140 -15439 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6474520 47638 1205000 11300 23078400 112470 0 0 0 0 0 0
-node "vpwr" 4 5685.31 -8740 -4960 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 924400 6404 3721200 19392 0 0 0 0 0 0 0 0
-node "out_sigma" 6 4799.41 -7301 3199 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2179204 21584 0 0 0 0 0 0 0 0 0 0
-node "out" 0 2665.93 -8760 5620 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1949616 6948 0 0 0 0 0 0 0 0 0 0
-node "vd" 4 53594.4 27420 -2180 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16969100 123750 2817200 18440 18297900 78740 403608 3616 2209872 11792 0 0
-substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "vd" "m1_15500_n1600#" 2541.2
-cap "vd" "ib2" 1208.76
-cap "gnd" "vd" 5322.5
-cap "ib" "vd" 103.982
-cap "m1_15500_n1600#" "out_buf1" 1897.45
-cap "ib2" "out_buf1" 530.035
-cap "vd" "out_ota" 2165.33
-cap "gnd" "out_buf1" 7704.26
-cap "ib" "out_buf1" 2315.29
-cap "out_ota" "out_buf1" 213.333
-cap "out_sigma" "vd" 342.09
-cap "gnd" "vpwr" 75.8907
-cap "vd" "vts" 17.1921
-cap "out_sigma" "clk" 80
-cap "out_sigma" "out_buf1" 335.291
-cap "gnd" "m1_15500_n1600#" 1284.87
-cap "vd" "clk" 885.872
-cap "vd" "out_buf1" 3584.11
-cap "gnd" "ib2" 1218.92
-cap "ib" "m1_15500_n1600#" 1686.18
-cap "out_sigma" "vpwr" 739.873
-cap "ib" "gnd" 742.444
-cap "out_ota" "ib2" 6.41079
-cap "gnd" "out_ota" 575.111
-cap "vpwr" "vd" 4186.73
-cap "vpwr" "clk" 1371.41
-cap "vpwr" "out_buf1" 20.3979
-cap "vts" "ib2" 501.997
-cap "gnd" "out_sigma" 128.751
-cap "vd" "out" 753.645
-cap "gnd" "vts" 13.3616
-cap "sensor_0/vts" "sensor_0/vtd" 12.2596
-cap "sensor_0/vts" "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_1/a_n260_n1737#" 0.363735
-cap "sensor_0/vts" "sensor_0/b" 1.39397
-cap "sensor_0/vts" "sensor_0/XN3/a_n158_n1563#" 96.9072
-cap "vts" "sensor_0/XN3/a_n158_n1563#" 157.706
-cap "vts" "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_1/a_n260_n1737#" 2.49401
-cap "sensor_0/b" "vts" 24.3517
-cap "vts" "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_1/a_100_n1563#" 1.88153
-cap "vts" "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_0/a_100_n1563#" 1.65326
-cap "vts" "sensor_0/a_11196_2438#" 0.155831
-cap "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_1/a_n260_n1737#" "vts" 16.2054
-cap "sensor_0/a_11396_2108#" "vts" 0.160276
-cap "vts" "sensor_0/a_11396_1690#" 3.95127
-cap "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_1/a_n100_n1651#" "vts" 12.4226
-cap "sensor_0/a_11138_1690#" "vts" 3.98414
-cap "sensor_0/a_11138_2108#" "vts" 0.160276
-cap "sensor_0/a_11196_2020#" "vts" 2.37917
-cap "vts" "sensor_0/a_11196_1602#" 24.9262
-cap "vts" "sensor_0/XN3/a_100_n1563#" 8.61228
-cap "buffer_1/a_14756_1890#" "buffer_1/ib" 0.0263303
-cap "buffer_1/a_14396_1716#" "buffer_1/ib" 0.499251
-cap "buffer_1/a_14556_1802#" "buffer_1/ib" 0.52451
-cap "buffer_1/a_14498_1890#" "buffer_1/ib" 0.0373148
-cap "buffer_1/ib" "buffer_1/gnd" 0.22787
-cap "buffer_1/ib" "buffer_1/a_14556_1802#" 0.123695
-cap "buffer_1/gnd" "buffer_1/net4" 6.06865
-cap "buffer_1/gnd" "buffer_1/ib" 34.7321
-cap "buffer_1/gnd" "buffer_1/in" 2.20696
-cap "buffer_1/gnd" "buffer_1/a_15696_2770#" 0.289302
-cap "buffer_1/gnd" "buffer_1/a_16120_1800#" 38.9436
-cap "buffer_1/gnd" "buffer_1/a_14556_1802#" 1.99403
-cap "buffer_1/gnd" "buffer_1/a_14498_1890#" 0.0827889
-cap "buffer_1/gnd" "buffer_1/a_15496_2682#" 0.0087384
-cap "buffer_1/gnd" "buffer_1/net3" 0.483579
-cap "buffer_1/gnd" "buffer_1/a_14756_1890#" 0.125968
-cap "buffer_1/gnd" "buffer_1/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n1835_n100#" 0.0730608
-cap "buffer_1/net4" "buffer_1/a_16120_1800#" -0.0350908
-cap "buffer_1/a_16120_1800#" "buffer_1/sky130_fd_pr__nfet_01v8_GVTB53_0/a_n287_n100#" -0.454867
-cap "buffer_1/gnd" "buffer_1/a_16120_1800#" 8.66814
-cap "sensor_0/vts" "sensor_0/b" 0.00395376
-cap "sensor_0/b" "vts" 0.513989
-cap "sensor_0/a_11196_2020#" "vts" 0.197688
-cap "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_1/a_n100_n1651#" "vts" 0.0751214
-cap "buffer_1/a_14396_1716#" "buffer_1/ib" 0.301717
-cap "buffer_1/a_14556_1802#" "buffer_1/ib" 1.34407
-cap "buffer_1/a_14756_1890#" "buffer_1/ib" 0.207377
-cap "buffer_1/ib" "buffer_1/a_14498_1890#" 0.293592
-cap "buffer_1/in" "buffer_1/ib" 0.542404
-cap "buffer_1/ib" "buffer_1/a_14556_1802#" 0.123695
-cap "buffer_1/gnd" "buffer_1/in" 0.0128458
-cap "buffer_1/ib" "buffer_1/gnd" 1.76938
-cap "buffer_1/ib" "buffer_1/in" -5.00216
-cap "buffer_1/vd" "buffer_1/in" -2.31419
-cap "buffer_1/a_14756_1890#" "buffer_1/gnd" 0.97801
-cap "buffer_1/net4" "buffer_1/gnd" 210.177
-cap "buffer_1/a_15696_2770#" "buffer_1/gnd" 6.76538
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "buffer_1/gnd" 58.8172
-cap "buffer_1/ib" "buffer_1/gnd" 94.1793
-cap "buffer_1/gnd" "buffer_1/in" 376.529
-cap "buffer_1/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n1835_n100#" "buffer_1/gnd" 1.41578
-cap "buffer_1/net2" "buffer_1/gnd" 9.34091
-cap "buffer_1/a_14556_1802#" "buffer_1/gnd" 6.93713
-cap "buffer_1/net3" "buffer_1/gnd" 31.5955
-cap "buffer_1/a_15438_2770#" "buffer_1/gnd" 3.52735
-cap "buffer_1/a_15496_2682#" "buffer_1/gnd" 47.6853
-cap "buffer_1/a_14498_1890#" "buffer_1/gnd" 0.645105
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n416_n100#" "buffer_1/gnd" 25.4275
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "buffer_1/a_15496_2682#" -1.92768
-cap "buffer_1/net2" "buffer_1/gnd" 6.19455
-cap "buffer_1/sky130_fd_pr__nfet_01v8_CL66SD_0/a_n2551_n188#" "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" -1.37666
-cap "buffer_1/sky130_fd_pr__nfet_01v8_CL66SD_0/a_n2551_n188#" "buffer_1/a_15696_2770#" -0.0231977
-cap "buffer_1/net3" "buffer_1/gnd" 0.552402
-cap "buffer_1/sky130_fd_pr__nfet_01v8_CL66SD_0/a_n2551_n188#" "buffer_1/a_15496_2682#" -0.219031
-cap "buffer_1/net2" "buffer_1/net4" -0.0408617
-cap "buffer_1/gnd" "buffer_1/net4" 3.47052
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "buffer_1/gnd" 20.3249
-cap "buffer_1/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n1835_n100#" "buffer_1/gnd" 1.28035
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "buffer_1/net4" -1.55546
-cap "buffer_1/gnd" "buffer_1/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n416_n100#" 2.60207
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "buffer_1/sky130_fd_pr__nfet_01v8_GVTB53_0/a_n287_n100#" -1.73218
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "buffer_1/a_15696_2770#" -0.493378
-cap "buffer_1/sky130_fd_pr__nfet_01v8_CL66SD_0/a_n2551_n188#" "buffer_1/gnd" 2.80893
-cap "buffer_1/a_21636_1802#" "buffer_1/out" 0.118367
-cap "buffer_1/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "buffer_1/out" 2.27374e-13
-cap "buffer_1/out" "buffer_1/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" 13.1749
-cap "buffer_1/out" "buffer_1/a_16120_1800#" 0.0233112
-cap "buffer_1/out" "buffer_1/a_21636_1802#" 0.158305
-cap "sensor_0/w_3200_3900#" "sigma-delta_0/reset_b_dff" 0.171127
-cap "sensor_0/w_3200_3900#" "sensor_0/vd" 0.977374
-cap "sensor_0/a_3396_4022#" "sigma-delta_0/reset_b_dff" 0.0846719
-cap "sensor_0/vd" "sensor_0/a_3396_4022#" 1.73194
-cap "sensor_0/sky130_fd_pr__pfet_01v8_8CLK97_0/a_n100_n297#" "sensor_0/vd" 1.73194
-cap "sigma-delta_0/reset_b_dff" "sensor_0/vd" 0.0855637
-cap "sensor_0/vd" "sensor_0/w_3200_3900#" 0.402448
-cap "sensor_0/d" "sensor_0/vd" 414.807
-cap "sigma-delta_0/reset_b_dff" "sensor_0/sky130_fd_pr__pfet_01v8_8CLK97_0/a_n100_n297#" 0.0846719
-cap "sigma-delta_0/reset_b_dff" "sensor_0/w_3200_3900#" 0.0704643
-cap "sigma-delta_0/reset_b_dff" "sensor_0/d" 9.77885
-cap "sensor_0/a" "sensor_0/vd" 5.19582
-cap "sensor_0/d" "sensor_0/vd" 578.949
-cap "sigma-delta_0/gnd" "sensor_0/vd" 0.102572
-cap "sigma-delta_0/gnd" "sensor_0/d" 14.9432
-cap "sigma-delta_0/gnd" "sensor_0/a" 0.458506
-cap "sensor_0/sky130_fd_pr__pfet_01v8_8CLK97_1/w_n296_n419#" "sigma-delta_0/gnd" 0.102572
-cap "vd" "sensor_0/a" 7.38262
-cap "sensor_0/sky130_fd_pr__pfet_01v8_8CLM97_0/w_n425_n419#" "vd" 38.1475
-cap "sensor_0/a" "sigma-delta_0/gnd" 0.576534
-cap "sensor_0/sky130_fd_pr__pfet_01v8_8CLM97_0/w_n425_n419#" "sigma-delta_0/gnd" 0.529793
-cap "vd" "sensor_0/sky130_fd_pr__pfet_01v8_8CLK97_1/w_n296_n419#" 3.22058
-cap "sensor_0/a_8216_4022#" "vd" 0.47972
-cap "sensor_0/a_8216_4022#" "sensor_0/gnd" 0.280833
-cap "sensor_0/w_8020_3900#" "vd" 0.434525
-cap "sensor_0/gnd" "vd" 9.07958
-cap "sensor_0/b" "vd" 0.819953
-cap "sensor_0/gnd" "sensor_0/w_8020_3900#" 0.550463
-cap "sensor_0/b" "sensor_0/gnd" 0.358101
-cap "sensor_0/b" "vd" 3.47692
-cap "sensor_0/gnd" "vd" 51.7475
-cap "sensor_0/gnd" "sensor_0/b" 11.322
-cap "sensor_0/a_11196_4528#" "vd" 1.24768
-cap "sensor_0/a_11138_3362#" "sensor_0/gnd" 0.139507
-cap "sensor_0/a_11396_4616#" "sensor_0/gnd" 2.77446
-cap "sensor_0/gnd" "sensor_0/a_11396_3780#" 0.449693
-cap "sensor_0/gnd" "vd" 16.7026
-cap "sensor_0/gnd" "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_1/a_n100_n815#" 4.2586
-cap "sensor_0/gnd" "sensor_0/a_11138_3780#" 0.449693
-cap "sensor_0/gnd" "sensor_0/a_11196_3274#" 1.85983
-cap "sensor_0/a_11196_4110#" "vd" 0.0896001
-cap "sensor_0/gnd" "sensor_0/a_11196_4528#" 26.1819
-cap "sensor_0/a_11138_4198#" "sensor_0/gnd" 0.944527
-cap "sensor_0/a_11396_3362#" "sensor_0/gnd" 0.139507
-cap "sensor_0/gnd" "sensor_0/a_11196_3692#" 6.06346
-cap "sensor_0/gnd" "sensor_0/a_11396_4198#" 0.944527
-cap "sensor_0/gnd" "sensor_0/a_11138_4616#" 2.77446
-cap "sensor_0/a_11196_4110#" "sensor_0/gnd" 11.4264
-cap "vd" "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_1/a_n100_n815#" 0.58603
-cap "buffer_1/ib" "buffer_1/a_14316_4422#" 2.06627
-cap "buffer_1/ib" "buffer_1/w_14120_4300#" 6.63425
-cap "buffer_1/ib" "buffer_1/a_14516_4519#" 0.306554
-cap "buffer_1/ib" "buffer_1/a_14516_3619#" 0.322361
-cap "buffer_1/a_14258_4519#" "buffer_1/ib" 0.461061
-cap "buffer_1/ib" "buffer_1/a_14258_3619#" 0.484937
-cap "buffer_1/vd" "buffer_1/ib" 1.59387
-cap "buffer_1/w_14120_3400#" "buffer_1/ib" 11.1859
-cap "buffer_1/in" "gnd" -1.77636e-15
-cap "buffer_1/ib" "buffer_1/a_14316_3522#" 2.78272
-cap "buffer_1/a_14258_3619#" "gnd" 0.750794
-cap "gnd" "buffer_1/a_14258_4519#" 3.19808
-cap "buffer_1/vd" "buffer_1/w_14120_4300#" 125.296
-cap "buffer_1/a_14516_3619#" "gnd" 0.750794
-cap "buffer_1/vd" "buffer_1/a_14316_3522#" -28.1132
-cap "gnd" "buffer_1/in" 0.823285
-cap "buffer_1/vd" "buffer_1/w_14120_3400#" -111.087
-cap "buffer_1/w_14120_4300#" "buffer_1/ib" 0.345383
-cap "buffer_1/vd" "buffer_1/a_14316_4422#" 42.9873
-cap "buffer_1/w_14120_3400#" "buffer_1/ib" 0.690765
-cap "buffer_1/a_14316_3522#" "buffer_1/ib" 0.385658
-cap "buffer_1/a_14516_4519#" "buffer_1/vd" 4.0622
-cap "buffer_1/a_14316_4422#" "buffer_1/ib" 0.192829
-cap "buffer_1/a_14258_3619#" "buffer_1/vd" -3.21642
-cap "buffer_1/vd" "buffer_1/a_14258_4519#" 10.9325
-cap "gnd" "buffer_1/w_14120_4300#" 30.6818
-cap "buffer_1/a_14516_3619#" "buffer_1/vd" -3.21642
-cap "gnd" "buffer_1/vd" 39.6936
-cap "gnd" "buffer_1/w_14120_3400#" 18.5923
-cap "buffer_1/in" "buffer_1/vd" -5.03329
-cap "gnd" "buffer_1/a_14316_3522#" 8.69766
-cap "gnd" "buffer_1/a_14316_4422#" 21.7886
-cap "buffer_1/a_14516_4519#" "gnd" 3.19808
-cap "gnd" "buffer_1/a_14396_1716#" 0.180384
-cap "buffer_1/vd" "buffer_1/net2" 3.28405
-cap "gnd" "buffer_1/a_14316_3522#" 6.57848
-cap "gnd" "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" 198.801
-cap "gnd" "buffer_1/vd" 750.605
-cap "gnd" "buffer_1/net2" 167.908
-cap "gnd" "buffer_1/w_14120_4300#" 8.94005
-cap "gnd" "buffer_1/a_14258_3619#" 0.517774
-cap "gnd" "buffer_1/net3" 292.488
-cap "gnd" "buffer_1/a_14258_4519#" 0.438728
-cap "gnd" "buffer_1/in" 0.568662
-cap "gnd" "buffer_1/a_14516_3619#" 0.74807
-cap "gnd" "buffer_1/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n416_n100#" 131.383
-cap "gnd" "buffer_1/a_14516_4519#" 0.633712
-cap "buffer_1/a_14316_4422#" "gnd" 4.89759
-cap "gnd" "buffer_1/w_14120_3400#" 15.6365
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "vd" 20.3651
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "buffer_1/net2" -5.4585
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "buffer_1/net3" -5.82963
-cap "gnd" "buffer_1/net2" 1.81454
-cap "gnd" "buffer_1/net3" 0.464184
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "buffer_1/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n416_n100#" -0.314115
-cap "gnd" "buffer_1/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n416_n100#" 4.67738
-cap "gnd" "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" 40.9236
-cap "vd" "buffer_1/net2" 1.60574
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8C4HA7_0/w_n812_n319#" "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" -7.38701
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8C4HA7_0/w_n812_n319#" "gnd" 7.08654
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_616_n100#" "vd" 0.617479
-cap "buffer_1/net2" "vd" 3.51132
-cap "vd" "buffer_1/sky130_fd_pr__pfet_01v8_8LYGA7_0/a_416_n197#" 0.276511
-cap "vd" "buffer_1/a_19796_4422#" 0.757565
-cap "gnd" "ota_0/XCC/m3_n2250_n2200#" 3.24939
-cap "gnd" "ota_0/XCC/m3_n2250_n2200#" 5.98543
-cap "ota_0/XCC/c1_n2150_n2100#" "gnd" 4.45877
-cap "sensor_0/a_3396_4022#" "sigma-delta_0/reset_b_dff" 0.278788
-cap "sigma-delta_0/vd" "sensor_0/w_2500_2780#" 0.143326
-cap "sigma-delta_0/vd" "sigma-delta_0/reset_b_dff" 1.70952
-cap "sensor_0/w_3200_3900#" "sigma-delta_0/reset_b_dff" 1.29058
-cap "sensor_0/w_3200_3900#" "sigma-delta_0/reset_b_dff" 0.564939
-cap "sigma-delta_0/reset_b_dff" "sigma-delta_0/vd" 23.7381
-cap "sensor_0/d" "sigma-delta_0/reset_b_dff" 9.64464
-cap "sigma-delta_0/gnd" "sigma-delta_0/reset_b_dff" -9.35494
-cap "sensor_0/sky130_fd_pr__pfet_01v8_8CLK97_0/a_n100_n297#" "sigma-delta_0/reset_b_dff" 0.186611
-cap "sensor_0/a" "sigma-delta_0/gnd" 0.914436
-cap "sensor_0/vd" "sigma-delta_0/out_comp" 3.04375
-cap "sensor_0/vd" "sigma-delta_0/gnd" 151.575
-cap "sensor_0/d" "sigma-delta_0/gnd" 9.6978
-cap "sensor_0/vd" "sigma-delta_0/XN1/a_n33_n188#" 2.20035
-cap "sigma-delta_0/reset_b_dff" "sigma-delta_0/gnd" -8.67268
-cap "vd" "sensor_0/c" 0.409298
-cap "vd" "sensor_0/a" 2.62937
-cap "sensor_0/c" "sigma-delta_0/gnd" 0.104038
-cap "vd" "sensor_0/sky130_fd_pr__pfet_01v8_8CLK97_1/w_n296_n419#" 15.9004
-cap "sensor_0/a" "sigma-delta_0/gnd" 2.74577
-cap "sigma-delta_0/gnd" "sensor_0/sky130_fd_pr__pfet_01v8_8CLK97_1/w_n296_n419#" 1.14743
-cap "sensor_0/sky130_fd_pr__pfet_01v8_8CLM97_0/w_n425_n419#" "vd" 83.3242
-cap "sensor_0/sky130_fd_pr__pfet_01v8_8CLM97_0/w_n425_n419#" "sigma-delta_0/gnd" 7.57916
-cap "sensor_0/a_8158_4119#" "sensor_0/gnd" 0.209612
-cap "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_1/a_n100_439#" "sensor_0/gnd" 0.268248
-cap "sensor_0/w_8020_3900#" "sensor_0/gnd" 5.40069
-cap "vd" "sensor_0/gnd" 199.173
-cap "vd" "sensor_0/a_8416_4119#" 0.320664
-cap "vd" "sensor_0/a_8216_4022#" 1.8065
-cap "sensor_0/a_8158_4119#" "vd" 0.320664
-cap "vd" "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_1/a_n100_439#" 0.33444
-cap "vd" "sensor_0/w_8020_3900#" 5.63115
-cap "sensor_0/a_8416_4119#" "sensor_0/gnd" 0.209612
-cap "sensor_0/a_8216_4022#" "sensor_0/gnd" 2.25536
-cap "vd" "sensor_0/gnd" 86.24
-cap "vd" "sensor_0/gnd" 475.176
-cap "vd" "sensor_0/sky130_fd_pr__nfet_01v8_SXQYJB_1/a_n100_439#" 0.0585066
-cap "buffer_1/a_14258_4519#" "ib2" 0.0238761
-cap "buffer_1/a_14516_4519#" "ib2" 0.0158073
-cap "buffer_1/w_14120_4300#" "ib2" 4.55164
-cap "ib2" "buffer_1/a_14316_4422#" 0.716453
-cap "gnd" "buffer_1/w_14120_4300#" 59.3597
-cap "buffer_1/a_14258_4519#" "gnd" 1.10402
-cap "buffer_1/w_14120_4300#" "ib2" 0.345383
-cap "gnd" "buffer_1/a_14516_4519#" 1.10402
-cap "buffer_1/vd" "gnd" 7.41181
-cap "buffer_1/vd" "buffer_1/a_14316_4422#" 10.6933
-cap "buffer_1/vd" "ib2" -1.13687e-13
-cap "gnd" "buffer_1/a_14316_4422#" 17.9983
-cap "buffer_1/a_14316_4422#" "ib2" 0.192829
-cap "buffer_1/vd" "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n616_n197#" 1.44157
-cap "buffer_1/vd" "buffer_1/w_14120_4300#" 48.0716
-cap "buffer_1/vd" "buffer_1/a_14516_4519#" 0.601702
-cap "buffer_1/a_14258_4519#" "buffer_1/vd" 0.675631
-cap "gnd" "buffer_1/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" 0.289994
-cap "gnd" "buffer_1/vd" 436.266
-cap "buffer_1/net2" "gnd" 170.574
-cap "buffer_1/net2" "buffer_1/vd" 96.2451
-cap "buffer_1/net2" "gnd" 0.137876
-cap "buffer_1/net2" "vd" 113.523
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8C4HA7_0/w_n812_n319#" "gnd" 0.663825
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8C4HA7_0/w_n812_n319#" "vd" 14.7164
-cap "buffer_1/net2" "vd" 118.039
-cap "vd" "buffer_1/sky130_fd_pr__pfet_01v8_8LYGA7_1/w_n812_n319#" 18.7376
-cap "vd" "buffer_1/a_19738_4519#" 0.560455
-cap "vd" "buffer_1/a_19796_4422#" 7.35517
-cap "vd" "buffer_1/a_19996_4519#" 0.560455
-cap "buffer_1/sky130_fd_pr__pfet_01v8_8LYGA7_0/a_416_n197#" "vd" 6.501
-cap "vd" "buffer_1/a_19996_3619#" 0.0531839
-cap "vd" "buffer_1/a_19796_3522#" 0.46645
-cap "vd" "buffer_1/a_19738_3619#" 0.0531839
-cap "vd" "buffer_1/sky130_fd_pr__pfet_01v8_8LYGA7_1/w_n812_n319#" 40.3722
-cap "buffer_1/w_19600_3400#" "vd" 2.52027
-cap "vd" "buffer_1/w_19600_4300#" 42.6477
-cap "gnd" "ota_0/XCC/m3_n2250_n2200#" 5.16362
-cap "gnd" "ota_0/XCC/c1_n2150_n2100#" 8.41278
-cap "gnd" "ota_0/XCC/m3_n2250_n2200#" 9.51147
-cap "vpwr" "sigma-delta_0/clk" 25.5782
-cap "sigma-delta_0/vd" "sigma-delta_0/clk" -2.84217e-14
-cap "vpwr" "sigma-delta_0/vd" 0.777657
-cap "sigma-delta_0/vd" "sigma-delta_0/reset_b_dff" 6.57958
-cap "sigma-delta_0/clk" "sigma-delta_0/vd" -3.69368
-cap "sigma-delta_0/gnd" "sigma-delta_0/reset_b_dff" 1.36738
-cap "sigma-delta_0/vd" "sigma-delta_0/reset_b_dff" 1.65576
-cap "sensor_0/vd" "sigma-delta_0/gnd" 4.60804
-cap "sigma-delta_0/in_comp" "sensor_0/vd" 1.15814
-cap "sensor_0/vd" "sigma-delta_0/out_comp" 3.13327
-cap "sigma-delta_0/reset_b_dff" "sigma-delta_0/gnd" 2.21948
-cap "sigma-delta_0/in_comp" "sigma-delta_0/gnd" 10.8848
-cap "sigma-delta_0/out_comp" "sigma-delta_0/gnd" 32.9932
-cap "sigma-delta_0/gnd" "sigma-delta_0/in_comp" 5.08322
-cap "sigma-delta_0/gnd" "sigma-delta_0/XC1/m3_n2870_n2820#" 35.7063
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "sensor_0/gnd" 72.4476
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "sensor_0/gnd" 72.4476
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "sensor_0/gnd" 3.1049
-cap "ota_0/vs" "ota_0/XCC/m3_n2250_n2200#" 5.16362
-cap "ota_0/XCC/c1_n2150_n2100#" "ota_0/vs" 8.41278
-cap "ota_0/vs" "ota_0/XCC/m3_n2250_n2200#" 9.51147
-cap "sigma-delta_0/clk" "vd" 0.270104
-cap "vd" "sigma-delta_0/vpwr" 1.13687e-13
-cap "sigma-delta_0/clk" "sigma-delta_0/vpwr" 0.354113
-cap "sigma-delta_0/out" "sigma-delta_0/clk" -10
-cap "sigma-delta_0/clk" "sigma-delta_0/x1/D" 0.463271
-cap "sigma-delta_0/vd" "sigma-delta_0/clk" -3.69368
-cap "sigma-delta_0/clk" "sigma-delta_0/reset_b_dff" 7.63278e-17
-cap "sigma-delta_0/out_comp" "sigma-delta_0/clk" 0.393604
-cap "sigma-delta_0/gnd" "sigma-delta_0/out_comp" 18.0024
-cap "sigma-delta_0/gnd" "sigma-delta_0/in_comp" 3.46355
-cap "sigma-delta_0/in_comp" "gnd" 1.7321
-cap "sigma-delta_0/XC1/c1_n2770_n2720#" "gnd" 1.7321
-cap "gnd" "sigma-delta_0/XC1/c1_n2770_n2720#" 0.0742328
-cap "out_buf1" "sigma-delta_0/XC1/m3_n2870_n2820#" 171.424
-cap "gnd" "sigma-delta_0/XC1/m3_n2870_n2820#" 13.4782
-cap "gnd" "sigma-delta_0/XC1/m3_n2870_n2820#" 9.28647
-cap "buffer_0/a_16120_1800#" "buffer_0/gnd" 0.584388
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n1061_n100#" "buffer_0/gnd" 0.262797
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2093_n100#" "buffer_0/gnd" 0.520215
-cap "buffer_0/a_16120_1800#" "buffer_0/gnd" 8.25747
-cap "buffer_0/net1" "gnd" 2.72532
-cap "gnd" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" 0.938636
-cap "gnd" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n1061_n100#" 0.296556
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n29_n100#" "gnd" 0.581864
-cap "buffer_0/a_16120_1800#" "gnd" 1.22388
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_1003_n100#" "gnd" 0.559353
-cap "gnd" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" 1.14473
-cap "gnd" "buffer_0/net1" 1.43975
-cap "gnd" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" 1.29392
-cap "gnd" "buffer_0/a_21636_1802#" 0.210948
-cap "gnd" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_2035_n100#" 0.567793
-cap "gnd" "buffer_0/a_16120_1800#" 0.507806
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" "out_buf1" 6.2432
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" 77.62
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "out_buf1" 1.12067
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" 0.0492197
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" 5.32676
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" 3.72158
-cap "buffer_0/a_21476_1716#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" 79.2268
-cap "buffer_0/a_21476_1716#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" 53.5224
-cap "m1_15500_n1600#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" -2.6406
-cap "out_buf1" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" 148.015
-cap "m1_15500_n1600#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" 6.90156
-cap "out_buf1" "buffer_0/a_21476_1716#" 6.61099
-cap "ib" "buffer_0/a_21476_1716#" 0.00473923
-cap "m1_15500_n1600#" "buffer_0/a_21476_1716#" 9.70969
-cap "ota_0/in1" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" 0.374497
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" 0.136532
-cap "ib" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" 0.0252256
-cap "ota_0/vs" "ota_0/in1" -1.10345
-cap "ota_0/vs" "ota_0/XCC/m3_n2250_n2200#" 2.06176
-cap "ota_0/vs" "ota_0/in2" -12.3925
-cap "ota_0/vs" "ota_0/XCC/c1_n2150_n2100#" 3.3591
-cap "ota_0/vs" "ota_0/XCC/m3_n2250_n2200#" 3.79779
-cap "ota_0/vs" "ib" 0.0280521
-cap "sigma-delta_0/out" "vd" 0.385863
-cap "sigma-delta_0/x1/a_193_47#" "sigma-delta_0/out" 0.118373
-cap "sigma-delta_0/vpwr" "vd" 0.93685
-cap "sigma-delta_0/out" "sigma-delta_0/vpwr" 16.6627
-cap "sigma-delta_0/out" "sigma-delta_0/x1/a_27_47#" 0.101502
-cap "sigma-delta_0/out" "sigma-delta_0/clk" 0.0417144
-cap "sigma-delta_0/vpwr" "sigma-delta_0/out" -2.87099
-cap "sigma-delta_0/vpwr" "sigma-delta_0/in" -10.3728
-cap "sigma-delta_0/x1/D" "sigma-delta_0/out" 0.140058
-cap "sigma-delta_0/x1/a_193_47#" "sigma-delta_0/out" 0.456631
-cap "sigma-delta_0/clk" "sigma-delta_0/out" -8.88504
-cap "sigma-delta_0/vpwr" "sigma-delta_0/clk" 0.0971098
-cap "sigma-delta_0/x1/a_27_47#" "sigma-delta_0/out" 0.77354
-cap "sigma-delta_0/out" "sigma-delta_0/x1/a_543_47#" 0.00113213
-cap "sigma-delta_0/out" "sigma-delta_0/x1/a_27_47#" 0.0320469
-cap "sigma-delta_0/out" "sigma-delta_0/out_comp" 0.105814
-cap "sigma-delta_0/out" "sigma-delta_0/x1/a_448_47#" 0.152083
-cap "sigma-delta_0/out" "sigma-delta_0/x1/a_193_47#" 0.0327936
-cap "out_buf1" "sigma-delta_0/XC1/m3_n2870_n2820#" 214.011
-cap "gnd" "sigma-delta_0/XC1/m3_n2870_n2820#" 88.7251
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "gnd" 68.0683
-cap "buffer_0/gnd" "buffer_0/a_14556_1802#" 5.71097
-cap "buffer_0/gnd" "buffer_0/ib" 9.92482
-cap "buffer_0/gnd" "buffer_0/a_14756_1890#" 0.479231
-cap "buffer_0/ib" "buffer_0/a_14556_1802#" 3.254
-cap "buffer_0/gnd" "buffer_0/a_14498_1890#" 0.479231
-cap "buffer_0/ib" "buffer_0/a_14756_1890#" 0.0979163
-cap "buffer_0/ib" "buffer_0/a_14498_1890#" 0.217028
-cap "buffer_0/gnd" "buffer_0/in" 0.786778
-cap "buffer_0/gnd" "buffer_0/a_15696_2770#" 0.599434
-cap "buffer_0/gnd" "buffer_0/ib" 14.3788
-cap "buffer_0/gnd" "buffer_0/a_15496_2682#" 0.0223929
-cap "buffer_0/gnd" "buffer_0/net4" 1.44219
-cap "buffer_0/gnd" "buffer_0/a_16120_1800#" 0.470923
-cap "buffer_0/gnd" "buffer_0/net3" 0.429206
-cap "buffer_0/gnd" "buffer_0/a_16120_1800#" 6.03631
-cap "buffer_0/net1" "gnd" 3.31518
-cap "gnd" "buffer_0/net1" 2.57048
-cap "gnd" "buffer_0/a_16120_1800#" 0.390925
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "gnd" 0.317925
-cap "gnd" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_487_n100#" 0.554304
-cap "buffer_0/a_16120_1800#" "buffer_0/out" 0.0038894
-cap "buffer_0/out" "buffer_0/a_21636_1802#" 0.56278
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "buffer_0/out" 0.90044
-cap "buffer_0/a_16120_1800#" "gnd" 0.136932
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "buffer_0/a_21636_1802#" 0.0122145
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_487_n100#" "buffer_0/out" 3.135
-cap "gnd" "buffer_0/a_21636_1802#" 0.0478965
-cap "buffer_0/out" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" 0.0119256
-cap "buffer_0/out" "buffer_0/a_21578_1890#" 0.0971632
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "buffer_0/out" 5.50077
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" 22.002
-cap "buffer_0/out" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" 0.00259646
-cap "buffer_0/out" "buffer_0/a_21836_1890#" 0.193372
-cap "buffer_0/out" "buffer_0/a_16120_1800#" 0.590302
-cap "buffer_0/out" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_2035_n100#" 0.761249
-cap "buffer_0/out" "buffer_0/a_21636_1802#" 2.4404
-cap "m1_15500_n1600#" "buffer_0/a_21476_1716#" 20.8778
-cap "buffer_0/a_21476_1716#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" 56.068
-cap "m1_15500_n1600#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" 0.0444975
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" "buffer_0/a_21476_1716#" 35.5706
-cap "m1_15500_n1600#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" 0.00435255
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" -0.355642
-cap "ota_0/in2" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" 0.729013
-cap "ota_0/in2" "vd" 1.13687e-13
-cap "ota_0/ib" "ota_0/in1" -1.13687e-13
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" "ota_0/ib" 0.0568442
-cap "ota_0/vs" "ota_0/in2" 0.147941
-cap "ota_0/a_n664_5802#" "ota_0/in1" 0.296642
-cap "ota_0/in1" "ota_0/in2" -24.9231
-cap "ota_0/w_n860_5680#" "ota_0/in2" 1.02819
-cap "ota_0/a_n624_5082#" "ota_0/in2" 0.530624
-cap "ota_0/a_n664_5802#" "ota_0/in2" 0.443066
-cap "ota_0/w_n860_5680#" "ota_0/ib" 0.712233
-cap "ota_0/ib" "ota_0/in2" 6.7297
-cap "ota_0/in1" "ota_0/a_n722_5899#" 0.0244205
-cap "ota_0/XM1/a_n158_n300#" "ota_0/in2" 0.116207
-cap "ota_0/in1" "ota_0/a_n464_5899#" 0.0154896
-cap "ota_0/vs" "ota_0/in1" -1.12162
-cap "ota_0/ib" "ota_0/a_n722_5899#" 0.0760832
-cap "ota_0/w_n860_5680#" "ota_0/in1" 0.689582
-cap "ota_0/in2" "ota_0/vs" 1.00316
-cap "ota_0/ib" "ota_0/vs" 0.0280521
-cap "ota_0/w_n860_5680#" "ota_0/in1" 0.0996719
-cap "ota_0/a_n664_5802#" "ota_0/in1" 0.318136
-cap "ota_0/w_n860_5680#" "ota_0/XM1/a_n158_n300#" 7.10543e-15
-cap "ota_0/in2" "ota_0/XM1/a_n158_n300#" 0.0835202
-cap "ota_0/in2" "ota_0/a_n624_5082#" 0.390301
-cap "ota_0/in2" "ota_0/a_n664_5802#" 0.471351
-cap "ota_0/in2" "ota_0/w_n860_5680#" 0.477894
-cap "ota_0/a_n464_5899#" "ota_0/XM1/a_n158_n300#" -8.88178e-16
-cap "ota_0/ib" "ota_0/w_n860_5680#" 0.0443748
-cap "sigma-delta_0/out" "sigma-delta_0/in" 0.507692
-cap "vd" "sigma-delta_0/in" 1.12997
-cap "sigma-delta_0/out" "sigma-delta_0/x1/VNB" 0.685918
-cap "sigma-delta_0/out" "sigma-delta_0/in" 0.507692
-cap "sigma-delta_0/out" "sigma-delta_0/x1/VNB" 0.693926
-cap "sigma-delta_0/vpwr" "sigma-delta_0/in" -4.35959
-cap "sigma-delta_0/in" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_48_n1032#" 0.143322
-cap "sigma-delta_0/x1/VNB" "sigma-delta_0/in" 12.9467
-cap "sigma-delta_0/in" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_48_n1032#" 0.143322
-cap "sigma-delta_0/in" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_380_n1032#" -7.10543e-15
-cap "out_buf1" "sigma-delta_0/XC1/m3_n2870_n2820#" 158.003
-cap "out_ota" "sigma-delta_0/XC1/m3_n2870_n2820#" 3.15177
-cap "gnd" "sigma-delta_0/XC1/m3_n2870_n2820#" 87.1537
-cap "gnd" "sigma-delta_0/XC1/m3_n2870_n2820#" 68.0683
-cap "buffer_0/in" "out_buf1" 3.55271e-15
-cap "gnd" "out_buf1" 129.811
-cap "gnd" "buffer_0/ib" 0.291437
-cap "gnd" "buffer_0/in" 0.451165
-cap "buffer_0/a_14556_1802#" "buffer_0/ib" 37.7481
-cap "buffer_0/in" "buffer_0/ib" -4.47378
-cap "buffer_0/a_14556_1802#" "buffer_0/gnd" 0.292345
-cap "buffer_0/net4" "buffer_0/ib" 1.22204
-cap "buffer_0/gnd" "buffer_0/in" 0.0253919
-cap "buffer_0/ib" "buffer_0/a_14756_1890#" 4.74468
-cap "buffer_0/vd" "buffer_0/in" -2.34831
-cap "buffer_0/gnd" "buffer_0/ib" 55.4392
-cap "buffer_0/a_14498_1890#" "buffer_0/ib" 7.97081
-cap "buffer_0/ib" "buffer_0/gnd" 0.58469
-cap "buffer_0/a_15496_2682#" "buffer_0/gnd" 0.00423168
-cap "buffer_0/ib" "buffer_0/net4" 1.21846
-cap "buffer_0/in" "buffer_0/gnd" 0.0148084
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_487_n100#" 1.42109e-14
-cap "buffer_0/out" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_487_n100#" 3.5502
-cap "buffer_0/a_21636_1802#" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_487_n100#" 8.88178e-16
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_487_n100#" "buffer_0/a_21836_1890#" -1.11022e-16
-cap "buffer_0/a_16120_1800#" "buffer_0/out" 2.28791
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "buffer_0/a_21636_2682#" 0.024429
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "buffer_0/out" 23.6661
-cap "buffer_0/net1" "buffer_0/out" 0.00755819
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" "buffer_0/a_21636_1802#" 0.0122145
-cap "buffer_0/a_21636_1802#" "buffer_0/out" 10.5585
-cap "buffer_0/out" "buffer_0/a_21578_1890#" 0.200513
-cap "buffer_0/out" "buffer_0/a_21836_1890#" 0.789814
-cap "buffer_0/out" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_n2711_n274#" 2.05434
-cap "buffer_0/out" "buffer_0/a_21636_1802#" 2.13871
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_1/a_2035_n100#" "buffer_0/out" 3.03528
-cap "buffer_0/out" "buffer_0/a_21836_1890#" 0.699548
-cap "buffer_0/a_21578_1890#" "buffer_0/out" 0.353153
-cap "buffer_0/a_21476_1716#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_2000#" 20.4015
-cap "ota_0/ib" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n165_n2562#" 0.103335
-cap "ota_0/ib" "ota_0/a_n722_7239#" 0.00557213
-cap "ota_0/ib" "ota_0/in2" -0.827496
-cap "ota_0/ib" "ota_0/in1" -19.6842
-cap "ota_0/ib" "ota_0/sky130_fd_pr__pfet_01v8_G8TPYT_1/w_n296_n819#" 11.2
-cap "ota_0/ib" "ota_0/w_n860_7020#" 0.328516
-cap "ota_0/ib" "ota_0/vd" 17.0747
-cap "ota_0/vd" "ota_0/a_n664_7142#" 0.0507402
-cap "ota_0/w_n860_5680#" "ota_0/in1" 0.173714
-cap "ota_0/ib" "ota_0/w_n860_7020#" 0.0781244
-cap "ota_0/out" "ota_0/XM8/w_n683_n969#" 2.91418
-cap "ota_0/a_4476_6842#" "ota_0/out" 0.292191
-cap "ota_0/out" "vd" 3.31814
-cap "ota_0/w_4280_6720#" "ota_0/out" 33.2397
-cap "ota_0/out" "ota_0/XM8/w_n683_n969#" 3.46763
-cap "ota_0/out" "ota_0/a_4418_6939#" 2.82146
-cap "ota_0/out" "ota_0/XM8/a_n29_n750#" 0.664363
-cap "ota_0/a_4476_6842#" "ota_0/out" 16.8389
-cap "ota_0/out" "ota_0/a_4676_6939#" 4.93795
-cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n118_600#" "sigma-delta_0/in" 0.00587224
-cap "sigma-delta_0/in" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n450_600#" 18.1878
-cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n580_n1162#" "sigma-delta_0/in" 1.72458
-cap "out_buf1" "sigma-delta_0/XR2/a_n450_600#" 3.81538
-cap "sigma-delta_0/XC1/c1_n2770_n2720#" "out_buf1" 3.26558
-cap "sigma-delta_0/XC1/c1_n2770_n2720#" "gnd" 5.18311
-cap "out_buf1" "sigma-delta_0/XC1/c1_n2770_n2720#" 8.29729
-cap "gnd" "sigma-delta_0/XC1/c1_n2770_n2720#" 13.1694
-cap "sigma-delta_0/XC1/c1_n2770_n2720#" "gnd" 13.1694
-cap "sigma-delta_0/XC1/c1_n2770_n2720#" "out_buf1" 8.29729
-cap "out_buf1" "sigma-delta_0/XC1/c1_n2770_n2720#" 8.29729
-cap "gnd" "sigma-delta_0/XC1/c1_n2770_n2720#" 13.1694
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "gnd" 87.1537
-cap "out_ota" "sigma-delta_0/XC1/m3_n2870_n2820#" 12.7123
-cap "out_buf1" "sigma-delta_0/XC1/c1_n2770_n2720#" 3.62118
-cap "out_buf1" "sigma-delta_0/XC1/m3_n2870_n2820#" 158.003
-cap "sigma-delta_0/XC1/c1_n2770_n2720#" "gnd" 5.74751
-cap "gnd" "buffer_0/a_14316_4422#" 1.05948
-cap "gnd" "sigma-delta_0/XC1/m3_n2870_n2820#" 68.0683
-cap "buffer_0/in" "buffer_0/a_14316_3522#" 1.30254
-cap "buffer_0/in" "buffer_0/w_14120_3400#" 5.68022
-cap "buffer_0/in" "buffer_0/a_14516_3619#" 0.141269
-cap "gnd" "buffer_0/a_14316_3522#" 1.29025
-cap "gnd" "buffer_0/w_14120_3400#" 4.69974
-cap "gnd" "buffer_0/a_14258_4519#" 0.350264
-cap "buffer_0/a_14258_3619#" "buffer_0/in" 0.205385
-cap "buffer_0/a_14258_3619#" "gnd" 0.368605
-cap "gnd" "buffer_0/w_14120_4300#" 2.81461
-cap "buffer_0/vd" "buffer_0/in" 0.0583475
-cap "buffer_0/vd" "gnd" 1.23897
-cap "buffer_0/vd" "buffer_0/a_14258_4519#" 12.7073
-cap "buffer_0/in" "buffer_0/w_14120_3400#" 0.266708
-cap "buffer_0/a_14516_4519#" "buffer_0/vd" 4.46789
-cap "buffer_0/w_14120_4300#" "buffer_0/vd" 140.049
-cap "buffer_0/in" "buffer_0/vd" -3.9996
-cap "buffer_0/a_14316_4422#" "buffer_0/vd" 47.4213
-cap "gnd" "buffer_0/w_14120_3400#" 0.418328
-cap "buffer_0/in" "buffer_0/a_14316_3522#" 0.250207
-cap "buffer_0/w_14120_4300#" "buffer_0/in" 0.133354
-cap "buffer_0/a_14316_4422#" "buffer_0/in" 0.394714
-cap "gnd" "buffer_0/a_14316_3522#" 0.085831
-cap "gnd" "buffer_0/w_14120_4300#" 0.209164
-cap "buffer_0/a_14316_3522#" "buffer_0/vd" 0.0906224
-cap "buffer_0/a_14316_4422#" "gnd" 0.0429155
-cap "buffer_0/net2" "buffer_0/vd" 3.10487
-cap "buffer_0/net3" "buffer_0/vd" 0.453112
-cap "out_ota" "buffer_0/net2" 1.34805
-cap "vd" "buffer_0/net3" 0.0906224
-cap "vd" "buffer_0/sky130_fd_pr__pfet_01v8_8C4HA7_0/a_n416_n100#" 0.359459
-cap "vd" "buffer_0/net2" 0.892885
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "vd" 17.6401
-cap "buffer_0/net2" "out_ota" 0.396397
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "out_ota" 7.27465
-cap "buffer_0/net2" "out_ota" 1.34805
-cap "buffer_0/net2" "vd" 3.10487
-cap "buffer_0/net3" "vd" 0.453112
-cap "buffer_0/a_19796_3522#" "vd" 0.0906224
-cap "buffer_0/a_19796_4422#" "vd" 0.620975
-cap "buffer_0/a_19796_4422#" "out_ota" 0.26961
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_2000#" "buffer_0/a_21476_1716#" 20.4015
-cap "ota_0/ib" "ota_0/sky130_fd_pr__pfet_01v8_G8TPYT_1/w_n296_n819#" 11.2
-cap "ota_0/w_n860_7020#" "ota_0/vd" 84.5997
-cap "ota_0/a_n664_7142#" "ota_0/vd" 24.2957
-cap "ota_0/ib" "ota_0/vd" 251.394
-cap "ota_0/a_n464_7239#" "ota_0/vd" 2.8184
-cap "ota_0/a_n722_7239#" "ota_0/vd" 2.8184
-cap "out_ota" "ota_0/vd" 0.269939
-cap "ota_0/XM1/w_n296_n519#" "ota_0/vd" 0.43595
-cap "ota_0/sky130_fd_pr__pfet_01v8_G8TPYT_1/a_n158_n600#" "ota_0/vd" 938.586
-cap "ota_0/vd" "ota_0/XM8/a_n287_n750#" 6.64417
-cap "ota_0/vd" "ota_0/sky130_fd_pr__pfet_01v8_G8TPYT_1/a_n100_n697#" 106.214
-cap "vd" "ota_0/XM8/a_n487_n847#" 65.2726
-cap "ota_0/out" "ota_0/XM8/a_n487_n847#" 0.050987
-cap "vd" "ota_0/a_4476_6842#" 19.2317
-cap "ota_0/out" "ota_0/a_4476_6842#" 0.292191
-cap "ota_0/XM8/w_n683_n969#" "vd" 48.0166
-cap "ota_0/XM8/w_n683_n969#" "ota_0/out" 5.48632
-cap "vd" "ota_0/out" 16.0599
-cap "vd" "ota_0/a_4418_6939#" 4.90668
-cap "vd" "ota_0/a_4676_6939#" 1.12659
-cap "vd" "ota_0/w_4280_6720#" 16.8246
-cap "ota_0/w_4280_6720#" "vd" 14.6652
-cap "ota_0/out" "ota_0/XM8/a_n29_n750#" 5.46302
-cap "ota_0/out" "ota_0/XM8/a_n229_n847#" 0.0366453
-cap "ota_0/out" "ota_0/XM8/w_n683_n969#" 2.71032
-cap "ota_0/out" "ota_0/a_4476_6842#" 7.58872
-cap "ota_0/a_4676_6939#" "ota_0/out" 2.12638
-cap "ota_0/w_4280_6720#" "ota_0/out" 17.8624
-cap "ota_0/a_4418_6939#" "ota_0/out" 1.21493
-cap "vd" "ota_0/a_4676_6939#" 3.78009
-cap "out_buf1" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n450_600#" 6.09775
-cap "gnd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n580_n1162#" 3.00498
-cap "out_sigma" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n580_n1162#" 0.0443748
-cap "out_buf1" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n580_n1162#" 2.94727
-cap "gnd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n450_600#" 1.99945
-cap "out_buf1" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_214_600#" 21.1909
-cap "gnd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n118_600#" 5.59936
-cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n450_600#" "out_buf1" 9.22678
-cap "gnd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_214_600#" 5.42984
-cap "out_buf1" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n580_n1162#" 24.0448
-cap "gnd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n450_600#" 3.5999
-cap "gnd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n580_n1162#" 8.3038
-cap "out_buf1" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n118_600#" 21.4636
-cap "sigma-delta_0/XR2/a_214_600#" "gnd" 5.42984
-cap "sigma-delta_0/XR2/a_n118_600#" "gnd" 5.71492
-cap "sigma-delta_0/XR2/a_214_600#" "out_buf1" 21.1909
-cap "out_buf1" "sigma-delta_0/XR2/a_n118_600#" 21.948
-cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n580_n1162#" "gnd" 6.41261
-cap "sigma-delta_0/XR2/a_n450_600#" "gnd" 5.43773
-cap "out_buf1" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_ARMGAU_0/a_n580_n1162#" 32.2233
-cap "sigma-delta_0/XR2/a_n450_600#" "out_buf1" 13.7193
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "out_buf1" 20.0486
-cap "gnd" "out_buf1" 69.7478
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "gnd" 63.825
-cap "out_buf1" "sigma-delta_0/XC1/m3_n2870_n2820#" 40.6784
-cap "ask-modulator_0/m4_9220_n380#" "out_buf1" 6.91739
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "gnd" 129.5
-cap "ask-modulator_0/m4_9220_n380#" "gnd" 7.91411
-cap "ask-modulator_0/m4_9220_n380#" "gnd" 39.5705
-cap "ask-modulator_0/m4_9220_n380#" "out_buf1" 34.5869
-cap "gnd" "sigma-delta_0/XC1/m3_n2870_n2820#" 129.5
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "out_buf1" 40.6784
-cap "ask-modulator_0/m4_9220_n380#" "gnd" 39.5705
-cap "out_buf1" "sigma-delta_0/XC1/m3_n2870_n2820#" 40.6784
-cap "out_buf1" "ask-modulator_0/m4_9220_n380#" 34.5869
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "gnd" 129.5
-cap "out_ota" "sigma-delta_0/XC1/m3_n2870_n2820#" 0.152414
-cap "ask-modulator_0/m4_9220_n380#" "gnd" 39.5705
-cap "out_buf1" "ask-modulator_0/m4_9220_n380#" 34.5869
-cap "out_buf1" "gnd" 94.1636
-cap "ask-modulator_0/m4_9220_n380#" "sigma-delta_0/XC1/m3_n2870_n2820#" 2.75795
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "gnd" 81.3498
-cap "out_buf1" "sigma-delta_0/XC1/m3_n2870_n2820#" 28.2122
-cap "gnd" "ask-modulator_0/m4_9220_n380#" 14.415
-cap "buffer_0/in" "ask-modulator_0/m4_9220_n380#" 30.4564
-cap "gnd" "buffer_0/a_14316_4422#" 0.230775
-cap "gnd" "sigma-delta_0/XC1/m3_n2870_n2820#" 0.0937912
-cap "gnd" "buffer_0/w_14120_4300#" 1.88513
-cap "buffer_0/a_14258_4519#" "gnd" 0.0183406
-cap "gnd" "out_buf1" 3.9338
-cap "ask-modulator_0/m4_9220_n380#" "out_buf1" 3.82927
-cap "buffer_0/a_14258_4519#" "buffer_0/vd" 2.22028
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n616_n197#" "buffer_0/vd" 1.49301
-cap "buffer_0/a_14316_4422#" "buffer_0/in" 0.56887
-cap "buffer_0/w_14120_4300#" "buffer_0/vd" 100.931
-cap "buffer_0/w_14120_4300#" "ask-modulator_0/m4_9220_n380#" 0.461999
-cap "buffer_0/w_14120_4300#" "gnd" 0.209164
-cap "buffer_0/a_14516_4519#" "buffer_0/vd" 2.13067
-cap "buffer_0/w_14120_4300#" "buffer_0/in" 0.565721
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/vd" 0.141968
-cap "buffer_0/a_14316_4422#" "buffer_0/vd" 23.8162
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/a_14316_4422#" 0.203439
-cap "gnd" "buffer_0/a_14316_4422#" 0.0429155
-cap "buffer_0/in" "buffer_0/vd" 0.347149
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/in" 53.2986
-cap "buffer_0/vd" "out_ota" 0.0900765
-cap "out_ota" "buffer_0/net2" 2.21883
-cap "buffer_0/vd" "buffer_0/net2" 177.242
-cap "ask-modulator_0/m4_9220_n380#" "out_ota" 53.2986
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/vd" 0.0962497
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/net2" 1.0172
-cap "out_ota" "buffer_0/sky130_fd_pr__pfet_01v8_8C4HA7_0/w_n812_n319#" 0.857979
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/net2" 0.203439
-cap "out_ota" "buffer_0/net2" 0.443767
-cap "vd" "buffer_0/sky130_fd_pr__pfet_01v8_8C4HA7_0/w_n812_n319#" 28.3995
-cap "vd" "buffer_0/net2" 180.199
-cap "ask-modulator_0/m4_9220_n380#" "out_ota" 53.2986
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/sky130_fd_pr__pfet_01v8_8C4HA7_0/w_n812_n319#" 0.916778
-cap "out_ota" "buffer_0/sky130_fd_pr__pfet_01v8_8LYGA7_1/w_n812_n319#" 0.141871
-cap "buffer_0/net2" "vd" 170.852
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/net2" 1.0172
-cap "vd" "buffer_0/sky130_fd_pr__pfet_01v8_8LYGA7_1/w_n812_n319#" 136.016
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/sky130_fd_pr__pfet_01v8_8LYGA7_1/w_n812_n319#" 0.151593
-cap "out_ota" "ask-modulator_0/m4_9220_n380#" 53.2986
-cap "out_ota" "buffer_0/net2" 2.21883
-cap "out_ota" "buffer_0/sky130_fd_pr__pfet_01v8_8LYGA7_1/w_n812_n319#" 0.0743131
-cap "buffer_0/a_19738_4519#" "vd" 1.0426
-cap "out_ota" "buffer_0/a_19796_4422#" 0.443767
-cap "buffer_0/a_19796_3522#" "vd" 1.19397
-cap "buffer_0/w_19600_4300#" "out_ota" 0.432367
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/sky130_fd_pr__pfet_01v8_8LYGA7_1/w_n812_n319#" 0.079406
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8LYGA7_1/w_n812_n319#" "vd" 16.9223
-cap "buffer_0/a_19796_4422#" "ask-modulator_0/m4_9220_n380#" 0.203439
-cap "buffer_0/a_19796_4422#" "vd" 13.3159
-cap "buffer_0/a_19996_4519#" "vd" 1.0426
-cap "buffer_0/w_19600_4300#" "ask-modulator_0/m4_9220_n380#" 0.461999
-cap "buffer_0/w_19600_4300#" "vd" 70.6417
-cap "buffer_0/a_19738_3619#" "vd" 0.154743
-cap "buffer_0/w_19600_3400#" "vd" 4.55889
-cap "buffer_0/a_19996_3619#" "vd" 0.154743
-cap "out_ota" "ask-modulator_0/m4_9220_n380#" 53.2986
-cap "ask-modulator_0/m4_9220_n380#" "out_ota" 53.2986
-cap "ask-modulator_0/m4_9220_n380#" "out_ota" 53.2986
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_0/a_n2711_n274#" 0.81186
-cap "vd" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_2000#" 7.10543e-15
-cap "vd" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_0/a_n2711_n274#" 14.3231
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_2000#" "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_0/a_n2711_n274#" 19.5458
-cap "buffer_0/sky130_fd_pr__nfet_01v8_CL66SD_0/a_n2711_n274#" "out_ota" 0.77007
-cap "vd" "buffer_0/a_21476_2596#" 10.8778
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/a_21476_2596#" 2.43558
-cap "ask-modulator_0/m4_9220_n380#" "out_ota" 53.2986
-cap "buffer_0/a_21476_2596#" "out_ota" 2.31021
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_2000#" "buffer_0/a_21476_2596#" 284.828
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_2000#" "vd" -8.25231
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n165_n2562#" "vd" 0.713767
-cap "out_ota" "ask-modulator_0/m4_9220_n380#" 13.6292
-cap "ota_0/vd" "out_ota" 1.33739
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "ask-modulator_0/m4_9220_n380#" 0.276998
-cap "gnd" "ask-modulator_0/m4_9220_n380#" 8.35774
-cap "out_buf1" "ask-modulator_0/m4_9220_n380#" 2.25333
-cap "out_buf1" "ask-modulator_0/m4_9220_n380#" 11.2666
-cap "gnd" "ask-modulator_0/m4_9220_n380#" 41.7887
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "ask-modulator_0/m4_9220_n380#" 1.38499
-cap "ask-modulator_0/m4_9220_n380#" "out_buf1" 11.2666
-cap "gnd" "ask-modulator_0/m4_9220_n380#" 41.7887
-cap "sigma-delta_0/XC1/m3_n2870_n2820#" "ask-modulator_0/m4_9220_n380#" 1.38499
-cap "ask-modulator_0/m4_9220_n380#" "gnd" 167.155
-cap "ask-modulator_0/m4_9220_n380#" "out_buf1" 60.4375
-cap "ask-modulator_0/m4_9220_n380#" "sigma-delta_0/XC1/m3_n2870_n2820#" 6.82012
-cap "gnd" "ask-modulator_0/m4_9220_n380#" 21.6436
-cap "ask-modulator_0/m4_9220_n380#" "out_buf1" 5.55513
-cap "ask-modulator_0/m4_9220_n380#" "out_ota" 37.2186
-cap "buffer_0/a_14516_4519#" "ask-modulator_0/m4_9220_n380#" 0.143386
-cap "buffer_0/a_14258_4519#" "ask-modulator_0/m4_9220_n380#" 0.143386
-cap "buffer_0/a_14316_4422#" "ask-modulator_0/m4_9220_n380#" 1.21453
-cap "buffer_0/w_14120_4300#" "ask-modulator_0/m4_9220_n380#" 5.08276
-cap "out_ota" "ask-modulator_0/m4_9220_n380#" 40.7941
-cap "vd" "ask-modulator_0/m4_9220_n380#" 11.3453
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/w_n812_n319#" "ask-modulator_0/m4_9220_n380#" 1.06245
-cap "buffer_0/sky130_fd_pr__pfet_01v8_BLSBYX_2/w_n296_n319#" "ask-modulator_0/m4_9220_n380#" 1.60612
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/w_n812_n319#" "ask-modulator_0/m4_9220_n380#" 7.14811
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "ask-modulator_0/m4_9220_n380#" 0.291129
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n616_n197#" "ask-modulator_0/m4_9220_n380#" 5.89827
-cap "out_ota" "ask-modulator_0/m4_9220_n380#" 40.7941
-cap "vd" "ask-modulator_0/m4_9220_n380#" 10.4909
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n616_n197#" "ask-modulator_0/m4_9220_n380#" 3.68451
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8LYGA7_0/w_n812_n319#" "ask-modulator_0/m4_9220_n380#" 1.39867
-cap "vd" "ask-modulator_0/m4_9220_n380#" 10.4909
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/w_n812_n319#" "ask-modulator_0/m4_9220_n380#" 1.0514
-cap "buffer_0/sky130_fd_pr__pfet_01v8_BLSBYX_2/w_n296_n319#" "ask-modulator_0/m4_9220_n380#" 4.34488
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/a_n416_n100#" "ask-modulator_0/m4_9220_n380#" 0.0410838
-cap "buffer_0/sky130_fd_pr__pfet_01v8_BLSBYX_2/a_n158_n100#" "ask-modulator_0/m4_9220_n380#" 0.170914
-cap "out_ota" "ask-modulator_0/m4_9220_n380#" 40.7941
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/a_416_n197#" "ask-modulator_0/m4_9220_n380#" 6.03565
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/sky130_fd_pr__pfet_01v8_8L4H97_1/a_616_n100#" 0.293588
-cap "vd" "ask-modulator_0/m4_9220_n380#" 10.4909
-cap "ask-modulator_0/m4_9220_n380#" "buffer_0/sky130_fd_pr__pfet_01v8_8LYGA7_0/w_n812_n319#" 8.63935
-cap "ask-modulator_0/m4_9220_n380#" "out_ota" 40.7941
-cap "buffer_0/w_19600_4300#" "ask-modulator_0/m4_9220_n380#" 5.08276
-cap "vd" "ask-modulator_0/m4_9220_n380#" 10.4909
-cap "out_ota" "ask-modulator_0/m4_9220_n380#" 40.7941
-cap "buffer_0/a_19996_4519#" "ask-modulator_0/m4_9220_n380#" 0.143386
-cap "buffer_0/a_19796_4422#" "ask-modulator_0/m4_9220_n380#" 1.21453
-cap "buffer_0/sky130_fd_pr__pfet_01v8_8LYGA7_0/w_n812_n319#" "ask-modulator_0/m4_9220_n380#" 0.808569
-cap "buffer_0/a_19738_4519#" "ask-modulator_0/m4_9220_n380#" 0.143386
-cap "out_ota" "ask-modulator_0/m4_9220_n380#" 40.7941
-cap "ask-modulator_0/m4_9220_n380#" "vd" 10.4909
-cap "ask-modulator_0/m4_9220_n380#" "out_ota" 40.7941
-cap "ask-modulator_0/m4_9220_n380#" "vd" 16.5108
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_2000#" "ask-modulator_0/m4_9220_n380#" 2.69318
-cap "ask-modulator_0/m4_9220_n380#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n165_n2562#" 1.36459
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n165_n2562#" "ask-modulator_0/m4_9220_n380#" 1.04395
-cap "ask-modulator_0/m4_9220_n380#" "vd" 17.0974
-cap "out_ota" "ask-modulator_0/m4_9220_n380#" 40.7941
-cap "ask-modulator_0/m4_9220_n380#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_2000#" 37.585
-cap "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_2000#" "ask-modulator_0/m4_9220_n380#" 1.27308
-cap "ask-modulator_0/m4_9220_n380#" "vd" 4.37204
-cap "ask-modulator_0/m4_9220_n380#" "out_ota" 10.4316
-cap "ask-modulator_0/in" "ask-modulator_0/gnd" 3.13924
-cap "vd" "ask-modulator_0/gnd" 0.965329
-cap "ask-modulator_0/gnd" "ask-modulator_0/in" 12.144
-cap "vd" "ask-modulator_0/gnd" 0.396841
-cap "ask-modulator_0/in" "vd" 0.405674
-cap "ask-modulator_0/in" "ask-modulator_0/gnd" 7.03989
-cap "ask-modulator_0/in" "out" 0.701697
-cap "ask-modulator_0/out" "vd" 11.7607
-cap "ask-modulator_0/in" "ask-modulator_0/out" 0.701697
-cap "ask-modulator_0/out" "vd" 5.64574
-merge "ask-modulator_0/in" "sigma-delta_0/x1/Q_N" -2584.11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -948261 -10322 0 0 0 0 0 0 0 0 0 0
-merge "sigma-delta_0/x1/Q_N" "sigma-delta_0/out"
-merge "sigma-delta_0/out" "out_sigma"
-merge "ask-modulator_0/gnd" "buffer_0/gnd" -21304.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1640420 -17478 -25200 -920 -12438380 -63642 0 0 0 0 0 0
-merge "buffer_0/gnd" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n165_n2562#"
-merge "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n165_n2562#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#"
-merge "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_n2432#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n165_n2562#"
-merge "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n165_n2562#" "sigma-delta_0/gnd"
-merge "sigma-delta_0/gnd" "ota_0/vs"
-merge "ota_0/vs" "buffer_1/gnd"
-merge "buffer_1/gnd" "gnd"
-merge "gnd" "sensor_0/gnd"
-merge "sensor_0/gnd" "VSUBS"
-merge "buffer_1/in" "sensor_0/vts" -3604.67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1192550 -12731 0 0 0 0 0 0 0 0 0 0
-merge "sensor_0/vts" "vts"
-merge "ota_0/ib" "ib" -399.133 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -60000 -1000 0 0 0 0 0 0 0 0 0 0
-merge "sigma-delta_0/clk" "clk" -379.079 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40000 -800 0 0 0 0 0 0 0 0 0 0
-merge "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_0/a_n35_2000#" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_2000#" -1617.05 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -458290 -4375 -135700 -1619 0 0 0 0 0 0 0 0
-merge "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_2000#" "ota_0/in2"
-merge "ota_0/in2" "m1_15500_n1600#"
-merge "ask-modulator_0/vd" "ota_0/vd" -33524.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9034925 -74422 -210000 -1840 -8810600 -38260 -201804 -1808 -1275904 -6744 0 0
-merge "ota_0/vd" "buffer_0/vd"
-merge "buffer_0/vd" "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#"
-merge "sky130_fd_pr__res_xhigh_po_0p35_FT5NBF_1/a_n35_n2432#" "sigma-delta_0/vd"
-merge "sigma-delta_0/vd" "buffer_1/vd"
-merge "buffer_1/vd" "sensor_0/vd"
-merge "sensor_0/vd" "vd"
-merge "buffer_0/out" "sigma-delta_0/in" -20841.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -11761640 -77802 0 0 0 0 0 0 0 0 0 0
-merge "sigma-delta_0/in" "ota_0/in1"
-merge "ota_0/in1" "buffer_1/out"
-merge "buffer_1/out" "out_buf1"
-merge "buffer_0/in" "ota_0/out" -9685.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4084250 -41548 0 0 0 0 0 0 0 0 0 0
-merge "ota_0/out" "out_ota"
-merge "buffer_0/ib" "buffer_1/ib" -2438.23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -27050 -1040 -960000 -9600 0 0 0 0 0 0 0 0
-merge "buffer_1/ib" "ib2"
-merge "ask-modulator_0/out" "out" -774.898 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -333824 -2328 0 0 0 0 0 0 0 0 0 0
-merge "sigma-delta_0/vpwr" "sigma-delta_0/reset_b_dff" -1967.11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -105930 -2232 -1000400 -5002 0 0 0 0 0 0 0 0
-merge "sigma-delta_0/reset_b_dff" "vpwr"
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_01v8_hvt l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__res_xhigh_po_5p73 l=l
+parameters sky130_fd_pr__res_xhigh_po_2p85 l=l
+parameters sky130_fd_pr__res_xhigh_po_1p41 l=l
+parameters sky130_fd_pr__res_xhigh_po_0p69 l=l
+parameters sky130_fd_pr__res_xhigh_po_0p35 l=l
+parameters sky130_fd_pr__res_xhigh_po l=l w=w
+parameters sky130_fd_pr__cap_mim_m3_1 w=w l=l
+parameters sky130_fd_pr__cap_mim_m3_2 w=w l=l
+port "clk" 2 13080 -1800 13280 -1600 m1
+port "ib" 5 4680 -1800 4880 -1600 m1
+port "out" 3 -320 10720 -120 10920 m1
+port "vpwr" 4 14280 -1800 14480 -1600 m1
+port "vd" 0 6040 33620 6240 33820 m1
+port "gnd" 1 -60 -1180 140 -980 m1
+node "sigma-delta_0.x1.dfrbp_1" 0 0 14598 2468 comment 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_16060_2515#" 165 2.23025 16060 2515 ndif 0 0 0 0 0 0 0 0 5124 290 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15815_2515#" 188 0.96847 15815 2515 ndif 0 0 0 0 0 0 0 0 5352 300 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15403_2515#" 240 5.78969 15403 2515 ndif 0 0 0 0 0 0 0 0 3528 252 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15237_2515#" 209 8.63363 15237 2515 ndif 0 0 0 0 0 0 0 0 11208 440 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15868_2881#" 306 0 15868 2881 pdif 0 0 0 0 0 0 0 0 0 0 4536 276 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15249_2881#" 1281 4.69374 15249 2881 pdif 0 0 0 0 0 0 0 0 0 0 13608 660 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11934 770 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15046_2515#" 659 80.0006 15046 2515 ndif 0 0 0 0 0 0 0 0 5280 298 5208 292 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19484 1184 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_16445_2515#" 1583 213.052 16445 2515 ndif 0 0 0 0 0 0 0 0 4368 272 6656 360 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16974 1122 0 0 32372 1176 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15706_2515#" 1519 274.553 15706 2515 ndif 0 0 0 0 0 0 0 0 5688 302 4704 280 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16644 1112 0 0 42022 2058 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15881_2489#" 3283 740.144 15881 2489 p 0 0 0 0 0 0 0 0 4368 272 4536 276 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65550 3746 0 0 41125 2048 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15141_2515#" 1631 280.803 15141 2515 ndif 0 0 0 0 0 0 0 0 4752 276 5796 306 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19716 1288 0 0 37638 2090 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15359_2757#" 1995 193.975 15359 2757 p 0 0 0 0 0 0 0 0 7992 394 10332 474 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16710 1114 0 0 29216 1704 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_14791_2515#" 2660 331.818 14791 2515 ndif 0 0 0 0 0 0 0 0 4368 272 6656 360 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 31374 2070 0 0 45484 2542 32812 2284 0 0 0 0 0 0 0 0 0 0
+node "sigma-delta_0.x1.D" 3654 2561.58 14929 2728 p 0 0 0 0 0 0 0 0 11600 516 34800 1316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21162 1262 0 0 57269 2710 245434 6970 98600 3660 0 0 0 0 0 0 0 0
+node "a_14625_2515#" 3806 700.195 14625 2515 ndif 0 0 0 0 0 0 0 0 4368 272 6656 360 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 54846 3646 0 0 44726 2132 35080 2446 0 0 0 0 0 0 0 0 0 0
+node "clk" 921 3433.45 13080 -1800 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18444 1232 0 0 9100 400 381008 4880 860000 9000 0 0 0 0 0 0 0 0
+equiv "clk" "sigma-delta_0.x1.CLK"
+equiv "clk" "sigma-delta_0.clk"
+node "sigma-delta_0.x1.Q" 1304 1092.18 16308 2765 pdif 0 0 0 0 0 0 0 0 6760 364 11200 512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 92478 3048 98678 3298 112000 2960 0 0 0 0 0 0 0 0
+node "a_17186_4420#" 25714 0 17186 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_17020_4420#" 25714 0 17020 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_17020_5320#" 401 557.187 17020 5320 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 94100 1344 0 0 0 0 0 0 0 0 0 0
+node "a_16854_3988#" 401 347.758 16854 3988 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 90100 1324 0 0 0 0 0 0 0 0 0 0
+node "a_16854_4420#" 25714 0 16854 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_16688_4420#" 25714 0 16688 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_16688_5320#" 401 387.76 16688 5320 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 90900 1328 0 0 0 0 0 0 0 0 0 0
+node "a_16522_3988#" 401 355.662 16522 3988 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 93300 1340 0 0 0 0 0 0 0 0 0 0
+node "a_16522_4420#" 25714 0 16522 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_16356_4420#" 25714 0 16356 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_16356_5320#" 401 391.608 16356 5320 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 95700 1352 0 0 0 0 0 0 0 0 0 0
+node "a_16190_3988#" 401 357.204 16190 3988 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 98100 1364 0 0 0 0 0 0 0 0 0 0
+node "a_16190_4420#" 25714 0 16190 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_16024_4420#" 25714 0 16024 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_16024_5320#" 401 446.598 16024 5320 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 92500 1336 0 0 0 0 0 0 0 0 0 0
+node "a_15712_3988#" 2494 69715.9 15712 3988 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 44604 2748 0 0 129936 4816 311504 5904 131800 3560 25600 640 28825688 22692 0 0 0 0
+node "a_15712_4420#" 25714 0 15712 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15546_4420#" 25714 0 15546 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15546_5320#" 401 449.03 15546 5320 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 91700 1332 0 0 0 0 0 0 0 0 0 0
+node "a_15380_3988#" 401 365.013 15380 3988 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 92500 1336 0 0 0 0 0 0 0 0 0 0
+node "a_15380_4420#" 25714 0 15380 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15214_4420#" 25714 0 15214 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_15214_5320#" 401 386.746 15214 5320 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 90100 1324 0 0 0 0 0 0 0 0 0 0
+node "a_15048_3988#" 401 364.375 15048 3988 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 90900 1328 0 0 0 0 0 0 0 0 0 0
+node "a_15048_4420#" 25714 0 15048 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_14882_4420#" 25714 0 14882 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_14882_5320#" 401 389.846 14882 5320 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 93300 1340 0 0 0 0 0 0 0 0 0 0
+node "a_14716_3988#" 401 365.631 14716 3988 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 90900 1328 0 0 0 0 0 0 0 0 0 0
+node "a_14716_4420#" 25714 0 14716 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_14550_4420#" 25714 0 14550 4420 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63000 1940 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "ib" 2475 6687.66 4680 -1800 m1 0 0 0 0 0 0 0 0 23200 1032 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 225600 3456 0 0 54944 3776 480920 8364 1397600 14080 0 0 0 0 0 0 0 0
+equiv "ib" "buffer_0.ib"
+node "buffer_0.c" 8506 1700.68 6342 4882 ndif 0 0 0 0 0 0 0 0 127600 5676 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77792 5324 463160 15820 392400 14400 0 0 0 0 0 0 0 0
+node "sensor_0.b" 19606 16681.5 598 330 p 0 0 0 0 0 0 0 0 92800 4128 46400 1832 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1804800 27648 0 0 410720 28104 877168 32604 478800 13040 0 0 0 0 0 0 0 0
+node "sensor_0.c" 15623 658.114 1396 3900 pdif 0 0 0 0 0 0 0 0 0 0 185600 7328 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 118800 1588 0 0 124576 8008 336516 8218 0 0 0 0 0 0 0 0 0 0
+node "sensor_0.a" 12299 5376.98 540 418 ndif 0 0 0 0 0 0 0 0 92800 4128 46400 1832 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 712800 9528 0 0 165920 11256 431494 13156 394400 11400 0 0 0 0 0 0 0 0
+node "sensor_0.d" 5460 293.405 1654 3900 pdif 0 0 0 0 0 0 0 0 0 0 69600 2748 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 41616 2652 126148 3396 49600 1400 0 0 0 0 0 0 0 0
+node "vtd" 22105 6534.21 736 2660 pdif 0 0 0 0 0 0 0 0 92800 4128 116000 4580 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2138400 23832 0 0 370736 24596 1297268 30286 479200 13000 0 0 0 0 0 0 0 0
+equiv "vtd" "sensor_0.vtd"
+node "a_14550_5320#" 401 586.899 14550 5320 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120960 4016 96500 1356 0 0 0 0 0 0 0 0 0 0
+node "out_buff" 14825 14489.8 6142 4794 p 0 0 0 0 0 0 0 0 58000 2580 69600 3096 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 752000 11520 0 0 283872 16812 1429860 40348 731400 21100 102200 1910 100800 1280 17993388 19526 0 0
+equiv "out_buff" "buffer_0.out"
+equiv "out_buff" "sigma-delta_0.in"
+node "buffer_0.d" 21082 27730.5 6312 5800 pdif 0 0 0 0 0 0 0 0 81200 3612 69600 3096 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1579200 24192 0 0 377536 25948 1180352 44332 471000 17180 71200 1940 21201124 20600 1011840 6964 0 0
+node "buffer_0.b" 9068 3354.52 6600 4882 ndif 0 0 0 0 0 0 0 0 58000 2580 11600 516 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 866800 13068 0 0 192032 13200 591112 23584 161600 5940 0 0 0 0 0 0 0 0
+node "buffer_0.a" 12262 4986.73 5826 4882 ndif 0 0 0 0 0 0 0 0 92800 4128 11600 516 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1017200 15372 0 0 243648 16564 836142 27694 193800 7300 0 0 0 0 0 0 0 0
+node "out" 984 59571.8 -320 10720 m1 0 0 0 0 0 0 0 0 23200 916 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13872 884 283200 3420 95200 1240 52533480 50416 93994164 93000 5068800 32320 0 0
+equiv "out" "ask-modulator_0.out"
+node "out_sigma" 2196 12116.8 858 10462 p 0 0 0 0 0 0 0 0 6760 364 10400 504 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22032 1356 0 0 24530 1354 3487048 38048 1921700 19500 0 0 0 0 0 0 0 0
+equiv "out_sigma" "sigma-delta_0.x1.Q_N"
+equiv "out_sigma" "sigma-delta_0.out"
+equiv "out_sigma" "ask-modulator_0.in"
+node "a_6126_29386#" 188 592.723 6126 29386 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 60480 2008 21050 942 0 0 0 0 0 0 0 0 0 0
+node "a_6126_29818#" 28571 0 6126 29818 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 70000 2140 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vpwr" 16750 7160.75 14280 -1800 m1 0 0 0 0 763032 5526 0 0 9000 380 61572 2904 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 33288 2224 0 0 147656 7152 467831 11082 962800 10960 0 0 0 0 0 0 0 0
+equiv "vpwr" "sigma-delta_0.x1.VPWR"
+equiv "vpwr" "sigma-delta_0.x1.RESET_B"
+equiv "vpwr" "sigma-delta_0.x1.VPB"
+equiv "vpwr" "sigma-delta_0.x1.VPWR"
+equiv "vpwr" "sigma-delta_0.x1.RESET_B"
+equiv "vpwr" "sigma-delta_0.vpwr"
+equiv "vpwr" "sigma-delta_0.reset_b_dff"
+node "vts" 56599 20705.9 167 2307 nw 0 0 0 0 3438916 8584 0 0 277440 16320 208800 8244 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 989600 14696 0 0 586088 35800 1275880 29316 791400 11120 0 0 0 0 0 0 0 0
+equiv "vts" "buffer_0.in"
+equiv "vts" "sensor_0.vts"
+node "vd" 53054 76349.3 6040 33620 m1 0 0 0 0 12061228 30008 0 0 977024 57472 429200 17816 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 514000 7140 0 0 1374496 81256 3633196 52982 1957200 35020 4295800 38040 11646770 63038 79162958 66720 0 0
+equiv "vd" "buffer_0.vd"
+equiv "vd" "sensor_0.vd"
+equiv "vd" "sigma-delta_0.vd"
+equiv "vd" "ask-modulator_0.vd"
+substrate "sigma-delta_0.x1.VNB" 0 0 36 196 ppd 0 0 0 0 0 0 0 0 675300 30026 1587528 93384 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 601600 9216 0 0 2196376 132536 11571436 96728 3511200 50920 33673940 39364 587910 12098 0 0 0 0
+equiv "sigma-delta_0.x1.VNB" "gnd"
+equiv "sigma-delta_0.x1.VNB" "buffer_0.gnd"
+equiv "sigma-delta_0.x1.VNB" "sensor_0.gnd"
+equiv "sigma-delta_0.x1.VNB" "sigma-delta_0.x1.VGND"
+equiv "sigma-delta_0.x1.VNB" "sigma-delta_0.gnd"
+equiv "sigma-delta_0.x1.VNB" "ask-modulator_0.gnd"
+cap "a_15359_2757#" "a_15815_2515#" 0.420392
+cap "a_14625_2515#" "a_15249_2881#" 0.973396
+cap "buffer_0.c" "vd" 398.617
+cap "sigma-delta_0.x1.D" "a_15706_2515#" 0.945465
+cap "sigma-delta_0.x1.Q" "a_15237_2515#" 0.145218
+cap "a_15706_2515#" "a_15359_2757#" 51.1621
+cap "vts" "sensor_0.a" 543.499
+cap "a_14791_2515#" "a_15046_2515#" 64.1782
+cap "a_16190_3988#" "vpwr" 3.83657
+cap "a_14791_2515#" "a_16445_2515#" 0.201379
+cap "a_14625_2515#" "a_15815_2515#" 0.256487
+cap "vpwr" "a_15403_2515#" 4.06892
+cap "a_16060_2515#" "a_15881_2489#" 7.39891
+cap "vpwr" "a_15046_2515#" 86.1106
+cap "sigma-delta_0.x1.Q" "a_16854_3988#" 414.437
+cap "vd" "buffer_0.a" 6660.08
+cap "sigma-delta_0.x1.Q" "vd" 96.9321
+cap "sigma-delta_0.x1.Q" "a_16522_3988#" 0.0499951
+cap "a_14625_2515#" "a_15706_2515#" 102.355
+cap "buffer_0.b" "out_sigma" 16.9784
+cap "a_16445_2515#" "vpwr" 199.935
+cap "vpwr" "out_buff" 8.3029
+cap "a_16445_2515#" "out_sigma" 69.1024
+cap "a_14791_2515#" "a_15249_2881#" 34.619
+cap "out_buff" "out_sigma" 552.369
+cap "vpwr" "a_15249_2881#" 156.329
+cap "sensor_0.b" "sensor_0.a" 821.192
+cap "a_14791_2515#" "a_15815_2515#" 0.0236482
+cap "vpwr" "a_15815_2515#" 0.792953
+cap "buffer_0.c" "out" 0.855526
+cap "a_14791_2515#" "a_15706_2515#" 125.324
+cap "vpwr" "a_15706_2515#" 523.616
+cap "a_15712_3988#" "a_16190_3988#" 357.461
+cap "a_15712_3988#" "a_16024_5320#" 8.27295
+cap "buffer_0.a" "out" 53.3286
+cap "a_15706_2515#" "out_sigma" 0.685233
+cap "a_15712_3988#" "a_16445_2515#" 3.66166
+cap "a_15712_3988#" "out_buff" 9.1495
+cap "out_sigma" "a_14550_5320#" 0.623052
+cap "sigma-delta_0.x1.D" "a_15868_2881#" 0.0211315
+cap "sensor_0.a" "sensor_0.d" 587.599
+cap "a_15868_2881#" "a_15359_2757#" 0.260086
+cap "a_16190_3988#" "a_16356_5320#" 5.35663
+cap "vd" "a_6126_29386#" 18.9196
+cap "a_16024_5320#" "a_16356_5320#" 300.127
+cap "vd" "vtd" 3434.68
+cap "a_15712_3988#" "a_15815_2515#" 0.0136133
+cap "vd" "a_16854_3988#" 17.4421
+cap "a_15712_3988#" "a_15706_2515#" 1.09659
+cap "clk" "a_15141_2515#" 0.326102
+cap "a_16522_3988#" "vd" 5.57985
+cap "a_16522_3988#" "a_16854_3988#" 303.257
+cap "a_15712_3988#" "a_16688_5320#" 5.56928
+cap "buffer_0.d" "buffer_0.b" 1042.27
+cap "clk" "sigma-delta_0.x1.D" 9.92904
+cap "clk" "a_15359_2757#" 0.17827
+cap "a_17020_5320#" "sigma-delta_0.x1.Q" 8.39025
+cap "a_16190_3988#" "a_15881_2489#" 0.427131
+cap "sigma-delta_0.x1.Q" "a_15141_2515#" 0.81116
+cap "a_14791_2515#" "a_15868_2881#" 0.146064
+cap "vpwr" "a_15868_2881#" 0.963032
+cap "a_16445_2515#" "a_15881_2489#" 106.826
+cap "clk" "a_14625_2515#" 274.46
+cap "buffer_0.d" "out_buff" 40042.3
+cap "a_6126_29386#" "out" 17.0749
+cap "a_16688_5320#" "a_16356_5320#" 306.579
+cap "buffer_0.c" "vts" 1078.05
+cap "sigma-delta_0.x1.D" "sigma-delta_0.x1.Q" 67.5245
+cap "sigma-delta_0.x1.Q" "a_15359_2757#" 1.11183
+cap "a_15380_3988#" "sigma-delta_0.x1.Q" 0.0014271
+cap "a_14882_5320#" "out_buff" 1.40184
+cap "vts" "buffer_0.a" 658.049
+cap "a_15048_3988#" "vd" 2.0588
+cap "buffer_0.c" "ib" 95.1394
+cap "vd" "out" 145044
+cap "a_14625_2515#" "sigma-delta_0.x1.Q" 0.954269
+cap "sensor_0.c" "vtd" 1124.53
+cap "ib" "buffer_0.a" 61.5202
+cap "a_14882_5320#" "a_15214_5320#" 303.257
+cap "clk" "a_14791_2515#" 2.40868
+cap "clk" "vpwr" 728.843
+cap "sensor_0.c" "vd" 803.661
+cap "a_15706_2515#" "a_15881_2489#" 251.137
+cap "vd" "a_14716_3988#" 2.10405
+cap "clk" "out_sigma" 110.436
+cap "a_15712_3988#" "a_15868_2881#" 0.055357
+cap "a_14882_5320#" "a_14550_5320#" 296.258
+cap "a_14791_2515#" "sigma-delta_0.x1.Q" 1.3744
+cap "buffer_0.c" "out_sigma" 1.07467
+cap "sigma-delta_0.x1.Q" "vpwr" 185.531
+cap "a_16024_5320#" "a_16190_3988#" 4.73441
+cap "sigma-delta_0.x1.Q" "out_sigma" 667.663
+cap "buffer_0.a" "out_sigma" 17.2466
+cap "vd" "a_15546_5320#" 61.8794
+cap "a_16190_3988#" "out_buff" 0.000987269
+cap "buffer_0.b" "out_buff" 2796.25
+cap "a_17020_5320#" "vd" 200.691
+cap "a_16024_5320#" "out_buff" 0.0349313
+cap "a_17020_5320#" "a_16854_3988#" 4.33959
+cap "a_15237_2515#" "a_15141_2515#" 13.793
+cap "sigma-delta_0.x1.D" "a_15237_2515#" 0.821777
+cap "a_15237_2515#" "a_15359_2757#" 0.316027
+cap "a_15048_3988#" "a_14716_3988#" 296.258
+cap "sigma-delta_0.x1.D" "a_16854_3988#" 0.268801
+cap "sigma-delta_0.x1.D" "vd" 908.308
+cap "vts" "vtd" 7637.47
+cap "a_15380_3988#" "vd" 2.09497
+cap "a_14625_2515#" "a_15237_2515#" 1.34175
+cap "a_15712_3988#" "sigma-delta_0.x1.Q" 413.652
+cap "vd" "vts" 1621.04
+cap "clk" "a_16060_2515#" 0.00631891
+cap "ib" "vtd" 3.73156
+cap "a_15214_5320#" "out_buff" 0.544496
+cap "a_14625_2515#" "vd" 0.0172426
+cap "a_16445_2515#" "a_15706_2515#" 0.705126
+cap "ib" "vd" 60.4888
+cap "a_15546_5320#" "out" 1.86896
+cap "a_17020_5320#" "out" 1.91867
+cap "sigma-delta_0.x1.Q" "a_16060_2515#" 0.60473
+cap "out_buff" "a_14550_5320#" 53.4663
+cap "sensor_0.b" "vtd" 4545.32
+cap "a_14791_2515#" "a_15237_2515#" 0.228109
+cap "vpwr" "a_15237_2515#" 2.9216
+cap "sensor_0.b" "vd" 69.3336
+cap "clk" "buffer_0.d" 204.946
+cap "a_14791_2515#" "vd" 0.107742
+cap "a_15706_2515#" "a_15815_2515#" 7.41624
+cap "sigma-delta_0.x1.D" "a_15048_3988#" 0.0255576
+cap "vd" "vpwr" 7.25639
+cap "a_15380_3988#" "a_15048_3988#" 302.462
+cap "vtd" "out_sigma" 0.687047
+cap "a_16522_3988#" "vpwr" 2.65646
+cap "clk" "a_15881_2489#" 0.0268376
+cap "buffer_0.d" "buffer_0.c" 1315.53
+cap "vts" "out" 3.35658
+cap "out_sigma" "a_16854_3988#" 0.76092
+cap "a_14625_2515#" "a_15048_3988#" 0.191793
+cap "vd" "out_sigma" 1880.38
+cap "buffer_0.d" "buffer_0.a" 2402.5
+cap "sigma-delta_0.x1.D" "a_14716_3988#" 0.206626
+cap "sensor_0.c" "vts" 191.956
+cap "sigma-delta_0.x1.Q" "a_15881_2489#" 141.608
+cap "vtd" "sensor_0.d" 299.974
+cap "sensor_0.c" "ib" 2.38072
+cap "vd" "sensor_0.d" 282.201
+cap "a_14625_2515#" "a_14716_3988#" 0.146705
+cap "a_14791_2515#" "a_15048_3988#" 0.182312
+cap "a_15048_3988#" "vpwr" 3.78746
+cap "a_15712_3988#" "a_16854_3988#" 9.57411
+cap "a_15712_3988#" "vd" 749.682
+cap "a_15712_3988#" "a_16522_3988#" 50.1963
+cap "a_15380_3988#" "a_15546_5320#" 4.33959
+cap "sensor_0.c" "sensor_0.b" 550.261
+cap "a_15048_3988#" "out_sigma" 14.6132
+cap "out" "out_sigma" 5439.76
+cap "sigma-delta_0.x1.D" "a_15141_2515#" 3.53128
+cap "a_15141_2515#" "a_15359_2757#" 209.641
+cap "a_15380_3988#" "a_15141_2515#" 0.122182
+cap "vpwr" "a_14716_3988#" 3.79612
+cap "clk" "a_15403_2515#" 0.0182049
+cap "clk" "a_15046_2515#" 0.308801
+cap "vd" "a_16356_5320#" 63.6692
+cap "sigma-delta_0.x1.D" "a_15359_2757#" 0.624074
+cap "a_14625_2515#" "a_15141_2515#" 115.353
+cap "a_15706_2515#" "a_15868_2881#" 6.45269
+cap "a_15380_3988#" "a_15359_2757#" 0.0720267
+cap "buffer_0.c" "buffer_0.b" 1338.54
+cap "a_16522_3988#" "a_16356_5320#" 5.08996
+cap "a_14716_3988#" "out_sigma" 14.6132
+cap "clk" "out_buff" 71.2685
+cap "a_14625_2515#" "sigma-delta_0.x1.D" 194.992
+cap "a_14625_2515#" "a_15359_2757#" 70.0901
+cap "a_16190_3988#" "sigma-delta_0.x1.Q" 0.0186573
+cap "buffer_0.b" "buffer_0.a" 125.665
+cap "a_15712_3988#" "out" 180.489
+cap "a_15712_3988#" "a_15048_3988#" 0.437621
+cap "sigma-delta_0.x1.Q" "a_15046_2515#" 0.0758083
+cap "sigma-delta_0.x1.Q" "a_15403_2515#" 0.0975096
+cap "sensor_0.c" "sensor_0.d" 492.041
+cap "buffer_0.c" "out_buff" 2018.37
+cap "sigma-delta_0.x1.Q" "a_16445_2515#" 226.171
+cap "buffer_0.d" "vd" 2785.82
+cap "ib" "vts" 722.505
+cap "a_14791_2515#" "a_15141_2515#" 229.804
+cap "buffer_0.a" "out_buff" 3964.83
+cap "clk" "a_15815_2515#" 0.0110223
+cap "vpwr" "a_15141_2515#" 362.703
+cap "clk" "a_15706_2515#" 0.064599
+cap "a_14882_5320#" "vd" 61.0407
+cap "vd" "a_15881_2489#" 1.71775
+cap "a_16522_3988#" "a_15881_2489#" 0.0127788
+cap "sigma-delta_0.x1.Q" "a_15249_2881#" 0.366121
+cap "a_14791_2515#" "sigma-delta_0.x1.D" 228.607
+cap "a_15712_3988#" "a_14716_3988#" 0.204078
+cap "a_16356_5320#" "out" 1.95181
+cap "a_14791_2515#" "a_15359_2757#" 186.387
+cap "a_15141_2515#" "out_sigma" 0.705103
+cap "vpwr" "a_15359_2757#" 377.891
+cap "sigma-delta_0.x1.D" "vpwr" 483.491
+cap "sensor_0.b" "vts" 974.235
+cap "a_15380_3988#" "vpwr" 3.97358
+cap "sigma-delta_0.x1.Q" "a_15815_2515#" 0.146914
+cap "sigma-delta_0.x1.D" "out_sigma" 293.869
+cap "a_14791_2515#" "a_14625_2515#" 906.454
+cap "a_15380_3988#" "out_sigma" 14.8305
+cap "ib" "sensor_0.b" 0.202194
+cap "sigma-delta_0.x1.Q" "a_15706_2515#" 5.92875
+cap "a_15359_2757#" "out_sigma" 0.372553
+cap "a_14625_2515#" "vpwr" 771.816
+cap "a_16688_5320#" "sigma-delta_0.x1.Q" 3.2005
+cap "vts" "out_sigma" 60.7685
+cap "a_15712_3988#" "a_15546_5320#" 4.65544
+cap "a_14625_2515#" "out_sigma" 1.53214
+cap "buffer_0.d" "out" 4.71923
+cap "a_15712_3988#" "a_17020_5320#" 9.74024
+cap "a_15712_3988#" "a_15141_2515#" 0.0202345
+cap "a_14882_5320#" "out" 1.9021
+cap "a_15048_3988#" "a_14882_5320#" 4.8233
+cap "vts" "sensor_0.d" 248.232
+cap "a_14791_2515#" "vpwr" 606.881
+cap "a_15712_3988#" "sigma-delta_0.x1.D" 339.481
+cap "a_15237_2515#" "a_15046_2515#" 0.461049
+cap "a_15712_3988#" "a_15359_2757#" 0.00748778
+cap "a_15712_3988#" "a_15380_3988#" 297.803
+cap "a_14791_2515#" "out_sigma" 1.09946
+cap "vd" "buffer_0.b" 6366.25
+cap "a_16190_3988#" "vd" 3.87735
+cap "a_16024_5320#" "vd" 62.6082
+cap "vpwr" "out_sigma" 596.532
+cap "a_16190_3988#" "a_16522_3988#" 311.892
+cap "a_16445_2515#" "vd" 3.17391
+cap "a_15712_3988#" "a_14625_2515#" 0.178278
+cap "a_14882_5320#" "a_14716_3988#" 4.33959
+cap "a_16522_3988#" "a_16445_2515#" 0.139562
+cap "sigma-delta_0.x1.D" "a_16060_2515#" 0.0454267
+cap "vd" "out_buff" 3212.85
+cap "sensor_0.b" "sensor_0.d" 15.1548
+cap "sensor_0.a" "vtd" 2136.42
+cap "sigma-delta_0.x1.Q" "a_15868_2881#" 0.0453494
+cap "a_15214_5320#" "vd" 59.8045
+cap "a_15712_3988#" "a_14791_2515#" 0.412666
+cap "vd" "sensor_0.a" 2920.67
+cap "a_15712_3988#" "vpwr" 13.1682
+cap "vd" "a_15706_2515#" 0.351857
+cap "buffer_0.b" "out" 63.4338
+cap "a_16024_5320#" "out" 1.88553
+cap "a_16688_5320#" "vd" 63.3088
+cap "a_16688_5320#" "a_16854_3988#" 4.73441
+cap "a_16688_5320#" "a_16522_3988#" 4.8233
+cap "a_15712_3988#" "out_sigma" 159.799
+cap "vd" "a_14550_5320#" 67.0133
+cap "sigma-delta_0.x1.D" "a_15881_2489#" 3.99569
+cap "buffer_0.d" "vts" 212.797
+cap "a_15048_3988#" "out_buff" 1.01002
+cap "vpwr" "a_16060_2515#" 3.1201
+cap "out_buff" "out" 10.8881
+cap "buffer_0.d" "ib" 193.617
+cap "a_14625_2515#" "a_15881_2489#" 43.5839
+cap "buffer_0.c" "buffer_0.a" 3881.67
+cap "a_15214_5320#" "out" 1.83582
+cap "a_15048_3988#" "a_15214_5320#" 4.73441
+cap "a_14716_3988#" "out_buff" 306.286
+cap "a_16688_5320#" "out" 1.85239
+cap "out" "a_14550_5320#" 1.96838
+cap "a_16024_5320#" "a_15546_5320#" 143.688
+cap "sensor_0.c" "sensor_0.a" 997.418
+cap "a_14791_2515#" "a_15881_2489#" 42.5519
+cap "vpwr" "a_15881_2489#" 687.791
+cap "buffer_0.d" "out_sigma" 39.8964
+cap "a_15546_5320#" "out_buff" 0.284097
+cap "a_15141_2515#" "a_15403_2515#" 1.70518
+cap "a_15141_2515#" "a_15046_2515#" 49.8273
+cap "a_15881_2489#" "out_sigma" 7.34534
+cap "a_15712_3988#" "a_16356_5320#" 6.313
+cap "a_14716_3988#" "a_14550_5320#" 4.57648
+cap "sigma-delta_0.x1.D" "a_15403_2515#" 0.0540666
+cap "sigma-delta_0.x1.D" "a_15046_2515#" 163.819
+cap "a_15359_2757#" "a_15403_2515#" 0.368523
+cap "sigma-delta_0.x1.D" "a_16445_2515#" 2.09469
+cap "a_15214_5320#" "a_15546_5320#" 296.258
+cap "vts" "buffer_0.b" 2937.68
+cap "a_15141_2515#" "a_15249_2881#" 57.222
+cap "a_15380_3988#" "out_buff" 0.451094
+cap "a_14625_2515#" "a_15046_2515#" 93.133
+cap "ib" "buffer_0.b" 16.7477
+cap "a_14625_2515#" "a_16445_2515#" 0.0471394
+cap "clk" "a_15237_2515#" 0.053347
+cap "sigma-delta_0.x1.D" "a_15249_2881#" 0.0555978
+cap "vts" "out_buff" 2356.03
+cap "a_15359_2757#" "a_15249_2881#" 97.7448
+cap "a_15706_2515#" "a_15141_2515#" 0.0799378
+cap "a_16688_5320#" "a_17020_5320#" 298.516
+cap "a_15712_3988#" "a_15881_2489#" 3.80692
+cap "ib" "out_buff" 11.1929
+cap "sigma-delta_0.x1.D" "a_15815_2515#" 0.0242099
+cap "a_15380_3988#" "a_15214_5320#" 4.73441
+device csubckt sky130_fd_pr__cap_mim_m3_2 6580 41 6581 42 w=6000 l=3000 "None" "out_buff" 17680 0 "buffer_0.d" 0 21201124,20600
+device csubckt sky130_fd_pr__cap_mim_m3_2 740 17520 741 17521 w=4880 l=4880 "None" "vd" 19200 0 "out" 0 33881640,42640
+device csubckt sky130_fd_pr__cap_mim_m3_2 740 22800 741 22801 w=4880 l=4880 "None" "vd" 19200 0 "out" 0 28113120,21236
+device csubckt sky130_fd_pr__cap_mim_m3_2 740 28080 741 28081 w=4880 l=4880 "None" "vd" 19200 0 "out" 0 28113120,21236
+device csubckt sky130_fd_pr__cap_mim_m3_1 17760 372 17761 373 w=5440 l=5440 "None" "a_15712_3988#" 21440 0 "sigma-delta_0.x1.VNB" 0 32082240,22664
+device msubckt sky130_fd_pr__nfet_01v8 2878 418 2879 419 l=200 w=200 "sigma-delta_0.x1.VNB" "sigma-delta_0.x1.VNB" 400 0 "sigma-delta_0.x1.VNB" 0 0 "sigma-delta_0.x1.VNB" 400 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 2498 418 2499 419 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "sensor_0.b" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 2118 418 2119 419 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sensor_0.b" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 1738 418 1739 419 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "vtd" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 1358 418 1359 419 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "vtd" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 978 418 979 419 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "sensor_0.a" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 598 418 599 419 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sensor_0.a" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 218 418 219 419 l=200 w=200 "sigma-delta_0.x1.VNB" "sigma-delta_0.x1.VNB" 400 0 "sigma-delta_0.x1.VNB" 0 0 "sigma-delta_0.x1.VNB" 400 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 2878 836 2879 837 l=200 w=200 "sigma-delta_0.x1.VNB" "sigma-delta_0.x1.VNB" 400 0 "sigma-delta_0.x1.VNB" 0 0 "sigma-delta_0.x1.VNB" 400 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 2498 836 2499 837 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "sensor_0.b" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 2118 836 2119 837 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sensor_0.b" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 1738 836 1739 837 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "vtd" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 1358 836 1359 837 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "vtd" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 978 836 979 837 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "sensor_0.a" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 598 836 599 837 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sensor_0.a" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 218 836 219 837 l=200 w=200 "sigma-delta_0.x1.VNB" "sigma-delta_0.x1.VNB" 400 0 "sigma-delta_0.x1.VNB" 0 0 "sigma-delta_0.x1.VNB" 400 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 2878 1254 2879 1255 l=200 w=200 "sigma-delta_0.x1.VNB" "sigma-delta_0.x1.VNB" 400 0 "sigma-delta_0.x1.VNB" 0 0 "sigma-delta_0.x1.VNB" 400 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 2498 1254 2499 1255 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "sensor_0.b" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 2118 1254 2119 1255 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sensor_0.b" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 1738 1254 1739 1255 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "vtd" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 1358 1254 1359 1255 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "vtd" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 978 1254 979 1255 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "sensor_0.a" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 598 1254 599 1255 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sensor_0.a" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 218 1254 219 1255 l=200 w=200 "sigma-delta_0.x1.VNB" "sigma-delta_0.x1.VNB" 400 0 "sigma-delta_0.x1.VNB" 0 0 "sigma-delta_0.x1.VNB" 400 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 2878 1672 2879 1673 l=200 w=200 "sigma-delta_0.x1.VNB" "sigma-delta_0.x1.VNB" 400 0 "sigma-delta_0.x1.VNB" 0 0 "sigma-delta_0.x1.VNB" 400 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 2498 1672 2499 1673 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "sensor_0.b" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 2118 1672 2119 1673 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sensor_0.b" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 1738 1672 1739 1673 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "vtd" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 1358 1672 1359 1673 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "vtd" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 978 1672 979 1673 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sigma-delta_0.x1.VNB" 200 11600,516 "sensor_0.a" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 598 1672 599 1673 l=200 w=200 "sigma-delta_0.x1.VNB" "sensor_0.b" 400 0 "sensor_0.a" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 218 1672 219 1673 l=200 w=200 "sigma-delta_0.x1.VNB" "sigma-delta_0.x1.VNB" 400 0 "sigma-delta_0.x1.VNB" 0 0 "sigma-delta_0.x1.VNB" 400 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 17210 2134 17211 2135 l=30 w=200 "sigma-delta_0.x1.VNB" "a_15712_3988#" 60 0 "sigma-delta_0.x1.D" 200 11600,516 "sigma-delta_0.x1.VNB" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 16594 2515 16595 2516 l=30 w=130 "sigma-delta_0.x1.VNB" "a_16445_2515#" 60 0 "sigma-delta_0.x1.VNB" 130 4010,197 "out_sigma" 130 6760,364
+device msubckt sky130_fd_pr__nfet_01v8 16497 2515 16498 2516 l=30 w=84 "sigma-delta_0.x1.VNB" "a_15881_2489#" 60 0 "a_16445_2515#" 84 4368,272 "sigma-delta_0.x1.VNB" 84 4010,197
+device msubckt sky130_fd_pr__pfet_01v8 17210 2813 17211 2814 l=30 w=600 "vd" "a_15712_3988#" 60 0 "sigma-delta_0.x1.D" 600 34800,1316 "vd" 600 34800,1316
+device msubckt sky130_fd_pr__nfet_01v8 16309 2515 16310 2516 l=30 w=130 "sigma-delta_0.x1.VNB" "a_15881_2489#" 60 0 "sigma-delta_0.x1.VNB" 130 6760,364 "sigma-delta_0.x1.Q" 130 6760,364
+device msubckt sky130_fd_pr__nfet_01v8 16121 2515 16122 2516 l=30 w=84 "sigma-delta_0.x1.VNB" "a_15706_2515#" 60 0 "a_16060_2515#" 84 2562,145 "a_15881_2489#" 84 4368,272
+device msubckt sky130_fd_pr__nfet_01v8 16030 2515 16031 2516 l=30 w=84 "sigma-delta_0.x1.VNB" "vpwr" 60 0 "sigma-delta_0.x1.VNB" 84 4998,203 "a_16060_2515#" 84 2562,145
+device msubckt sky130_fd_pr__nfet_01v8 15881 2515 15882 2516 l=30 w=84 "sigma-delta_0.x1.VNB" "a_15881_2489#" 60 0 "a_15815_2515#" 84 2676,150 "sigma-delta_0.x1.VNB" 84 4998,203
+device msubckt sky130_fd_pr__nfet_01v8 15785 2515 15786 2516 l=30 w=72 "sigma-delta_0.x1.VNB" "a_14625_2515#" 60 0 "a_15706_2515#" 72 2844,151 "a_15815_2515#" 72 2676,150
+device msubckt sky130_fd_pr__nfet_01v8 15676 2515 15677 2516 l=30 w=72 "sigma-delta_0.x1.VNB" "a_14791_2515#" 60 0 "a_15359_2757#" 72 3996,197 "a_15706_2515#" 72 2844,151
+device msubckt sky130_fd_pr__pfet_01v8_hvt 16594 2765 16595 2766 l=30 w=200 "vpwr" "a_16445_2515#" 60 0 "vpwr" 200 6160,267 "out_sigma" 200 10400,504
+device msubckt sky130_fd_pr__pfet_01v8_hvt 16497 2837 16498 2838 l=30 w=128 "vpwr" "a_15881_2489#" 60 0 "a_16445_2515#" 128 6656,360 "vpwr" 128 6160,267
+device msubckt sky130_fd_pr__pfet_01v8_hvt 16278 2765 16279 2766 l=30 w=200 "vpwr" "a_15881_2489#" 60 0 "vpwr" 200 8528,334 "sigma-delta_0.x1.Q" 200 11200,512
+device msubckt sky130_fd_pr__nfet_01v8 15577 2515 15578 2516 l=30 w=128 "sigma-delta_0.x1.VNB" "a_15141_2515#" 60 0 "sigma-delta_0.x1.VNB" 128 5384,230 "a_15359_2757#" 128 3996,197
+device msubckt sky130_fd_pr__nfet_01v8 15445 2515 15446 2516 l=30 w=84 "sigma-delta_0.x1.VNB" "vpwr" 60 0 "a_15403_2515#" 84 1764,126 "sigma-delta_0.x1.VNB" 84 5384,230
+device msubckt sky130_fd_pr__nfet_01v8 15373 2515 15374 2516 l=30 w=84 "sigma-delta_0.x1.VNB" "a_15359_2757#" 60 0 "a_15237_2515#" 84 5604,220 "a_15403_2515#" 84 1764,126
+device msubckt sky130_fd_pr__nfet_01v8 15207 2515 15208 2516 l=30 w=72 "sigma-delta_0.x1.VNB" "a_14791_2515#" 60 0 "a_15141_2515#" 72 2376,138 "a_15237_2515#" 72 5604,220
+device msubckt sky130_fd_pr__nfet_01v8 15111 2515 15112 2516 l=30 w=72 "sigma-delta_0.x1.VNB" "a_14625_2515#" 60 0 "a_15046_2515#" 72 2640,149 "a_15141_2515#" 72 2376,138
+device msubckt sky130_fd_pr__pfet_01v8_hvt 16114 2881 16115 2882 l=30 w=84 "vpwr" "a_15706_2515#" 60 0 "a_15881_2489#" 84 2268,138 "vpwr" 84 8528,334
+device msubckt sky130_fd_pr__pfet_01v8_hvt 16030 2881 16031 2882 l=30 w=84 "vpwr" "vpwr" 60 0 "vpwr" 84 3276,162 "a_15881_2489#" 84 2268,138
+device msubckt sky130_fd_pr__pfet_01v8_hvt 15922 2881 15923 2882 l=30 w=84 "vpwr" "a_15881_2489#" 60 0 "a_15868_2881#" 84 2268,138 "vpwr" 84 3276,162
+device msubckt sky130_fd_pr__pfet_01v8_hvt 15838 2881 15839 2882 l=30 w=84 "vpwr" "a_14791_2515#" 60 0 "a_15706_2515#" 84 2352,140 "a_15868_2881#" 84 2268,138
+device msubckt sky130_fd_pr__pfet_01v8_hvt 15752 2881 15753 2882 l=30 w=84 "vpwr" "a_14625_2515#" 60 0 "a_15359_2757#" 84 5166,237 "a_15706_2515#" 84 2352,140
+device msubckt sky130_fd_pr__pfet_01v8_hvt 15653 2797 15654 2798 l=30 w=168 "vpwr" "a_15141_2515#" 60 0 "vpwr" 168 8736,440 "a_15359_2757#" 168 5166,237
+device msubckt sky130_fd_pr__nfet_01v8 15016 2515 15017 2516 l=30 w=84 "sigma-delta_0.x1.VNB" "sigma-delta_0.x1.D" 60 0 "sigma-delta_0.x1.VNB" 84 8820,378 "a_15046_2515#" 84 2640,149
+device msubckt sky130_fd_pr__nfet_01v8 14761 2515 14762 2516 l=30 w=84 "sigma-delta_0.x1.VNB" "a_14625_2515#" 60 0 "sigma-delta_0.x1.VNB" 84 2268,138 "a_14791_2515#" 84 4368,272
+device msubckt sky130_fd_pr__nfet_01v8 14677 2515 14678 2516 l=30 w=84 "sigma-delta_0.x1.VNB" "clk" 60 0 "a_14625_2515#" 84 4368,272 "sigma-delta_0.x1.VNB" 84 2268,138
+device msubckt sky130_fd_pr__pfet_01v8_hvt 15456 2881 15457 2882 l=30 w=84 "vpwr" "vpwr" 60 0 "vpwr" 84 2814,151 "a_15249_2881#" 84 4368,272
+device msubckt sky130_fd_pr__pfet_01v8_hvt 15359 2881 15360 2882 l=30 w=84 "vpwr" "a_15359_2757#" 60 0 "a_15249_2881#" 84 4620,194 "vpwr" 84 2814,151
+device msubckt sky130_fd_pr__pfet_01v8_hvt 15219 2881 15220 2882 l=30 w=84 "vpwr" "a_14625_2515#" 60 0 "a_15141_2515#" 84 2898,153 "a_15249_2881#" 84 4620,194
+device msubckt sky130_fd_pr__pfet_01v8_hvt 15120 2881 15121 2882 l=30 w=84 "vpwr" "a_14791_2515#" 60 0 "a_15046_2515#" 84 2604,146 "a_15141_2515#" 84 2898,153
+device msubckt sky130_fd_pr__pfet_01v8_hvt 15028 2881 15029 2882 l=30 w=84 "vpwr" "sigma-delta_0.x1.D" 60 0 "vpwr" 84 4368,272 "a_15046_2515#" 84 2604,146
+device msubckt sky130_fd_pr__pfet_01v8_hvt 14761 2831 14762 2832 l=30 w=128 "vpwr" "a_14625_2515#" 60 0 "vpwr" 128 3456,182 "a_14791_2515#" 128 6656,360
+device msubckt sky130_fd_pr__pfet_01v8_hvt 14677 2831 14678 2832 l=30 w=128 "vpwr" "clk" 60 0 "a_14625_2515#" 128 6656,360 "vpwr" 128 3456,182
+device msubckt sky130_fd_pr__pfet_01v8 2974 2660 2975 2661 l=200 w=400 "vts" "vts" 400 0 "vts" 0 0 "vts" 800 23200,916
+device msubckt sky130_fd_pr__pfet_01v8 2600 2660 2601 2661 l=200 w=400 "vts" "vtd" 400 0 "vts" 400 11600,458 "vtd" 400 23200,916
+device msubckt sky130_fd_pr__pfet_01v8 2342 2660 2343 2661 l=200 w=400 "vts" "vtd" 400 0 "vtd" 400 11600,458 "vts" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 2084 2660 2085 2661 l=200 w=400 "vts" "vtd" 400 0 "vts" 400 11600,458 "vtd" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 1826 2660 1827 2661 l=200 w=400 "vts" "vtd" 400 0 "vtd" 400 11600,458 "vts" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 1568 2660 1569 2661 l=200 w=400 "vts" "vtd" 400 0 "vts" 400 11600,458 "vtd" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 1310 2660 1311 2661 l=200 w=400 "vts" "vtd" 400 0 "vtd" 400 11600,458 "vts" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 1052 2660 1053 2661 l=200 w=400 "vts" "vtd" 400 0 "vts" 400 11600,458 "vtd" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 794 2660 795 2661 l=200 w=400 "vts" "vtd" 400 0 "vtd" 400 23200,916 "vts" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 414 2660 415 2661 l=200 w=400 "vts" "vts" 400 0 "vts" 0 0 "vts" 800 23200,916
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 17186 4420 17187 4421 l=900 "sigma-delta_0.x1.VNB" "a_17186_4420#" 0 0 "a_17020_5320#" 70 30240,1004 "sigma-delta_0.x1.Q" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 17020 4420 17021 4421 l=900 "sigma-delta_0.x1.VNB" "a_17020_4420#" 0 0 "a_17020_5320#" 70 30240,1004 "a_16854_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 16854 4420 16855 4421 l=900 "sigma-delta_0.x1.VNB" "a_16854_4420#" 0 0 "a_16688_5320#" 70 30240,1004 "a_16854_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 16688 4420 16689 4421 l=900 "sigma-delta_0.x1.VNB" "a_16688_4420#" 0 0 "a_16688_5320#" 70 30240,1004 "a_16522_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 16522 4420 16523 4421 l=900 "sigma-delta_0.x1.VNB" "a_16522_4420#" 0 0 "a_16356_5320#" 70 30240,1004 "a_16522_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 16356 4420 16357 4421 l=900 "sigma-delta_0.x1.VNB" "a_16356_4420#" 0 0 "a_16356_5320#" 70 30240,1004 "a_16190_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 16190 4420 16191 4421 l=900 "sigma-delta_0.x1.VNB" "a_16190_4420#" 0 0 "a_16024_5320#" 70 30240,1004 "a_16190_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 16024 4420 16025 4421 l=900 "sigma-delta_0.x1.VNB" "a_16024_4420#" 0 0 "a_16024_5320#" 70 30240,1004 "a_15712_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 15712 4420 15713 4421 l=900 "sigma-delta_0.x1.VNB" "a_15712_4420#" 0 0 "a_15546_5320#" 70 30240,1004 "a_15712_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 15546 4420 15547 4421 l=900 "sigma-delta_0.x1.VNB" "a_15546_4420#" 0 0 "a_15546_5320#" 70 30240,1004 "a_15380_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 15380 4420 15381 4421 l=900 "sigma-delta_0.x1.VNB" "a_15380_4420#" 0 0 "a_15214_5320#" 70 30240,1004 "a_15380_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 15214 4420 15215 4421 l=900 "sigma-delta_0.x1.VNB" "a_15214_4420#" 0 0 "a_15214_5320#" 70 30240,1004 "a_15048_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 15048 4420 15049 4421 l=900 "sigma-delta_0.x1.VNB" "a_15048_4420#" 0 0 "a_14882_5320#" 70 30240,1004 "a_15048_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 14882 4420 14883 4421 l=900 "sigma-delta_0.x1.VNB" "a_14882_4420#" 0 0 "a_14882_5320#" 70 30240,1004 "a_14716_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 14716 4420 14717 4421 l=900 "sigma-delta_0.x1.VNB" "a_14716_4420#" 0 0 "a_14550_5320#" 70 30240,1004 "a_14716_3988#" 70 30240,1004
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 14550 4420 14551 4421 l=900 "sigma-delta_0.x1.VNB" "a_14550_4420#" 0 0 "a_14550_5320#" 70 30240,1004 "out_buff" 70 30240,1004
+device msubckt sky130_fd_pr__nfet_01v8 12058 4048 12059 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "buffer_0.d" 0 0 "buffer_0.d" 400 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 11800 4048 11801 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "sigma-delta_0.x1.VNB" 200 5800,258 "buffer_0.d" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 11542 4048 11543 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "out_buff" 200 5800,258 "sigma-delta_0.x1.VNB" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 11284 4048 11285 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "sigma-delta_0.x1.VNB" 200 5800,258 "out_buff" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 11026 4048 11027 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "buffer_0.d" 200 5800,258 "sigma-delta_0.x1.VNB" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 10768 4048 10769 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "sigma-delta_0.x1.VNB" 200 5800,258 "buffer_0.d" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 10510 4048 10511 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "out_buff" 200 5800,258 "sigma-delta_0.x1.VNB" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 10252 4048 10253 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "sigma-delta_0.x1.VNB" 200 5800,258 "out_buff" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 9994 4048 9995 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "buffer_0.d" 200 5800,258 "sigma-delta_0.x1.VNB" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 9736 4048 9737 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "sigma-delta_0.x1.VNB" 200 5800,258 "buffer_0.d" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 9478 4048 9479 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "out_buff" 200 5800,258 "sigma-delta_0.x1.VNB" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 9220 4048 9221 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "sigma-delta_0.x1.VNB" 200 5800,258 "out_buff" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 8962 4048 8963 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "buffer_0.d" 200 5800,258 "sigma-delta_0.x1.VNB" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 8704 4048 8705 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "sigma-delta_0.x1.VNB" 200 5800,258 "buffer_0.d" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 8446 4048 8447 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "out_buff" 200 5800,258 "sigma-delta_0.x1.VNB" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 8188 4048 8189 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "sigma-delta_0.x1.VNB" 200 5800,258 "out_buff" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 7930 4048 7931 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "buffer_0.d" 200 5800,258 "sigma-delta_0.x1.VNB" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 7672 4048 7673 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "sigma-delta_0.x1.VNB" 200 5800,258 "buffer_0.d" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 7414 4048 7415 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "out_buff" 200 5800,258 "sigma-delta_0.x1.VNB" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 7156 4048 7157 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "sigma-delta_0.x1.VNB" 200 5800,258 "out_buff" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 6898 4048 6899 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.d" 400 0 "buffer_0.d" 200 11600,516 "sigma-delta_0.x1.VNB" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 6494 4048 6495 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "ib" 400 0 "sigma-delta_0.x1.VNB" 200 5800,258 "buffer_0.c" 200 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 6236 4048 6237 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "ib" 400 0 "ib" 200 5800,258 "sigma-delta_0.x1.VNB" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 5978 4048 5979 4049 l=200 w=200 "sigma-delta_0.x1.VNB" "ib" 400 0 "ib" 0 0 "ib" 400 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 11302 4882 11303 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.a" 400 0 "buffer_0.a" 0 0 "buffer_0.a" 400 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 11044 4882 11045 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "out_buff" 400 0 "buffer_0.c" 200 5800,258 "buffer_0.a" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 10786 4882 10787 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "vts" 400 0 "buffer_0.b" 200 5800,258 "buffer_0.c" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 10528 4882 10529 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "vts" 400 0 "buffer_0.c" 200 5800,258 "buffer_0.b" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 10270 4882 10271 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "out_buff" 400 0 "buffer_0.a" 200 5800,258 "buffer_0.c" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 10012 4882 10013 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "out_buff" 400 0 "buffer_0.c" 200 5800,258 "buffer_0.a" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 9754 4882 9755 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "vts" 400 0 "buffer_0.b" 200 5800,258 "buffer_0.c" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 9496 4882 9497 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "vts" 400 0 "buffer_0.c" 200 5800,258 "buffer_0.b" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 9238 4882 9239 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "out_buff" 400 0 "buffer_0.a" 200 5800,258 "buffer_0.c" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 8980 4882 8981 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "out_buff" 400 0 "buffer_0.c" 200 5800,258 "buffer_0.a" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 8722 4882 8723 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "vts" 400 0 "buffer_0.b" 200 5800,258 "buffer_0.c" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 8464 4882 8465 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "vts" 400 0 "buffer_0.c" 200 5800,258 "buffer_0.b" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 8206 4882 8207 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "out_buff" 400 0 "buffer_0.a" 200 5800,258 "buffer_0.c" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 7948 4882 7949 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "out_buff" 400 0 "buffer_0.c" 200 5800,258 "buffer_0.a" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 7690 4882 7691 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "vts" 400 0 "buffer_0.b" 200 5800,258 "buffer_0.c" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 7432 4882 7433 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "vts" 400 0 "buffer_0.c" 200 5800,258 "buffer_0.b" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 7174 4882 7175 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "out_buff" 400 0 "buffer_0.a" 200 5800,258 "buffer_0.c" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 6916 4882 6917 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "out_buff" 400 0 "buffer_0.c" 200 5800,258 "buffer_0.a" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 6658 4882 6659 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "vts" 400 0 "buffer_0.b" 200 5800,258 "buffer_0.c" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 6400 4882 6401 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "vts" 400 0 "buffer_0.c" 200 5800,258 "buffer_0.b" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 6142 4882 6143 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "out_buff" 400 0 "buffer_0.a" 200 5800,258 "buffer_0.c" 200 5800,258
+device msubckt sky130_fd_pr__nfet_01v8 5884 4882 5885 4883 l=200 w=200 "sigma-delta_0.x1.VNB" "buffer_0.a" 400 0 "buffer_0.a" 0 0 "buffer_0.a" 400 11600,516
+device msubckt sky130_fd_pr__pfet_01v8 3774 3900 3775 3901 l=200 w=400 "vd" "sensor_0.c" 400 0 "sensor_0.c" 0 0 "sensor_0.c" 800 23200,916
+device msubckt sky130_fd_pr__pfet_01v8 3388 3900 3389 3901 l=200 w=400 "vd" "vtd" 400 0 "sensor_0.b" 400 11600,458 "sensor_0.c" 400 23200,916
+device msubckt sky130_fd_pr__pfet_01v8 3130 3900 3131 3901 l=200 w=400 "vd" "vtd" 400 0 "sensor_0.c" 400 11600,458 "sensor_0.b" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 2872 3900 2873 3901 l=200 w=400 "vd" "vtd" 400 0 "sensor_0.b" 400 11600,458 "sensor_0.c" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 2614 3900 2615 3901 l=200 w=400 "vd" "vtd" 400 0 "sensor_0.c" 400 23200,916 "sensor_0.b" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 2228 3900 2229 3901 l=200 w=400 "vd" "sensor_0.a" 400 0 "sensor_0.d" 400 11600,458 "sensor_0.c" 400 23200,916
+device msubckt sky130_fd_pr__pfet_01v8 1970 3900 1971 3901 l=200 w=400 "vd" "sensor_0.a" 400 0 "sensor_0.c" 400 11600,458 "sensor_0.d" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 1712 3900 1713 3901 l=200 w=400 "vd" "sensor_0.a" 400 0 "sensor_0.d" 400 11600,458 "sensor_0.c" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 1454 3900 1455 3901 l=200 w=400 "vd" "sensor_0.a" 400 0 "sensor_0.c" 400 23200,916 "sensor_0.d" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 1072 3900 1073 3901 l=200 w=400 "vd" "sensor_0.a" 400 0 "vd" 400 11600,458 "sensor_0.a" 400 23200,916
+device msubckt sky130_fd_pr__pfet_01v8 814 3900 815 3901 l=200 w=400 "vd" "sensor_0.a" 400 0 "sensor_0.a" 400 23200,916 "vd" 400 11600,458
+device msubckt sky130_fd_pr__pfet_01v8 434 3900 435 3901 l=200 w=400 "vd" "vd" 400 0 "vd" 0 0 "vd" 800 23200,916
+device msubckt sky130_fd_pr__pfet_01v8 3754 4580 3755 4581 l=200 w=400 "vd" "vd" 400 0 "vd" 0 0 "vd" 800 23200,916
+device msubckt sky130_fd_pr__pfet_01v8 2574 4580 2575 4581 l=1000 w=400 "vd" "vtd" 2000 0 "vts" 400 23200,916 "vd" 400 23200,916
+device msubckt sky130_fd_pr__pfet_01v8 2194 4580 2195 4581 l=200 w=400 "vd" "vtd" 400 0 "vd" 400 23200,916 "sensor_0.d" 400 23200,916
+device msubckt sky130_fd_pr__pfet_01v8 1814 4580 1815 4581 l=200 w=400 "vd" "vd" 400 0 "vd" 0 0 "vd" 800 23200,916
+device msubckt sky130_fd_pr__pfet_01v8 12404 5800 12405 5801 l=200 w=200 "vd" "vd" 400 0 "vd" 0 0 "vd" 400 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 12146 5800 12147 5801 l=200 w=200 "vd" "buffer_0.b" 400 0 "out_buff" 200 5800,258 "vd" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 11888 5800 11889 5801 l=200 w=200 "vd" "buffer_0.b" 400 0 "vd" 200 5800,258 "out_buff" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 11630 5800 11631 5801 l=200 w=200 "vd" "buffer_0.b" 400 0 "out_buff" 200 5800,258 "vd" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 11372 5800 11373 5801 l=200 w=200 "vd" "buffer_0.b" 400 0 "vd" 200 5800,258 "out_buff" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 11114 5800 11115 5801 l=200 w=200 "vd" "buffer_0.b" 400 0 "out_buff" 200 11600,516 "vd" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 10734 5800 10735 5801 l=200 w=200 "vd" "buffer_0.b" 400 0 "vd" 200 11600,516 "buffer_0.b" 200 11600,516
+device msubckt sky130_fd_pr__pfet_01v8 10346 5800 10347 5801 l=200 w=200 "vd" "buffer_0.b" 400 0 "out_buff" 200 5800,258 "vd" 200 11600,516
+device msubckt sky130_fd_pr__pfet_01v8 10088 5800 10089 5801 l=200 w=200 "vd" "buffer_0.b" 400 0 "vd" 200 5800,258 "out_buff" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 9830 5800 9831 5801 l=200 w=200 "vd" "buffer_0.b" 400 0 "out_buff" 200 5800,258 "vd" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 9572 5800 9573 5801 l=200 w=200 "vd" "buffer_0.b" 400 0 "vd" 200 5800,258 "out_buff" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 9314 5800 9315 5801 l=200 w=200 "vd" "buffer_0.b" 400 0 "out_buff" 200 11600,516 "vd" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 8926 5800 8927 5801 l=200 w=200 "vd" "buffer_0.a" 400 0 "buffer_0.d" 200 5800,258 "vd" 200 11600,516
+device msubckt sky130_fd_pr__pfet_01v8 8668 5800 8669 5801 l=200 w=200 "vd" "buffer_0.a" 400 0 "vd" 200 5800,258 "buffer_0.d" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 8410 5800 8411 5801 l=200 w=200 "vd" "buffer_0.a" 400 0 "buffer_0.d" 200 5800,258 "vd" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 8152 5800 8153 5801 l=200 w=200 "vd" "buffer_0.a" 400 0 "vd" 200 5800,258 "buffer_0.d" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 7894 5800 7895 5801 l=200 w=200 "vd" "buffer_0.a" 400 0 "buffer_0.d" 200 11600,516 "vd" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 7514 5800 7515 5801 l=200 w=200 "vd" "buffer_0.a" 400 0 "vd" 200 11600,516 "buffer_0.a" 200 11600,516
+device msubckt sky130_fd_pr__pfet_01v8 7144 5800 7145 5801 l=200 w=200 "vd" "buffer_0.a" 400 0 "vd" 200 5800,258 "buffer_0.d" 200 11600,516
+device msubckt sky130_fd_pr__pfet_01v8 6886 5800 6887 5801 l=200 w=200 "vd" "buffer_0.a" 400 0 "buffer_0.d" 200 5800,258 "vd" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 6628 5800 6629 5801 l=200 w=200 "vd" "buffer_0.a" 400 0 "vd" 200 5800,258 "buffer_0.d" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 6370 5800 6371 5801 l=200 w=200 "vd" "buffer_0.a" 400 0 "buffer_0.d" 200 5800,258 "vd" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 6112 5800 6113 5801 l=200 w=200 "vd" "buffer_0.a" 400 0 "vd" 200 5800,258 "buffer_0.d" 200 5800,258
+device msubckt sky130_fd_pr__pfet_01v8 5854 5800 5855 5801 l=200 w=200 "vd" "vd" 400 0 "vd" 0 0 "vd" 400 11600,516
+device msubckt sky130_fd_pr__nfet_01v8 876 10550 877 10551 l=30 w=400 "sigma-delta_0.x1.VNB" "out_sigma" 60 0 "out" 400 23200,916 "sigma-delta_0.x1.VNB" 400 23200,916
+device rsubckt sky130_fd_pr__res_xhigh_po_0p35 6126 29818 6127 29819 l=1000 "sigma-delta_0.x1.VNB" "a_6126_29818#" 0 0 "vd" 70 30240,1004 "a_6126_29386#" 70 30240,1004

@@ -40,9 +40,9 @@ Circuit 1: sky130_fd_pr__cap_mim_m3_2      |Circuit 2: sky130_fd_pr__cap_mim_m3_
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__cap_mim_m3_2 and sky130_fd_pr__cap_mim_m3_2 are equivalent.
-Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN in circuit ask-modulator (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__nfet_01v8_5JJSBP in circuit ask-modulator (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_2_97K3D8 in circuit ask-modulator (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_7RFGLT in circuit ask-modulator (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_LPSAWK in circuit ask-modulator (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_2_5FNSJ7 in circuit ask-modulator (0)(1 instance)
 
 Class ask-modulator (0):  Merged 2 parallel devices.
 Subcircuit summary:
@@ -52,7 +52,7 @@ sky130_fd_pr__res_xhigh_po_0p35 (1)        |sky130_fd_pr__res_xhigh_po_0p35 (1)
 sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
 sky130_fd_pr__cap_mim_m3_2 (3->1)          |sky130_fd_pr__cap_mim_m3_2 (3->1)          
 Number of devices: 3                       |Number of devices: 3                       
-Number of nets: 4                          |Number of nets: 4                          
+Number of nets: 5                          |Number of nets: 5                          
 ---------------------------------------------------------------------------------------
 Netlists match uniquely.
 

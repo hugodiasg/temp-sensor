@@ -1,0 +1,23 @@
+* NGSPICE file created from ask-modulator.ext - technology: sky130A
+
+.subckt sky130_fd_pr__res_xhigh_po_0p35_7RFGLT a_n165_n1062# a_n35_500# a_n35_n932#
+X0 a_n35_500# a_n35_n932# a_n165_n1062# sky130_fd_pr__res_xhigh_po_0p35 l=5
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_ATLS57 a_15_n200# a_n175_n374# a_n73_n200# a_n33_n288#
+X0 a_15_n200# a_n33_n288# a_n73_n200# a_n175_n374# sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
+.ends
+
+.subckt sky130_fd_pr__cap_mim_m3_2_5FNSJ7 m4_n2789_n7800# c2_n2709_n7720#
+X0 c2_n2709_n7720# m4_n2789_n7800# sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
+X1 c2_n2709_n7720# m4_n2789_n7800# sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
+X2 c2_n2709_n7720# m4_n2789_n7800# sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
+.ends
+
+.subckt ask-modulator gnd in out vd
+XXR1 gnd m1_6610_12460# vd sky130_fd_pr__res_xhigh_po_0p35_7RFGLT
+XXM1 gnd gnd out in sky130_fd_pr__nfet_01v8_ATLS57
+XXC0 out vd sky130_fd_pr__cap_mim_m3_2_5FNSJ7
+R0 out vd sky130_fd_pr__res_generic_m3 w=11.4 l=0.1
+.ends
+

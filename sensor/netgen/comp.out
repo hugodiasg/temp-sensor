@@ -28,36 +28,34 @@ Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8CLM97 in circuit sensor (0)(2 instances)
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8CLK97 in circuit sensor (0)(2 instances)
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_82U688 in circuit sensor (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__nfet_01v8_SXQYJB in circuit sensor (0)(3 instances)
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_8CLZW6 in circuit sensor (0)(2 instances)
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_3P9HCE in circuit sensor (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_37ZGCE in circuit sensor (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_G8PMZT in circuit sensor (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_FRXWNM in circuit sensor (0)(5 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_FVXEPM in circuit sensor (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_FVTXNM in circuit sensor (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_3HGYVM in circuit sensor (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_SKTYVM in circuit sensor (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_9VJR3B in circuit sensor (0)(8 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_YAWWFM in circuit sensor (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_YAEUFM in circuit sensor (0)(1 instance)
 
-Class sensor (0):  Merged 46 parallel devices.
-Class sensor (1):  Merged 11 parallel devices.
+Class sensor (0):  Merged 45 parallel devices.
+Class sensor (1):  Merged 10 parallel devices.
 Subcircuit summary:
 Circuit 1: sensor                          |Circuit 2: sensor                          
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__pfet_01v8 (25->7)            |sky130_fd_pr__pfet_01v8 (11->7)            
+sky130_fd_pr__pfet_01v8 (26->9)            |sky130_fd_pr__pfet_01v8 (12->9)            
 sky130_fd_pr__nfet_01v8 (32->4)            |sky130_fd_pr__nfet_01v8 (32->4)            
-Number of devices: 11                      |Number of devices: 11                      
-Number of nets: 15                         |Number of nets: 15                         
+Number of devices: 13                      |Number of devices: 13                      
+Number of nets: 8                          |Number of nets: 8                          
 ---------------------------------------------------------------------------------------
-Resolving symmetries by property value.
-Resolving symmetries by pin name.
-Netlists match with 2 symmetries.
+Netlists match uniquely.
 
 Subcircuit pins:
 Circuit 1: sensor                          |Circuit 2: sensor                          
 -------------------------------------------|-------------------------------------------
 gnd                                        |gnd                                        
-vd                                         |vd                                         
 vtd                                        |vtd                                        
 vts                                        |vts                                        
+vd                                         |vd                                         
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sensor and sensor are equivalent.

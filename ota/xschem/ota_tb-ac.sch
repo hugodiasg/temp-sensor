@@ -90,4 +90,4 @@ device="ceramic capacitor"}
 C {devices/gnd.sym} 1345 -570 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 1195 -710 0 0 {name=l18 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1205 -560 0 1 {name=l19 sig_type=std_logic lab=vs}
-C {/home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sym} 1245 -630 0 0 {name=X1}
+C {projects/temp-sensor/ota/xschem/ota-pex.sym} 1245 -630 0 0 {name=X1}

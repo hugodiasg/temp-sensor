@@ -1,4 +1,4 @@
-v {xschem version=3.4.2 file_version=1.2
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -82,4 +82,4 @@ value=4p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 980 -600 0 0 {name=l16 lab=GND}
-C {/home/hugodg/projects/temp-sensor/buffer/xschem/buffer-pex.sym} 870 -660 0 0 {name=X1}
+C {projects/temp-sensor/buffer/xschem/buffer-pex.sym} 870 -660 0 0 {name=X1}

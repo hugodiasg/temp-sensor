@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -32,7 +32,7 @@ let idd=-i(vdd)
 
 
 let tc=deriv(vts)
-let err=abs((vts-v_lin))
+let err=abs((vts-v_lin))/1.64e-3
 
 plot idd
 *plot is1 is2 il3 isat4
@@ -44,11 +44,10 @@ plot vts vtd xlimit 20 50
 plot vts v_lin xlimit -100 215
 plot err xlimit -100 215
 
-*wrdata ~/ptat-temp-tb.txt vts
+wrdata /foss/designs/ptat-temp-tb.txt vts v_lin
 .endc
 "}
 C {devices/gnd.sym} -80 -530 2 0 {name=l2 lab=GND}
-C {/home/hugodg/projects-sky130/temp-sensor/sensor/xschem/sensor.sym} -80 -380 0 0 {name=x1}
 C {devices/lab_pin.sym} 70 -410 2 0 {name=l3 sig_type=std_logic lab=vts}
 C {devices/lab_pin.sym} -80 -450 0 0 {name=l4 sig_type=std_logic lab=vd}
 C {devices/code.sym} 430 -1010 0 0 {name=TT_MODELS
@@ -58,6 +57,7 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {devices/vsource.sym} 80 -620 2 0 {name=Bvts value="v=-0.00222727*(temper-35)+1.20625"}
+C {devices/vsource.sym} 80 -620 2 0 {name=Bvts value="v=-0.00164*temper+1.42962"}
 C {devices/gnd.sym} 80 -660 2 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 80 -590 0 0 {name=l7 sig_type=std_logic lab=v_lin}
+C {/foss/designs/temp-sensor/sensor/xschem/sensor-pex.sym} -80 -380 0 0 {name=x1}

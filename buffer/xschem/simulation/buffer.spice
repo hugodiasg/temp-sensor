@@ -1,24 +1,22 @@
-** sch_path: /home/hugodg/projects/temp-sensor/buffer/xschem/buffer.sch
+** sch_path: /foss/designs/temp-sensor/buffer/xschem/buffer.sch
 .subckt buffer vd ib out in gnd
 *.PININFO vd:B ib:B out:B in:B gnd:B
-XM3 net2 net2 vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
-XM1 net2 out net4 gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
-XM2 net3 in net4 gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
-XM4 net3 net3 vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
-XM5 net4 ib gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
-XM6 out net3 vd vd sky130_fd_pr__pfet_01v8 L=1 W=10 nf=10 m=1
-XM7 out net1 gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
-XM8 net1 net2 vd vd sky130_fd_pr__pfet_01v8 L=1 W=10 nf=10 m=1
-XM9 net1 net1 gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
+XM3 a a vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
+XM1 a out c gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
+XM2 b in c gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
+XM4 b b vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
+XM5 c ib gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM6 out b vd vd sky130_fd_pr__pfet_01v8 L=1 W=10 nf=10 m=1
+XM7 out d gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
+XM8 d a vd vd sky130_fd_pr__pfet_01v8 L=1 W=10 nf=10 m=1
+XM9 d d gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=10 m=1
 XM10 ib ib gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
-XPD1 net8 net7 net6 net5 sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
-XPD2 net12 net11 net10 net9 sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
-XPD3 net16 net15 net14 net13 sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
-XPD4 net20 net19 net18 net17 sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
-XND1 net25 net21 net26 gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
-XND2 net27 net22 net28 gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
-XND3 net29 net23 net30 gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
-XND4 net32 net24 net31 gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
-XCc out net1 sky130_fd_pr__cap_mim_m3_2 W=21 L=21 m=1
+XCc out d sky130_fd_pr__cap_mim_m3_2 W=30 L=15 m=1
+XM11 vd vd vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
+XM12 vd vd vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
+XM13 a a a gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM14 a a a gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM15 ib ib ib gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM16 d d d gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
 .ends
 .end

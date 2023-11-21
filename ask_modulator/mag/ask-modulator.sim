@@ -1,29 +1,15 @@
 | units: 500000 tech: sky130A format: MIT
-x sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/a_n35_n500# out vd gnd l=1000 w=0 x=9373 y=-2060 sky130_fd_pr__res_xhigh_po_0p35
-x in out gnd gnd l=30 w=400 x=9797 y=-4429 sky130_fd_pr__nfet_01v8
-x vd out l=4880 w=4880 x=12158 y=4193 sky130_fd_pr__cap_mim_m3_2
-x vd out l=4880 w=4880 x=12158 y=9372 sky130_fd_pr__cap_mim_m3_2
-x vd out l=4880 w=4880 x=12158 y=-987 sky130_fd_pr__cap_mim_m3_2
-C vd out 110.15
-R in 995
-= in sky130_fd_pr__nfet_01v8_5JJSBP_0/a_n33_n288#
-= in m1_9780_n4000#
-R gnd 42828
-= gnd sky130_fd_pr__cap_mim_m3_2_97K3D8_0/VSUBS
-= gnd sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/a_n165_n1062#
-= gnd sky130_fd_pr__nfet_01v8_5JJSBP_0/a_n175_n374#
-= gnd sky130_fd_pr__nfet_01v8_5JJSBP_0/a_15_n200#
-C out GND 53.81
-R out 1164
-= out sky130_fd_pr__cap_mim_m3_2_97K3D8_0/m4_n2619_n7720#
-= out m4_7020_9040#
-= out m4_7020_3840#
-= out m4_9220_n380#
-= out sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/a_n35_n932#
-= out sky130_fd_pr__nfet_01v8_5JJSBP_0/a_n73_n200#
-R sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/a_n35_n500# 28571
-C vd GND 11.80
-R vd 190
-= vd sky130_fd_pr__cap_mim_m3_2_97K3D8_0/c2_n2519_n7620#
-= vd m1_10360_n2160#
-= vd sky130_fd_pr__res_xhigh_po_0p35_CTQ8XN_0/a_n35_500#
+x vd out s=28113120,21236 l=4880 w=4880 x=1480 y=11160 sky130_fd_pr__cap_mim_m3_2
+x a_6866_12898# vd a_6866_12466# gnd s=30240,1004 d=30240,1004 l=1000 w=0 x=6866 y=12898 sky130_fd_pr__res_xhigh_po_0p35
+x vd out s=33881640,42640 l=4880 w=4880 x=1480 y=600 sky130_fd_pr__cap_mim_m3_2
+x vd out s=28113120,21236 l=4880 w=4880 x=1480 y=5880 sky130_fd_pr__cap_mim_m3_2
+x in out gnd gnd s=23200,916 d=23200,916 l=30 w=400 x=1616 y=-6369 sky130_fd_pr__nfet_01v8
+C out vd 139.0
+C out0 63.4
+R out 985
+R in 996
+C vd0 12.2
+R vd 189
+R gnd 42746
+R a_6866_12466# 188
+R a_6866_12898# 28571

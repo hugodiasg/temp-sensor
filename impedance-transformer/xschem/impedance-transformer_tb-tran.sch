@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -54,7 +54,6 @@ C {devices/gnd.sym} -275 -270 2 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} -490 -100 2 0 {name=l4 sig_type=std_logic lab=in}
 C {devices/lab_pin.sym} -265 -160 2 0 {name=l7 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} -425 -80 1 0 {name=l8 sig_type=std_logic lab=in}
-C {/home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sym} -265 -80 0 0 {name=x1}
 C {devices/code.sym} 390 -790 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -62,7 +61,6 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {/home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/impedance-transformer.sym} 45 -80 0 0 {name=x2}
 C {devices/lab_pin.sym} 195 -80 1 0 {name=l9 sig_type=std_logic lab=out}
 C {devices/res.sym} 195 -35 0 0 {name=R3
 value=50
@@ -71,3 +69,5 @@ device=resistor
 m=1}
 C {devices/gnd.sym} 195 -5 0 0 {name=l15 lab=GND}
 C {devices/gnd.sym} 45 -30 0 0 {name=l10 lab=GND}
+C {/foss/designs/temp-sensor/impedance-transformer/xschem/impedance-transformer.sym} 45 -80 0 0 {name=x1}
+C {/foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator.sym} -265 -80 0 0 {name=x2}

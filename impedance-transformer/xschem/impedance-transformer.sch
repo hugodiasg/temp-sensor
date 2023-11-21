@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -26,9 +26,4 @@ C {sky130_fd_pr/cap_mim_m3_2.sym} 360 -190 0 0 {name=C0 model=cap_mim_m3_2 W=23.
 C {sky130_fd_pr/cap_mim_m3_2.sym} 567.5 -190 0 1 {name=C1 model=cap_mim_m3_2 W=25.2 L=25.2 MF=25 spiceprefix=X}
 C {devices/iopin.sym} 332.5 -237.5 2 0 {name=p2 lab=in}
 C {devices/iopin.sym} 595 -237.5 2 1 {name=p3 lab=out}
-C {/home/hugodg/projects-sky130/temp-sensor/impedance-transformer/xschem/l1.sym} 460 -235 0 0 {name=x1}
-C {devices/code.sym} 760 -337.5 0 0 {name=RC_Ext only_toplevel=false value="* NGSPICE file created from impedance-transformer.ext - technology: sky
-
-
-
-"}
+C {/foss/designs/temp-sensor/ask_modulator/xschem/l0.sym} 460 -235 0 0 {name=x1}

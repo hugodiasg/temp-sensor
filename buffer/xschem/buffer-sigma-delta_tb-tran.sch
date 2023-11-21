@@ -1,4 +1,4 @@
-v {xschem version=3.4.2 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,7 +34,7 @@ C {devices/code_shown.sym} 1475 -930 0 0 {name=Simulation only_toplevel=false va
 .control
 set color0=white
 set color1=black
-set temp=10
+set temp=35
 destroy all
 save all
 tran 10p 10u 
@@ -64,9 +64,7 @@ C {devices/lab_pin.sym} 1250 -750 1 0 {name=l20 sig_type=std_logic lab=vpwr}
 C {devices/lab_pin.sym} 1280 -750 1 0 {name=l21 sig_type=std_logic lab=vpwr}
 C {devices/gnd.sym} 1060 -570 0 0 {name=l22 lab=GND}
 C {devices/lab_pin.sym} 1050 -750 0 0 {name=l23 sig_type=std_logic lab=vd}
-C {/home/hugodg/projects-sky130/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1170 -660 0 0 {name=x2}
-C {/home/hugodg/projects-sky130/temp-sensor/buffer/xschem/buffer-pex.sym} 875 -660 0 0 {name=X4}
-C {devices/isource.sym} 760 -910 0 0 {name=ibias1 value=5u}
+C {devices/isource.sym} 760 -910 0 0 {name=ibias1 value=1u}
 C {devices/lab_pin.sym} 760 -870 0 0 {name=l12 sig_type=std_logic lab=ib2}
 C {devices/lab_pin.sym} 855 -600 0 1 {name=l17 sig_type=std_logic lab=ib2}
 C {devices/lab_pin.sym} 845 -730 0 0 {name=l8 sig_type=std_logic lab=vd}
@@ -77,3 +75,5 @@ C {devices/gnd.sym} 860 -890 0 0 {name=l2 lab=GND}
 C {devices/lab_pin.sym} 860 -950 0 0 {name=l3 sig_type=std_logic lab=in1}
 C {devices/lab_pin.sym} 720 -680 0 0 {name=l5 sig_type=std_logic lab=in1}
 C {devices/lab_pin.sym} 995 -660 1 0 {name=l9 sig_type=std_logic lab=out_buffer}
+C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1170 -660 0 0 {name=x2}
+C {/foss/designs/temp-sensor/buffer/xschem/buffer-no-dummies.sym} 875 -660 0 0 {name=X1}

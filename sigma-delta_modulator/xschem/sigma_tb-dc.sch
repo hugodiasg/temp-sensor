@@ -1,4 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
+v {xschem version=3.4.5 file_version=1.2
 
 * Copyright 2020 Stefan Frederik Schippers
 * 
@@ -70,5 +70,4 @@ C {devices/lab_pin.sym} 1230 -725 0 0 {name=l18 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1230 -615 0 1 {name=l19 sig_type=std_logic lab=vs}
 C {devices/lab_pin.sym} 990 -945 0 0 {name=l1 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1120 -950 0 0 {name=l4 sig_type=std_logic lab=vs}
-C {/home/hugodg/projects-sky130/temp-sensor/amp-op/xschem/ota.sym} 1175 -670 0 0 {name=X1}
 C {devices/code_shown.sym} 1430 -660 0 0 {name=Lib only_toplevel=false value=".lib "/home/hugodg/sky130_workspace/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice" tt"}

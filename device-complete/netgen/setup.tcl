@@ -1,1 +1,0 @@
-/home/hugodg/sky130_workspace/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl

@@ -1,0 +1,145 @@
+** sch_path: /foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator_tb-sp.sch
+**.subckt ask-modulator_tb-sp
+Vdd vd GND DC 3.3 AC 0
+Vin net1 GND DC 1.8 AC 1
+Vin1 net2 GND DC 0 AC 1
+R1 ns11 net1 50 m=1
+R3 ns12 GND 50 m=1
+R4 ns22 net2 50 m=1
+R5 ns21 net3 50 m=1
+Vin2 net3 GND DC 1.8
+x1 vd ns12 ns11 GND ask-modulator-pex
+x2 vd ns22 ns21 GND ask-modulator-pex
+**** begin user architecture code
+
+
+
+.ac lin 1MEG 2G 4G
+.control
+destroy all
+set units=degrees
+run
+
+set color0=white
+set color1=black
+
+let z0=50
+
+* Find two S parameters from test circuit
+let s11 = v(ns11)
+let s12 = v(ns12)
+let s21 = v(ns21)
+let s22 = v(ns22)
+
+* Extract Y parameters
+*let StoYDelS = ((1+s11)*(1+s22)-s12*s21)*z0
+*let y11 = ((1+s22)*(1-s11)+s12*s21/StoYDelS
+*let y12=-2*s12/StoYDelS
+*let y21=-2*s21/StoYDelS
+*let y22 = ((1+s11)*(1-s22)+s12+s21)/StoYDelS
+
+* Extract Z parameters
+let StoZDelS = ((1-s11)*(1-s22)-s12*s21)/z0
+let z11 = ((1+s11)*(1-s22)+s12*s21)/StoZDelS
+let z12 = 2*s12/StoZDelS
+let z21 = 2*s21/StoZDelS
+let z22=((1-s11)*(1+s22)+s12*s21)/StoZDelS
+
+*plot z11
+*plot z12
+*plot z21
+*plot z22
+let z_output= z22-(z12*z21/(z11+z0))
+let z_in=z11-(z12*z21)/(z22+z0)
+plot mag(z_output)
+plot ph(z_output)
+
+.endc
+
+ .lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym # of
+*+ pins=4
+** sym_path: /foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym
+** sch_path: /foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sch
+.subckt ask-modulator-pex vd out in gnd
+*.iopin gnd
+*.ipin in
+*.opin out
+*.iopin vd
+**** begin user architecture code
+
+
+* NGSPICE file created from ask-modulator.ext - technology: sky130A
+
+*.subckt ask-modulator gnd in out vd
+X0 vd out sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
+X1 vd a_6866_12466# gnd.t2 sky130_fd_pr__res_xhigh_po_0p35 l=5
+X2 vd out sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
+X3 vd out sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
+X4 gnd.t1 in.t0 out.t0 gnd.t0 sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
+R0 out out.t0 9.21142
+R1 gnd.n20 gnd.n9 815.595
+R2 gnd.n20 gnd.t0 25.9602
+R3 gnd.n17 gnd.n14 25.7537
+R4 gnd.n9 gnd.t2 24.3172
+R5 gnd.n6 gnd.n3 24.2378
+R6 gnd.n26 gnd.t1 8.70236
+R7 gnd gnd.n26 2.5773
+R8 gnd.n23 gnd.n22 0.366293
+R9 gnd.n12 gnd.n11 0.366279
+R10 gnd.n11 gnd.n10 0.365897
+R11 gnd.n22 gnd.n21 0.365897
+R12 gnd.n6 gnd.n5 0.130535
+R13 gnd.n1 gnd.n0 0.1305
+R14 gnd.t2 gnd.n1 0.1305
+R15 gnd.n5 gnd.n4 0.1305
+R16 gnd.n19 gnd.n18 0.10956
+R17 gnd.t0 gnd.n19 0.10956
+R18 gnd.n16 gnd.n15 0.10956
+R19 gnd.n17 gnd.n16 0.109083
+R20 gnd.n14 gnd.n13 0.0264102
+R21 gnd.n8 gnd.n7 0.00762598
+R22 gnd.n9 gnd.n8 0.00762598
+R23 gnd.n3 gnd.n2 0.00762598
+R24 gnd.n24 gnd.n23 0.00240486
+R25 gnd.t0 gnd.n17 0.00197336
+R26 gnd.n25 gnd.n24 0.00186816
+R27 gnd.t2 gnd.n6 0.00146241
+R28 gnd.n26 gnd.n25 0.00124275
+R29 gnd.n20 gnd.n12 0.00101458
+R30 gnd.n23 gnd.n20 0.0010004
+R31 in in.t0 396.178
+C0 vd a_6866_12466# 0.0117f
+C1 out in 0.244f
+C2 vd out 0.139p
+C3 a_6866_12466# out 0.0171f
+*.ends
+
+
+
+**** end user architecture code
+x1 vd out l0
+.ends
+
+
+* expanding   symbol:  /foss/designs/temp-sensor/ask_modulator/xschem/l0.sym # of pins=2
+** sym_path: /foss/designs/temp-sensor/ask_modulator/xschem/l0.sym
+** sch_path: /foss/designs/temp-sensor/ask_modulator/xschem/l0.sch
+.subckt l0 p1 p2
+*.iopin p2
+*.iopin p1
+L0 p1 net3 993p m=1
+Cs1 p1 net1 58.53f m=1
+Cs2 p2 net2 52.93f m=1
+Rs1 net1 GND 24.1 m=1
+Rs2 net2 GND 22.94 m=1
+R1 p2 net3 3.443 m=1
+.ends
+
+.GLOBAL GND
+.end

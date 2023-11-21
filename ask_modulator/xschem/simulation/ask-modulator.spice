@@ -1,8 +1,8 @@
-** sch_path: /home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator.sch
+** sch_path: /foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator.sch
 .subckt ask-modulator gnd in out vd
 *.PININFO gnd:B in:I out:O vd:B
-XC0 vd out sky130_fd_pr__cap_mim_m3_2 W=24.4 L=24.4 MF=3 m=3
-XR1 out vd gnd sky130_fd_pr__res_xhigh_po_0p35 L=5 mult=1 m=1
+XC0 vd out sky130_fd_pr__cap_mim_m3_2 W=24.4 L=24.4 m=3
+XR1 net1 vd gnd sky130_fd_pr__res_xhigh_po_0p35 L=5 mult=1 m=1
 XM1 out in gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 m=1
 .ends
 .end

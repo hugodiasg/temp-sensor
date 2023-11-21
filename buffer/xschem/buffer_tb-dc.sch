@@ -1,4 +1,4 @@
-v {xschem version=3.4.2 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,7 +31,7 @@ N 1070 -730 1070 -720 { lab=vd}
 N 1200 -650 1210 -650 { lab=out}
 N 1210 -650 1220 -650 { lab=out}
 C {devices/vsource.sym} 755 -705 0 0 {name=VIN1 value=1.2}
-C {devices/isource.sym} 755 -485 0 0 {name=ibias value=5u}
+C {devices/isource.sym} 755 -485 0 0 {name=ibias value=1u}
 C {devices/gnd.sym} 755 -665 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 990 -915 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 1120 -920 0 0 {name=VSS value=0
@@ -78,4 +78,4 @@ value=4p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 1220 -590 0 0 {name=l16 lab=GND}
-C {/home/hugodg/projects/temp-sensor/buffer/xschem/buffer-pex.sym} 1100 -650 0 0 {name=X1}
+C {/foss/designs/temp-sensor/buffer/xschem/buffer-pex.sym} 1100 -650 0 0 {name=X1}

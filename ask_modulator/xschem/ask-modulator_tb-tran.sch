@@ -1,60 +1,58 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
 V {}
 S {}
 E {}
-N -60 -110 -60 -100 {
+N -1157.5 157.5 -1157.5 167.5 {
 lab=in}
-N 155 -210 155 -190 {
+N -942.5 157.5 -942.5 177.5 {
 lab=vd}
-N 165 -160 165 -140 {
+N -1232.5 207.5 -1232.5 227.5 {
 lab=vd}
-N 315 -80 325 -80 {
+N -1082.5 287.5 -1072.5 287.5 {
 lab=out}
-N 5 -80 20 -80 {
+N -1392.5 287.5 -1377.5 287.5 {
 lab=in}
-C {devices/vsource.sym} 155 -240 2 0 {name=Vdd value=1.8}
-C {devices/vsource.sym} -60 -140 2 0 {name=Vin value="PULSE(0V	1.8V	0.5ns	0.1ns	0.1ns	50ns	100ns)"}
-C {devices/gnd.sym} 165 -30 0 0 {name=l1 lab=GND}
-C {devices/lab_pin.sym} 325 -80 1 0 {name=l2 sig_type=std_logic lab=out}
-C {devices/lab_pin.sym} 155 -190 2 0 {name=l3 sig_type=std_logic lab=vd}
-C {devices/gnd.sym} -60 -170 2 0 {name=l5 lab=GND}
-C {devices/code_shown.sym} 400 -635 0 0 {name=Simulation only_toplevel=false value="
-*.tran 0.2n 30n
-*.tran 0.3n 400n
-*.tran 0.05n 1.3n
+C {devices/code_shown.sym} -630 -265 0 0 {name=Simulation only_toplevel=false value="
+
+
+.tran 40p 150n
 
 .control
-set wr_singlescale
-option numdgt=7
 destroy all
-save all
-tran 0.005n 100n
 run
 
 set color0=white
 set color1=black
 
-let t=100n
 let id =-i(vdd)
 *plot id
-*plot in
+plot in
+plot out 
 
-*plot out
-wrdata ./ask-modulator-data.txt out in 
+* FFT
+linearize out
+fft out
+plot mag(out) xlimit 1.7G 4G ylimit 0 50u
 .endc"
 }
-C {devices/gnd.sym} 155 -270 2 0 {name=l6 lab=GND}
-C {devices/lab_pin.sym} -60 -100 2 0 {name=l4 sig_type=std_logic lab=in}
-C {devices/lab_pin.sym} 165 -160 2 0 {name=l7 sig_type=std_logic lab=vd}
-C {devices/lab_pin.sym} 5 -80 1 0 {name=l8 sig_type=std_logic lab=in}
-C {devices/code.sym} 390 -790 0 0 {name=TT_MODELS
+C {devices/vsource.sym} -942.5 127.5 2 0 {name=Vdd value=1.8}
+C {devices/gnd.sym} -1232.5 337.5 0 0 {name=l1 lab=GND}
+C {devices/lab_pin.sym} -1072.5 287.5 1 0 {name=l2 sig_type=std_logic lab=out}
+C {devices/lab_pin.sym} -942.5 177.5 2 0 {name=l3 sig_type=std_logic lab=vd}
+C {devices/gnd.sym} -1157.5 97.5 2 0 {name=l8 lab=GND}
+C {devices/gnd.sym} -942.5 97.5 2 0 {name=l9 lab=GND}
+C {devices/lab_pin.sym} -1157.5 167.5 2 0 {name=l10 sig_type=std_logic lab=in}
+C {devices/lab_pin.sym} -1232.5 207.5 2 0 {name=l11 sig_type=std_logic lab=vd}
+C {devices/lab_pin.sym} -1392.5 287.5 1 0 {name=l12 sig_type=std_logic lab=in}
+C {devices/code.sym} -602.5 365 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {/home/hugodg/projects-sky130/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym} 165 -80 0 0 {name=x1}
+C {devices/sqwsource.sym} -1157.5 127.5 2 0 {name=V1 vhi=1.8 freq=10e6}
+C {/foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym} -1232.5 287.5 0 0 {name=x1}
