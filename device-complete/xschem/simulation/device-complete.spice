@@ -1,9 +1,9 @@
 ** sch_path: /foss/designs/temp-sensor/device-complete/xschem/device-complete.sch
-.subckt device-complete vd clk out vpwr ib gnd
-*.PININFO vd:B clk:I out:O vpwr:B ib:B gnd:B
+.subckt device-complete vd clk out vpwr ib gnd vts out_buff out_sigma
+*.PININFO vd:B clk:I out:O vpwr:B ib:B gnd:B vts:O out_buff:O out_sigma:O
 x3 vd vts vtd gnd sensor
-X2 vd vts out_buf ib gnd buffer
-x1 vpwr clk out_sigma out_buf vpwr gnd vd sigma-delta
+X2 vd vts out_buff ib gnd buffer
+x1 vpwr clk out_sigma out_buff vpwr gnd vd sigma-delta
 x4 vd out out_sigma gnd ask-modulator
 .ends
 

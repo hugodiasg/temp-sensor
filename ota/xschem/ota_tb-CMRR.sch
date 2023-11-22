@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -65,13 +65,13 @@ C {devices/gnd.sym} 1120 -890 0 0 {name=l6 lab=GND}
 C {devices/gnd.sym} 990 -885 0 0 {name=l7 lab=GND}
 C {devices/gnd.sym} 495 -450 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} 495 -530 0 0 {name=l17 sig_type=std_logic lab=ib1}
-C {devices/vsource.sym} 1020 -700 0 0 {name=VIN12 value="DC 0 AC 0.5"}
+C {devices/vsource.sym} 1020 -700 0 0 {name=VIN12 value="DC 0.9 AC 1"}
 C {devices/isource.sym} 1025 -425 0 0 {name=ibias1 value=5.53u}
 C {devices/gnd.sym} 1020 -660 0 0 {name=l21 lab=GND}
 C {devices/gnd.sym} 1025 -385 0 0 {name=l22 lab=GND}
 C {devices/lab_pin.sym} 1025 -465 0 0 {name=l23 sig_type=std_logic lab=ib2}
 C {devices/lab_pin.sym} 1020 -740 0 0 {name=l24 sig_type=std_logic lab=in12}
-C {devices/vsource.sym} 1015 -575 0 0 {name=VIN22 value="DC 0 AC 0.5 180"}
+C {devices/vsource.sym} 1015 -575 0 0 {name=VIN22 value="DC 0.9 AC 1 180"}
 C {devices/gnd.sym} 1015 -535 0 0 {name=l25 lab=GND}
 C {devices/lab_pin.sym} 1015 -615 0 0 {name=l26 sig_type=std_logic lab=in22}
 C {devices/lab_pin.sym} 990 -945 0 0 {name=l1 sig_type=std_logic lab=vd}
@@ -106,9 +106,9 @@ device="ceramic capacitor"}
 C {devices/gnd.sym} 1385 -625 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 1235 -775 0 0 {name=l18 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1245 -605 0 1 {name=l27 sig_type=std_logic lab=vs}
-C {devices/vsource.sym} 385 -710 0 0 {name=VIN1 value="DC 0 AC 0.5"}
+C {devices/vsource.sym} 385 -710 0 0 {name=VIN1 value="DC 0.9 AC 1"}
 C {devices/gnd.sym} 385 -670 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} 385 -750 0 0 {name=l11 sig_type=std_logic lab=in11}
 C {devices/lab_pin.sym} 625 -685 0 0 {name=l2 sig_type=std_logic lab=in11}
-C {/home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sym} 730 -715 0 0 {name=X1}
-C {/home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sym} 1285 -685 0 0 {name=X2}
+C {/foss/designs/dpga_unic-cass/xschem/ota-pex.sym} 730 -715 0 0 {name=X1}
+C {/foss/designs/dpga_unic-cass/xschem/ota-pex.sym} 1285 -685 0 0 {name=X2}

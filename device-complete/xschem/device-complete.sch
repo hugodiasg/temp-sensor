@@ -6,9 +6,9 @@ V {}
 S {}
 E {}
 N -945 160 -905 160 {
-lab=out_buf}
+lab=out_buff}
 N -905 160 -715 160 {
-lab=out_buf}
+lab=out_buff}
 N -1295 225 -1295 235 {
 lab=gnd}
 N -1295 95 -1295 110 {
@@ -47,3 +47,6 @@ C {devices/lab_pin.sym} -675 250 0 0 {name=l3 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} -1065 90 0 0 {name=l6 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} -1075 230 0 0 {name=l7 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} -1055 220 3 0 {name=l8 sig_type=std_logic lab=ib}
+C {devices/opin.sym} -1120 -230 0 0 {name=p4 lab=vts}
+C {devices/opin.sym} -1120 -190 0 0 {name=p7 lab=out_buff}
+C {devices/opin.sym} -1120 -150 0 0 {name=p8 lab=out_sigma}

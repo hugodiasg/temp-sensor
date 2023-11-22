@@ -222,8 +222,11 @@ Subcircuit pins:
 Circuit 1: device-complete                 |Circuit 2: device-complete                 
 -------------------------------------------|-------------------------------------------
 vpwr                                       |vpwr                                       
+out_sigma                                  |out_sigma                                  
 gnd                                        |gnd                                        
 ib                                         |ib                                         
+vts                                        |vts                                        
+out_buff                                   |out_buff                                   
 clk                                        |clk                                        
 out                                        |out                                        
 vd                                         |vd                                         

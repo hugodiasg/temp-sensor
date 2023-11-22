@@ -184,42 +184,58 @@ x out_buff buffer_0.c buffer_0.a gnd s=5800,258 d=5800,258 l=200 w=200 x=10012 y
 x buffer_0.d gnd buffer_0.d gnd s=5800,258 d=5800,258 l=200 w=200 x=10768 y=4048 sky130_fd_pr__nfet_01v8
 x gnd gnd gnd gnd d=11600,516 l=200 w=200 x=218 y=1254 sky130_fd_pr__nfet_01v8
 x a_15712_3988# gnd s=32082240,22664 l=5440 w=5440 x=17760 y=372 sky130_fd_pr__cap_mim_m3_1
-C vd buffer_0.d 2.8
-C vts buffer_0.b 2.9
-C vts vtd 7.6
-C sensor_0.a vtd 2.1
-C out out_sigma 5.4
-C buffer_0.d buffer_0.a 2.4
-C buffer_0.d out_buff 40.0
-C vd buffer_0.a 6.7
+C out_sigma out_buff 2.2
+C out_buff vts 2.4
 C vd out_buff 3.2
-C vd out 145.0
-C out_buff buffer_0.a 4.0
-C vd sensor_0.a 2.9
-C vd buffer_0.b 6.4
-C vd vtd 3.4
-C buffer_0.c buffer_0.a 3.9
-C out_buff buffer_0.c 2.0
-C vts out_buff 2.4
-C buffer_0.b out_buff 2.8
 C sensor_0.b vtd 4.5
-C clk0 3.4
+C sensor_0.a vtd 2.1
+C buffer_0.a buffer_0.c 3.9
+C buffer_0.d buffer_0.a 2.4
+C ib vts 2.2
+C out_sigma vpwr 2.0
+C sensor_0.a vd 2.9
+C vtd vts 7.6
+C buffer_0.b vts 2.9
+C vd vtd 3.4
+C buffer_0.d vd 2.8
+C vd buffer_0.b 6.4
+C buffer_0.a vd 6.7
+C out_sigma out 5.4
+C vd out 145.0
+C out_buff buffer_0.c 2.0
+C buffer_0.d out_buff 40.1
+C out_buff buffer_0.b 2.8
+C buffer_0.a out_buff 4.0
+C clk0 3.2
 R clk 921
 = clk sigma-delta_0.x1.CLK
 = clk sigma-delta_0.clk
-C ib0 6.7
+C ib0 5.9
 R ib 2475
 = ib buffer_0.ib
+C out_buff0 16.5
+R out_buff 14828
+= out_buff buffer_0.out
+= out_buff sigma-delta_0.in
 C out0 59.6
 R out 985
 = out ask-modulator_0.out
-C vpwr0 7.2
+C out_sigma0 13.3
+R out_sigma 2200
+= out_sigma sigma-delta_0.x1.Q_N
+= out_sigma sigma-delta_0.out
+= out_sigma ask-modulator_0.in
+C vpwr0 6.6
 R vpwr 16750
 = vpwr sigma-delta_0.x1.VPWR
 = vpwr sigma-delta_0.x1.RESET_B
 = vpwr sigma-delta_0.x1.VPB
 = vpwr sigma-delta_0.vpwr
 = vpwr sigma-delta_0.reset_b_dff
+C vts0 22.7
+R vts 56602
+= vts buffer_0.in
+= vts sensor_0.vts
 C vd0 76.3
 R vd 169477
 = vd buffer_0.vd
@@ -275,7 +291,7 @@ R a_14716_3988# 401
 R a_14716_4420# 25714
 R a_14550_4420# 25714
 R buffer_0.c 8506
-C sensor_0.b0 16.7
+C sensor_0.b0 16.6
 R sensor_0.b 19606
 R sensor_0.c 15623
 C sensor_0.a0 5.4
@@ -285,27 +301,14 @@ C vtd0 6.5
 R vtd 22105
 = vtd sensor_0.vtd
 R a_14550_5320# 401
-C out_buff0 14.5
-R out_buff 14825
-= out_buff buffer_0.out
-= out_buff sigma-delta_0.in
-C buffer_0.d0 27.7
+C buffer_0.d0 27.6
 R buffer_0.d 21082
 C buffer_0.b0 3.4
 R buffer_0.b 9068
 C buffer_0.a0 5.0
 R buffer_0.a 12262
-C out_sigma0 12.1
-R out_sigma 2196
-= out_sigma sigma-delta_0.x1.Q_N
-= out_sigma sigma-delta_0.out
-= out_sigma ask-modulator_0.in
 R a_6126_29386# 188
 R a_6126_29818# 28571
-C vts0 20.7
-R vts 56599
-= vts buffer_0.in
-= vts sensor_0.vts
 R gnd 337173
 = gnd sigma-delta_0.x1.VNB
 = gnd buffer_0.gnd

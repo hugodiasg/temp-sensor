@@ -30,14 +30,19 @@ destroy all
 save all
 set color0=white
 set color1=black
-dc temp -50 300 1
+set hcopypscolor = 1
+set wr_singlescale
+option numdgt=7
+dc temp -50 200 0.1
 run
 *0.5 °C of difference
-let limit = minimum(abs(out-vts))+0.00164/4
+*let limit = minimum(abs(out-vts))+0.00164/4
 
-plot abs(out-vts) limit
+plot abs(out-vts) 
 plot out vts v_lin
 plot out vts v_lin ylimit 1.1 1.45
+
+wrdata /foss/designs/temp-sensor/data/ptat_buffer-temp.txt vts out v_lin
 .endc
 "}
 C {devices/gnd.sym} -450 -520 2 0 {name=l2 lab=GND}
@@ -50,15 +55,15 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {devices/vsource.sym} 80 -620 2 0 {name=Bvts value="v=-0.00164*temper+1.42962"}
+C {devices/vsource.sym} 80 -620 2 0 {name=Bvts value="v=-0.00161538*temper+1.42434"}
 C {devices/gnd.sym} 80 -660 2 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 80 -590 0 0 {name=l7 sig_type=std_logic lab=v_lin}
 C {devices/lab_pin.sym} -190 -450 0 0 {name=l8 sig_type=std_logic lab=vd}
-C {devices/isource.sym} -340 -610 0 0 {name=ibias1 value=0.1u}
+C {devices/isource.sym} -340 -610 0 0 {name=ibias1 value=20u}
 C {devices/lab_pin.sym} -340 -570 0 0 {name=l12 sig_type=std_logic lab=ib2}
 C {devices/lab_pin.sym} -340 -650 0 0 {name=l24 sig_type=std_logic lab=vd}
 C {devices/gnd.sym} -200 -300 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} -180 -320 0 1 {name=l10 sig_type=std_logic lab=ib2}
 C {devices/lab_pin.sym} -40 -380 0 1 {name=l11 sig_type=std_logic lab=out}
-C {/foss/designs/temp-sensor/sensor/xschem/sensor-pex.sym} -450 -370 0 0 {name=x1}
-C {/foss/designs/temp-sensor/buffer/xschem/buffer-pex.sym} -160 -380 0 0 {name=X2}
+C {/foss/designs/temp-sensor/sensor/xschem/sensor.sym} -450 -370 0 0 {name=x1}
+C {/foss/designs/temp-sensor/buffer/xschem/buffer-no-dummies.sym} -160 -380 0 0 {name=X2}

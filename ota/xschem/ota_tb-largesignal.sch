@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,34 +21,20 @@ S {}
 E {}
 N -75 -75 -75 -65 { lab=ib}
 N -75 -5 -75 5 { lab=GND}
-N -65 -285 -65 -275 { lab=in1}
+N -65 -285 -65 -275 { lab=inn}
 N -65 -215 -65 -205 { lab=GND}
-N 350 -280 350 -155 {
-lab=GND}
-N 330 -250 330 -185 {
-lab=in2}
-N 300 -185 330 -185 {
-lab=in2}
-N 350 -155 350 -105 {
-lab=GND}
-N 330 -105 350 -105 {
-lab=GND}
-N 330 -125 330 -105 {
-lab=GND}
-N 330 -105 330 -85 {
-lab=GND}
-N 330 -310 430 -310 {
-lab=vd}
+N 300 -190 330 -190 {
+lab=inp}
 N 430 -310 430 -300 {
 lab=vd}
 N 300 -250 300 -235 {
-lab=in1}
+lab=inn}
 N 300 -235 390 -235 {
-lab=in1}
+lab=inn}
 N 390 -250 390 -235 {
-lab=in1}
+lab=inn}
 N 330 -190 390 -190 {
-lab=in2}
+lab=inp}
 C {devices/isource.sym} -75 -35 0 0 {name=ibias value=5.53u}
 C {devices/vsource.sym} 330 -505 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 460 -510 0 0 {name=VSS value=0
@@ -59,9 +45,10 @@ destroy all
 set color0=white
 set color1=black
 save all
-tran 0.1u 1m
+tran 100u 1
 run
-plot out in1
+plot out inn
+plot out inn xlimit 503m 505m
 .endc"}
 C {devices/gnd.sym} 460 -480 0 0 {name=l6 lab=GND}
 C {devices/gnd.sym} 330 -475 0 0 {name=l7 lab=GND}
@@ -77,10 +64,10 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 "
 spice_ignore=false}
 C {devices/gnd.sym} -65 -205 0 0 {name=l2 lab=GND}
-C {devices/lab_pin.sym} -65 -285 0 0 {name=l10 sig_type=std_logic lab=in1}
-C {devices/sqwsource.sym} -65 -245 0 0 {name=V1 vhi=1.8 freq=1k}
-C {devices/lab_pin.sym} 300 -185 0 0 {name=l3 sig_type=std_logic lab=in2}
-C {devices/lab_pin.sym} 300 -250 0 0 {name=l5 sig_type=std_logic lab=in1}
+C {devices/lab_pin.sym} -65 -285 0 0 {name=l10 sig_type=std_logic lab=inn}
+C {devices/sqwsource.sym} -65 -245 0 0 {name=V1 vhi=1 freq=1}
+C {devices/lab_pin.sym} 300 -190 0 0 {name=l3 sig_type=std_logic lab=inp}
+C {devices/lab_pin.sym} 300 -250 0 0 {name=l5 sig_type=std_logic lab=inn}
 C {devices/lab_pin.sym} 480 -170 2 0 {name=l12 sig_type=std_logic lab=ib}
 C {devices/lab_pin.sym} 580 -220 2 0 {name=l15 sig_type=std_logic lab=out}
 C {devices/capa.sym} 580 -190 0 0 {name=Cl
@@ -91,17 +78,7 @@ device="ceramic capacitor"}
 C {devices/gnd.sym} 580 -160 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 430 -300 0 0 {name=l18 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 440 -150 0 1 {name=l19 sig_type=std_logic lab=vs}
-C {sky130_fd_pr/res_xhigh_po_0p35.sym} 330 -155 0 1 {name=R1
-W=0.35
-L=10
-model=res_xhigh_po_0p35
-spiceprefix=X
-mult=1}
-C {sky130_fd_pr/res_xhigh_po_0p35.sym} 330 -280 0 1 {name=R2
-W=0.35
-L=10
-model=res_xhigh_po_0p35
-spiceprefix=X
-mult=1}
-C {devices/gnd.sym} 330 -85 0 0 {name=l13 lab=GND}
-C {/home/hugodg/projects-sky130/temp-sensor/ota/xschem/ota-pex.sym} 480 -220 0 0 {name=X1}
+C {devices/vsource.sym} -70 -135 0 0 {name=VDD1 value=0.9}
+C {devices/gnd.sym} -70 -105 0 0 {name=l8 lab=GND}
+C {devices/lab_pin.sym} -70 -165 0 0 {name=l11 sig_type=std_logic lab=inp}
+C {/foss/designs/dpga_unic-cass/xschem/ota-pex.sym} 480 -220 0 0 {name=X1}

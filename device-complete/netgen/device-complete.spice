@@ -236,10 +236,10 @@ X49 a_n2689_1995# a_n2855_1995# vpwr vpwr sky130_fd_pr__pfet_01v8_hvt ad=0.166 p
 X50 x1.Q a_n1599_1969# gnd gnd sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
 .ends
 
-.subckt device-complete vd gnd clk out vpwr ib
-Xsensor_0 vd buffer_0/in sensor_0/vtd gnd sensor
-Xbuffer_0 vd ib buffer_0/out buffer_0/in gnd buffer
-Xask-modulator_0 gnd sigma-delta_0/out out vd gnd ask-modulator
-Xsigma-delta_0 buffer_0/out gnd vd gnd clk sigma-delta_0/out vpwr vpwr gnd sigma-delta
+.subckt device-complete vd gnd clk out vpwr ib out_buff vts out_sigma
+Xsensor_0 vd vts vtd gnd sensor
+Xbuffer_0 vd ib out_buff vts gnd buffer
+Xask-modulator_0 gnd out_sigma out vd gnd ask-modulator
+Xsigma-delta_0 out_buff gnd vd gnd clk out_sigma vpwr vpwr gnd sigma-delta
 .ends
 

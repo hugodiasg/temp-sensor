@@ -20,7 +20,7 @@ destroy all
 save all
 set color0=white
 set color1=black
-set temp=60
+set temp=35
 set hcopypscolor = 1
 set wr_singlescale
 option numdgt=7
@@ -28,14 +28,14 @@ tran 40p 10u
 *let pot=-i(vdd)*vd
 save all
 
-plot x1.vts x1.out_sigma x1.out_buff avg(x1.out_buff)
+plot vts out_sigma out_buff avg(out_buff)
 plot out
  
 
 *meas tran pot_avg avg pot from=0 to=5u
 *plot pot pot_avg pot_rms
 
-wrdata /foss/designs/temp-sensor/data/tran60.txt x1.vts x1.out_sigma x1.out_buff out
+wrdata /foss/designs/temp-sensor/data/tran35.txt vts out_sigma out_buff out
 
 *linearize out
 *fft out
@@ -65,7 +65,7 @@ C {devices/sqwsource.sym} 710 -385 0 0 {name=V3 vhi=1.8 freq=10e6}
 C {devices/vsource.sym} 535 -580 0 0 {name=vdd value=1.8}
 C {devices/gnd.sym} 535 -550 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 535 -610 0 0 {name=l3 sig_type=std_logic lab=vd}
-C {devices/isource.sym} 555 -395 0 0 {name=ibias value=1u}
+C {devices/isource.sym} 555 -395 0 0 {name=ibias value=20u}
 C {devices/lab_pin.sym} 555 -355 0 0 {name=l17 sig_type=std_logic lab=ib}
 C {devices/vsource.sym} 335 -595 0 0 {name=VSS value=0
 }
@@ -78,4 +78,7 @@ C {devices/lab_pin.sym} 265 -185 1 0 {name=l11 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 295 -185 1 0 {name=l13 sig_type=std_logic lab=vpwr}
 C {devices/gnd.sym} 265 -5 0 1 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 555 -435 0 0 {name=l4 sig_type=std_logic lab=vd}
-C {/foss/designs/temp-sensor/device-complete/xschem/device-complete-pex.sym} 375 -95 0 0 {name=x1}
+C {devices/lab_pin.sym} 430 -5 3 0 {name=l5 sig_type=std_logic lab=vts}
+C {devices/lab_pin.sym} 450 -5 3 0 {name=l9 sig_type=std_logic lab=out_sigma}
+C {devices/lab_pin.sym} 470 -5 3 0 {name=l16 sig_type=std_logic lab=out_buff}
+C {/foss/designs/temp-sensor/device-complete/xschem/device-complete.sym} 375 -95 0 0 {name=x1}

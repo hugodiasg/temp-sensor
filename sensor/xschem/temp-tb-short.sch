@@ -44,7 +44,7 @@ plot vts vtd xlimit 20 50
 plot vts v_lin xlimit -100 215
 plot err xlimit -100 215
 
-wrdata /foss/designs/ptat-temp-tb.txt vts v_lin
+*wrdata /foss/designs/ptat-temp-tb.txt vts v_lin
 .endc
 "}
 C {devices/gnd.sym} -80 -530 2 0 {name=l2 lab=GND}
