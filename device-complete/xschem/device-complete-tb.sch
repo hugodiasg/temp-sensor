@@ -81,4 +81,4 @@ C {devices/lab_pin.sym} 555 -435 0 0 {name=l4 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 430 -5 3 0 {name=l5 sig_type=std_logic lab=vts}
 C {devices/lab_pin.sym} 450 -5 3 0 {name=l9 sig_type=std_logic lab=out_sigma}
 C {devices/lab_pin.sym} 470 -5 3 0 {name=l16 sig_type=std_logic lab=out_buff}
-C {/foss/designs/temp-sensor/device-complete/xschem/device-complete.sym} 375 -95 0 0 {name=x1}
+C {/foss/designs/temp-sensor/device-complete/xschem/device-complete-pex.sym} 330 -85 0 0 {name=x1}

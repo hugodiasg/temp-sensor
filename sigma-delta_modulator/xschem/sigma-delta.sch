@@ -45,16 +45,12 @@ N 650 -2000 670 -2000 {
 lab=out_comp}
 N 560 -2130 560 -2080 {
 lab=vd}
-N 560 -1910 560 -1790 {
-lab=gnd}
 N 520 -2050 520 -2030 {
 lab=in_comp}
 N 520 -2030 520 -1940 {
 lab=in_comp}
 N 560 -2080 560 -2050 {
 lab=vd}
-N 560 -1940 560 -1910 {
-lab=gnd}
 N 560 -2020 560 -1970 {
 lab=out_comp}
 N 560 -2000 650 -2000 {
@@ -71,8 +67,6 @@ N 320 -2000 320 -1970 {
 lab=in_comp}
 N 265 -2000 320 -2000 {
 lab=in_comp}
-N 320 -1910 320 -1790 {
-lab=gnd}
 N 320 -2000 520 -2000 {
 lab=in_comp}
 N 850 -2020 870 -2020 {
@@ -85,6 +79,12 @@ N 150 -1920 150 -1830 {
 lab=Q}
 N 560 -2200 560 -2130 {
 lab=vd}
+N 560 -1910 560 -1790 {
+lab=gnd}
+N 560 -1940 560 -1910 {
+lab=gnd}
+N 320 -1910 320 -1790 {
+lab=gnd}
 C {devices/ipin.sym} -45 -2000 0 0 {name=p4 lab=in}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 320 -1940 0 0 {name=C1 model=cap_mim_m3_1 W=27.196 L=27.196 MF=1 spiceprefix=X}
 C {devices/iopin.sym} 200 -1770 1 0 {name=p6 lab=gnd}

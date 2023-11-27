@@ -60,4 +60,4 @@ spice_ignore=false}
 C {devices/vsource.sym} 80 -620 2 0 {name=Bvts value="v=-0.00164*temper+1.42962"}
 C {devices/gnd.sym} 80 -660 2 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 80 -590 0 0 {name=l7 sig_type=std_logic lab=v_lin}
-C {/foss/designs/temp-sensor/sensor/xschem/sensor-pex.sym} -80 -380 0 0 {name=x1}
+C {/foss/designs/temp-sensor/sensor/xschem/sensor.sym} -80 -380 0 0 {name=x1}

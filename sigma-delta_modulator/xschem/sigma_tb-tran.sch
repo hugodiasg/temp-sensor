@@ -29,21 +29,22 @@ destroy all
 save all
 set color0=white
 set color1=black
-set temp=27
-tran 1n 50u
+tran 10n 10u
+*tran 10n 1m
 run
 
-plot in_0 out1
-plot in_0v9 out2
-plot in_1v8 out3
+*plot in_linear out1
+plot in1 out1
+plot in2 out2
+plot in3 out3
 
 .endc"}
 C {devices/lab_pin.sym} 725 -1055 0 0 {name=l10 sig_type=std_logic lab=clk}
 C {devices/gnd.sym} 1080 -540 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 1230 -720 0 0 {name=l9 sig_type=std_logic lab=clk}
-C {devices/vsource.sym} 895 -1015 0 0 {name=vin value="0"}
+C {devices/vsource.sym} 895 -1015 0 0 {name=vin value="1.2"}
 C {devices/gnd.sym} 895 -985 0 0 {name=l11 lab=GND}
-C {devices/lab_pin.sym} 895 -1045 0 0 {name=l12 sig_type=std_logic lab=in_0}
+C {devices/lab_pin.sym} 895 -1045 0 0 {name=l12 sig_type=std_logic lab=in1}
 C {devices/code.sym} 1660 -1210 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -62,27 +63,30 @@ C {devices/vsource.sym} 1120 -945 0 0 {name=vd value=1.8}
 C {devices/gnd.sym} 1120 -915 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 1120 -975 0 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1070 -720 0 0 {name=l7 sig_type=std_logic lab=vd}
-C {devices/gnd.sym} 1080 -225 0 0 {name=l17 lab=GND}
-C {devices/lab_pin.sym} 1230 -405 0 0 {name=l18 sig_type=std_logic lab=clk}
-C {devices/lab_pin.sym} 1340 -315 3 1 {name=l19 sig_type=std_logic lab=out2}
-C {devices/lab_pin.sym} 1270 -405 1 0 {name=l20 sig_type=std_logic lab=vpwr}
-C {devices/lab_pin.sym} 1300 -405 1 0 {name=l21 sig_type=std_logic lab=vpwr}
-C {devices/lab_pin.sym} 1070 -405 0 0 {name=l22 sig_type=std_logic lab=vd}
-C {devices/gnd.sym} 1095 125 0 0 {name=l24 lab=GND}
-C {devices/lab_pin.sym} 1245 -55 0 0 {name=l25 sig_type=std_logic lab=clk}
-C {devices/lab_pin.sym} 1355 35 3 1 {name=l26 sig_type=std_logic lab=out3}
-C {devices/lab_pin.sym} 1285 -55 1 0 {name=l27 sig_type=std_logic lab=vpwr}
-C {devices/lab_pin.sym} 1315 -55 1 0 {name=l28 sig_type=std_logic lab=vpwr}
-C {devices/lab_pin.sym} 1085 -55 0 0 {name=l29 sig_type=std_logic lab=vd}
-C {devices/vsource.sym} 900 -890 0 0 {name=vin1 value="0.9"}
+C {devices/vsource.sym} 900 -890 0 0 {name=vin1 value="1.3"}
 C {devices/gnd.sym} 900 -860 0 0 {name=l30 lab=GND}
-C {devices/lab_pin.sym} 900 -920 0 0 {name=l31 sig_type=std_logic lab=in_0v9}
-C {devices/vsource.sym} 900 -760 0 0 {name=vin2 value="1.8"}
+C {devices/lab_pin.sym} 900 -920 0 0 {name=l31 sig_type=std_logic lab=in2}
+C {devices/vsource.sym} 900 -760 0 0 {name=vin2 value="1.4"}
 C {devices/gnd.sym} 900 -730 0 0 {name=l32 lab=GND}
-C {devices/lab_pin.sym} 900 -790 0 0 {name=l33 sig_type=std_logic lab=in_1v8}
-C {devices/lab_pin.sym} 1040 -630 0 0 {name=l4 sig_type=std_logic lab=in_0}
-C {devices/lab_pin.sym} 1040 -315 0 0 {name=l13 sig_type=std_logic lab=in_0v9}
-C {devices/lab_pin.sym} 1055 35 0 0 {name=l23 sig_type=std_logic lab=in_1v8}
-C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta-pex.sym} 1190 -630 0 0 {name=x4}
-C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta-pex.sym} 1190 -315 0 0 {name=x1}
-C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta-pex.sym} 1205 35 0 0 {name=x2}
+C {devices/lab_pin.sym} 900 -790 0 0 {name=l33 sig_type=std_logic lab=in3}
+C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1190 -630 0 0 {name=x1}
+C {devices/vsource.sym} 895 -1100 2 0 {name=Bvts value="v=200*time+1.2"}
+C {devices/lab_pin.sym} 895 -1070 0 0 {name=l13 sig_type=std_logic lab=in_linear}
+C {devices/gnd.sym} 895 -1130 2 0 {name=l17 lab=GND}
+C {devices/lab_pin.sym} 1040 -630 0 0 {name=l18 sig_type=std_logic lab=in1}
+C {devices/gnd.sym} 1080 -270 0 0 {name=l4 lab=GND}
+C {devices/lab_pin.sym} 1230 -450 0 0 {name=l19 sig_type=std_logic lab=clk}
+C {devices/lab_pin.sym} 1340 -360 3 1 {name=l20 sig_type=std_logic lab=out2}
+C {devices/lab_pin.sym} 1270 -450 1 0 {name=l21 sig_type=std_logic lab=vpwr}
+C {devices/lab_pin.sym} 1300 -450 1 0 {name=l22 sig_type=std_logic lab=vpwr}
+C {devices/lab_pin.sym} 1070 -450 0 0 {name=l23 sig_type=std_logic lab=vd}
+C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1190 -360 0 0 {name=x2}
+C {devices/lab_pin.sym} 1040 -360 0 0 {name=l24 sig_type=std_logic lab=in2}
+C {devices/gnd.sym} 1090 -30 0 0 {name=l25 lab=GND}
+C {devices/lab_pin.sym} 1240 -210 0 0 {name=l26 sig_type=std_logic lab=clk}
+C {devices/lab_pin.sym} 1350 -120 3 1 {name=l27 sig_type=std_logic lab=out3}
+C {devices/lab_pin.sym} 1280 -210 1 0 {name=l28 sig_type=std_logic lab=vpwr}
+C {devices/lab_pin.sym} 1310 -210 1 0 {name=l29 sig_type=std_logic lab=vpwr}
+C {devices/lab_pin.sym} 1080 -210 0 0 {name=l34 sig_type=std_logic lab=vd}
+C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1200 -120 0 0 {name=x3}
+C {devices/lab_pin.sym} 1050 -120 0 0 {name=l35 sig_type=std_logic lab=in3}

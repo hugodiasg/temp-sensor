@@ -78,4 +78,4 @@ value=4p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 1220 -590 0 0 {name=l16 lab=GND}
-C {/foss/designs/temp-sensor/buffer/xschem/buffer-no-dummies.sym} 1100 -650 0 0 {name=X1}
+C {/foss/designs/temp-sensor/buffer/xschem/buffer-pex.sym} 1100 -650 0 0 {name=X1}

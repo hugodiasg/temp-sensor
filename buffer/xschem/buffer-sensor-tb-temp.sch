@@ -37,7 +37,9 @@ dc temp -50 200 0.1
 run
 *0.5 °C of difference
 *let limit = minimum(abs(out-vts))+0.00164/4
+let tc=deriv(out)
 
+plot tc
 plot abs(out-vts) 
 plot out vts v_lin
 plot out vts v_lin ylimit 1.1 1.45
@@ -55,7 +57,7 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {devices/vsource.sym} 80 -620 2 0 {name=Bvts value="v=-0.00161538*temper+1.42434"}
+C {devices/vsource.sym} 80 -620 2 0 {name=Bvts value="v=-0.0016*temper+1.423"}
 C {devices/gnd.sym} 80 -660 2 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 80 -590 0 0 {name=l7 sig_type=std_logic lab=v_lin}
 C {devices/lab_pin.sym} -190 -450 0 0 {name=l8 sig_type=std_logic lab=vd}
@@ -66,4 +68,4 @@ C {devices/gnd.sym} -200 -300 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} -180 -320 0 1 {name=l10 sig_type=std_logic lab=ib2}
 C {devices/lab_pin.sym} -40 -380 0 1 {name=l11 sig_type=std_logic lab=out}
 C {/foss/designs/temp-sensor/sensor/xschem/sensor.sym} -450 -370 0 0 {name=x1}
-C {/foss/designs/temp-sensor/buffer/xschem/buffer-no-dummies.sym} -160 -380 0 0 {name=X2}
+C {/foss/designs/temp-sensor/buffer/xschem/buffer-pex.sym} -160 -380 0 0 {name=X2}

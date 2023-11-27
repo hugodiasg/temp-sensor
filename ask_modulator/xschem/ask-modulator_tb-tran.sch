@@ -18,7 +18,7 @@ lab=in}
 C {devices/code_shown.sym} -630 -265 0 0 {name=Simulation only_toplevel=false value="
 
 
-.tran 40p 150n
+.tran 40p 1.5u
 
 .control
 destroy all
