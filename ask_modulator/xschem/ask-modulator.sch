@@ -67,4 +67,3 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {/foss/designs/temp-sensor/ask_modulator/xschem/l0.sym} 540 -275 1 0 {name=x1}

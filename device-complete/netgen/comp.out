@@ -71,19 +71,6 @@ Circuit 1: sky130_fd_pr__res_xhigh_po_0p35 |Circuit 2: sky130_fd_pr__res_xhigh_p
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__res_xhigh_po_0p35 and sky130_fd_pr__res_xhigh_po_0p35 are equivalent.
 
-Circuit 1 cell sky130_fd_pr__cap_mim_m3_1 and Circuit 2 cell sky130_fd_pr__cap_mim_m3_1 are black boxes.
-Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
-
-Subcircuit pins:
-Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_1      
--------------------------------------------|-------------------------------------------
-1                                          |1                                          
-2                                          |2                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
-
 Class sensor (0):  Merged 45 parallel devices.
 Class sensor (1):  Merged 10 parallel devices.
 Subcircuit summary:
@@ -160,21 +147,21 @@ Device classes ask-modulator and ask-modulator are equivalent.
   Flattening non-matched subcircuits ask-modulator ask-modulator
 Flattening unmatched subcell sky130_fd_sc_hd__dfrbp_1 in circuit sigma-delta (1)(1 instance)
 
+Cell sigma-delta (0) disconnected node: a_n3084_1636#
 Cell sigma-delta (0) disconnected node: x1/VGND
-Cell sigma-delta (0) disconnected node: VSUBS
-Class sigma-delta (0):  Merged 14 series devices.
+Class sigma-delta (0):  Merged 21 series devices.
+Cell sigma-delta (0) disconnected node: a_n3084_1636#
 Cell sigma-delta (0) disconnected node: x1/VGND
-Cell sigma-delta (0) disconnected node: VSUBS
 Subcircuit summary:
 Circuit 1: sigma-delta                     |Circuit 2: sigma-delta                     
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__res_xhigh_po_0p35 (16->2)    |sky130_fd_pr__res_xhigh_po_0p35 (2)        
-sky130_fd_pr__pfet_01v8_hvt (16)           |sky130_fd_pr__pfet_01v8_hvt (16)           
 sky130_fd_pr__nfet_01v8 (17)               |sky130_fd_pr__nfet_01v8 (17)               
+sky130_fd_pr__res_xhigh_po_0p35 (24->3)    |sky130_fd_pr__res_xhigh_po_0p35 (3)        
+sky130_fd_pr__pfet_01v8_hvt (16)           |sky130_fd_pr__pfet_01v8_hvt (16)           
+sky130_fd_pr__cap_mim_m3_2 (2)             |sky130_fd_pr__cap_mim_m3_2 (2)             
 sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
-sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
-Number of devices: 37                      |Number of devices: 37                      
-Number of nets: 24                         |Number of nets: 24                         
+Number of devices: 39                      |Number of devices: 39                      
+Number of nets: 25                         |Number of nets: 25                         
 ---------------------------------------------------------------------------------------
 Netlists match uniquely with port errors.
 
@@ -183,13 +170,13 @@ Circuit 1: sigma-delta                     |Circuit 2: sigma-delta
 -------------------------------------------|-------------------------------------------
 in                                         |in                                         
 reset_b_dff                                |reset_b_dff                                
+vpwr                                       |vpwr                                       
+gnd                                        |gnd                                        
 vd                                         |vd                                         
 clk                                        |clk                                        
 out                                        |out                                        
-vpwr                                       |vpwr                                       
-gnd                                        |gnd                                        
+a_n3084_1636#                              |(no matching pin)                          
 x1/VGND                                    |(no matching pin)                          
-VSUBS                                      |(no matching pin)                          
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sigma-delta and sigma-delta are equivalent.
@@ -200,16 +187,17 @@ Circuit 1: device-complete                 |Circuit 2: device-complete
 -------------------------------------------|-------------------------------------------
 sensor (1)                                 |sensor (1)                                 
 buffer (1)                                 |buffer (1)                                 
-sky130_fd_pr__cap_mim_m3_2 (3->1)          |sky130_fd_pr__cap_mim_m3_2 (3->1)          
-sky130_fd_pr__res_xhigh_po_0p35 (3)        |sky130_fd_pr__res_xhigh_po_0p35 (3)        
+sky130_fd_pr__cap_mim_m3_2 (5->3)          |sky130_fd_pr__cap_mim_m3_2 (5->3)          
+sky130_fd_pr__res_xhigh_po_0p35 (4)        |sky130_fd_pr__res_xhigh_po_0p35 (4)        
 sky130_fd_pr__nfet_01v8 (18)               |sky130_fd_pr__nfet_01v8 (18)               
 sky130_fd_pr__pfet_01v8_hvt (16)           |sky130_fd_pr__pfet_01v8_hvt (16)           
 sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
-sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
-Number of devices: 42                      |Number of devices: 42                      
-Number of nets: 28                         |Number of nets: 28                         
+Number of devices: 44                      |Number of devices: 44                      
+Number of nets: 29                         |Number of nets: 29                         
 ---------------------------------------------------------------------------------------
-Netlists match uniquely.
+Netlists match uniquely with property errors.
+sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35:41 vs. sigma-delta:1/sky130_fd_pr__res_xhigh_po_0p35:R3:
+ l circuit1: 16   circuit2: 18   (delta=11.8%, cutoff=1%)
 
 Subcircuit pins:
 Circuit 1: device-complete                 |Circuit 2: device-complete                 
@@ -220,12 +208,15 @@ gnd                                        |gnd
 ib                                         |ib                                         
 vts                                        |vts                                        
 out_buff                                   |out_buff                                   
-clk                                        |clk                                        
 out                                        |out                                        
+clk                                        |clk                                        
 vd                                         |vd                                         
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes device-complete and device-complete are equivalent.
 
 Final result: Circuits match uniquely.
-.
+Property errors were found.
+
+The following cells had property errors:
+ device-complete

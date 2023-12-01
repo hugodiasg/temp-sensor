@@ -40,7 +40,6 @@ C {devices/lab_pin.sym} -245 210 0 0 {name=l4 sig_type=std_logic lab=gnd}
 C {devices/iopin.sym} -1390 -70 0 0 {name=p9 lab=gnd}
 C {/foss/designs/temp-sensor/sensor/xschem/sensor.sym} -1295 170 0 0 {name=x3}
 C {/foss/designs/temp-sensor/buffer/xschem/buffer.sym} -1035 160 0 0 {name=X2}
-C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} -565 160 0 0 {name=x1}
 C {/foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator.sym} -245 160 0 0 {name=x4}
 C {devices/lab_pin.sym} -685 70 0 0 {name=l2 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} -675 250 0 0 {name=l3 sig_type=std_logic lab=gnd}
@@ -50,3 +49,4 @@ C {devices/lab_pin.sym} -1055 220 3 0 {name=l8 sig_type=std_logic lab=ib}
 C {devices/opin.sym} -1120 -230 0 0 {name=p4 lab=vts}
 C {devices/opin.sym} -1120 -190 0 0 {name=p7 lab=out_buff}
 C {devices/opin.sym} -1120 -150 0 0 {name=p8 lab=out_sigma}
+C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} -565 160 0 0 {name=x1}

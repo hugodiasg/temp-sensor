@@ -20,7 +20,7 @@ V {}
 S {}
 E {}
 N 150 -2000 150 -1980 {
-lab=in_comp}
+lab=in_int}
 N -50 -2000 20 -2000 {
 lab=in}
 N 200 -1790 200 -1760 {
@@ -32,7 +32,7 @@ lab=gnd}
 N 130 -1950 130 -1790 {
 lab=gnd}
 N 80 -2000 150 -2000 {
-lab=in_comp}
+lab=in_int}
 N 200 -1790 350 -1790 {
 lab=gnd}
 N 50 -1790 130 -1790 {
@@ -59,16 +59,8 @@ N 350 -1790 560 -1790 {
 lab=gnd}
 N 670 -1980 670 -1960 {
 lab=reset_b_dff}
-N 150 -2000 265 -2000 {
-lab=in_comp}
 N 670 -2130 670 -2020 {
 lab=clk}
-N 320 -2000 320 -1970 {
-lab=in_comp}
-N 265 -2000 320 -2000 {
-lab=in_comp}
-N 320 -2000 520 -2000 {
-lab=in_comp}
 N 850 -2020 870 -2020 {
 lab=Q}
 N 870 -2020 870 -1830 {
@@ -83,10 +75,25 @@ N 560 -1910 560 -1790 {
 lab=gnd}
 N 560 -1940 560 -1910 {
 lab=gnd}
-N 320 -1910 320 -1790 {
+N 270 -2000 270 -1930 {
+lab=in_int}
+N 380 -2000 520 -2000 {
+lab=in_comp}
+N 440 -2000 440 -1930 {
+lab=in_comp}
+N 270 -1870 270 -1790 {
 lab=gnd}
+N 440 -1870 440 -1790 {
+lab=gnd}
+N 350 -1980 350 -1790 {
+lab=gnd}
+N 150 -2000 270 -2000 {
+lab=in_int}
+N 270 -2000 310 -2000 {
+lab=in_int}
+N 310 -2000 320 -2000 {
+lab=in_int}
 C {devices/ipin.sym} -45 -2000 0 0 {name=p4 lab=in}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 320 -1940 0 0 {name=C1 model=cap_mim_m3_1 W=27.196 L=27.196 MF=1 spiceprefix=X}
 C {devices/iopin.sym} 200 -1770 1 0 {name=p6 lab=gnd}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} 150 -1950 0 0 {name=R2
 W=0.35
@@ -98,7 +105,7 @@ C {devices/iopin.sym} 670 -2130 3 0 {name=p2 lab=clk}
 C {devices/iopin.sym} 890 -2000 0 0 {name=p3 lab=out}
 C {devices/iopin.sym} 670 -1800 1 0 {name=p7 lab=reset_b_dff}
 C {devices/iopin.sym} 810 -2130 3 0 {name=p1 lab=vpwr}
-C {devices/lab_pin.sym} 310 -2000 1 0 {name=l3 sig_type=std_logic lab=in_comp}
+C {devices/lab_pin.sym} 310 -2000 1 0 {name=l3 sig_type=std_logic lab=in_int}
 C {devices/lab_pin.sym} 650 -2000 1 0 {name=l4 sig_type=std_logic lab=out_comp}
 C {devices/lab_pin.sym} 490 -1830 1 0 {name=l5 sig_type=std_logic lab=Q}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} 50 -2000 3 0 {name=R1
@@ -137,5 +144,14 @@ spiceprefix=X
 }
 C {sky130_stdcells/dfrbp_1.sym} 760 -2000 0 0 {name=x1 VGND=GND VNB=GND VPB=VPWR VPWR=VPWR prefix=sky130_fd_sc_hd__ }
 C {devices/iopin.sym} 560 -2200 3 0 {name=p5 lab=vd}
-C {devices/code.sym} 975 -2200 0 0 {name=lib_dff only_toplevel=false value=".include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 350 -2000 3 0 {name=R3
+W=0.35
+L=18
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {devices/lab_pin.sym} 430 -2000 1 0 {name=l1 sig_type=std_logic lab=in_comp}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 270 -1900 0 0 {name=C1 model=cap_mim_m3_2 W=27.196 L=27.196 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 440 -1900 0 0 {name=C2 model=cap_mim_m3_2 W=27.196 L=27.196 MF=1 spiceprefix=X}
+C {devices/code.sym} 925 -2220 0 0 {name=lib_dff only_toplevel=false value=".include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 "}

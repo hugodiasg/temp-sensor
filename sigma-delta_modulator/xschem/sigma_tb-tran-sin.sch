@@ -29,7 +29,7 @@ destroy all
 save all
 set color0=white
 set color1=black
-tran 10n 100u
+tran 10n 10u
 *tran 10n 10u
 run
 
@@ -42,7 +42,7 @@ plot in3 out3
 C {devices/lab_pin.sym} 725 -1055 0 0 {name=l10 sig_type=std_logic lab=clk}
 C {devices/gnd.sym} 1080 -540 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 1230 -720 0 0 {name=l9 sig_type=std_logic lab=clk}
-C {devices/vsource.sym} 895 -1015 0 0 {name=vin value="sin(0.9 0.9 10k)"}
+C {devices/vsource.sym} 895 -1015 0 0 {name=vin value="sin(0.9 0.9 1k)"}
 C {devices/gnd.sym} 895 -985 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 895 -1045 0 0 {name=l12 sig_type=std_logic lab=in1}
 C {devices/code.sym} 1660 -1210 0 0 {name=TT_MODELS

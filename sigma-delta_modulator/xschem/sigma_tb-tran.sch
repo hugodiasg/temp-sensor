@@ -69,7 +69,6 @@ C {devices/lab_pin.sym} 900 -920 0 0 {name=l31 sig_type=std_logic lab=in2}
 C {devices/vsource.sym} 900 -760 0 0 {name=vin2 value="1.4"}
 C {devices/gnd.sym} 900 -730 0 0 {name=l32 lab=GND}
 C {devices/lab_pin.sym} 900 -790 0 0 {name=l33 sig_type=std_logic lab=in3}
-C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1190 -630 0 0 {name=x1}
 C {devices/vsource.sym} 895 -1100 2 0 {name=Bvts value="v=200*time+1.2"}
 C {devices/lab_pin.sym} 895 -1070 0 0 {name=l13 sig_type=std_logic lab=in_linear}
 C {devices/gnd.sym} 895 -1130 2 0 {name=l17 lab=GND}
@@ -80,7 +79,6 @@ C {devices/lab_pin.sym} 1340 -360 3 1 {name=l20 sig_type=std_logic lab=out2}
 C {devices/lab_pin.sym} 1270 -450 1 0 {name=l21 sig_type=std_logic lab=vpwr}
 C {devices/lab_pin.sym} 1300 -450 1 0 {name=l22 sig_type=std_logic lab=vpwr}
 C {devices/lab_pin.sym} 1070 -450 0 0 {name=l23 sig_type=std_logic lab=vd}
-C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1190 -360 0 0 {name=x2}
 C {devices/lab_pin.sym} 1040 -360 0 0 {name=l24 sig_type=std_logic lab=in2}
 C {devices/gnd.sym} 1090 -30 0 0 {name=l25 lab=GND}
 C {devices/lab_pin.sym} 1240 -210 0 0 {name=l26 sig_type=std_logic lab=clk}
@@ -88,5 +86,8 @@ C {devices/lab_pin.sym} 1350 -120 3 1 {name=l27 sig_type=std_logic lab=out3}
 C {devices/lab_pin.sym} 1280 -210 1 0 {name=l28 sig_type=std_logic lab=vpwr}
 C {devices/lab_pin.sym} 1310 -210 1 0 {name=l29 sig_type=std_logic lab=vpwr}
 C {devices/lab_pin.sym} 1080 -210 0 0 {name=l34 sig_type=std_logic lab=vd}
-C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1200 -120 0 0 {name=x3}
 C {devices/lab_pin.sym} 1050 -120 0 0 {name=l35 sig_type=std_logic lab=in3}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 320 -1940 0 0 {name=C1 model=cap_mim_m3_1 W=27.196 L=27.196 MF=1 spiceprefix=X}
+C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta-pex.sym} 1190 -630 0 0 {name=x1}
+C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta-pex.sym} 1190 -360 0 0 {name=x2}
+C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta-pex.sym} 1200 -120 0 0 {name=x3}
