@@ -41,6 +41,7 @@ C {devices/code_shown.sym} 1470 -880 0 0 {name=Simulation only_toplevel=false va
 .control
 set color0=white
 set color1=black
+set wr_singlescale
 
 destroy all
 save all
@@ -51,7 +52,7 @@ let err = abs(out-in1)
 plot err ylabel 'Error (V)'
 plot v(out) v(in1)
 
-
+wrdata /foss/designs/temp-sensor/data/buffer-tran-tb.txt in1 out
 .endc"}
 C {devices/gnd.sym} 1120 -890 0 0 {name=l6 lab=GND}
 C {devices/gnd.sym} 990 -885 0 0 {name=l7 lab=GND}

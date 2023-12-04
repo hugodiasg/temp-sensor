@@ -13,13 +13,6 @@ N 1520 -485 1520 -475 { lab=vd}
 N 1520 -415 1520 -405 { lab=ib}
 N 1490 -135 1535 -135 {
 lab=out}
-C {devices/code.sym} 1820 -960 0 0 {name=TT_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
-.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
-"
-spice_ignore=false}
 C {devices/code_shown.sym} 1800 -705 0 0 {name=Simulation only_toplevel=false value="
 .control
 destroy all
@@ -41,6 +34,8 @@ plot out_buff vts v_lin
 plot out_buff vts v_lin ylimit 1.1 1.45
 
 wrdata /foss/designs/temp-sensor/data/device-complete-temp.txt vts out_buff v_lin
+*wrdata /foss/designs/temp-sensor/data/device-complete-temp_ss.txt vts out_buff v_lin
+*wrdata /foss/designs/temp-sensor/data/device-complete-temp_ff.txt vts out_buff v_lin
 .endc
 "
 }
@@ -73,3 +68,4 @@ C {devices/lab_pin.sym} 1395 -55 3 0 {name=l5 sig_type=std_logic lab=vts}
 C {devices/lab_pin.sym} 1415 -55 3 0 {name=l18 sig_type=std_logic lab=out_sigma}
 C {devices/lab_pin.sym} 1435 -55 3 0 {name=l19 sig_type=std_logic lab=out_buff}
 C {/foss/designs/temp-sensor/device-complete/xschem/device-complete-pex.sym} 1295 -135 0 0 {name=x1}
+C {sky130_fd_pr/corner.sym} 1990 -970 0 0 {name=CORNER only_toplevel=true corner=tt}

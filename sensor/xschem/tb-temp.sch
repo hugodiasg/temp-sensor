@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {}
@@ -22,26 +22,30 @@ destroy all
 save all
 set color0=white
 set color1=black
-dc temp -100 300 1
+set wr_singlescale
+dc temp -50 200 1
 run
 let idd=-i(vdd)
+*let is1=-i(vs1)
+*let is2=-i(vs2)
+*let il3=-i(vl3)
+*let isat4=-i(vsat4)
+
 
 let tc=deriv(vts)
-let err=abs((vts-v_lin))
-let pot=idd*vd
+let err=abs((vts-v_lin))/1.64e-3
 
 plot idd
-plot pot
 *plot is1 is2 il3 isat4
-plot vts-vtd
+*plot vts-vtd
 plot tc ylabel 'mV/°C'
 plot vts vtd 
-plot tc ylabel 'mV/°C' xlimit 20 50
-plot vts vtd xlimit 20 50
-plot vts v_lin xlimit -100 215
-plot err xlimit -100 215
+*plot tc ylabel 'mV/°C' xlimit 20 50
+*plot vts vtd xlimit 20 50
+*plot vts v_lin xlimit -100 215
+*plot err xlimit -100 215
 
-*wrdata ~/ptat-temp-tb.txt vts
+wrdata /foss/designs/temp-sensor/data/ptat-temp-tb.txt vts vtd
 .endc
 "}
 C {devices/gnd.sym} -80 -530 2 0 {name=l2 lab=GND}
@@ -54,7 +58,7 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {devices/vsource.sym} 80 -620 2 0 {name=Bvts value="v=-0.00222727*(temper-35)+1.20625"}
+C {devices/vsource.sym} 80 -620 2 0 {name=Bvts value="v=-0.00164*temper+1.42962"}
 C {devices/gnd.sym} 80 -660 2 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 80 -590 0 0 {name=l7 sig_type=std_logic lab=v_lin}
-C {/home/hugodg/projects-sky130/temp-sensor/sensor/xschem/sensor-pex.sym} -80 -380 0 0 {name=x1}
+C {/foss/designs/temp-sensor/sensor/xschem/sensor-pex.sym} -80 -380 0 0 {name=x1}

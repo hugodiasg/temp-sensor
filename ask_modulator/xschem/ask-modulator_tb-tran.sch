@@ -18,7 +18,7 @@ lab=in}
 C {devices/code_shown.sym} -630 -265 0 0 {name=Simulation only_toplevel=false value="
 
 
-.tran 40p 1.5u
+.tran 40p 15u
 
 .control
 destroy all
@@ -26,11 +26,17 @@ run
 
 set color0=white
 set color1=black
+set hcopypscolor = 1
+set wr_singlescale
+set temp=35
+option numdgt=7
 
 let id =-i(vdd)
 *plot id
 plot in
 plot out 
+
+wrdata /foss/designs/temp-sensor/data/ask-modulator_tran35.txt out -i(vdd)
 
 * FFT
 linearize out
