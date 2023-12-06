@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.5 file_version=1.2
 * Copyright 2020 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -59,7 +59,7 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 "
 spice_ignore=false}
 C {devices/vsource.sym} 555 -685 0 0 {name=VIN1 value="AC 1 DC 1"}
-C {devices/isource.sym} 555 -465 0 0 {name=ibias value=5u}
+C {devices/isource.sym} 555 -465 0 0 {name=ibias value=20u}
 C {devices/gnd.sym} 555 -645 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 790 -895 0 0 {name=VDD value=1.8}
 C {devices/vsource.sym} 920 -900 0 0 {name=VSS value=0
@@ -82,4 +82,4 @@ value=4p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 980 -600 0 0 {name=l16 lab=GND}
-C {projects/temp-sensor/buffer/xschem/buffer-pex.sym} 870 -660 0 0 {name=X1}
+C {/foss/designs/temp-sensor/buffer/xschem/buffer-pex.sym} 870 -660 0 0 {name=X1}

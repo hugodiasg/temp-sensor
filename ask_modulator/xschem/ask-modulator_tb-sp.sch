@@ -39,19 +39,17 @@ N -335 190 -335 220 {
 lab=GND}
 N -335 190 -305 190 {
 lab=GND}
-N -245 190 -235 190 {
-lab=#net3}
-N -235 190 -225 190 {
-lab=#net3}
-C {devices/vsource.sym} 35 -250 2 0 {name=Vdd value="DC 3.3 AC 0"}
-C {devices/vsource.sym} -260 -90 1 0 {name=Vin value="DC 1.8 AC 1"}
+N -310 190 -220 190 {
+lab=GND}
+C {devices/vsource.sym} 35 -250 2 0 {name=Vdd value="DC 1.8 AC 0"}
+C {devices/vsource.sym} -260 -90 1 0 {name=Vin value="AC 1"}
 C {devices/gnd.sym} 20 -40 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 190 -90 1 0 {name=l2 sig_type=std_logic lab=ns12}
 C {devices/lab_pin.sym} 35 -200 2 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/gnd.sym} -320 -90 0 0 {name=l5 lab=GND}
 C {devices/code_shown.sym} 275 -965 0 0 {name=Simulation only_toplevel=false value="
 
-.ac lin 1MEG 2G 4G
+.ac lin 1MEG 1G 4G
 .control
 destroy all
 set units=degrees
@@ -91,6 +89,7 @@ let z_in=z11-(z12*z21)/(z22+z0)
 plot mag(z_output)
 plot ph(z_output)
 
+wrdata /foss/designs/temp-sensor/data/ask-modulator_sp.txt ns11 ns12 ns21 ns22
 .endc"
 
 
@@ -126,7 +125,6 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/gnd.sym} -335 220 0 0 {name=l16 lab=GND}
-C {devices/vsource.sym} -275 190 1 0 {name=Vin2 value="DC 1.8"}
 C {/foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym} 20 -90 0 0 {name=x1}
 C {/foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym} 10 190 0 0 {name=x2}
 C {devices/code.sym} 280 -1122.5 0 0 {name=TT_MODELS

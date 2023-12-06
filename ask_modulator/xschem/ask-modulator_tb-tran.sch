@@ -28,7 +28,6 @@ set color0=white
 set color1=black
 set hcopypscolor = 1
 set wr_singlescale
-set temp=35
 option numdgt=7
 
 let id =-i(vdd)
@@ -36,7 +35,7 @@ let id =-i(vdd)
 plot in
 plot out 
 
-wrdata /foss/designs/temp-sensor/data/ask-modulator_tran35.txt out -i(vdd)
+wrdata /foss/designs/temp-sensor/data/ask-modulator_tran.txt in out
 
 * FFT
 linearize out

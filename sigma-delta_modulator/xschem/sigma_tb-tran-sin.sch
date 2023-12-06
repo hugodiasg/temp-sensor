@@ -29,20 +29,20 @@ destroy all
 save all
 set color0=white
 set color1=black
-tran 10n 10u
+set wr_singlescale
+tran 10n 25u
 *tran 10n 10u
 run
 
 *plot in_linear out1
 plot in1 out1
-plot in2 out2
-plot in3 out3
 
+wrdata /foss/designs/temp-sensor/data/sigma_tb-tran-sin.txt in1 out1
 .endc"}
 C {devices/lab_pin.sym} 725 -1055 0 0 {name=l10 sig_type=std_logic lab=clk}
 C {devices/gnd.sym} 1080 -540 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 1230 -720 0 0 {name=l9 sig_type=std_logic lab=clk}
-C {devices/vsource.sym} 895 -1015 0 0 {name=vin value="sin(0.9 0.9 1k)"}
+C {devices/vsource.sym} 895 -1015 0 0 {name=vin value="sin(0.9 0.9 40k)"}
 C {devices/gnd.sym} 895 -985 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 895 -1045 0 0 {name=l12 sig_type=std_logic lab=in1}
 C {devices/code.sym} 1660 -1210 0 0 {name=TT_MODELS
