@@ -28,6 +28,7 @@ set color0=white
 set color1=black
 set hcopypscolor = 1
 set wr_singlescale
+set temp=60
 option numdgt=7
 
 let id =-i(vdd)
@@ -35,7 +36,7 @@ let id =-i(vdd)
 plot in
 plot out 
 
-wrdata /foss/designs/temp-sensor/data/ask-modulator_tran.txt in out
+wrdata /foss/designs/temp-sensor/data/ask-modulator_tran60.txt in out
 
 * FFT
 linearize out
@@ -60,4 +61,4 @@ value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
 "
 spice_ignore=false}
 C {devices/sqwsource.sym} -1157.5 127.5 2 0 {name=V1 vhi=1.8 freq=10e6}
-C {/foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator-pex.sym} -1232.5 287.5 0 0 {name=x1}
+C {/foss/designs/temp-sensor/ask_modulator/xschem/ask-modulator.sym} -1232.5 287.5 0 0 {name=x1}
