@@ -19,7 +19,7 @@ C {devices/code_shown.sym} -630 -265 0 0 {name=Simulation only_toplevel=false va
 
 
 .tran 40p 15u
-
+.options savecurrents
 .control
 destroy all
 run
@@ -32,11 +32,14 @@ set temp=60
 option numdgt=7
 
 let id =-i(vdd)
+let pot = id*vd
 *plot id
+plot pot
 plot in
-plot out 
+plot out
+ 
 
-wrdata /foss/designs/temp-sensor/data/ask-modulator_tran60.txt in out
+wrdata /foss/designs/temp-sensor/data/ask-modulator_tran60.txt in out id
 
 * FFT
 linearize out

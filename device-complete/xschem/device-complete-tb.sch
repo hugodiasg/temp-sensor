@@ -25,8 +25,19 @@ set hcopypscolor = 1
 set wr_singlescale
 option numdgt=7
 tran 40p 10u
+
 *let pot=-i(vdd)*vd
+*let pot_sensor = -i(v.x1.vsensor)*vd
+*let pot_buffer = -i(v.x1.vbuffer)*vd
+*let pot_sigma_analog = -i(v.x1.vasigma)*vd
+*let pot_sigma_digital = -i(v.x1.vdsigma)*vpwr
+*let pot_sigma_tot = abs(pot_sigma_analog)+abs(pot_sigma_analog)
+*let pot_ask = -i(v.x1.vask)*vd
+
 save all
+
+*plot pot pot_sensor pot_buffer pot_sigma_analog pot_sigma_digital pot_sigma_tot pot_ask
+*plot avg(pot) avg(pot_sensor) avg(pot_buffer) avg(pot_sigma_analog) avg(pot_sigma_digital) avg(pot_sigma_tot) avg(pot_ask)
 
 plot vts out_sigma out_buff avg(out_buff)
 plot out
@@ -35,7 +46,7 @@ plot out
 *meas tran pot_avg avg pot from=0 to=5u
 *plot pot pot_avg pot_rms
 
-wrdata /foss/designs/temp-sensor/data/tran35.txt vts out_sigma out_buff out
+*wrdata /foss/designs/temp-sensor/data/tran35.txt vts out_sigma out_buff out
 
 *linearize out
 *fft out
@@ -81,4 +92,4 @@ C {devices/lab_pin.sym} 555 -435 0 0 {name=l4 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 430 -5 3 0 {name=l5 sig_type=std_logic lab=vts}
 C {devices/lab_pin.sym} 450 -5 3 0 {name=l9 sig_type=std_logic lab=out_sigma}
 C {devices/lab_pin.sym} 470 -5 3 0 {name=l16 sig_type=std_logic lab=out_buff}
-C {/foss/designs/temp-sensor/device-complete/xschem/device-complete-pex.sym} 330 -85 0 0 {name=x1}
+C {/foss/designs/temp-sensor/device-complete/xschem/device-complete.sym} 375 -95 0 0 {name=x1}

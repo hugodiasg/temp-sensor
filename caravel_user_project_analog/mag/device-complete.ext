@@ -1,0 +1,601 @@
+timestamp 1702052053
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sigma-delta sigma-delta_0 1 0 17480 0 1 520
+use sensor sensor_0 1 0 660 0 1 2500
+use buffer buffer_0 1 0 4468 0 1 -78
+use ask-modulator ask-modulator_0 1 0 -740 0 1 16920
+port "clk" 2 13078 -2576 13278 -2376 m1
+port "vpwr" 4 14278 -2576 14478 -2376 m1
+port "ib" 5 4958 -2576 5158 -2376 m1
+port "vts" 8 4360 -2580 4560 -2380 m1
+port "out_buff" 7 13658 -2576 13858 -2376 m1
+port "gnd" 1 -62 -1956 138 -1756 m1
+port "out" 3 -320 10720 -120 10920 m1
+port "out_sigma" 9 14018 -2576 14218 -2376 m1
+port "vd" 0 6040 33620 6240 33820 m1
+node "m1_16630_0#" 0 188.028 16630 0 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 44800 920 0 0 0 0 0 0 0 0 0 0
+node "m1_14970_0#" 0 79.8197 14970 0 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22400 600 0 0 0 0 0 0 0 0 0 0
+node "m1_14770_0#" 0 104.678 14770 0 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22400 600 0 0 0 0 0 0 0 0 0 0
+node "clk" 4 2006.6 13078 -2576 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 369800 4500 683672 7236 0 0 0 0 0 0 0 0
+node "vpwr" 4 1314.23 14278 -2576 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 128800 2480 751672 7916 0 0 0 0 0 0 0 0
+node "ib" 4 1859.67 4958 -2576 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 202800 2840 667200 8660 0 0 0 0 0 0 0 0
+node "vts" 6 3503.55 4360 -2580 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 415600 5368 1320500 14004 0 0 0 0 0 0 0 0
+node "vtd" 0 198.44 4040 3360 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 66000 1060 0 0 0 0 0 0 0 0 0 0
+node "m1_3810_3420#" 0 89.0501 3810 3420 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14000 480 0 0 0 0 0 0 0 0 0 0
+node "out_buff" 12 4953.12 13658 -2576 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 618400 7840 1937432 23796 0 0 0 0 0 0 0 0
+node "gnd" 11 18490.6 -62 -1956 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7377600 38980 1540872 11592 1725400 17656 0 0 0 0 0 0
+node "out" 0 295.813 -320 10720 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 88000 1280 0 0 0 0 0 0 0 0 0 0
+node "out_sigma" 19 12958.5 14018 -2576 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3239000 32480 2890432 29716 0 0 0 0 0 0 0 0
+node "vd" 7 22385.7 6040 33620 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 715200 7280 298000 4520 3431100 31110 10909922 58182 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "vpwr" "out_sigma" 1241.01
+cap "vpwr" "out_buff" 2.07967
+cap "gnd" "ib" 632.831
+cap "m1_14770_0#" "clk" 0.0738482
+cap "gnd" "m1_14970_0#" 55.0602
+cap "out_sigma" "out_buff" 2174.84
+cap "vts" "ib" 546.834
+cap "out_sigma" "vd" 738.231
+cap "gnd" "vpwr" 758.217
+cap "out_buff" "vd" 184.536
+cap "m1_14770_0#" "m1_14970_0#" 68.4444
+cap "gnd" "out_sigma" 576.545
+cap "gnd" "out_buff" 579.651
+cap "clk" "vpwr" 302.343
+cap "m1_14770_0#" "vpwr" 5.33729
+cap "clk" "out_sigma" 386.013
+cap "vtd" "m1_3810_3420#" 31.4286
+cap "clk" "out_buff" 682.302
+cap "m1_14770_0#" "out_sigma" 0.572706
+cap "m1_14770_0#" "out_buff" 0.262097
+cap "vpwr" "m1_14970_0#" 1.1832
+cap "gnd" "vts" 700.301
+cap "gnd" "clk" 699.349
+cap "vtd" "vts" 47.2101
+cap "out" "out_sigma" 20.8448
+cap "m1_14770_0#" "gnd" 4.91277
+cap "gnd" "m1_16630_0#" 89.0164
+cap "buffer_0/gnd" "sensor_0/gnd" 8.82139
+cap "ib" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" 23.6601
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" "vts" 5.46434
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/c2_n3269_n1500#" "vts" 4.33667
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" "ib" 13.7045
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/c2_n3269_n1500#" "ib" 6.54571
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" "buffer_0/gnd" 51.0747
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/c2_n3269_n1500#" "buffer_0/gnd" 32.478
+cap "buffer_0/gnd" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" 54.5004
+cap "buffer_0/gnd" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/c2_n3269_n1500#" 37.3924
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" "buffer_0/gnd" 54.444
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/c2_n3269_n1500#" "buffer_0/gnd" 37.3667
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" "buffer_0/gnd" 176.439
+cap "buffer_0/gnd" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/c2_n3269_n1500#" 68.1011
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" "buffer_0/gnd" 181.707
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/c2_n3269_n1500#" "buffer_0/gnd" 28.5139
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" "clk" 9.14166
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" "clk" 4.56165
+cap "sensor_0/gnd" "gnd" 12.2965
+cap "gnd" "sensor_0/gnd" 72.3493
+cap "sensor_0/gnd" "buffer_0/gnd" 8.82139
+cap "sensor_0/gnd" "vts" 0.359159
+cap "buffer_0/ib" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" 83.4362
+cap "vts" "sensor_0/gnd" 0.843047
+cap "buffer_0/ib" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" 48.3283
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/c2_n3269_n1500#" "vts" 20.1128
+cap "buffer_0/ib" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/c2_n3269_n1500#" 30.4451
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" "vts" 19.1913
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" "clk" 32.0142
+cap "sigma-delta_0/clk" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" 16.0243
+cap "sigma-delta_0/clk" "sigma-delta_0/gnd" 0.113655
+cap "sigma-delta_0/out" "sigma-delta_0/gnd" 0.703895
+cap "sigma-delta_0/gnd" "out_buff" 0.196793
+cap "sigma-delta_0/vpwr" "sigma-delta_0/gnd" 70.9591
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/D" 1.32858
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/a_1217_47#" 0.110001
+cap "sigma-delta_0/x1/a_27_47#" "sigma-delta_0/gnd" 0.734942
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/a_1283_21#" 0.160065
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/a_1108_47#" 1.7684
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/a_1270_413#" 0.03501
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/a_193_47#" 1.05217
+cap "sigma-delta_0/vpwr" "sigma-delta_0/gnd" -2.46635
+cap "sigma-delta_0/out" "sigma-delta_0/gnd" 0.292458
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/a_543_47#" 0.278048
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/a_761_289#" 1.18391
+cap "sensor_0/gnd" "gnd" 283.265
+cap "gnd" "sensor_0/sky130_fd_pr__nfet_01v8_9VJR3B_1/a_n158_n727#" 9.89012
+cap "sensor_0/gnd" "sensor_0/sky130_fd_pr__nfet_01v8_9VJR3B_1/a_n158_n727#" 2.27374e-13
+cap "sensor_0/sky130_fd_pr__nfet_01v8_9VJR3B_1/a_n100_n815#" "gnd" 140.652
+cap "gnd" "sensor_0/sky130_fd_pr__pfet_01v8_YAEUFM_0/a_n1061_n200#" 97.2315
+cap "sensor_0/b" "gnd" 274.217
+cap "sensor_0/gnd" "sensor_0/b" -2.27374e-13
+cap "gnd" "sensor_0/sky130_fd_pr__nfet_01v8_9VJR3B_1/a_n158_n727#" 288.154
+cap "sensor_0/gnd" "gnd" 52.7881
+cap "sensor_0/vts" "sensor_0/gnd" 2.84496
+cap "gnd" "sensor_0/gnd" 0.0222161
+cap "sensor_0/b" "sensor_0/vts" 0.0337683
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" "buffer_0/ib" 81.2311
+cap "sensor_0/gnd" "sensor_0/vts" 5.53014
+cap "buffer_0/ib" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" 47.129
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/c2_n3269_n1500#" "sensor_0/vts" 24.4973
+cap "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/c2_n3269_n1500#" "buffer_0/ib" 27.5775
+cap "sensor_0/vts" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" 31.2198
+cap "buffer_0/d" "buffer_0/out" 0.0133937
+cap "buffer_0/d" "out_sigma" 0.614535
+cap "buffer_0/d" "clk" 27.6151
+cap "sigma-delta_0/out" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" 0.235775
+cap "sigma-delta_0/clk" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" 10.319
+cap "sigma-delta_0/vpwr" "sigma-delta_0/x1/a_761_289#" 1.08894
+cap "sigma-delta_0/x1/a_193_47#" "sigma-delta_0/out" 0.177926
+cap "sigma-delta_0/out" "sigma-delta_0/clk" -4.56558
+cap "sigma-delta_0/out" "sigma-delta_0/gnd" 1.38915
+cap "sigma-delta_0/vpwr" "sigma-delta_0/out" -22.0036
+cap "out_buff" "sigma-delta_0/out" 0.135931
+cap "sigma-delta_0/x1/a_27_47#" "sigma-delta_0/out" 1.07353
+cap "sigma-delta_0/x1/D" "sigma-delta_0/clk" -0.270234
+cap "sigma-delta_0/x1/D" "sigma-delta_0/gnd" -5.68434e-14
+cap "sigma-delta_0/vpwr" "sigma-delta_0/x1/D" 22.1621
+cap "out_buff" "sigma-delta_0/x1/D" 0.165001
+cap "sigma-delta_0/x1/a_1283_21#" "sigma-delta_0/vpwr" 0.133421
+cap "sigma-delta_0/x1/a_543_47#" "sigma-delta_0/vpwr" 1.57668
+cap "sigma-delta_0/x1/a_651_413#" "sigma-delta_0/vpwr" 0.78694
+cap "sigma-delta_0/vpwr" "sigma-delta_0/x1/a_448_47#" 1.20708
+cap "sigma-delta_0/x1/a_1270_413#" "sigma-delta_0/vpwr" 0.0212257
+cap "sigma-delta_0/vpwr" "sigma-delta_0/x1/VNB" 1.16525
+cap "sigma-delta_0/x1/D" "sigma-delta_0/out" 0.303604
+cap "sigma-delta_0/vpwr" "sigma-delta_0/x1/a_193_47#" 6.67835
+cap "sigma-delta_0/clk" "sigma-delta_0/gnd" 0.243253
+cap "sigma-delta_0/vpwr" "sigma-delta_0/clk" -29.7487
+cap "sigma-delta_0/x1/a_193_47#" "out_buff" 0.0829025
+cap "sigma-delta_0/x1/a_1108_47#" "sigma-delta_0/vpwr" 0.522621
+cap "out_buff" "sigma-delta_0/clk" 0.303175
+cap "sigma-delta_0/vpwr" "sigma-delta_0/gnd" 190.182
+cap "sigma-delta_0/x1/a_27_47#" "sigma-delta_0/clk" 1.79798
+cap "out_buff" "sigma-delta_0/gnd" 0.56762
+cap "sigma-delta_0/vpwr" "out_buff" 1.72949
+cap "sigma-delta_0/x1/a_27_47#" "sigma-delta_0/vpwr" 18.9547
+cap "sigma-delta_0/x1/a_27_47#" "out_buff" 0.475955
+cap "sigma-delta_0/clk" "sigma-delta_0/x1/a_761_289#" 5.55112e-17
+cap "sigma-delta_0/out" "sigma-delta_0/vpwr" 1.13687e-13
+cap "sigma-delta_0/x1/a_1283_21#" "sigma-delta_0/vpwr" -7.38964e-13
+cap "sigma-delta_0/x1/a_1108_47#" "sigma-delta_0/gnd" 0.0138248
+cap "sigma-delta_0/x1/a_27_47#" "sigma-delta_0/clk" 0.0828371
+cap "sigma-delta_0/x1/D" "sigma-delta_0/vpwr" -3.1225e-15
+cap "sigma-delta_0/gnd" "sigma-delta_0/vpwr" 0.0136577
+cap "sigma-delta_0/x1/a_193_47#" "sigma-delta_0/gnd" 0.604747
+cap "sigma-delta_0/x1/a_1847_47#" "sigma-delta_0/vpwr" 2.13163e-14
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/a_27_47#" 0.480975
+cap "sigma-delta_0/x1/a_761_289#" "sigma-delta_0/vpwr" -8.52651e-14
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/a_543_47#" 0.363508
+cap "sigma-delta_0/x1/a_193_47#" "sigma-delta_0/vpwr" 1.13687e-13
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/a_1283_21#" 0.388995
+cap "sigma-delta_0/x1/a_27_47#" "sigma-delta_0/vpwr" -5.68434e-13
+cap "sigma-delta_0/x1/a_448_47#" "sigma-delta_0/vpwr" 7.10543e-15
+cap "sigma-delta_0/gnd" "sigma-delta_0/x1/D" 0.272375
+cap "sigma-delta_0/x1/a_543_47#" "sigma-delta_0/vpwr" -2.84217e-14
+cap "sensor_0/sky130_fd_pr__pfet_01v8_YAEUFM_0/a_n1061_n200#" "gnd" 44.6927
+cap "sensor_0/a" "gnd" 134.938
+cap "sensor_0/vts" "gnd" 39.1591
+cap "sensor_0/sky130_fd_pr__pfet_01v8_FRXWNM_3/a_n158_n200#" "gnd" 47.4082
+cap "sensor_0/gnd" "gnd" 58.9655
+cap "sensor_0/sky130_fd_pr__nfet_01v8_9VJR3B_1/a_n100_n815#" "gnd" 44.6208
+cap "gnd" "sensor_0/gnd" 15.3433
+cap "gnd" "sensor_0/a" 191.052
+cap "gnd" "sensor_0/b" 87.2696
+cap "sensor_0/vts" "gnd" 79.8483
+cap "gnd" "sensor_0/vtd" 233.252
+cap "gnd" "sensor_0/vtd" 0.493599
+cap "sensor_0/b" "sensor_0/vts" 15.4678
+cap "sensor_0/vts" "sensor_0/gnd" 0.907923
+cap "sensor_0/vtd" "sensor_0/vts" 0.0938326
+cap "gnd" "sensor_0/b" 0.0927294
+cap "sensor_0/vts" "buffer_0/ib" 0.00777605
+cap "sensor_0/b" "sensor_0/vts" 15.2927
+cap "sensor_0/vts" "sensor_0/gnd" 1.87035
+cap "buffer_0/ib" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" -11.2206
+cap "buffer_0/ib" "sensor_0/vts" -44.3511
+cap "sensor_0/vts" "buffer_0/sky130_fd_pr__cap_mim_m3_2_26U9NK_0/m4_n3349_n1580#" 8.79827
+cap "buffer_0/vd" "sensor_0/vts" 51.6036
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n229_n1597#" "sensor_0/vts" 15.3278
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n29_n1500#" "sensor_0/vts" 2.92108
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_29_n1597#" "sensor_0/vts" 9.15489
+cap "buffer_0/d" "sensor_0/vts" 77.5782
+cap "buffer_0/in" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n29_n1500#" 4.44089e-16
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n229_n1597#" "buffer_0/in" -1.77636e-15
+cap "out_sigma" "buffer_0/vd" 0.211138
+cap "out_sigma" "buffer_0/out" 1.29871
+cap "sigma-delta_0/out" "buffer_0/out" 7.74089
+cap "sigma-delta_0/out" "buffer_0/vd" 9.67512
+cap "sigma-delta_0/out" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_n29_n1500#" 0.787011
+cap "sigma-delta_0/out" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_29_n1597#" 3.70955
+cap "out_buff" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_QABHPF_0/a_48_n632#" 0.630709
+cap "out_buff" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_QABHPF_0/a_n616_n632#" 3.54808
+cap "sigma-delta_0/x1/VNB" "sigma-delta_0/out" 0.40381
+cap "sigma-delta_0/x1/VNB" "sigma-delta_0/vpwr" 0.139764
+cap "sigma-delta_0/out" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_QABHPF_0/a_n616_n632#" 0.179295
+cap "out_buff" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_QABHPF_0/a_n284_n632#" 1.26517
+cap "sigma-delta_0/x1/VNB" "out_buff" 5.05849
+cap "sensor_0/a" "gnd" 187.459
+cap "sensor_0/vts" "gnd" 29.8184
+cap "sensor_0/vd" "gnd" 109.102
+cap "sensor_0/sky130_fd_pr__pfet_01v8_FRXWNM_3/a_n158_n200#" "gnd" 12.4813
+cap "sensor_0/sky130_fd_pr__pfet_01v8_YAEUFM_0/a_n1061_n200#" "gnd" 10.6156
+cap "sensor_0/vts" "gnd" 57.9384
+cap "gnd" "sensor_0/d" 11.8595
+cap "gnd" "sensor_0/c" 22.6525
+cap "gnd" "sensor_0/vtd" 56.9683
+cap "sensor_0/vd" "gnd" 52.3008
+cap "gnd" "sensor_0/a" 210.294
+cap "sensor_0/vd" "sensor_0/a" 4.54747e-13
+cap "gnd" "sensor_0/b" 0.190516
+cap "sensor_0/b" "sensor_0/vd" -1.42109e-14
+cap "sensor_0/vtd" "sensor_0/vd" 0.0097676
+cap "gnd" "sensor_0/vtd" 1.78822
+cap "sensor_0/vtd" "sensor_0/vts" 0.505268
+cap "sensor_0/vts" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n545_n1500#" 0.27322
+cap "sensor_0/vtd" "buffer_0/vd" 0.559264
+cap "sensor_0/c" "buffer_0/vd" 0.00926763
+cap "sensor_0/c" "sensor_0/vd" 0.00614097
+cap "sensor_0/vts" "buffer_0/vd" 0.169819
+cap "buffer_0/vd" "sensor_0/vd" 6.46043
+cap "sensor_0/vtd" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n545_n1500#" 0.562218
+cap "sensor_0/vts" "sensor_0/vtd" -28.3871
+cap "buffer_0/vd" "sensor_0/vts" 6.91361
+cap "buffer_0/vd" "buffer_0/d" 1.13687e-13
+cap "buffer_0/d" "sensor_0/vd" 0.86062
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n29_n1500#" "sensor_0/vts" 0.0868265
+cap "buffer_0/vd" "sensor_0/vd" 6.42593
+cap "buffer_0/d" "sensor_0/vts" 17.0756
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n229_n1597#" "sensor_0/vts" 0.685688
+cap "buffer_0/in" "buffer_0/a" 1.42109e-14
+cap "buffer_0/in" "buffer_0/d" 2.84217e-14
+cap "buffer_0/vd" "buffer_0/d" 0.0584842
+cap "buffer_0/vd" "buffer_0/in" 0.59789
+cap "buffer_0/vd" "buffer_0/sky130_fd_pr__nfet_01v8_HD5U9F_1/a_15_n238#" 0.0131109
+cap "buffer_0/vd" "buffer_0/a" 0.0209791
+cap "buffer_0/vd" "buffer_0/c" 0.379157
+cap "out_sigma" "buffer_0/out" 2.24479
+cap "buffer_0/sky130_fd_pr__pfet_01v8_AXJJQ9_1/a_n616_n197#" "buffer_0/out" 43.0458
+cap "buffer_0/d" "buffer_0/out" 0.114857
+cap "buffer_0/vd" "buffer_0/out" 56.9708
+cap "sigma-delta_0/out" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_n229_n1597#" 0.191519
+cap "sigma-delta_0/out" "buffer_0/vd" 0.274911
+cap "sigma-delta_0/out" "sigma-delta_0/in" 0.453324
+cap "sigma-delta_0/out" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_n29_n1500#" 0.0425425
+cap "sigma-delta_0/in" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_214_n882#" 0.519506
+cap "sigma-delta_0/in" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n118_n882#" 1.33667
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n450_n882#" "sigma-delta_0/in" 4.02949
+cap "sigma-delta_0/out" "sigma-delta_0/in_int" 0.283976
+cap "sigma-delta_0/in" "sigma-delta_0/a_n3084_1636#" 13.2724
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n450_n882#" "vd" 0.328044
+cap "sigma-delta_0/in" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_QABHPF_0/a_n450_200#" 0.0338832
+cap "sigma-delta_0/in" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_QABHPF_0/a_214_200#" 0.00311638
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_QABHPF_0/a_n118_200#" "sigma-delta_0/in" 0.0196513
+cap "sigma-delta_0/in" "vd" 0.0522072
+cap "sigma-delta_0/in" "sigma-delta_0/out" 0.29119
+cap "sigma-delta_0/in" "sigma-delta_0/in_int" 47.8294
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n450_n882#" "sigma-delta_0/vd" 0.299764
+cap "sigma-delta_0/in_int" "sigma-delta_0/vd" 0.913676
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n118_n882#" "sigma-delta_0/vd" 0.282796
+cap "sigma-delta_0/in_int" "sigma-delta_0/a_n3084_1636#" -0.0123218
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_214_n882#" "sigma-delta_0/vd" 0.328044
+cap "sigma-delta_0/in" "sigma-delta_0/in_int" 4.45205
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_214_n882#" "sigma-delta_0/vd" 0.311076
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n118_n882#" "sigma-delta_0/vd" 0.27714
+cap "ask-modulator_0/out" "sensor_0/vd" 3.05252
+cap "ask-modulator_0/gnd" "sensor_0/vd" 173.371
+cap "sensor_0/vts" "ask-modulator_0/gnd" 1.56839
+cap "sensor_0/vd" "sensor_0/d" 5.68434e-14
+cap "ask-modulator_0/gnd" "sensor_0/vtd" 16.9229
+cap "sensor_0/vtd" "out_sigma" 0.114508
+cap "ask-modulator_0/gnd" "sensor_0/vd" 287.859
+cap "ask-modulator_0/out" "sensor_0/vd" 1.23322
+cap "ask-modulator_0/gnd" "sensor_0/d" 1.52334
+cap "sensor_0/vd" "out_sigma" 21.0674
+cap "sensor_0/vd" "sensor_0/vtd" 24.8386
+cap "sensor_0/vd" "out_sigma" 19.9941
+cap "sensor_0/vd" "ask-modulator_0/out" 11.9273
+cap "sensor_0/c" "sensor_0/vd" 9.97988
+cap "ask-modulator_0/gnd" "sensor_0/vtd" 0.0285991
+cap "out_sigma" "sensor_0/vtd" 0.572539
+cap "sensor_0/vd" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n229_n1597#" 0.537241
+cap "buffer_0/vd" "sensor_0/vd" 9.3756
+cap "sensor_0/vd" "sensor_0/c" 6.87946
+cap "out_sigma" "sensor_0/vd" 4.12274
+cap "sensor_0/vd" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n487_n1597#" 0.0107596
+cap "ask-modulator_0/out" "sensor_0/vd" 38.6476
+cap "sensor_0/vd" "ask-modulator_0/out" 38.0882
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_287_n1597#" "out_sigma" 0.128509
+cap "sensor_0/vd" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_287_n1597#" 27.9409
+cap "buffer_0/d" "out_sigma" 0.752416
+cap "sensor_0/vd" "buffer_0/d" 39.5168
+cap "sensor_0/vd" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n487_n1597#" 70.5424
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n487_n1597#" "out_sigma" 0.305973
+cap "ask-modulator_0/out" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_287_n1597#" 0.115585
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n29_n1500#" "out_sigma" 8.93924
+cap "sensor_0/vd" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n29_n1500#" 222.642
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n487_n1597#" "ask-modulator_0/out" 0.275203
+cap "ask-modulator_0/out" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n29_n1500#" 0.348503
+cap "sensor_0/vd" "buffer_0/vd" 77.8577
+cap "buffer_0/vd" "out_sigma" 0.093398
+cap "buffer_0/vd" "ask-modulator_0/out" 0.193443
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n229_n1597#" "out_sigma" 8.38665
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n229_n1597#" "sensor_0/vd" 191.245
+cap "buffer_0/d" "buffer_0/vd" 1.13687e-13
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n229_n1597#" "ask-modulator_0/out" 0.550407
+cap "sensor_0/vd" "out_sigma" -0.809158
+cap "buffer_0/vd" "buffer_0/b" 0.158801
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n487_n1597#" "buffer_0/vd" 1.61469
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_287_n1597#" "ask-modulator_0/out" 0.159618
+cap "buffer_0/a" "buffer_0/vd" 133.928
+cap "buffer_0/vd" "buffer_0/gnd" 2.37668
+cap "ask-modulator_0/out" "buffer_0/vd" 8.43697
+cap "buffer_0/d" "buffer_0/vd" 18.3516
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_287_n1597#" "out_sigma" 0.177464
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_287_n1597#" "buffer_0/vd" 41.8225
+cap "buffer_0/vd" "out_sigma" 29.5566
+cap "ask-modulator_0/out" "buffer_0/a" 0.916427
+cap "buffer_0/sky130_fd_pr__nfet_01v8_HD5U9F_1/a_15_n238#" "buffer_0/vd" 3.85228
+cap "buffer_0/a" "out_sigma" 1.01889
+cap "buffer_0/vd" "buffer_0/a" 46.8305
+cap "buffer_0/vd" "buffer_0/gnd" 1.75449
+cap "buffer_0/a" "ask-modulator_0/out" 0.75679
+cap "buffer_0/a" "out_sigma" 0.947551
+cap "buffer_0/vd" "buffer_0/sky130_fd_pr__nfet_01v8_HD5U9F_1/a_15_n238#" 3.41674
+cap "buffer_0/vd" "ask-modulator_0/out" 0.660833
+cap "buffer_0/vd" "buffer_0/sky130_fd_pr__nfet_01v8_HD5U9F_1/a_n81_172#" 9.6947
+cap "buffer_0/vd" "buffer_0/c" 2.02634
+cap "buffer_0/vd" "buffer_0/b" 48.8933
+cap "buffer_0/vd" "out_sigma" 25.0333
+cap "buffer_0/b" "ask-modulator_0/out" 0.685493
+cap "buffer_0/b" "out_sigma" 0.846804
+cap "out_sigma" "buffer_0/vd" 29.1449
+cap "buffer_0/out" "buffer_0/vd" 10.5714
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_n487_n1597#" "buffer_0/vd" 10.629
+cap "buffer_0/b" "buffer_0/vd" 65.8283
+cap "buffer_0/gnd" "buffer_0/vd" 1.4623
+cap "ask-modulator_0/out" "buffer_0/vd" 0.275203
+cap "out_sigma" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_n487_n1597#" 0.0887322
+cap "out_sigma" "buffer_0/b" 1.12904
+cap "buffer_0/b" "ask-modulator_0/out" 1.0155
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_n487_n1597#" "ask-modulator_0/out" 0.0798089
+cap "buffer_0/sky130_fd_pr__pfet_01v8_AXJJQ9_1/a_n616_n197#" "out_sigma" 8.13638
+cap "buffer_0/sky130_fd_pr__pfet_01v8_AXJJQ9_1/a_n616_n197#" "ask-modulator_0/out" 0.550407
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_287_n1597#" "buffer_0/out" 41.9259
+cap "buffer_0/out" "out_sigma" 2.30651
+cap "buffer_0/vd" "out_sigma" 12.6742
+cap "buffer_0/vd" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_287_n1597#" -2.84217e-14
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_287_n1597#" "vd" 36.7378
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_n487_n1597#" "buffer_0/out" 2.04707
+cap "buffer_0/out" "ask-modulator_0/out" 0.395447
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_n487_n1597#" "vd" 26.0228
+cap "buffer_0/vd" "ask-modulator_0/out" 0.645478
+cap "buffer_0/sky130_fd_pr__pfet_01v8_AXJJQ9_1/a_n616_n197#" "buffer_0/out" 34.9322
+cap "buffer_0/sky130_fd_pr__pfet_01v8_AXJJQ9_1/a_n616_n197#" "vd" 89.147
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_287_n1597#" "out_sigma" 0.305973
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_n487_n1597#" "out_sigma" 0.217241
+cap "buffer_0/vd" "buffer_0/out" 116.257
+cap "buffer_0/out" "vd" 14.89
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_287_n1597#" "ask-modulator_0/out" 0.275203
+cap "buffer_0/vd" "vd" 89.2025
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_n487_n1597#" "ask-modulator_0/out" 0.195394
+cap "out_sigma" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n616_450#" 0.364916
+cap "out_sigma" "sigma-delta_0/a_n3084_1636#" 0.297222
+cap "out_sigma" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_n29_n1500#" 1.93231
+cap "out_sigma" "buffer_0/vd" 2.77528
+cap "ask-modulator_0/out" "sigma-delta_0/in" 1.66363
+cap "sigma-delta_0/in" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n616_450#" 0.0349313
+cap "vd" "sigma-delta_0/in" 1.05584
+cap "ask-modulator_0/out" "sigma-delta_0/in" 2.96692
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_380_450#" "sigma-delta_0/in" 0.284097
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n616_450#" "sigma-delta_0/a_n3084_1636#" -2.19946
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n616_450#" "out_sigma" 0.258135
+cap "out_sigma" "sigma-delta_0/a_n3084_1636#" 0.0238868
+cap "vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n450_n882#" 1.77601
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n616_450#" "sigma-delta_0/in" 47.8653
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n118_n882#" "vd" 0.26792
+cap "sigma-delta_0/in" "sigma-delta_0/a_n3084_1636#" 69.0051
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n616_450#" "vd" 67.0133
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n616_450#" "ask-modulator_0/out" 1.96838
+cap "vd" "sigma-delta_0/a_n3084_1636#" 6.2665
+cap "sigma-delta_0/in" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n284_450#" 1.40184
+cap "vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n284_450#" 49.6229
+cap "ask-modulator_0/out" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n284_450#" 1.56702
+cap "sigma-delta_0/in" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_48_450#" 0.544496
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n284_450#" 31.082
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n118_n882#" 1.50809
+cap "ask-modulator_0/out" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n284_450#" 0.951049
+cap "sigma-delta_0/vd" "sigma-delta_0/in_int" 2.48122
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_380_450#" 61.8034
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_380_450#" "ask-modulator_0/out" 1.86896
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n284_450#" 11.4177
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_n284_450#" "ask-modulator_0/out" 0.335081
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_214_n882#" 1.76692
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_48_450#" 59.8045
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_48_450#" "ask-modulator_0/out" 1.83582
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n616_450#" 61.952
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n616_450#" "ask-modulator_0/out" 1.88553
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n450_n882#" 1.86491
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n284_450#" "ask-modulator_0/out" 1.00076
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_546_n882#" "sigma-delta_0/vd" 0.58157
+cap "ask-modulator_0/out" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_380_450#" 1.91867
+cap "sigma-delta_0/in_int" "sigma-delta_0/vd" 12.8589
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n616_450#" 0.0710698
+cap "sigma-delta_0/a_n3084_1636#" "sigma-delta_0/vd" 10.0164
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n284_450#" "sigma-delta_0/vd" 31.4264
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n616_450#" "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" -0.209953
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_1/a_380_450#" "sigma-delta_0/vd" 0.0126281
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n284_450#" "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" -0.524592
+cap "sigma-delta_0/in_int" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_48_450#" -0.749715
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_380_450#" 67.7092
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n118_n882#" 1.78092
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_380_450#" "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" -1.28919
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_48_450#" "ask-modulator_0/out" 1.85239
+cap "sigma-delta_0/in_int" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n616_450#" -0.0900007
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_n284_450#" "sigma-delta_0/in_int" -0.570744
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_214_n882#" "sigma-delta_0/vd" 1.78055
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" 17.2878
+cap "sigma-delta_0/in_int" "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_380_450#" -1.02604
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_48_450#" "sigma-delta_0/vd" 60.3153
+cap "sigma-delta_0/sky130_fd_pr__res_xhigh_po_0p35_XMXTTL_2/a_48_450#" "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" -0.785565
+cap "ask-modulator_0/gnd" "ask-modulator_0/out" 17.0988
+cap "sensor_0/vd" "ask-modulator_0/gnd" 2.25752
+cap "sensor_0/vd" "ask-modulator_0/out" 11.4661
+cap "sensor_0/vd" "ask-modulator_0/gnd" 6.48687
+cap "sensor_0/vd" "out_sigma" 22.2627
+cap "ask-modulator_0/out" "ask-modulator_0/gnd" 43.5488
+cap "ask-modulator_0/out" "out_sigma" 637.133
+cap "ask-modulator_0/gnd" "out_sigma" 17.1527
+cap "sensor_0/vd" "ask-modulator_0/out" 11.3613
+cap "ask-modulator_0/out" "sensor_0/vd" 20.6151
+cap "sensor_0/vd" "out_sigma" 20.0828
+cap "ask-modulator_0/out" "out_sigma" 337.301
+cap "sensor_0/vd" "ask-modulator_0/out" 38.2882
+cap "out_sigma" "sensor_0/vd" 3.82037
+cap "out_sigma" "ask-modulator_0/out" 337.301
+cap "sensor_0/vd" "out_sigma" -1.95046
+cap "ask-modulator_0/out" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n29_n1500#" 0.946483
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n545_n1500#" "out_sigma" 0.838239
+cap "out_sigma" "buffer_0/vd" 5.00413
+cap "out_sigma" "ask-modulator_0/out" 337.301
+cap "out_sigma" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n487_n1597#" 0.113446
+cap "sensor_0/vd" "ask-modulator_0/out" 38.0882
+cap "out_sigma" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n229_n1597#" 7.81813
+cap "out_sigma" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_0/a_n29_n1500#" 8.65579
+cap "ask-modulator_0/out" "buffer_0/vd" 1.86231
+cap "buffer_0/vd" "out_sigma" -8.15681
+cap "ask-modulator_0/out" "buffer_0/vd" 849.84
+cap "ask-modulator_0/out" "out_sigma" 337.301
+cap "ask-modulator_0/out" "buffer_0/vd" 116.901
+cap "out_sigma" "buffer_0/vd" 22.6365
+cap "out_sigma" "ask-modulator_0/out" 337.301
+cap "ask-modulator_0/out" "buffer_0/vd" 115.111
+cap "out_sigma" "ask-modulator_0/out" 337.301
+cap "out_sigma" "buffer_0/vd" 27.0085
+cap "ask-modulator_0/out" "out_sigma" 337.301
+cap "buffer_0/vd" "out_sigma" 14.5188
+cap "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_287_n1597#" "out_sigma" 0.0544342
+cap "out_sigma" "buffer_0/sky130_fd_pr__pfet_01v8_99C25S_1/a_487_n1500#" 0.838239
+cap "vd" "out_sigma" -1.83045
+cap "ask-modulator_0/out" "vd" 115.111
+cap "buffer_0/sky130_fd_pr__pfet_01v8_AXJJQ9_1/a_n616_n197#" "out_sigma" 7.52443
+cap "ask-modulator_0/out" "out_sigma" 307.458
+cap "vd" "out_sigma" -0.946099
+cap "out_sigma" "sigma-delta_0/a_n3084_1636#" 0.226094
+cap "vd" "ask-modulator_0/out" 115.111
+cap "sigma-delta_0/a_n3084_1636#" "ask-modulator_0/out" 1.01336
+cap "sigma-delta_0/a_n3084_1636#" "out_sigma" 0.167208
+cap "sigma-delta_0/a_n3084_1636#" "sigma-delta_0/in" 0.771219
+cap "sigma-delta_0/a_n3084_1636#" "vd" 22.357
+cap "ask-modulator_0/out" "vd" 115.111
+cap "sigma-delta_0/vd" "sigma-delta_0/a_n3084_1636#" 24.7401
+cap "ask-modulator_0/out" "sigma-delta_0/vd" 115.111
+cap "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" "sigma-delta_0/vd" 18.6583
+cap "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" "ask-modulator_0/out" 7.74018
+cap "sigma-delta_0/vd" "sigma-delta_0/a_n3084_1636#" 17.8508
+cap "ask-modulator_0/out" "sigma-delta_0/a_n3084_1636#" 1.01336
+cap "sigma-delta_0/vd" "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/c2_n2989_n2720#" 13.9572
+cap "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" "sigma-delta_0/a_n3084_1636#" -3.3963
+cap "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/c2_n2989_n2720#" "ask-modulator_0/out" 3.82271
+cap "sigma-delta_0/vd" "ask-modulator_0/out" 87.8279
+cap "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/c2_n2989_n2720#" "sigma-delta_0/a_n3084_1636#" -2.82528
+cap "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" "ask-modulator_0/out" 68.1526
+cap "ask-modulator_0/out" "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/c2_n2989_n2720#" 84.9491
+cap "ask-modulator_0/out" "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/c2_n2989_n2720#" 74.3941
+cap "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" "ask-modulator_0/out" 114.452
+cap "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/c2_n2989_n2720#" "ask-modulator_0/out" 54.2276
+cap "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" "ask-modulator_0/out" 202.912
+cap "ask-modulator_0/out" "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/m4_n3069_n2800#" 16.5061
+cap "sigma-delta_0/sky130_fd_pr__cap_mim_m3_2_S7KLY5_1/c2_n2989_n2720#" "ask-modulator_0/out" 14.7552
+cap "ask-modulator_0/out" "out_sigma" 1255.83
+cap "ask-modulator_0/gnd" "out_sigma" 45.6222
+cap "ask-modulator_0/gnd" "ask-modulator_0/out" -28.9247
+cap "buffer_0/vd" "ask-modulator_0/out" 2058.19
+cap "ask-modulator_0/in" "ask-modulator_0/out" 11.1132
+cap "ask-modulator_0/in" "ask-modulator_0/XM1/a_n175_n374#" 45.6222
+cap "ask-modulator_0/out" "ask-modulator_0/XM1/a_n175_n374#" -10.3303
+cap "ask-modulator_0/in" "ask-modulator_0/out" 532.423
+cap "vd" "ask-modulator_0/out" 812.251
+cap "ask-modulator_0/in" "ask-modulator_0/out" 0.694782
+cap "ask-modulator_0/in" "ask-modulator_0/XM1/a_n175_n374#" 25.3286
+cap "ask-modulator_0/XM1/a_n175_n374#" "ask-modulator_0/in" 51.4188
+cap "ask-modulator_0/out" "ask-modulator_0/in" 23.4268
+cap "ask-modulator_0/in" "ask-modulator_0/out" 44.5159
+cap "ask-modulator_0/in" "ask-modulator_0/out" 0.944029
+cap "ask-modulator_0/XC0/c2_n2709_n7720#" "vd" 4.94804
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "vd" 35.0533
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "vd" 35.0533
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "vd" 50.0761
+cap "vd" "ask-modulator_0/XC0/c2_n2709_n7720#" 7.83626
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "vd" 50.0761
+cap "vd" "ask-modulator_0/XC0/c2_n2709_n7720#" 7.83626
+cap "vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 50.0761
+cap "vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 50.0761
+cap "ask-modulator_0/XC0/c2_n2709_n7720#" "vd" 6.51529
+cap "vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 45.0685
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "vd" 45.0685
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "vd" 46.4992
+cap "vd" "ask-modulator_0/XC0/c2_n2709_n7720#" 6.73919
+cap "vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 46.4992
+cap "ask-modulator_0/XC0/c2_n2709_n7720#" "vd" 7.83626
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "vd" 50.0761
+cap "vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 50.0761
+cap "ask-modulator_0/XC0/c2_n2709_n7720#" "vd" 7.83626
+cap "vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 50.0761
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "vd" 50.0761
+cap "vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 7.8691
+cap "vd" "ask-modulator_0/XC0/c2_n2709_n7720#" 4.72415
+cap "vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 33.6225
+cap "vd" "ask-modulator_0/XC0/c2_n2709_n7720#" 0.694069
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "vd" 7.8691
+cap "vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 33.6225
+cap "vd" "ask-modulator_0/XR1/a_n35_n932#" 2.4277
+cap "vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 50.0761
+cap "vd" "ask-modulator_0/XR1/a_n165_n1062#" 0.77077
+cap "vd" "ask-modulator_0/XR1/a_n35_500#" 7.83626
+cap "ask-modulator_0/XR1/a_n165_n1062#" "vd" 2.8743
+cap "vd" "ask-modulator_0/XR1/a_n35_n932#" 1.46088
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "vd" 50.0761
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "ask-modulator_0/XR1/a_n35_500#" -0.175797
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "vd" 42.1712
+cap "ask-modulator_0/XR1/a_n35_n932#" "vd" 2.05503
+cap "vd" "ask-modulator_0/XR1/a_n35_500#" 31.7142
+cap "vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 42.1712
+cap "ask-modulator_0/XR1/a_n35_500#" "vd" 443.465
+cap "vd" "ask-modulator_0/XR1/a_n165_n1062#" 6.80922
+cap "vd" "ask-modulator_0/XR1/a_n35_n932#" 1.23615
+cap "ask-modulator_0/vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 31.855
+cap "ask-modulator_0/vd" "ask-modulator_0/XR1/a_n165_n1062#" 0.252963
+cap "ask-modulator_0/vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 36.4482
+cap "ask-modulator_0/vd" "ask-modulator_0/XC0/m4_n2789_n7800#" 0.593959
+cap "ask-modulator_0/XC0/m4_n2789_n7800#" "ask-modulator_0/vd" 0.679604
+merge "ask-modulator_0/in" "sigma-delta_0/out" -9015.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2674200 -26660 -974400 -9300 0 0 0 0 0 0 0 0
+merge "sigma-delta_0/out" "out_sigma"
+merge "ask-modulator_0/VSUBS" "ask-modulator_0/gnd" -8061.24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1816800 -19240 0 0 -896000 -9800 0 0 0 0 0 0
+merge "ask-modulator_0/gnd" "sigma-delta_0/x1/VGND"
+merge "sigma-delta_0/x1/VGND" "sigma-delta_0/a_n3084_1636#"
+merge "sigma-delta_0/a_n3084_1636#" "m1_16630_0#"
+merge "m1_16630_0#" "sigma-delta_0/gnd"
+merge "sigma-delta_0/gnd" "m1_14970_0#"
+merge "m1_14970_0#" "m1_14770_0#"
+merge "m1_14770_0#" "buffer_0/gnd"
+merge "buffer_0/gnd" "sensor_0/gnd"
+merge "sensor_0/gnd" "VSUBS"
+merge "VSUBS" "gnd"
+merge "buffer_0/in" "sensor_0/vts" -678.769 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -68800 -1480 0 0 0 0 0 0 0 0 0 0
+merge "sensor_0/vts" "vts"
+merge "sigma-delta_0/clk" "clk" -146.919 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40000 -800 0 0 0 0 0 0 0 0 0 0
+merge "ask-modulator_0/vd" "sigma-delta_0/vd" -16599.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -193840 -3704 0 0 -1008000 -8400 -7980000 -42000 0 0 0 0
+merge "sigma-delta_0/vd" "buffer_0/vd"
+merge "buffer_0/vd" "sensor_0/vd"
+merge "sensor_0/vd" "vd"
+merge "sigma-delta_0/in" "buffer_0/out" -1769.49 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -54400 -1320 -448000 -5600 0 0 0 0 0 0 0 0
+merge "buffer_0/out" "out_buff"
+merge "sensor_0/vtd" "m1_3810_3420#" -235.991 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -54000 -1280 0 0 0 0 0 0 0 0 0 0
+merge "m1_3810_3420#" "vtd"
+merge "ask-modulator_0/out" "out" -332.812 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40000 -800 0 0 0 0 0 0 0 0 0 0
+merge "sigma-delta_0/vpwr" "sigma-delta_0/reset_b_dff" -505.394 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -44800 -1200 0 0 0 0 0 0 0 0 0 0
+merge "sigma-delta_0/reset_b_dff" "vpwr"
+merge "buffer_0/ib" "ib" -162.379 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -38016 -780 0 0 0 0 0 0 0 0 0 0
