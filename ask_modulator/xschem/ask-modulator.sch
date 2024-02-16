@@ -33,19 +33,18 @@ N 400 -117.5 400 -107.5 {
 lab=out}
 N 542.5 -157.5 542.5 -147.5 {
 lab=out}
-N 620 -227.5 620 -147.5 {
-lab=out}
 N 400 -230 400 -147.5 {
 lab=out}
 N 542.5 -217.5 542.5 -157.5 {
 lab=out}
 N 542.5 -230 542.5 -217.5 {
 lab=out}
+N 620 -230 620 -147.5 {
+lab=out}
 C {devices/iopin.sym} 400 -27.5 1 0 {name=p1 lab=gnd}
 C {devices/ipin.sym} 340 -77.5 0 0 {name=p3 lab=in}
 C {devices/opin.sym} 440 -117.5 0 0 {name=p4 lab=out}
 C {devices/iopin.sym} 400 -332.5 3 0 {name=p2 lab=vd}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 400 -260 0 0 {name=C0 model=cap_mim_m3_2 W=24.4 L=24.4 MF=3 spiceprefix=X}
 C {devices/lab_pin.sym} 600 -260 0 0 {name=l1 sig_type=std_logic lab=gnd}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} 620 -260 0 0 {name=R1
 W=0.35
@@ -56,7 +55,7 @@ mult=1}
 C {sky130_fd_pr/nfet_01v8.sym} 380 -77.5 0 0 {name=M1
 L=0.15
 W=2
-nf=1 
+nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -68,3 +67,4 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {/foss/designs/temp-sensor/ask_modulator/xschem/l0.sym} 540 -275 1 0 {name=x1}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 400 -260 0 0 {name=C1 model=cap_mim_m3_1 W=24.4 L=24.4 MF=3 spiceprefix=X}

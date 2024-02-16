@@ -1,0 +1,10 @@
+* NGSPICE file created from ask_modulator.ext - technology: sky130A
+
+.subckt ask_modulator gnd in out vd
+X0 vd out sky130_fd_pr__cap_mim_m3_1 l=24.4 w=24.5
+X1 vd out sky130_fd_pr__cap_mim_m3_1 l=24.4 w=24.5
+X2 vd out sky130_fd_pr__cap_mim_m3_1 l=24.4 w=24.5
+X3 vd a_6866_12466# gnd sky130_fd_pr__res_xhigh_po_0p35 l=5
+X4 gnd in out gnd sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
+.ends
+

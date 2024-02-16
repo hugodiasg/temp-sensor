@@ -151,7 +151,7 @@ model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
 C {devices/lab_pin.sym} 430 -2000 1 0 {name=l1 sig_type=std_logic lab=in_comp}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 270 -1900 0 0 {name=C1 model=cap_mim_m3_2 W=27.196 L=27.196 MF=1 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 440 -1900 0 0 {name=C2 model=cap_mim_m3_2 W=27.196 L=27.196 MF=1 spiceprefix=X}
-C {devices/code.sym} 925 -2220 0 0 {name=lib_dff only_toplevel=false value=".include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+C {sky130_fd_pr/cap_mim_m3_1.sym} 270 -1900 0 0 {name=C1 model=cap_mim_m3_1 W=27.196 L=27.196 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 440 -1900 0 0 {name=C2 model=cap_mim_m3_1 W=27.196 L=27.196 MF=1 spiceprefix=X}
+C {devices/code.sym} 930 -2255 0 0 {name=lib_dff only_toplevel=false value=".include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 "}

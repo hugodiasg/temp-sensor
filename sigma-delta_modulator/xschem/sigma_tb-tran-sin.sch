@@ -63,5 +63,5 @@ C {devices/vsource.sym} 1120 -945 0 0 {name=vd value=1.8}
 C {devices/gnd.sym} 1120 -915 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 1120 -975 0 0 {name=l3 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 1070 -720 0 0 {name=l7 sig_type=std_logic lab=vd}
-C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym} 1190 -630 0 0 {name=x1}
 C {devices/lab_pin.sym} 1040 -630 0 0 {name=l18 sig_type=std_logic lab=in1}
+C {/foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta-pex.sym} 1190 -630 0 0 {name=x1}

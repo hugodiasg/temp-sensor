@@ -175,7 +175,7 @@ lab=d}
 N 1430 -1765 1445 -1765 {
 lab=vd}
 N 1430 -1735 1430 -1715 {
-lab=out}
+lab=d}
 N 1370 -1765 1390 -1765 {
 lab=d}
 N 1430 -1625 1430 -1605 {
@@ -377,7 +377,6 @@ C {devices/iopin.sym} 40 -1705 2 0 {name=p4 lab=in}
 C {devices/iopin.sym} 490 -1255 1 0 {name=p5 lab=gnd}
 C {devices/lab_pin.sym} 450 -1675 0 1 {name=l1 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} 680 -1675 0 0 {name=l2 sig_type=std_logic lab=gnd}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 820 -1495 1 0 {name=Cc model=cap_mim_m3_2 W=30 L=15 MF=1 spiceprefix=X}
 C {devices/lab_pin.sym} 340 -1825 3 1 {name=l3 sig_type=std_logic lab=a}
 C {devices/lab_pin.sym} 800 -1825 3 1 {name=l4 sig_type=std_logic lab=b}
 C {devices/lab_pin.sym} 560 -1595 3 1 {name=l5 sig_type=std_logic lab=c}
@@ -634,3 +633,4 @@ C {devices/lab_pin.sym} 1985 -1420 0 0 {name=l59 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} 1985 -1470 1 0 {name=l60 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} 2035 -1420 2 0 {name=l61 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} 1985 -1375 3 0 {name=l62 sig_type=std_logic lab=gnd}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 820 -1495 1 0 {name=C1 model=cap_mim_m3_1 W=30 L=15 MF=1 spiceprefix=X}

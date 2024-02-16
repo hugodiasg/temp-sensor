@@ -29,24 +29,18 @@ Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
 
-Circuit 1 cell sky130_fd_pr__cap_mim_m3_2 and Circuit 2 cell sky130_fd_pr__cap_mim_m3_2 are black boxes.
-Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_2 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_2 is a placeholder, treated as a black box.
+Circuit 1 cell sky130_fd_pr__cap_mim_m3_1 and Circuit 2 cell sky130_fd_pr__cap_mim_m3_1 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
 
 Subcircuit pins:
-Circuit 1: sky130_fd_pr__cap_mim_m3_2      |Circuit 2: sky130_fd_pr__cap_mim_m3_2      
+Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_1      
 -------------------------------------------|-------------------------------------------
 1                                          |1                                          
 2                                          |2                                          
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
-Device classes sky130_fd_pr__cap_mim_m3_2 and sky130_fd_pr__cap_mim_m3_2 are equivalent.
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_AXJJQ9 in circuit buffer (0)(2 instances)
-Flattening unmatched subcell sky130_fd_pr__nfet_01v8_HD5U9F in circuit buffer (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__nfet_01v8_5VPKLS in circuit buffer (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_99C25S in circuit buffer (0)(2 instances)
-Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_2_26U9NK in circuit buffer (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__nfet_01v8_MMM6UU in circuit buffer (0)(1 instance)
+Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
 
 Class buffer (0):  Merged 16 parallel devices.
 Class buffer (1):  Merged 4 parallel devices.
@@ -55,7 +49,7 @@ Circuit 1: buffer                          |Circuit 2: buffer
 -------------------------------------------|-------------------------------------------
 sky130_fd_pr__pfet_01v8 (22->9)            |sky130_fd_pr__pfet_01v8 (12->9)            
 sky130_fd_pr__nfet_01v8 (14->11)           |sky130_fd_pr__nfet_01v8 (12->11)           
-sky130_fd_pr__cap_mim_m3_2 (1)             |sky130_fd_pr__cap_mim_m3_2 (1)             
+sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
 Number of devices: 21                      |Number of devices: 21                      
 Number of nets: 9                          |Number of nets: 9                          
 ---------------------------------------------------------------------------------------
@@ -64,8 +58,8 @@ Netlists match uniquely.
 Subcircuit pins:
 Circuit 1: buffer                          |Circuit 2: buffer                          
 -------------------------------------------|-------------------------------------------
-gnd                                        |gnd                                        
 in                                         |in                                         
+gnd                                        |gnd                                        
 out                                        |out                                        
 ib                                         |ib                                         
 vd                                         |vd                                         

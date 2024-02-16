@@ -1,0 +1,95 @@
+** sch_path: /foss/designs/temp-sensor/device-complete/xschem/device_without_rf.sch
+.subckt device_without_rf vd clk out vpwr ib gnd vts out_buff
+*.PININFO vd:B clk:I out:O vpwr:B ib:B gnd:B vts:O out_buff:O
+x3 vd vts vtd gnd sensor
+X2 vd vts out_buff ib gnd buffer
+x1 vpwr clk out out_buff vpwr gnd vd sigma-delta
+.ends
+
+* expanding   symbol:  /foss/designs/temp-sensor/sensor/xschem/sensor.sym # of pins=4
+** sym_path: /foss/designs/temp-sensor/sensor/xschem/sensor.sym
+** sch_path: /foss/designs/temp-sensor/sensor/xschem/sensor.sch
+.subckt sensor vd vts vtd gnd
+*.PININFO vd:B vts:O vtd:O gnd:B
+XP1 a a vd vd sky130_fd_pr__pfet_01v8 L=1 W=4 nf=2 m=1
+XP2 c a d vd sky130_fd_pr__pfet_01v8 L=1 W=8 nf=4 m=1
+XP3 d vtd vd vd sky130_fd_pr__pfet_01v8 L=1 W=2 nf=1 m=1
+XP4 vts vtd vd vd sky130_fd_pr__pfet_01v8 L=5 W=2 nf=1 m=1
+XP5 b vtd c vd sky130_fd_pr__pfet_01v8 L=1 W=8 nf=4 m=1
+XP6 vtd vtd vts vts sky130_fd_pr__pfet_01v8 L=1 W=16 nf=8 m=1
+XN1 a b gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=8
+XN2 b b gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=8
+XN3 vtd b gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=8
+XPD0 vd vd vd vd sky130_fd_pr__pfet_01v8 L=1 W=2 nf=1 m=1
+XPD1 vd vd vd vd sky130_fd_pr__pfet_01v8 L=1 W=2 nf=1 m=1
+XPD2 c c c vd sky130_fd_pr__pfet_01v8 L=1 W=2 nf=1 m=1
+XPD3 vts vts vts vts sky130_fd_pr__pfet_01v8 L=1 W=2 nf=1 m=1
+XPD4 vts vts vts vts sky130_fd_pr__pfet_01v8 L=1 W=2 nf=1 m=1
+XPD5 vd vd vd vd sky130_fd_pr__pfet_01v8 L=1 W=2 nf=1 m=1
+XN4 gnd gnd gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XN5 gnd gnd gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XN6 gnd gnd gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XN7 gnd gnd gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XN8 gnd gnd gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XN9 gnd gnd gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XN10 gnd gnd gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XN11 gnd gnd gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  /foss/designs/temp-sensor/buffer/xschem/buffer.sym # of pins=5
+** sym_path: /foss/designs/temp-sensor/buffer/xschem/buffer.sym
+** sch_path: /foss/designs/temp-sensor/buffer/xschem/buffer.sch
+.subckt buffer vd in out ib gnd
+*.PININFO vd:B ib:B out:B in:B gnd:B
+XM3 a a vd vd sky130_fd_pr__pfet_01v8 L=1 W=5 nf=5 m=1
+XM1 a out c gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.5 nf=1 m=1
+XM2 b in c gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.5 nf=1 m=1
+XM4 b b vd vd sky130_fd_pr__pfet_01v8 L=1 W=5 nf=5 m=1
+XM5 c ib gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM6 out b vd vd sky130_fd_pr__pfet_01v8 L=1 W=30 nf=2 m=1
+XM7 out d gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=2 m=1
+XM8 d a vd vd sky130_fd_pr__pfet_01v8 L=1 W=30 nf=2 m=1
+XM9 d d gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=10 nf=2 m=1
+XM10 ib ib gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM11 vd vd vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
+XM12 a a a vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
+XM13 b b b vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
+XM14 vd vd vd vd sky130_fd_pr__pfet_01v8 L=1 W=1 nf=1 m=1
+XM15 out out out vd sky130_fd_pr__pfet_01v8 L=1 W=15 nf=1 m=1
+XM16 d d d vd sky130_fd_pr__pfet_01v8 L=1 W=15 nf=1 m=1
+XM17 a a a gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.5 nf=1 m=1
+XM18 b b b gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.5 nf=1 m=1
+XM19 ib ib ib gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM20 c c c gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 m=1
+XM21 d d d vd sky130_fd_pr__pfet_01v8 L=1 W=15 nf=1 m=1
+XM22 out out out vd sky130_fd_pr__pfet_01v8 L=1 W=15 nf=1 m=1
+XM23 gnd gnd gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=5 nf=1 m=1
+XM24 gnd gnd gnd gnd sky130_fd_pr__nfet_01v8 L=1 W=5 nf=1 m=1
+XC1 out d sky130_fd_pr__cap_mim_m3_1 W=30 L=15 m=1
+.ends
+
+
+* expanding   symbol:  /foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym # of
+*+ pins=7
+** sym_path: /foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sym
+** sch_path: /foss/designs/temp-sensor/sigma-delta_modulator/xschem/sigma-delta.sch
+.subckt sigma-delta vpwr clk out in reset_b_dff gnd vd
+*.PININFO in:I gnd:B clk:B out:B reset_b_dff:B vpwr:B vd:B
+XR2 Q in_int gnd sky130_fd_pr__res_xhigh_po_0p35 L=36 mult=1 m=1
+XR1 in_int in gnd sky130_fd_pr__res_xhigh_po_0p35 L=36 mult=1 m=1
+XN1 out_comp in_comp gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XP1 out_comp in_comp vd vd sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=1 m=1
+x1 clk out_comp reset_b_dff GND GND VPWR VPWR Q out sky130_fd_sc_hd__dfrbp_1
+XR3 in_comp in_int gnd sky130_fd_pr__res_xhigh_po_0p35 L=18 mult=1 m=1
+XC1 in_int gnd sky130_fd_pr__cap_mim_m3_1 W=27.196 L=27.196 m=1
+XC2 in_comp gnd sky130_fd_pr__cap_mim_m3_1 W=27.196 L=27.196 m=1
+**** begin user architecture code
+
+.include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+**** end user architecture code
+.ends
+
+.end

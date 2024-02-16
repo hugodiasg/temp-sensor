@@ -1,46 +1,10 @@
 * NGSPICE file created from ask-modulator.ext - technology: sky130A
 
 .subckt ask-modulator gnd in out vd
-X0 vd out sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
-X1 vd a_6866_12466# gnd.t2 sky130_fd_pr__res_xhigh_po_0p35 l=5
-X2 vd out sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
-X3 vd out sky130_fd_pr__cap_mim_m3_2 l=24.4 w=24.4
-X4 gnd.t1 in.t0 out.t0 gnd.t0 sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
-R0 out out.t0 9.21142
-R1 gnd.n20 gnd.n9 815.595
-R2 gnd.n20 gnd.t0 25.9602
-R3 gnd.n17 gnd.n14 25.7537
-R4 gnd.n9 gnd.t2 24.3172
-R5 gnd.n6 gnd.n3 24.2378
-R6 gnd.n26 gnd.t1 8.70236
-R7 gnd gnd.n26 2.5773
-R8 gnd.n23 gnd.n22 0.366293
-R9 gnd.n12 gnd.n11 0.366279
-R10 gnd.n11 gnd.n10 0.365897
-R11 gnd.n22 gnd.n21 0.365897
-R12 gnd.n6 gnd.n5 0.130535
-R13 gnd.n1 gnd.n0 0.1305
-R14 gnd.t2 gnd.n1 0.1305
-R15 gnd.n5 gnd.n4 0.1305
-R16 gnd.n19 gnd.n18 0.10956
-R17 gnd.t0 gnd.n19 0.10956
-R18 gnd.n16 gnd.n15 0.10956
-R19 gnd.n17 gnd.n16 0.109083
-R20 gnd.n14 gnd.n13 0.0264102
-R21 gnd.n8 gnd.n7 0.00762598
-R22 gnd.n9 gnd.n8 0.00762598
-R23 gnd.n3 gnd.n2 0.00762598
-R24 gnd.n24 gnd.n23 0.00240486
-R25 gnd.t0 gnd.n17 0.00197336
-R26 gnd.n25 gnd.n24 0.00186816
-R27 gnd.t2 gnd.n6 0.00146241
-R28 gnd.n26 gnd.n25 0.00124275
-R29 gnd.n20 gnd.n12 0.00101458
-R30 gnd.n23 gnd.n20 0.0010004
-R31 in in.t0 396.178
-C0 vd a_6866_12466# 0.0117f
-C1 out in 0.244f
-C2 vd out 0.139p
-C3 a_6866_12466# out 0.0171f
+X0 vd out sky130_fd_pr__cap_mim_m3_1 l=24.4 w=24.5
+X1 vd out sky130_fd_pr__cap_mim_m3_1 l=24.4 w=24.5
+X2 vd out sky130_fd_pr__cap_mim_m3_1 l=24.4 w=24.5
+X3 vd out gnd sky130_fd_pr__res_xhigh_po_0p35 l=5
+X4 gnd in out gnd sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
 .ends
 
