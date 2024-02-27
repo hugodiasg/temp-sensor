@@ -1,6 +1,6 @@
 * NGSPICE file created from device_without_rf.ext - technology: sky130A
 
-.subckt device_without_rf gnd clk out vts ib out_buff vd vpwr
+.subckt device_without_rf gnd clk vts ib out_buff vd out vpwr
 X0 gnd a_15881_829# a_15815_855# gnd sky130_fd_pr__nfet_01v8 ad=0.125 pd=1.01 as=0.0669 ps=0.75 w=0.42 l=0.15
 X1 vpwr a_15706_855# a_15881_829# vpwr sky130_fd_pr__pfet_01v8_hvt ad=0.213 pd=1.67 as=0.0567 ps=0.69 w=0.42 l=0.15
 X2 gnd gnd gnd gnd sky130_fd_pr__nfet_01v8 ad=1.45 pd=10.6 as=20.7 ps=173 w=5 l=1

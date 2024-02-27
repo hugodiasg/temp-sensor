@@ -102,13 +102,14 @@ out_buff                                   |out_buff
 ib                                         |ib                                         
 vpwr                                       |vpwr                                       
 clk                                        |clk                                        
-out_sigma                                  |out **Mismatch**                           
+out                                        |out                                        
 gnd                                        |gnd                                        
 ---------------------------------------------------------------------------------------
-Cell pin lists for device_without_rf and device_without_rf altered to match.
+Cell pin lists are equivalent.
 Device classes device_without_rf and device_without_rf are equivalent.
 
-Final result: Top level cell failed pin matching.
+Final result: Circuits match uniquely.
+Property errors were found.
 
 The following cells had property errors:
  device_without_rf
