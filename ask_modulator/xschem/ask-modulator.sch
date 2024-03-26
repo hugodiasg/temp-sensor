@@ -33,13 +33,13 @@ N 400 -117.5 400 -107.5 {
 lab=out}
 N 542.5 -157.5 542.5 -147.5 {
 lab=out}
-N 620 -227.5 620 -147.5 {
-lab=out}
 N 400 -230 400 -147.5 {
 lab=out}
 N 542.5 -217.5 542.5 -157.5 {
 lab=out}
 N 542.5 -230 542.5 -217.5 {
+lab=out}
+N 620 -230 620 -145 {
 lab=out}
 C {devices/iopin.sym} 400 -27.5 1 0 {name=p1 lab=gnd}
 C {devices/ipin.sym} 340 -77.5 0 0 {name=p3 lab=in}

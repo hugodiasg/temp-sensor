@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1702052053
+timestamp 1711411705
 << metal1 >>
 rect 6000 33780 7320 33820
 rect 6000 33500 6940 33780
@@ -12,7 +12,9 @@ rect -80 11320 1580 11460
 rect 1760 11320 1780 11460
 rect -80 11300 1780 11320
 rect -320 10720 120 10920
-rect 1550 6760 13100 6780
+rect 1550 6764 5244 6780
+rect 6500 6764 13100 6780
+rect 1550 6760 13100 6764
 rect 1040 6560 1240 6760
 rect 1550 6560 1560 6760
 rect 1760 6560 12880 6760
@@ -326,9 +328,9 @@ rect -20 -20 0 0
 rect 14280 -20 14300 0
 rect 5340 -1820 5360 -1800
 use ask-modulator  ask-modulator_0 /foss/designs/temp-sensor/ask_modulator/mag
-timestamp 1702051655
+timestamp 1711411705
 transform 1 0 -740 0 1 16920
-box 660 -10360 23078 16420
+box 660 -10360 31420 16420
 use buffer  buffer_0 /foss/designs/temp-sensor/buffer/mag
 timestamp 1700764089
 transform 1 0 4468 0 1 -78
